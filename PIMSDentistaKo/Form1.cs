@@ -16,5 +16,10 @@ namespace PIMSDentistaKo
         {
             InitializeComponent();
         }
+
+        private void bunifuDatePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
