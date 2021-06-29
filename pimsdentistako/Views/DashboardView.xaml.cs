@@ -27,6 +27,7 @@ namespace pimsdentistako.Views
 
         private void showDateBtn_Click(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show(CustomCalendar.myCalendar.SelectedDate.ToString());
         }
 
         private void onMouseLeave_CC(object sender, MouseEventArgs e)
