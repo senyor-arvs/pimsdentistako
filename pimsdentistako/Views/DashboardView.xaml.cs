@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pimsdentistako.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -21,11 +22,16 @@ namespace pimsdentistako.Views
         public DashboardView()
         {
             InitializeComponent();
+            DataContext = new CustomCalendarViewModel();
         }
 
         private void showDateBtn_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(CustomCalendar.myCalendar.SelectedDate.ToString());
+        }
+
+        private void onMouseLeave_CC(object sender, MouseEventArgs e)
+        {
         }
     }
 }
