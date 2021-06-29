@@ -48,7 +48,11 @@
             </StackPanel>
         </DockPanel>
         <StackPanel Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="5">
-            <component:CustomCalendar x:Name="CustomCalendar" Margin="30"/>
+            <component:CustomCalendar 
+                x:Name="CustomCalendar" 
+                Margin="30" 
+                MouseEnter="CustomCalendar_MouseEnter"
+                />
             <Button Content="Show Date"
                     Height="auto"
                     FontSize="20"

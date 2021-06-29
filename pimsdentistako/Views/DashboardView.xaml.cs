@@ -27,5 +27,10 @@ namespace pimsdentistako.Views
         {
             MessageBox.Show(CustomCalendar.myCalendar.SelectedDate.ToString());
         }
+
+        private void CustomCalendar_MouseEnter(object sender, MouseEventArgs e)
+        {
+           
+        }
     }
 }
