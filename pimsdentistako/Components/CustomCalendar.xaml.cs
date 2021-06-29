@@ -25,7 +25,17 @@ namespace pimsdentistako.Components
 
         private void CustomCalendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            Mouse.Capture(null); 
         }
+
+      
+
+
+
+
+
+
+
+
     }
 }

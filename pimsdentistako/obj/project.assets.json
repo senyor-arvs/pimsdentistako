@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj",
+      "projectUniqueName": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\pimsdentistako.csproj",
       "projectName": "pimsdentistako",
-      "projectPath": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj",
+      "projectPath": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\pimsdentistako.csproj",
       "packagesPath": "C:\\Users\\Kristian\\.nuget\\packages\\",
-      "outputPath": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\pimsdentistako\\pimsdentistako\\obj\\",
+      "outputPath": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kristian\\AppData\\Roaming\\NuGet\\NuGet.Config",
