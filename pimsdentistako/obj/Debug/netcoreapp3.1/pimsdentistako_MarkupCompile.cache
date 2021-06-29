@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\Dentista Ko Development\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\
 pimsdentistako
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\Dentista Ko Development\pimsdentistako\pimsdentistako\App.xaml
-4-954840522
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\App.xaml
+41660784742
 
-9-575121786
-192-1533232326
+9138198031
+1921654412462
 Components\CustomCalendar.xaml;MainWindow.xaml;Views\DashboardView.xaml;Views\TransactionView.xaml;
 
 False

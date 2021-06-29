@@ -8,24 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\xenxi\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Kristian\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xenxi\\Documents\\2020 Programming Files\\C sharp\\Dentista Ko Software\\Dentista Ko Development\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj",
+      "projectUniqueName": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\pimsdentistako.csproj",
       "projectName": "pimsdentistako",
-      "projectPath": "C:\\Users\\xenxi\\Documents\\2020 Programming Files\\C sharp\\Dentista Ko Software\\Dentista Ko Development\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj",
-      "packagesPath": "C:\\Users\\xenxi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xenxi\\Documents\\2020 Programming Files\\C sharp\\Dentista Ko Software\\Dentista Ko Development\\pimsdentistako\\pimsdentistako\\obj\\",
+      "projectPath": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\pimsdentistako.csproj",
+      "packagesPath": "C:\\Users\\Kristian\\.nuget\\packages\\",
+      "outputPath": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\xenxi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Kristian\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,11 +28,11 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.telerik.com/nuget": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -49,7 +44,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "imports": [
           "net461",
           "net462",
@@ -68,7 +62,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
