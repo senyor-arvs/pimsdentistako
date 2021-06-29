@@ -464,7 +464,7 @@
                       CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}"
                       BorderBrush="White"
                       Margin="2,2,2,2"
-                      Foreground="#FF363636" Height="245" SelectedDatesChanged="CustomCalendar_SelectedDatesChanged"/>
+                      Foreground="#FF363636" Height="245" SelectedDatesChanged="CustomCalendar_SelectedDatesChanged" />
         </Viewbox>
         <!--
         <TextBlock x:Name="myTextBlock" 
