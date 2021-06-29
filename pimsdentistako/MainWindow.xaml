@@ -4,9 +4,239 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pimsdentistako"
+        xmlns:views="clr-namespace:pimsdentistako.Views"
+        xmlns:viewmodels="clr-namespace:pimsdentistako.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        ResizeMode="NoResize"
+        WindowState="Maximized"
+        Title="MainWindow" Height="1040" Width="1920">
+    <Window.Resources>
+        <!-- dashboardView sample -->
+        <DataTemplate x:Name="dashboardView" DataType="{x:Type viewmodels:DashboardViewModel}">
+            <views:DashboardView/>
+        </DataTemplate>
+        <!-- Add the remaining views below -->
+        <DataTemplate x:Name="transactionView" DataType="{x:Type viewmodels:TransactionViewModel}">
+            <views:TransactionView/>
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.ColumnSpan="1" Grid.RowSpan="5"
+              Background="#191715">
+            <StackPanel>
+                <StackPanel HorizontalAlignment="Center">
+                    <TextBlock Text="D E N T I S T A    K O"
+                           Foreground="White"
+                           FontSize="30"
+                           Margin="0,40,0,0"
+                           FontFamily="Arial"/>
+                </StackPanel>
 
+                <StackPanel Orientation="Horizontal">
+                    <Grid MaxHeight="150"
+                      MaxWidth="150"
+                      Margin="30,30,0,30"
+                      HorizontalAlignment="Left"
+                          Grid.Column="0">
+                        <Border Name="mask" 
+                                Background="White" 
+                                CornerRadius="50"
+                                />
+                        <StackPanel
+                           Cursor="Hand" MouseLeftButtonDown="ProfilePicture_LeftClick">
+                            <StackPanel.OpacityMask>
+                                <VisualBrush Visual="{Binding ElementName=mask}"/>
+                            </StackPanel.OpacityMask>
+                            <Image Source="Assets/img/profile_picture.jpg"
+                           Width="150"
+                           Height="150"
+                           HorizontalAlignment="Left"/>
+                        </StackPanel>
+                    </Grid>
+                    <StackPanel Margin="15,30,30,30">
+                        <TextBlock Text="Hello world!"
+                               FontSize="30"
+                               Foreground="White"
+                               HorizontalAlignment="Left"/>
+                        <TextBlock Text="Dr. Ian Santos"
+                               FontSize="30"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               TextWrapping="Wrap"/>
+                        <TextBlock Text="Click here to change user!"
+                               FontSize="15"
+                               Foreground="#c09764"
+                               HorizontalAlignment="Left"
+                               TextWrapping="Wrap"/>
+                    </StackPanel>
+
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="What would you like to do today?"
+                               Foreground="White"
+                               FontSize="24"
+                               HorizontalAlignment="Center"/>
+                </StackPanel>
+
+                <StackPanel Margin="0,30,0,0">
+                    <Button Content="Master Files"
+                            FontSize="35"
+                            FontFamily="Arial"
+                            Foreground="White"
+                            HorizontalAlignment="Left">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#bd7e4a"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#a26838"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="340"
+                                        Height="50"
+                                        CornerRadius="0,35,35,0"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Left"
+                                                      VerticalAlignment="Center"
+                                                      Margin="50,0,0,0"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+
+                <StackPanel Margin="0,30,0,0">
+                    <Button Content="Transactions"
+                            FontSize="35"
+                            FontFamily="Arial"
+                            Foreground="White"
+                            HorizontalAlignment="Left"
+                            x:Name="transactionsBtn" Click="transactionsBtn_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#bd7e4a"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#a26838"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="340"
+                                        Height="50"
+                                        CornerRadius="0,35,35,0"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Left"
+                                                      VerticalAlignment="Center"
+                                                      Margin="50,0,0,0"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+
+                <StackPanel Margin="0,30,0,0">
+                    <Button Content="Utility"
+                            FontSize="35"
+                            FontFamily="Arial"
+                            Foreground="White"
+                            HorizontalAlignment="Left">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#bd7e4a"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#a26838"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="340"
+                                        Height="50"
+                                        CornerRadius="0,35,35,0"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Left"
+                                                      VerticalAlignment="Center"
+                                                      Margin="50,0,0,0"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+
+                <StackPanel Margin="0,30,0,0">
+                    <Button Content="User Account"
+                            FontSize="35"
+                            FontFamily="Arial"
+                            Foreground="White"
+                            HorizontalAlignment="Left">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#bd7e4a"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#a26838"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="340"
+                                        Height="50"
+                                        CornerRadius="0,35,35,0"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Left"
+                                                      VerticalAlignment="Center"
+                                                      Margin="50,0,0,0"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+
+
+            </StackPanel>
+        </Grid>
+        
+        <!-- This is the ContentControl where the views will be displayed. -->
+        <ContentControl Grid.Row="0" 
+                        Grid.Column="1" 
+                        Grid.ColumnSpan="5" 
+                        Grid.RowSpan="5"
+                        Content="{Binding}"/>
     </Grid>
 </Window>
