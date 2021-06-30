@@ -54,7 +54,7 @@
                             </Button.Template>
 
                             <StackPanel>
-                                <Image Source="images/minimize.png"
+                                <Image Source="../images/minimize.png"
                                    Width="30"
                                    RenderOptions.BitmapScalingMode="Fant"
                                        />
@@ -85,7 +85,7 @@
                             </Button.Template>
 
                             <StackPanel>
-                                <Image Source="images/maximize.png"
+                                <Image Source="../images/maximize.png"
                                    Width="30"
                                    RenderOptions.BitmapScalingMode="Fant"
                                        />
@@ -271,7 +271,7 @@
                                 </Button.Template>
 
                                 <StackPanel>
-                                    <Image Source="images/backup.png"
+                                    <Image Source="../images/backup.png"
                                            Width="30"
                                            RenderOptions.BitmapScalingMode="Fant"/>
                                 </StackPanel>
@@ -432,7 +432,7 @@
                                                     </Button.Template>
 
                                                     <StackPanel>
-                                                        <Image Source="images/next.png"
+                                                        <Image Source="../images/next.png"
                                                            Width="30"
                                                            RenderOptions.BitmapScalingMode="Fant"/>
                                                     </StackPanel>
@@ -475,7 +475,7 @@
                                                     </Button.Template>
 
                                                     <StackPanel>
-                                                        <Image Source="images/person.png"
+                                                        <Image Source="../images/person.png"
                                                            Width="30"
                                                            RenderOptions.BitmapScalingMode="Fant"/>
                                                     </StackPanel>
