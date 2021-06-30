@@ -7,54 +7,504 @@
              xmlns:component="clr-namespace:pimsdentistako.Components"
              xmlns:viewmodels="clr-namespace:pimsdentistako.ViewModels"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="800">
+             d:DesignHeight="1080" d:DesignWidth="1390">
     <Grid Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <DockPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="2">
-            <StackPanel>
-                <TextBlock HorizontalAlignment="Center"
-                           Text="Dashboard"
-                           FontSize="40"
-                           Margin="0 20 0 40"/>
-                <Border BorderBrush="Black"
-                        BorderThickness="1"
-                        CornerRadius="20"
-                        Margin="24 0 24 24">
-                    <StackPanel>
-                        <TextBlock Text="Remaining Appointments"
-                               FontSize="24"
-                               HorizontalAlignment="Center"
-                               TextWrapping="Wrap"
-                               TextAlignment="Center"
-                               Margin="10 0 10 0"/>
-                        <TextBlock Text="N"
-                               FontSize="24"
-                               FontWeight="Bold"
-                               HorizontalAlignment="Center"/>
+
+        <Grid Grid.Column="1">
+            <StackPanel Margin="30,30,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <!-- Dashboard Title -->
+                    <TextBlock Name="Header" Text="Dashboard" 
+                           FontFamily="Rounded Elegance"
+                           FontSize="110"
+                           Foreground="#191715"/>
+
+                    <!-- Minimize Maximize Close -->
+                    <StackPanel Orientation="Horizontal"
+                                Margin="590,0,0,0"
+                                VerticalAlignment="Top">
+                        <!-- Minimize -->
+                        <Button Width="40"
+                                Height="40">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Cursor" Value="Hand"/>
+                                </Style>
+                            </Button.Style>
+
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Width="40"
+                                        Height="40"
+                                        CornerRadius="5"
+                                        BorderBrush=" #191715"
+                                            BorderThickness="2">
+                                        <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"
+                                                      Margin="0,0,0,0"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+
+                            <StackPanel>
+                                <Image Source="images/minimize.png"
+                                   Width="30"
+                                   RenderOptions.BitmapScalingMode="Fant"
+                                       />
+                            </StackPanel>
+                        </Button>
+                        <!-- Maximize -->
+                        <Button Width="40"
+                                Height="40"
+                                Margin="10,0,0,0">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Cursor" Value="Hand"/>
+                                </Style>
+                            </Button.Style>
+
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Width="40"
+                                        Height="40"
+                                        CornerRadius="5"
+                                        BorderBrush=" #191715"
+                                            BorderThickness="2">
+                                        <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"
+                                                      Margin="0,0,0,0"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+
+                            <StackPanel>
+                                <Image Source="images/maximize.png"
+                                   Width="30"
+                                   RenderOptions.BitmapScalingMode="Fant"
+                                       />
+                            </StackPanel>
+                        </Button>
+                        <!-- Close -->
+                        <Button Width="40"
+                            Height="40"
+                            Margin="10,0,0,0">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Cursor" Value="Hand"/>
+                                </Style>
+                            </Button.Style>
+
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Width="40"
+                                        Height="40"
+                                        CornerRadius="5"
+                                        BorderBrush=" #191715"
+                                            BorderThickness="2">
+                                        <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"
+                                                      Margin="0,0,0,0"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+
+                            <StackPanel>
+                                <Image Source="images/close.png"
+                                   Width="30"
+                                   RenderOptions.BitmapScalingMode="Fant"
+                                       />
+                            </StackPanel>
+                        </Button>
                     </StackPanel>
-                </Border>
+                </StackPanel>
+
+                <!-- Status Report and Statistics -->
+                <StackPanel Margin="10,-20,0,0">
+                    <TextBlock Text="S t a t u s   R e p o r t   &amp;   S t a t i s t i c s"
+                           FontFamily="Rounded Elegance"
+                           FontSize="25"
+                           Foreground="#502e18"
+                           TextOptions.TextFormattingMode="Display"
+                           />
+                </StackPanel>
+
+                <!-- Status and Calendar-->
+                <StackPanel Orientation="Horizontal">
+                    <!--Status-->
+                    <StackPanel>
+                        <!-- Patients -->
+                        <StackPanel Margin="0,40,0,0">
+                            <Border Width="340"
+                                Height="200"
+                                CornerRadius="40"
+                                BorderBrush=" #191715"
+                                BorderThickness="2">
+                                <StackPanel Margin="20">
+                                    <TextBlock Text="You currently have"
+                                           FontSize="25"
+                                           FontFamily="Rounded Elegance"
+                                           HorizontalAlignment="Right"/>
+                                    <TextBlock Text="324"
+                                           FontSize="70"
+                                           FontFamily="LEMON MILK Regular"
+                                           HorizontalAlignment="Right"/>
+                                    <TextBlock Text="patients."
+                                           FontSize="25"
+                                           FontFamily="Rounded Elegance"
+                                           HorizontalAlignment="Right"
+                                           Foreground=" #c09764"/>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                        <!-- Appointments -->
+                        <StackPanel Margin="0,15,0,0">
+                            <Border Width="340"
+                                Height="200"
+                                CornerRadius="40"
+                                BorderBrush=" #191715"
+                                BorderThickness="2">
+                                <StackPanel Margin="20">
+                                    <TextBlock Text="You have"
+                                           FontSize="25"
+                                           FontFamily="Rounded Elegance"
+                                           HorizontalAlignment="Right"/>
+                                    <TextBlock Text="6"
+                                           FontSize="70"
+                                           FontFamily="LEMON MILK Regular"
+                                           HorizontalAlignment="Right"/>
+
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                        <TextBlock Text="appointments"
+                                           FontSize="25"
+                                           FontFamily="Rounded Elegance"
+                                           HorizontalAlignment="Right"
+                                           Foreground=" #c09764"/>
+                                        <TextBlock Text="  today."
+                                           FontSize="25"
+                                           FontFamily="Rounded Elegance"
+                                           HorizontalAlignment="Right"
+                                           Foreground="#191715"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+
+                        <!-- Report Button -->
+                        <StackPanel Orientation="Horizontal" Margin="20,30,0,0"
+                                    HorizontalAlignment="Left">
+                            <Button Width="50"
+                            Height="50">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="#191715"/>
+                                        <Setter Property="Cursor" Value="Hand"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#502e18"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Width="50"
+                                        Height="50"
+                                        CornerRadius="100"
+                                        Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"
+                                                      Margin="0,0,0,0"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+
+                                <StackPanel>
+                                    <Image Source="images/report.png"
+                                           Width="30"
+                                           RenderOptions.BitmapScalingMode="Fant"/>
+                                </StackPanel>
+                            </Button>
+                            <StackPanel VerticalAlignment="Center" Margin="20">
+                                <TextBlock Text="View the Reports"
+                               Foreground="#191715"
+                               FontFamily="Rounded Elegance"
+                               FontSize="20"
+                               />
+                            </StackPanel>
+                        </StackPanel>
+                        <!-- Backup Button -->
+                        <StackPanel Orientation="Horizontal" Margin="20,30,0,0"
+                                    HorizontalAlignment="Left">
+                            <Button Width="50"
+                            Height="50">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="#191715"/>
+                                        <Setter Property="Cursor" Value="Hand"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#502e18"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Width="50"
+                                        Height="50"
+                                        CornerRadius="100"
+                                        Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"
+                                                      Margin="0,0,0,0"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+
+                                <StackPanel>
+                                    <Image Source="images/backup.png"
+                                           Width="30"
+                                           RenderOptions.BitmapScalingMode="Fant"/>
+                                </StackPanel>
+                            </Button>
+
+                            <StackPanel VerticalAlignment="Center" Margin="20">
+                                <TextBlock Text="Backup your Data"
+                               Foreground="#191715"
+                               FontFamily="Rounded Elegance"
+                               FontSize="20"
+                               />
+                            </StackPanel>
+                        </StackPanel>
+
+                        <!-- Time -->
+                        <StackPanel Margin="0,100,0,0">
+                            <TextBlock Text="6/21/2021"
+                                       Foreground="#191715"
+                                       FontFamily="Rounded Elegance"
+                                       FontSize="25"/>
+                            <TextBlock Text="10:07 AM"
+                                       Foreground="#191715"
+                                       FontFamily="LEMON MILK"
+                                       FontSize="60"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!-- Calendar -->
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel>
+                                <Border Background="#83502e" CornerRadius="40" Margin="35,35,35,40">
+                                    <Image Height="540"
+                                   Width="950"/>
+                                </Border>
+                            </StackPanel>
+
+                            <StackPanel>
+                                <Border Background="#191715" CornerRadius="40" Margin="-500,0,0,0"
+                                Width="400"
+                                Height="70">
+                                    <TextBlock Text="JUNE 2021"
+                                       Foreground="White"
+                                       FontSize="40"
+                                       FontFamily="LEMON MILK"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"/>
+                                </Border>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <!-- Patient Status -->
+                        <StackPanel>
+                            <StackPanel>
+                                <Border BorderBrush="#191715"
+                                    Height="235"
+                                    Width="950"
+                                    BorderThickness="2"
+                                    CornerRadius="40">
+                                    <StackPanel Margin="40,40,0,0" Orientation="Horizontal">
+                                        <!-- Personal Details -->
+                                        <StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="Name of Patient:"
+                                                       FontSize="20"
+                                                       FontFamily="LEMON MILK Light"/>
+                                                <TextBlock Text="Cruz Jr., Alberto"
+                                                       FontSize="20"
+                                                       FontFamily="Rounded Elegance"
+                                                       Margin="10,0,0,0"
+                                                       VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal"
+                                                    Margin="0,5,0,0">
+                                                <TextBlock Text="Contact No:"
+                                                       FontSize="20"
+                                                       FontFamily="LEMON MILK Light"/>
+                                                <TextBlock Text="09292903671"
+                                                       FontSize="20"
+                                                       FontFamily="Rounded Elegance"
+                                                       Margin="10,0,0,0"
+                                                       VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal"
+                                                    Margin="0,5,0,0">
+                                                <TextBlock Text="Time of Appointment"
+                                                       FontSize="20"
+                                                       FontFamily="LEMON MILK Light"/>
+                                                <TextBlock Text="8:00 AM - June 16, 2021"
+                                                       FontSize="20"
+                                                       FontFamily="Rounded Elegance"
+                                                       Margin="10,0,0,0"
+                                                       VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal"
+                                                    Margin="0,5,0,0">
+                                                <TextBlock Text="Reason:"
+                                                       FontSize="20"
+                                                       FontFamily="LEMON MILK Light"/>
+                                                <TextBlock Text="Daily Bracket Cleanup"
+                                                       FontSize="20"
+                                                       FontFamily="Rounded Elegance"
+                                                       Margin="10,0,0,0"
+                                                       VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal"
+                                                    Margin="0,5,0,0" Height="69">
+                                                <TextBlock Text="Additional Notes (If Any):"
+                                                       FontSize="20"
+                                                       FontFamily="LEMON MILK Light"/>
+                                                <TextBlock Text="Matagal nang hindi bumabalik para mapalitan ang rubber ng brackets niya."
+                                                       FontSize="20"
+                                                       FontFamily="Rounded Elegance"
+                                                       Margin="10,0,0,0"
+                                                       TextWrapping="Wrap" Width="413"/>
+                                            </StackPanel>
+                                        </StackPanel>
+
+                                        <!-- Patient Buttons -->
+                                        <StackPanel Margin="35,60,0,0">
+                                            <!-- Next Patient -->
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="-20,0,0,10">
+                                                <TextBlock Text="Next Patient"
+                                                           Foreground="#191715"
+                                                           FontFamily="Rounded Elegance"
+                                                           FontSize="15"
+                                                           VerticalAlignment="Center"
+                                                           Margin="0,0,10,0"
+                                                           />
+                                                <Button Width="50"
+                                                    Height="50">
+                                                    <Button.Style>
+                                                        <Style TargetType="Button">
+                                                            <Setter Property="Background" Value="#191715"/>
+                                                            <Setter Property="Cursor" Value="Hand"/>
+                                                            <Style.Triggers>
+                                                                <Trigger Property="IsMouseOver" Value="True">
+                                                                    <Setter Property="Background" Value="#502e18"/>
+                                                                </Trigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </Button.Style>
+
+                                                    <Button.Template>
+                                                        <ControlTemplate TargetType="Button">
+                                                            <Border Width="50"
+                                                                Height="50"
+                                                                CornerRadius="100"
+                                                                Background="{TemplateBinding Background}">
+                                                                <ContentPresenter VerticalAlignment="Center"
+                                                                              HorizontalAlignment="Center"
+                                                                              Margin="0,0,0,0"/>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Button.Template>
+
+                                                    <StackPanel>
+                                                        <Image Source="images/next.png"
+                                                           Width="30"
+                                                           RenderOptions.BitmapScalingMode="Fant"/>
+                                                    </StackPanel>
+                                                </Button>
+                                            </StackPanel>
+
+                                            <!-- Additional Details -->
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                                <TextBlock Text="Details"
+                                                           Foreground="#191715"
+                                                           FontFamily="Rounded Elegance"
+                                                           FontSize="15"
+                                                           VerticalAlignment="Center"
+                                                           Margin="0,0,10,0"/>
+                                                <Button Width="50"
+                                                    Height="50">
+                                                    <Button.Style>
+                                                        <Style TargetType="Button">
+                                                            <Setter Property="Background" Value="#191715"/>
+                                                            <Setter Property="Cursor" Value="Hand"/>
+                                                            <Style.Triggers>
+                                                                <Trigger Property="IsMouseOver" Value="True">
+                                                                    <Setter Property="Background" Value="#502e18"/>
+                                                                </Trigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </Button.Style>
+
+                                                    <Button.Template>
+                                                        <ControlTemplate TargetType="Button">
+                                                            <Border Width="50"
+                                                                Height="50"
+                                                                CornerRadius="100"
+                                                                Background="{TemplateBinding Background}">
+                                                                <ContentPresenter VerticalAlignment="Center"
+                                                                              HorizontalAlignment="Center"
+                                                                              Margin="0,0,0,0"/>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Button.Template>
+
+                                                    <StackPanel>
+                                                        <Image Source="images/person.png"
+                                                           Width="30"
+                                                           RenderOptions.BitmapScalingMode="Fant"/>
+                                                    </StackPanel>
+                                                </Button>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Border>
+                            </StackPanel>
+
+                            <StackPanel>
+                                <Border Background="#191715" CornerRadius="30" Margin="-570,-470,0,0"
+                                Width="350"
+                                Height="55">
+                                    <TextBlock Text="Patient No.1"
+                                       Foreground="White"
+                                       FontSize="30"
+                                       FontFamily="LEMON MILK"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"/>
+                                </Border>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
             </StackPanel>
-        </DockPanel>
-        <StackPanel Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="5">
+        </Grid>
+
+        <!-- <StackPanel Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="5">
             <component:CustomCalendar x:Name="CustomCalendar" Margin="30" MouseLeave="onMouseLeave_CC"/>
             <Button Content="Show Date"
                     Height="auto"
                     FontSize="20"
                     Margin="50 0 50 0"
                     x:Name="showDateBtn" Click="showDateBtn_Click"/>
-        </StackPanel>
+        </StackPanel> -->
+        
     </Grid>
 </UserControl>
