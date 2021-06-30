@@ -29,25 +29,27 @@
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
-        <Grid Grid.Column="0"
-              Background="#191715">
+
+        <Grid Background="#191715" Grid.Column="0" MaxWidth="520" HorizontalAlignment="Left">
             <Viewbox Stretch="Uniform">
                 <StackPanel>
                     <!-- Upper Header -->
                     <StackPanel HorizontalAlignment="Center">
-                        <TextBlock Text="D  E  N  T  I  S  T  A    K  O"
+                        <TextBlock
+                           Text="D  E  N  T  I  S  T  A    K  O"
                            Foreground="White"
                            FontSize="35"
-                           Margin="0,25,0,0" FontFamily="Rounded Elegance"
-                           />
+                           Margin="0,25,0,0" 
+                           FontFamily="Rounded Elegance"/>
                     </StackPanel>
                     <!-- Icon & Greetings -->
                     <StackPanel Orientation="Horizontal">
-                        <Grid MaxHeight="150" Width="150" Margin="60,30,0,0" HorizontalAlignment="Left">
+                        <Grid Height="150" Width="150" Margin="60,30,0,0" HorizontalAlignment="Left">
                             <Border Name="mask" Background ="White" CornerRadius="50"/>
                             <StackPanel>
                                 <StackPanel.OpacityMask>
@@ -290,7 +292,7 @@
         </Grid>
 
         <!-- This is the ContentControl where the views will be displayed. -->
-        <Viewbox Stretch="Uniform" Grid.Column="1">
+        <Viewbox Stretch="Uniform" Grid.Column="1" Grid.ColumnSpan="3">
             <ContentControl
                         Content="{Binding}"/>
         </Viewbox>
