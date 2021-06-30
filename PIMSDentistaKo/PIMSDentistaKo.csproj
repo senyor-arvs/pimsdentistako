@@ -7,11 +7,47 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\img\profile_picture.jpg" />
+    <None Remove="images\backup.png" />
+    <None Remove="images\close.png" />
+    <None Remove="images\home.png" />
+    <None Remove="images\Klee.jpg" />
+    <None Remove="images\logo.png" />
+    <None Remove="images\maximize.png" />
+    <None Remove="images\minimize.png" />
+    <None Remove="images\next.png" />
+    <None Remove="images\person.png" />
+    <None Remove="images\report.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\img\profile_picture.jpg">
+    <Resource Include="images\backup.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\close.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\Klee.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\maximize.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\minimize.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\next.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\person.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\report.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
