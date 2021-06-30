@@ -33,5 +33,10 @@ namespace pimsdentistako.Views
         private void onMouseLeave_CC(object sender, MouseEventArgs e)
         {
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

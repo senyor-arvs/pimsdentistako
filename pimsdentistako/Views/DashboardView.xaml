@@ -196,7 +196,7 @@
                         <StackPanel Orientation="Horizontal" Margin="20,30,0,0"
                                     HorizontalAlignment="Left">
                             <Button Width="50"
-                            Height="50">
+                            Height="50" Click="Button_Click">
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#191715"/>
