@@ -23,7 +23,6 @@ D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debu
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.baml
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.g.cs
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.baml
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csprojAssemblyReference.cache
 E:\Programming\C#\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.exe
 E:\Programming\C#\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.deps.json
 E:\Programming\C#\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.json
@@ -50,3 +49,34 @@ E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdent
 E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.pdb
 E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.genruntimeconfig.cache
 E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.AssemblyReference.cache
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.Properties.Resources.resources
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.GenerateResource.cache
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csprojAssemblyReference.cache
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.exe
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.deps.json
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.json
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.dev.json
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.dll
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.pdb
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.AssemblyReference.cache
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.g.cs
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.g.cs
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.g.cs
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.cache
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.lref
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.baml
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.baml
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.baml
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.g.resources
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.Properties.Resources.resources
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.GenerateResource.cache
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfoInputs.cache
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfo.cs
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.CoreCompileInputs.cache
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.dll
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.pdb
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.genruntimeconfig.cache
