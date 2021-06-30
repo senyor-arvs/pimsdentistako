@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\obj\Debug\netcoreapp3.1\
 pimsdentistako
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\App.xaml
-41660784742
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+C:\Users\RCS\Desktop\PROJECT ELECTIVES\pimsdentistako\App.xaml
+4-954840522
 
-11-1800891496
-1921654412462
+11-1283186747
+192-1533232326
 Components\CustomCalendar.xaml;MainWindow.xaml;Views\DashboardView.xaml;Views\TransactionView.xaml;
 
 False
