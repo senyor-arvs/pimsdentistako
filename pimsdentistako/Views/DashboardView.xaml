@@ -16,6 +16,7 @@
         <Grid Grid.Column="1">
             <StackPanel Margin="30,30,0,0">
                 <StackPanel Orientation="Horizontal">
+                    
                     <!-- Dashboard Title -->
                     <TextBlock Name="Header" Text="Dashboard" 
                            FontFamily="Rounded Elegance"
@@ -112,7 +113,7 @@
                             </Button.Template>
 
                             <StackPanel>
-                                <Image Source="images/close.png"
+                                <Image Source="../images/close.png"
                                    Width="30"
                                    RenderOptions.BitmapScalingMode="Fant"
                                        />
@@ -223,7 +224,7 @@
                                 </Button.Template>
 
                                 <StackPanel>
-                                    <Image Source="images/report.png"
+                                    <Image Source="../images/report.png"
                                            Width="30"
                                            RenderOptions.BitmapScalingMode="Fant"/>
                                 </StackPanel>

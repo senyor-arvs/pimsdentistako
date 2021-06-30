@@ -16,7 +16,7 @@
     >
     
     <Window.Resources>
-        <!-- dashboardView sample -->
+        <!-- dashboardView sample dasfdsa-->
         <DataTemplate x:Name="dashboardView" DataType="{x:Type viewmodels:DashboardViewModel}">
             <views:DashboardView/>
         </DataTemplate>
