@@ -350,5 +350,5 @@ MigrationBackup/
 .ionide/
 
 .vs/PIMSDentistaKo/v16/
-pimsdentistako/bin/Debug/netcoreapp3.1/
+pimsdentistako/bin/Debug/
 pimsdentistako/obj/
