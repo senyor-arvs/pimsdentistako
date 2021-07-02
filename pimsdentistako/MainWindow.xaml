@@ -7,11 +7,11 @@
         xmlns:views="clr-namespace:pimsdentistako.Views"
         xmlns:viewmodels="clr-namespace:pimsdentistako.ViewModels"
         mc:Ignorable="d"
-        
-        
         WindowStartupLocation="CenterScreen"
         WindowState="Normal"
         Title="MainWindow" Height="1040" Width="1920"
+        WindowStyle="None"
+        ResizeMode="NoResize"
         >
 
     <!--WindowStyle="None"
@@ -150,7 +150,8 @@
                             FontSize="32"
                             FontFamily="Rounded Elegance"
                             Foreground="White"
-                            Name="transactionsBtn">
+                            Name="transactionsBtn"
+                            Click="transactionsBtn_Click">
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Background" Value="#bd7e4a"/>
