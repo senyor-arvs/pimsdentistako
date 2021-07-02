@@ -14,8 +14,7 @@
         ResizeMode="NoResize"
         >
 
-    <!--WindowStyle="None"
-    ResizeMode="NoResize"-->
+   
 
     <Window.Resources>
         <!-- dashboardView sample -->
