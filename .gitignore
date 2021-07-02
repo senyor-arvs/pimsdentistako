@@ -349,6 +349,6 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
-.vs/PIMSDentistaKo/v16
+.vs/PIMSDentistaKo/v16/
 pimsdentistako/bin/Debug/netcoreapp3.1/
 pimsdentistako/obj/
