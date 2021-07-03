@@ -7,7 +7,10 @@
              xmlns:component="clr-namespace:pimsdentistako.Components"
              xmlns:viewmodels="clr-namespace:pimsdentistako.ViewModels"
              mc:Ignorable="d" 
-             d:DesignHeight="1080" d:DesignWidth="1390">
+             Height="auto" Width="auto"
+             >
+
+    <!-- d:DesignHeight="1080" d:DesignWidth="1390"-->
     <Grid Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -16,7 +19,7 @@
         <Grid Grid.Column="0">
             <StackPanel Margin="30,30,0,0">
                 <StackPanel Orientation="Horizontal">
-                    
+
                     <!-- Dashboard Title -->
                     <TextBlock Name="Header" Text="Dashboard" 
                            FontFamily="Rounded Elegance"
@@ -51,7 +54,7 @@
                             </Button.Template>
 
                             <StackPanel>
-                                <Image Source="images/minimize.png"
+                                <Image Source="../images/minimize.png"
                                    Width="30"
                                    RenderOptions.BitmapScalingMode="Fant"
                                        />
@@ -82,7 +85,7 @@
                             </Button.Template>
 
                             <StackPanel>
-                                <Image Source="images/maximize.png"
+                                <Image Source="../images/maximize.png"
                                    Width="30"
                                    RenderOptions.BitmapScalingMode="Fant"
                                        />
@@ -268,7 +271,7 @@
                                 </Button.Template>
 
                                 <StackPanel>
-                                    <Image Source="images/backup.png"
+                                    <Image Source="../images/backup.png"
                                            Width="30"
                                            RenderOptions.BitmapScalingMode="Fant"/>
                                 </StackPanel>
@@ -301,8 +304,10 @@
                         <StackPanel Orientation="Horizontal">
                             <StackPanel>
                                 <Border Background="#83502e" CornerRadius="40" Margin="35,35,35,40">
-                                    <Image Height="540"
-                                   Width="950"/>
+                                    <Viewbox Height="540"
+                                   Width="950">
+                                        <component:CustomCalendar  />
+                                    </Viewbox>
                                 </Border>
                             </StackPanel>
 
@@ -310,7 +315,7 @@
                                 <Border Background="#191715" CornerRadius="40" Margin="-500,0,0,0"
                                 Width="400"
                                 Height="70">
-                                    <TextBlock Text="JUNE 2021"
+                                    <TextBlock Text="{Binding }"
                                        Foreground="White"
                                        FontSize="40"
                                        FontFamily="LEMON MILK"
@@ -327,7 +332,8 @@
                                     Height="235"
                                     Width="950"
                                     BorderThickness="2"
-                                    CornerRadius="40">
+                                    CornerRadius="40"
+                                    Margin="0 0 0 30">
                                     <StackPanel Margin="40,40,0,0" Orientation="Horizontal">
                                         <!-- Personal Details -->
                                         <StackPanel>
@@ -426,7 +432,7 @@
                                                     </Button.Template>
 
                                                     <StackPanel>
-                                                        <Image Source="images/next.png"
+                                                        <Image Source="../images/next.png"
                                                            Width="30"
                                                            RenderOptions.BitmapScalingMode="Fant"/>
                                                     </StackPanel>
@@ -469,7 +475,7 @@
                                                     </Button.Template>
 
                                                     <StackPanel>
-                                                        <Image Source="images/person.png"
+                                                        <Image Source="../images/person.png"
                                                            Width="30"
                                                            RenderOptions.BitmapScalingMode="Fant"/>
                                                     </StackPanel>
@@ -481,7 +487,7 @@
                             </StackPanel>
 
                             <StackPanel>
-                                <Border Background="#191715" CornerRadius="30" Margin="-570,-470,0,0"
+                                <Border Background="#191715" CornerRadius="30" Margin="-570,-470,0,60"
                                 Width="350"
                                 Height="55">
                                     <TextBlock Text="Patient No.1"
@@ -506,6 +512,6 @@
                     Margin="50 0 50 0"
                     x:Name="showDateBtn" Click="showDateBtn_Click"/>
         </StackPanel> -->
-        
+
     </Grid>
 </UserControl>

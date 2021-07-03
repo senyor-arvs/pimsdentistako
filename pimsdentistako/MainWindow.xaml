@@ -7,17 +7,17 @@
         xmlns:views="clr-namespace:pimsdentistako.Views"
         xmlns:viewmodels="clr-namespace:pimsdentistako.ViewModels"
         mc:Ignorable="d"
-        ResizeMode="CanResize"
-        
         WindowStartupLocation="CenterScreen"
         WindowState="Normal"
-        Title="MainWindow" Height="1024" Width="1280"
+        Title="MainWindow" Height="1080" Width="1920"
         WindowStyle="None"
-        Name="MainScreen"
-    >
-    
+        ResizeMode="NoResize"
+        >
+
+   
+
     <Window.Resources>
-        <!-- dashboardView sample-->
+        <!-- dashboardView sample -->
         <DataTemplate x:Name="dashboardView" DataType="{x:Type viewmodels:DashboardViewModel}">
             <views:DashboardView/>
         </DataTemplate>
@@ -26,33 +26,29 @@
             <views:TransactionView/>
         </DataTemplate>
     </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
-
-    <Viewbox HorizontalAlignment="Left"
-             Stretch="Uniform"
-             >
-        
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="530"/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-
-            <Grid Grid.Column="0"
-              Background="#191715">
+        <Grid Background="#191715" Grid.Column="0" MaxWidth="520" HorizontalAlignment="Left">
+            <Viewbox Stretch="Uniform">
                 <StackPanel>
                     <!-- Upper Header -->
                     <StackPanel HorizontalAlignment="Center">
-                        <TextBlock Text="D  E  N  T  I  S  T  A    K  O"
+                        <TextBlock
+                           Text="D  E  N  T  I  S  T  A    K  O"
                            Foreground="White"
                            FontSize="35"
-                           Margin="0,25,0,0" FontFamily="Rounded Elegance"
-                               Name="DentistaKoLabel"
-                           />
+                           Margin="0,25,0,0" 
+                           FontFamily="Rounded Elegance"/>
                     </StackPanel>
                     <!-- Icon & Greetings -->
                     <StackPanel Orientation="Horizontal">
-                        <Grid MaxHeight="150" Width="150" Margin="60,30,0,0" HorizontalAlignment="Left">
+                        <Grid Height="150" Width="150" Margin="60,30,0,0" HorizontalAlignment="Left">
                             <Border Name="mask" Background ="White" CornerRadius="50"/>
                             <StackPanel>
                                 <StackPanel.OpacityMask>
@@ -61,7 +57,7 @@
                                 <Image Source="images/Klee.jpg"
                             Width="150"
                             Height="150"
-                            />
+                            RenderOptions.BitmapScalingMode="Fant"/>
                             </StackPanel>
                         </Grid>
 
@@ -153,7 +149,8 @@
                             FontSize="32"
                             FontFamily="Rounded Elegance"
                             Foreground="White"
-                            Name="transactionsBtn">
+                            Name="transactionsBtn"
+                            Click="transactionsBtn_Click">
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Background" Value="#bd7e4a"/>
@@ -291,12 +288,13 @@
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
-            </Grid>
-
-            <!-- This is the ContentControl where the views will be displayed. -->
-            <ContentControl Grid.Column="1" 
-                        Content="{Binding}"/>
+            </Viewbox>
         </Grid>
-    </Viewbox>
-    
+
+        <!-- This is the ContentControl where the views will be displayed. -->
+        <Viewbox Stretch="Uniform" Grid.Column="1" Grid.ColumnSpan="3">
+            <ContentControl
+                        Content="{Binding}"/>
+        </Viewbox>
+    </Grid>
 </Window>

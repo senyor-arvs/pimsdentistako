@@ -26,11 +26,6 @@ namespace pimsdentistako
         {
             InitializeComponent();
             DataContext = new DashboardViewModel();
-
-            double setPercentage = 0.95;
-            MainScreen.Height = 1080* setPercentage;
-            MainScreen.Width = 1920* setPercentage;
-            DentistaKoLabel.FontSize = 35 * setPercentage;
         }
 
         private void ProfilePicture_LeftClick(object sender, MouseButtonEventArgs e)
