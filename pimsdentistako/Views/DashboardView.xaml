@@ -27,101 +27,106 @@
                            Foreground="#191715"/>
 
                     <!-- Minimize Maximize Close -->
-                    <StackPanel Orientation="Horizontal"
-                                Margin="590,0,0,0"
-                                VerticalAlignment="Top">
-                        <!-- Minimize -->
-                        <Button Width="40"
-                                Height="40">
-                            <Button.Style>
-                                <Style TargetType="Button">
-                                    <Setter Property="Cursor" Value="Hand"/>
-                                </Style>
-                            </Button.Style>
 
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <Border Width="40"
+                    <StackPanel Orientation="Horizontal"
+                                Margin="630,0,0,0"
+                                VerticalAlignment="Top">
+                        <Viewbox Width="100">
+                            <StackPanel Orientation="Horizontal">
+                                <!-- Minimize -->
+                                <Button Width="40"
+                                Height="40">
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Setter Property="Cursor" Value="Hand"/>
+                                        </Style>
+                                    </Button.Style>
+
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Width="40"
                                         Height="40"
                                         CornerRadius="5"
                                         BorderBrush=" #191715"
                                             BorderThickness="2">
-                                        <ContentPresenter VerticalAlignment="Center"
+                                                <ContentPresenter VerticalAlignment="Center"
                                                       HorizontalAlignment="Center"
                                                       Margin="0,0,0,0"/>
-                                    </Border>
-                                </ControlTemplate>
-                            </Button.Template>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
 
-                            <StackPanel>
-                                <Image Source="../images/minimize.png"
+                                    <StackPanel>
+                                        <Image Source="../images/minimize.png"
                                    Width="30"
                                    RenderOptions.BitmapScalingMode="Fant"
                                        />
-                            </StackPanel>
-                        </Button>
-                        <!-- Maximize -->
-                        <Button Width="40"
+                                    </StackPanel>
+                                </Button>
+                                <!-- Maximize -->
+                                <Button Width="40"
                                 Height="40"
                                 Margin="10,0,0,0">
-                            <Button.Style>
-                                <Style TargetType="Button">
-                                    <Setter Property="Cursor" Value="Hand"/>
-                                </Style>
-                            </Button.Style>
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Setter Property="Cursor" Value="Hand"/>
+                                        </Style>
+                                    </Button.Style>
 
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <Border Width="40"
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Width="40"
                                         Height="40"
                                         CornerRadius="5"
                                         BorderBrush=" #191715"
                                             BorderThickness="2">
-                                        <ContentPresenter VerticalAlignment="Center"
+                                                <ContentPresenter VerticalAlignment="Center"
                                                       HorizontalAlignment="Center"
                                                       Margin="0,0,0,0"/>
-                                    </Border>
-                                </ControlTemplate>
-                            </Button.Template>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
 
-                            <StackPanel>
-                                <Image Source="../images/maximize.png"
+                                    <StackPanel>
+                                        <Image Source="../images/maximize.png"
                                    Width="30"
                                    RenderOptions.BitmapScalingMode="Fant"
                                        />
-                            </StackPanel>
-                        </Button>
-                        <!-- Close -->
-                        <Button Width="40"
+                                    </StackPanel>
+                                </Button>
+                                <!-- Close -->
+                                <Button Width="40"
                             Height="40"
                             Margin="10,0,0,0">
-                            <Button.Style>
-                                <Style TargetType="Button">
-                                    <Setter Property="Cursor" Value="Hand"/>
-                                </Style>
-                            </Button.Style>
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Setter Property="Cursor" Value="Hand"/>
+                                        </Style>
+                                    </Button.Style>
 
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <Border Width="40"
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Width="40"
                                         Height="40"
                                         CornerRadius="5"
                                         BorderBrush=" #191715"
                                             BorderThickness="2">
-                                        <ContentPresenter VerticalAlignment="Center"
+                                                <ContentPresenter VerticalAlignment="Center"
                                                       HorizontalAlignment="Center"
                                                       Margin="0,0,0,0"/>
-                                    </Border>
-                                </ControlTemplate>
-                            </Button.Template>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
 
-                            <StackPanel>
-                                <Image Source="../images/close.png"
+                                    <StackPanel>
+                                        <Image Source="../images/close.png"
                                    Width="30"
                                    RenderOptions.BitmapScalingMode="Fant"
                                        />
+                                    </StackPanel>
+                                </Button>
                             </StackPanel>
-                        </Button>
+                        </Viewbox>
                     </StackPanel>
                 </StackPanel>
 
@@ -315,7 +320,7 @@
                                 <Border Background="#191715" CornerRadius="40" Margin="-500,0,0,0"
                                 Width="400"
                                 Height="70">
-                                    <TextBlock Text="{Binding }"
+                                    <TextBlock Text=""
                                        Foreground="White"
                                        FontSize="40"
                                        FontFamily="LEMON MILK"
