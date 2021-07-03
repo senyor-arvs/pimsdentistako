@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace pimsdentistako.Views
 {
@@ -22,7 +23,15 @@ namespace pimsdentistako.Views
         public DashboardView()
         {
             InitializeComponent();
-            DataContext = new CustomCalendarViewModel();
+
+            // Initializing text components and timer
+            timeTxt.Content = DateTime.Now.ToShortTimeString();
+            DispatcherTimer timer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromSeconds(1)
+            };
+            timer.Tick += timer_Tick;
+            timer.Start();
         }
 
         private void showDateBtn_Click(object sender, RoutedEventArgs e)
@@ -38,5 +47,17 @@ namespace pimsdentistako.Views
         {
 
         }
+
+        private void customCalendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Mouse.Capture(null);
+        }
+
+        void timer_Tick(object sender, EventArgs e)
+        {
+            timeTxt.Content = DateTime.Now.ToShortTimeString();
+        }
+
+
     }
 }

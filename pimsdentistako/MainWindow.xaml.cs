@@ -25,7 +25,7 @@ namespace pimsdentistako
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new DashboardViewModel();
+            DataContext = new DashboardViewModel(DateTime.Today);
             Mainscreen.Height = 1080 * 0.95;
             Mainscreen.Width = 1920 * 0.95;
         }
@@ -54,12 +54,11 @@ namespace pimsdentistako
             if (!this.pressed)
             {
                 DataContext = new TransactionViewModel();
-                transactionsBtn.Background = Brushes.Gray; // change color to something else i guess - jedi
+                //transactionsBtn.Background = Brushes.Gray; // change color to something else i guess - jedi
                 this.pressed = true;
             } else
             {
-                DataContext = new DashboardViewModel();
-                transactionsBtn.Background = new SolidColorBrush(Color.FromRgb(189, 126, 74));
+                //transactionsBtn.Background = new SolidColorBrush(Color.FromRgb(189, 126, 74));
                 this.pressed = false;
             }
         }
@@ -78,6 +77,14 @@ namespace pimsdentistako
                 AppointmentsButton.IsEnabled = false; // drop down menu item
                 PatientsButton.IsEnabled = false; // drop down menu item
             }
+        }
+
+        private void dashboardBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new DashboardViewModel(DateTime.Today);
+            AppointmentsButton.IsEnabled = false; // drop down menu item
+            PatientsButton.IsEnabled = false; // drop down menu item
+            //transactionsBtn.Background = new SolidColorBrush(Color.FromRgb(189, 126, 74));
         }
     }
 }

@@ -4,7 +4,8 @@ using System.Text;
 
 namespace pimsdentistako.ViewModels
 {
-    class TransactionViewModel
+    class TransactionViewModel : ViewModelBase
     {
+
     }
 }

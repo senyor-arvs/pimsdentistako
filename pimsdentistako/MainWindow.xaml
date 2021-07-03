@@ -265,6 +265,9 @@
                                                 <Trigger Property="IsMouseOver" Value="True">
                                                     <Setter Property="Background" Value="#a26838"/>
                                                 </Trigger>
+                                                <Trigger Property="ClickMode" Value="Press">
+                                                    
+                                                </Trigger>
                                             </Style.Triggers>
                                         </Style>
                                     </Button.Style>
@@ -446,7 +449,8 @@
                     <Viewbox Width="200">
                         <StackPanel Orientation="Horizontal" Margin="0,50,0,30" HorizontalAlignment="Left">
                             <Button Width="50"
-                            Height="50">
+                                    Height="50"
+                                    x:Name="dashboardBtn" Click="dashboardBtn_Click">
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#bd7e4a"/>
@@ -493,8 +497,7 @@
 
         <!-- This is the ContentControl where the views will be displayed. -->
         <Viewbox Stretch="Uniform" Grid.Column="1" Grid.ColumnSpan="3">
-            <ContentControl
-                        Content="{Binding}"/>
+            <ContentControl Content="{Binding}"/>
         </Viewbox>
     </Grid>
 </Window>
