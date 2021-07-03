@@ -26,6 +26,8 @@ namespace pimsdentistako
         {
             InitializeComponent();
             DataContext = new DashboardViewModel();
+            Mainscreen.Height = 1080 * 0.95;
+            Mainscreen.Width = 1920 * 0.95;
         }
 
         private void ProfilePicture_LeftClick(object sender, MouseButtonEventArgs e)
@@ -35,10 +37,24 @@ namespace pimsdentistako
 
         private void transactionsBtn_Click(object sender, RoutedEventArgs e)
         {
+            if (AppointmentsButton.IsEnabled == true && PatientsButton.IsEnabled == true)
+            {
+                AppointmentsButton.IsEnabled = false; // drop down menu item
+                PatientsButton.IsEnabled = false; // drop down menu item
+            }
+            else 
+            {
+                AppointmentsButton.IsEnabled = true; // drop down menu item
+                PatientsButton.IsEnabled = true; // drop down menu item
+                DentistButton.IsEnabled = false; // drop down menu item
+                TreatmentButton.IsEnabled = false; // drop down menu item
+            }
+            
+
             if (!this.pressed)
             {
                 DataContext = new TransactionViewModel();
-                transactionsBtn.Background = Brushes.Gray;
+                transactionsBtn.Background = Brushes.Gray; // change color to something else i guess - jedi
                 this.pressed = true;
             } else
             {
@@ -46,7 +62,22 @@ namespace pimsdentistako
                 transactionsBtn.Background = new SolidColorBrush(Color.FromRgb(189, 126, 74));
                 this.pressed = false;
             }
-            
+        }
+
+        private void Master_File_Click(object sender, RoutedEventArgs e)
+        {
+            if (DentistButton.IsEnabled == true && TreatmentButton.IsEnabled == true)
+            {
+                DentistButton.IsEnabled = false; // drop down menu item
+                TreatmentButton.IsEnabled = false; // drop down menu item
+            }
+            else 
+            {
+                DentistButton.IsEnabled = true; // drop down menu item
+                TreatmentButton.IsEnabled = true; // drop down menu item
+                AppointmentsButton.IsEnabled = false; // drop down menu item
+                PatientsButton.IsEnabled = false; // drop down menu item
+            }
         }
     }
 }
