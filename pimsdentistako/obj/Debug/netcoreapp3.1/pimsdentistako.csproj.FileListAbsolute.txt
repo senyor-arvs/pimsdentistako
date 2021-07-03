@@ -51,3 +51,5 @@ E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdent
 E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.AssemblyReference.cache
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.Properties.Resources.resources
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.GenerateResource.cache
+E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.Properties.Resources.resources
+E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.GenerateResource.cache
