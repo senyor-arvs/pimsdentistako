@@ -1,20 +1,20 @@
 ﻿pimsdentistako
-1.0.0.0
+
 
 winexe
 C#
 .cs
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\
 pimsdentistako
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\App.xaml
+D:\arvin\Repos\pimsdentistako\App.xaml
 41660784742
 
-13-227854058
+12284186205
 1921654412462
 Components\CustomCalendar.xaml;MainWindow.xaml;Views\DashboardView.xaml;Views\TransactionView.xaml;
 
-True
+False
 

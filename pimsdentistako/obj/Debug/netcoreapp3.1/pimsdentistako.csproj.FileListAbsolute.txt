@@ -53,3 +53,55 @@ D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debu
 E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.Properties.Resources.resources
 E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.GenerateResource.cache
 E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.AssemblyReference.cache
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.exe
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.deps.json
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.json
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.dev.json
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.dll
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.pdb
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csprojAssemblyReference.cache
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.g.cs
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.g.cs
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.g.cs
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\App.g.cs
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.cache
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.lref
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.baml
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.baml
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.baml
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.baml
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.g.resources
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.Properties.Resources.resources
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.GenerateResource.cache
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfoInputs.cache
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfo.cs
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.dll
+D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.pdb
+D:\arvin\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.exe
+D:\arvin\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.deps.json
+D:\arvin\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.json
+D:\arvin\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.dev.json
+D:\arvin\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.dll
+D:\arvin\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.pdb
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csprojAssemblyReference.cache
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.g.cs
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.g.cs
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.g.cs
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\App.g.cs
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.cache
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.lref
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.baml
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.baml
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.baml
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.baml
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.g.resources
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.Properties.Resources.resources
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.GenerateResource.cache
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfoInputs.cache
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfo.cs
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.dll
+D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.pdb
