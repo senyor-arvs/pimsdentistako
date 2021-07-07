@@ -21,8 +21,11 @@
             <views:DashboardView/>
         </DataTemplate>
         <!-- Add the remaining views below -->
-        <DataTemplate x:Name="transactionView" DataType="{x:Type viewmodels:TransactionViewModel}">
-            <views:TransactionView/>
+        <DataTemplate x:Name="appointmentsView" DataType="{x:Type viewmodels:AppointmentsViewModel}">
+            <views:AppointmentsView/>
+        </DataTemplate>
+        <DataTemplate x:Name="patientsView" DataType="{x:Type viewmodels:PatientsViewModel}">
+            <views:PatientsView/>
         </DataTemplate>
     </Window.Resources>
     <Grid>
@@ -295,7 +298,7 @@
                                         Margin="80,20,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
                                         IsEnabled="False"
-                                        Name="AppointmentsButton">
+                                        Name="AppointmentsButton" Click="AppointmentsButton_Click">
                                     <Button.Style>
                                         <Style TargetType="Button">
                                             <Setter Property="Background" Value="White"/>
@@ -340,7 +343,8 @@
                                         Margin="80,20,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
                                         IsEnabled="False"
-                                        Name="PatientsButton">
+                                        Name="PatientsButton" 
+                                        Click="PatientsButton_Click">
                                     <Button.Style>
                                         <Style TargetType="Button">
                                             <Setter Property="Background" Value="White"/>

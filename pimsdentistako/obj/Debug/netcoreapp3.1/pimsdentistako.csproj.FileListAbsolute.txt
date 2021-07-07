@@ -21,8 +21,6 @@ D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debu
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.baml
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.g.cs
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.baml
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.g.cs
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.baml
 E:\Programming\C#\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.exe
 E:\Programming\C#\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.deps.json
 E:\Programming\C#\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.json
@@ -133,3 +131,8 @@ C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev
 C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.dll
 C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.pdb
 C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.genruntimeconfig.cache
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\AppointmentsView.g.cs
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\PatientsView.g.cs
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\AppointmentsView.baml
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\PatientsView.baml
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csprojAssemblyReference.cache
