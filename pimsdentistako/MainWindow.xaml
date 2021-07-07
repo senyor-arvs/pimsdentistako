@@ -13,9 +13,7 @@
         WindowStyle="None"
         ResizeMode="CanResize"
         Name="Mainscreen"
-        >
-
-   
+        MouseDown="Mainscreen_MouseDown">
 
     <Window.Resources>
         <!-- dashboardView -->
