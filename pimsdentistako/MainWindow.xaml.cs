@@ -86,5 +86,12 @@ namespace pimsdentistako
             PatientsButton.IsEnabled = false; // drop down menu item
             //transactionsBtn.Background = new SolidColorBrush(Color.FromRgb(189, 126, 74));
         }
+
+        private void Mainscreen_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            //make form draggable
+            if (e.LeftButton == MouseButtonState.Pressed)
+                this.DragMove();
+        }
     }
 }

@@ -105,3 +105,31 @@ D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInf
 D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfo.cs
 D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.dll
 D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.pdb
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.exe
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.deps.json
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.json
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.dev.json
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.dll
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.pdb
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.AssemblyReference.cache
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.g.cs
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.g.cs
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.g.cs
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.cache
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.lref
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.baml
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.baml
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.baml
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.g.resources
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.Properties.Resources.resources
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.GenerateResource.cache
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfoInputs.cache
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfo.cs
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.CoreCompileInputs.cache
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.dll
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.pdb
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.genruntimeconfig.cache
