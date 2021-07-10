@@ -598,7 +598,8 @@
 
                 <!-- Status Report and Statistics -->
                 <StackPanel Margin="10,-20,0,0">
-                    <TextBlock Text="S t a t u s   R e p o r t   &amp;   S t a t i s t i c s"
+
+                    <TextBlock TextOptions.TextRenderingMode="ClearType" Text="S t a t u s   R e p o r t   &amp;   S t a t i s t i c s"
                            FontFamily="Rounded Elegance"
                            FontSize="25"
                            Foreground="#502e18"

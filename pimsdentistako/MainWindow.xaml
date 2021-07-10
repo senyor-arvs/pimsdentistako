@@ -109,7 +109,8 @@
                     <!-- Options -->
                     <Viewbox HorizontalAlignment="Left" Width="250">
                         <StackPanel>
-                            <TextBlock Text="What would you like to do today?"
+                            <TextBlock 
+                                Text="What would you like to do today?"
                                Foreground="White"
                                FontSize="20"
                                FontFamily="Rounded Elegance"
