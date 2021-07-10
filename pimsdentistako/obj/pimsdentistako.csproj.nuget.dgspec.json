@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\RCS\\source\\repos\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj": {}
+    "C:\\Users\\RCS\\Source\\Repos\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj": {}
   },
   "projects": {
-    "C:\\Users\\RCS\\source\\repos\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj": {
+    "C:\\Users\\RCS\\Source\\Repos\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RCS\\source\\repos\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj",
+        "projectUniqueName": "C:\\Users\\RCS\\Source\\Repos\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj",
         "projectName": "pimsdentistako",
-        "projectPath": "C:\\Users\\RCS\\source\\repos\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj",
+        "projectPath": "C:\\Users\\RCS\\Source\\Repos\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj",
         "packagesPath": "C:\\Users\\RCS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RCS\\source\\repos\\pimsdentistako\\pimsdentistako\\obj\\",
+        "outputPath": "C:\\Users\\RCS\\Source\\Repos\\pimsdentistako\\pimsdentistako\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\RCS\\AppData\\Roaming\\NuGet\\NuGet.Config",
