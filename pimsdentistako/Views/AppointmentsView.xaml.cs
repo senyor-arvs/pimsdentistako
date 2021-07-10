@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace pimsdentistako.Views
 {
     /// <summary>
-    /// Interaction logic for TransactionView.xaml
+    /// Interaction logic for AppointmentsView.xaml
     /// </summary>
-    public partial class TransactionView : UserControl
+    public partial class AppointmentsView : UserControl
     {
-        public TransactionView()
+        public AppointmentsView()
         {
             InitializeComponent();
         }

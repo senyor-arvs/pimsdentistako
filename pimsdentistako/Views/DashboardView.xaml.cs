@@ -58,6 +58,40 @@ namespace pimsdentistako.Views
             timeTxt.Content = DateTime.Now.ToShortTimeString();
         }
 
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
 
+        private void btnMaximize_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = Window.GetWindow(this);
+
+            if (window.WindowState == WindowState.Maximized)
+            {
+                window.WindowState = WindowState.Normal;
+            }
+            else
+            {
+                window.WindowState = WindowState.Maximized;
+            }
+            
+        }
+      
+
+        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = Window.GetWindow(this);
+
+            if (window.WindowState == WindowState.Minimized)
+            {
+                window.WindowState = WindowState.Normal;
+            }
+            else
+            {
+                window.WindowState = WindowState.Minimized;
+            }
+
+        }
     }
 }

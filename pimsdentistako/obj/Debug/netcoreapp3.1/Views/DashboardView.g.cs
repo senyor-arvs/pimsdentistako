@@ -73,7 +73,7 @@ namespace pimsdentistako.Views {
         /// InitializeComponent
         /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.6.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.8.1.0")]
         public void InitializeComponent() {
             if (_contentLoaded) {
                 return;
@@ -89,7 +89,7 @@ namespace pimsdentistako.Views {
         }
         
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.6.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.8.1.0")]
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
@@ -101,6 +101,33 @@ namespace pimsdentistako.Views {
             this.Header = ((System.Windows.Controls.TextBlock)(target));
             return;
             case 2:
+            this.btnMinimize = ((System.Windows.Controls.Button)(target));
+            
+            #line 505 "..\..\..\..\Views\DashboardView.xaml"
+            this.btnMinimize.Click += new System.Windows.RoutedEventHandler(this.btnMinimize_Click);
+            
+            #line default
+            #line hidden
+            return;
+            case 3:
+            this.btnMaximize = ((System.Windows.Controls.Button)(target));
+            
+            #line 537 "..\..\..\..\Views\DashboardView.xaml"
+            this.btnMaximize.Click += new System.Windows.RoutedEventHandler(this.btnMaximize_Click);
+            
+            #line default
+            #line hidden
+            return;
+            case 4:
+            this.btnClose = ((System.Windows.Controls.Button)(target));
+            
+            #line 569 "..\..\..\..\Views\DashboardView.xaml"
+            this.btnClose.Click += new System.Windows.RoutedEventHandler(this.btnClose_Click);
+            
+            #line default
+            #line hidden
+            return;
+            case 5:
             
             #line 675 "..\..\..\..\Views\DashboardView.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click);

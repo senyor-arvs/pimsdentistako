@@ -53,7 +53,6 @@ namespace pimsdentistako
 
             if (!this.pressed)
             {
-                DataContext = new TransactionViewModel();
                 //transactionsBtn.Background = Brushes.Gray; // change color to something else i guess - jedi
                 this.pressed = true;
             } else
@@ -85,6 +84,23 @@ namespace pimsdentistako
             AppointmentsButton.IsEnabled = false; // drop down menu item
             PatientsButton.IsEnabled = false; // drop down menu item
             //transactionsBtn.Background = new SolidColorBrush(Color.FromRgb(189, 126, 74));
+        }
+
+        private void Mainscreen_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            //make form draggable
+            if (e.LeftButton == MouseButtonState.Pressed)
+                this.DragMove();
+        }
+
+        private void PatientsButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new PatientsViewModel();
+        }
+
+        private void AppointmentsButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new AppointmentsViewModel();
         }
     }
 }

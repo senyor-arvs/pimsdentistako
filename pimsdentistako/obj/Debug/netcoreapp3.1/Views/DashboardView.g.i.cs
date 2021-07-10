@@ -101,6 +101,7 @@ namespace pimsdentistako.Views {
             this.Header = ((System.Windows.Controls.TextBlock)(target));
             return;
             case 2:
+            this.btnMinimize = ((System.Windows.Controls.Button)(target));
             
             #line 675 "..\..\..\..\Views\DashboardView.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click);
@@ -108,10 +109,10 @@ namespace pimsdentistako.Views {
             #line default
             #line hidden
             return;
-            case 3:
+            case 6:
             this.timeTxt = ((System.Windows.Controls.Label)(target));
             return;
-            case 4:
+            case 7:
             this.myCalendar = ((System.Windows.Controls.Calendar)(target));
             
             #line 789 "..\..\..\..\Views\DashboardView.xaml"

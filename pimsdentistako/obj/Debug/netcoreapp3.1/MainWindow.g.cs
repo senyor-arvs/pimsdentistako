@@ -52,7 +52,7 @@ namespace pimsdentistako {
         #line hidden
         
         
-        #line 57 "..\..\..\MainWindow.xaml"
+        #line 58 "..\..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Border mask;
         
@@ -113,7 +113,7 @@ namespace pimsdentistako {
         /// InitializeComponent
         /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.6.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.8.1.0")]
         public void InitializeComponent() {
             if (_contentLoaded) {
                 return;
@@ -129,7 +129,7 @@ namespace pimsdentistako {
         }
         
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.6.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.8.1.0")]
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
@@ -139,6 +139,12 @@ namespace pimsdentistako {
             {
             case 1:
             this.Mainscreen = ((pimsdentistako.MainWindow)(target));
+            
+            #line 16 "..\..\..\MainWindow.xaml"
+            this.Mainscreen.MouseDown += new System.Windows.Input.MouseButtonEventHandler(this.Mainscreen_MouseDown);
+            
+            #line default
+            #line hidden
             return;
             case 2:
             this.mask = ((System.Windows.Controls.Border)(target));
@@ -168,9 +174,30 @@ namespace pimsdentistako {
             return;
             case 7:
             this.AppointmentsButton = ((System.Windows.Controls.Button)(target));
+            
+            #line 301 "..\..\..\MainWindow.xaml"
+            this.AppointmentsButton.Click += new System.Windows.RoutedEventHandler(this.AppointmentsButton_Click);
+            
+            #line default
+            #line hidden
             return;
             case 8:
             this.PatientsButton = ((System.Windows.Controls.Button)(target));
+            
+            #line 347 "..\..\..\MainWindow.xaml"
+            this.PatientsButton.Click += new System.Windows.RoutedEventHandler(this.PatientsButton_Click);
+            
+            #line default
+            #line hidden
+            return;
+            case 9:
+            this.dashboardBtn = ((System.Windows.Controls.Button)(target));
+            
+            #line 455 "..\..\..\MainWindow.xaml"
+            this.dashboardBtn.Click += new System.Windows.RoutedEventHandler(this.dashboardBtn_Click);
+            
+            #line default
+            #line hidden
             return;
             case 9:
             this.dashboardBtn = ((System.Windows.Controls.Button)(target));
