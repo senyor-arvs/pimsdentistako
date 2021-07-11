@@ -67,7 +67,7 @@
                         <!--DATA GRID-->
                         <StackPanel HorizontalAlignment="Left" 
                                     Width="750">
-                            <DataGrid Height="650" Width="700" SelectionChanged="DataGrid_SelectionChanged" FontSize="25" FontFamily="LEMON MILK" Background="#FFF7F7F7" BorderBrush="#FF688CAF" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <DataGrid x:Name="patientDataGrid" Height="650" Width="700" FontSize="25" FontFamily="LEMON MILK" Background="#FFF7F7F7" BorderBrush="#FF688CAF" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" SelectionChanged="patientDataGrid_SelectionChanged">
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Header="Patient No."/>
                                     <DataGridTextColumn Header="Patient"/>
@@ -309,8 +309,8 @@
                                         FontFamily="Rounded Elegance"
                                         Foreground="White"
                                         Margin="-0,0,0,0"
-                                        TextOptions.TextRenderingMode="Aliased"
-                                        Click="Master_File_Click">
+                                        TextOptions.TextRenderingMode="Aliased" Click="Master_File_Click"
+                                        >
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#83502E"/>
