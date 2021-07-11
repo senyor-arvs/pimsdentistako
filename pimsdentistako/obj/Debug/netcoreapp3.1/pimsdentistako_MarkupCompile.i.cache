@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\RCS\Source\Repos\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\
 pimsdentistako
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-C:\Users\RCS\Source\Repos\pimsdentistako\pimsdentistako\App.xaml
-51964746419
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\App.xaml
+51838362868
 
-14-842353366
-192-1533232326
+14-1134523534
+1921654412462
 Components\CustomCalendar.xaml;MainWindow.xaml;Views\DashboardView.xaml;Views\PatientsView.xaml;Views\TransactionView.xaml;
 
-True
+False
 
