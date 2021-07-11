@@ -182,7 +182,7 @@
                 </StackPanel>
                 <StackPanel Margin="0 20 0 0">
                     <DataGrid Height="265"
-                              x:Name="datagridDentalRecords">
+                              x:Name="datagridDentalRecords" SelectionChanged="datagridDentalRecords_SelectionChanged">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Record Date"/>
                             <DataGridTextColumn Header="Record Time"/>

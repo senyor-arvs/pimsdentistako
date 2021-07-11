@@ -22,5 +22,10 @@ namespace pimsdentistako.Views
         {
             InitializeComponent();
         }
+
+        private void datagridDentalRecords_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
