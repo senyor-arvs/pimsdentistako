@@ -53,7 +53,7 @@ namespace pimsdentistako.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/pimsdentistako;component/views/transactionview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PIMSDentistaKo;component/views/transactionview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\TransactionView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
