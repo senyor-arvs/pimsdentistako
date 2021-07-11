@@ -4,7 +4,7 @@ using System.Text;
 
 namespace pimsdentistako.ViewModels
 {
-    class TransactionViewModel : ViewModelBase
+    public class PatientsViewModel
     {
 
     }

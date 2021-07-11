@@ -14,13 +14,18 @@ using System.Windows.Shapes;
 namespace pimsdentistako.Views
 {
     /// <summary>
-    /// Interaction logic for TransactionView.xaml
+    /// Interaction logic for DentalRecordsView.xaml
     /// </summary>
-    public partial class TransactionView : UserControl
+    public partial class DentalRecordsView : Window
     {
-        public TransactionView()
+        public DentalRecordsView()
         {
             InitializeComponent();
+        }
+
+        private void datagridDentalRecords_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

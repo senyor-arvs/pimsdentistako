@@ -10,13 +10,16 @@
     <Compile Update="Components\CustomCalendar.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\AppointmentsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\DashboardView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\PatientsView.xaml.cs">
+    <Compile Update="Views\DentalRecordsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\TransactionView.xaml.cs">
+    <Compile Update="Views\PatientsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -27,13 +30,16 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\AppointmentsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\DashboardView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\PatientsView.xaml">
+    <Page Update="Views\DentalRecordsView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\TransactionView.xaml">
+    <Page Update="Views\PatientsView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

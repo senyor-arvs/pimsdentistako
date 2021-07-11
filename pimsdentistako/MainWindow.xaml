@@ -13,9 +13,7 @@
         WindowStyle="None"
         ResizeMode="CanResize"
         Name="Mainscreen"
-        >
-
-   
+        MouseDown="Mainscreen_MouseDown">
 
     <Window.Resources>
         <!-- dashboardView -->
@@ -23,8 +21,11 @@
             <views:DashboardView/>
         </DataTemplate>
         <!-- Add the remaining views below -->
-        <DataTemplate x:Name="transactionView" DataType="{x:Type viewmodels:TransactionViewModel}">
-            <views:TransactionView/>
+        <DataTemplate x:Name="appointmentsView" DataType="{x:Type viewmodels:AppointmentsViewModel}">
+            <views:AppointmentsView/>
+        </DataTemplate>
+        <DataTemplate x:Name="patientsView" DataType="{x:Type viewmodels:PatientsViewModel}">
+            <views:PatientsView/>
         </DataTemplate>
     </Window.Resources>
     <Grid>
@@ -297,7 +298,7 @@
                                         Margin="80,20,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
                                         IsEnabled="False"
-                                        Name="AppointmentsButton">
+                                        Name="AppointmentsButton" Click="AppointmentsButton_Click">
                                     <Button.Style>
                                         <Style TargetType="Button">
                                             <Setter Property="Background" Value="White"/>
@@ -342,7 +343,8 @@
                                         Margin="80,20,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
                                         IsEnabled="False"
-                                        Name="PatientsButton">
+                                        Name="PatientsButton" 
+                                        Click="PatientsButton_Click">
                                     <Button.Style>
                                         <Style TargetType="Button">
                                             <Setter Property="Background" Value="White"/>
@@ -423,6 +425,39 @@
                                             <Style.Triggers>
                                                 <Trigger Property="IsMouseOver" Value="True">
                                                     <Setter Property="Background" Value="#a26838"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Width="400"
+                                        Height="50"
+                                        CornerRadius="0,30,30,0"
+                                        Background="{TemplateBinding Background}">
+                                                <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Left"
+                                                      Margin="65,0,0,0"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                            </StackPanel>
+
+                            <StackPanel Margin="0,20,0,0" HorizontalAlignment="Left">
+                                <Button Content="Dental Records"
+                                        x:Name="dentalRecordsBtn"
+                                        FontSize="32"
+                                        FontFamily="Rounded Elegance"
+                                        Foreground="White" Click="dentalRecordsBtn_Click">
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Setter Property="Background" Value="SlateGray"/>
+                                            <Setter Property="Cursor" Value="Hand"/>
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Background" Value="Gray"/>
                                                 </Trigger>
                                             </Style.Triggers>
                                         </Style>
