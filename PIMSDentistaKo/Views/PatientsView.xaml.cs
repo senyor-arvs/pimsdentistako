@@ -22,5 +22,14 @@ namespace pimsdentistako.Views
         {
             InitializeComponent();
         }
+
+        private void patientDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+        private void Master_File_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
