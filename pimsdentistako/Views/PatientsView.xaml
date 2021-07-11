@@ -5,8 +5,527 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:pimsdentistako.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="1080" d:DesignWidth="1920">
+
     <Grid Background="White">
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <StackPanel Margin="30,30,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Name="Header" Text="Patients" 
+                           FontFamily="Rounded Elegance"
+                           FontSize="110"
+                           Foreground="#191715"/>
+
+                </StackPanel>
+
+                <StackPanel Margin="420,-70,0,0">
+                    <TextBlock Text="TOTAL:"
+                           FontFamily="Rounded Elegance"
+                           FontSize="60"
+                           Foreground="#502e18"
+                           TextOptions.TextFormattingMode="Display"
+                           />
+                </StackPanel>
+
+                <StackPanel Margin="520,-10,0,0">
+                    <TextBlock Text="Search by:"
+                           FontFamily="Rounded Elegance"
+                           FontSize="40"
+                           Foreground="#502e18"
+                           TextOptions.TextFormattingMode="Display"
+                           />
+                </StackPanel>
+
+                <StackPanel Width="150"
+                            Margin="0,-38,320,0">
+                    <Button>
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="dropdown"
+                                           FontFamily="Rounded Elegance"
+                                            FontSize="25"
+                                            Foreground="#502e18"
+                                            TextOptions.TextFormattingMode="Display"/>
+                                <Path x:Name="BtnArrow" 
+                                      Margin="4" 
+                                      VerticalAlignment="Center" 
+                                      Width="6" Fill="#FF527DB5" 
+                                      Stretch="Uniform" 
+                                      HorizontalAlignment="Right" 
+                                      Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z "/>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
+
+                <StackPanel Height="850">
+                    <StackPanel Margin="0,50,0,0">
+                        <!--DATA GRID-->
+                        <StackPanel HorizontalAlignment="Left" 
+                                    Width="750">
+                            <DataGrid Height="650" Width="700" SelectionChanged="DataGrid_SelectionChanged" FontSize="25" FontFamily="LEMON MILK" Background="#FFF7F7F7" BorderBrush="#FF688CAF" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Patient No."/>
+                                    <DataGridTextColumn Header="Patient"/>
+                                </DataGrid.Columns>
+
+
+                            </DataGrid>
+
+                        </StackPanel>
+
+                        <!--TextBox Area-->
+                        <StackPanel Margin="0,-30,0,0">
+                            <StackPanel Margin="750,-600,0,0">
+                                <TextBlock Text="Name"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="25"
+                                           FontFamily="LEMON MILK Light"/>
+                                <TextBox x:Name="Name"
+                                         Width="300"
+                                         Height="40"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="750,-500,0,0">
+                                <TextBlock Text="Middle Name"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="25"
+                                           FontFamily="LEMON MILK Light"/>
+                                <TextBox x:Name="MiddleName"
+                                         Width="300"
+                                         Height="40"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="750,-400,0,0">
+                                <TextBlock Text="Last Name"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="25"
+                                           FontFamily="LEMON MILK Light"/>
+                                <TextBox x:Name="LastName"
+                                         Width="300"
+                                         Height="40"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="750,-300,0,0">
+                                <TextBlock Text="Nickname"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="25"
+                                           FontFamily="LEMON MILK Light"/>
+                                <TextBox x:Name="Nickname"
+                                         Width="300"
+                                         Height="40"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="750,-200,0,0">
+                                <TextBlock Text="Suffix"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="25"
+                                           FontFamily="LEMON MILK Light"/>
+                                <TextBox x:Name="Suffix"
+                                         Width="300"
+                                         Height="40"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="750,-100,0,0">
+                                <TextBlock Text="Civil Status"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="25"
+                                           FontFamily="LEMON MILK Light"/>
+                                <TextBox x:Name="CivilStatus"
+                                         Width="300"
+                                         Height="40"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="1100,-600,0,0">
+                                <TextBlock Text="Address"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="25"
+                                           FontFamily="LEMON MILK Light"/>
+                                <TextBox x:Name="Address"
+                                         Width="300"
+                                         Height="40"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="1100,-500,0,0">
+                                <TextBlock Text="Email"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="25"
+                                           FontFamily="LEMON MILK Light"/>
+                                <TextBox x:Name="Email"
+                                         Width="300"
+                                         Height="40"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="1100,-400,0,0">
+                                <TextBlock Text="Mobile Number"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="25"/>
+                                <TextBox x:Name="MobileNumber"
+                                         Width="300"
+                                         Height="40"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="1100,-300,0,0">
+                                <TextBlock Text="Home Number"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="25"
+                                           FontFamily="LEMON MILK Light"/>
+                                <TextBox x:Name="HomeNumber"
+                                         Width="300"
+                                         Height="40"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="1100,-200,0,0">
+                                <TextBlock Text="Date of Birth"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="25"
+                                           FontFamily="LEMON MILK Light"/>
+                                <TextBox x:Name="DateOfBirth"
+                                         Width="300"
+                                         Height="40"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="1100,-100,0,0">
+                                <TextBlock Text="Reffered By"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="25"
+                                           FontFamily="LEMON MILK Light"/>
+                                <TextBox x:Name="RefferedBy"
+                                         Width="300"
+                                         Height="40"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="1450,-600,0,0">
+                                <TextBlock Text="Occupation"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="25"
+                                           FontFamily="LEMON MILK Light"/>
+                                <TextBox x:Name="Occupation"
+                                         Width="300"
+                                         Height="40"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="1450,-500,0,0">
+                                <TextBlock Text="Company"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="25"
+                                           FontFamily="LEMON MILK Light"/>
+                                <TextBox x:Name="Company"
+                                         Width="300"
+                                         Height="40"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="1450,-400,0,0">
+                                <TextBlock Text="Office Number"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="25"
+                                           FontFamily="LEMON MILK Light"/>
+                                <TextBox x:Name="OfficeNumber"
+                                         Width="300"
+                                         Height="40"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="1450,-300,0,0">
+                                <TextBlock Text="Fax Number"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="25"
+                                           FontFamily="LEMON MILK Light"/>
+                                <TextBox x:Name="FaxNumber"
+                                         Width="300"
+                                         Height="40"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="1450,-200,0,0">
+                                <TextBlock Text="Age"
+                                           Width="100"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="25"
+                                           FontFamily="LEMON MILK Light"/>
+                                <TextBox x:Name="Age"
+                                         Width="100"
+                                         Height="40"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                        </StackPanel>
+
+                        <!--Treatment Plan-->
+                        <StackPanel Margin="200,-35,0,0">
+                            <Button Content="TREATMENT PLAN"
+                                        FontSize="20"
+                                        FontFamily="Rounded Elegance"
+                                        Foreground="White"
+                                        Margin="-0,0,0,0"
+                                        TextOptions.TextRenderingMode="Aliased"
+                                        Click="Master_File_Click">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="#83502E"/>
+                                        <Setter Property="Cursor" Value="Hand"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#a26838"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Width="180"
+                                        Height="50"
+                                        CornerRadius="30,30,30,30"
+                                        Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="CENTER"
+                                                      Margin="0,0,0,0"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </StackPanel>
+
+                        <!--Dental Records-->
+                        <StackPanel Margin="700,-50,0,0">
+                            <Button Content="DENTAL RECORD"
+                                        FontSize="20"
+                                        FontFamily="Rounded Elegance"
+                                        Foreground="White"
+                                        Margin="-0,0,0,0"
+                                        TextOptions.TextRenderingMode="Aliased"
+                                        Click="Master_File_Click">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="#bd7e4a"/>
+                                        <Setter Property="Cursor" Value="Hand"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#a26838"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Width="180"
+                                        Height="50"
+                                        CornerRadius="30,30,30,30"
+                                        Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="CENTER"
+                                                      Margin="0,0,0,0"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </StackPanel>
+
+                        <!--Emergency Info-->
+                        <StackPanel Margin="1200,-50,0,0">
+                            <Button Content="EMERGENCY INFO"
+                                        FontSize="20"
+                                        FontFamily="Rounded Elegance"
+                                        Foreground="White"
+                                        Margin="-0,0,0,0"
+                                        TextOptions.TextRenderingMode="Aliased"
+                                        Click="Master_File_Click">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="#31170a"/>
+                                        <Setter Property="Cursor" Value="Hand"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#a26838"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Width="180"
+                                        Height="50"
+                                        CornerRadius="30,30,30,30"
+                                        Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="CENTER"
+                                                      Margin="0,0,0,0"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </StackPanel>
+
+
+                        <!--ADD PATIENT-->
+
+                        <StackPanel Width="180" Margin="0,20,1630,0">
+                            <Button Content="ADD PATIENT"
+                                        FontSize="20"
+                                        FontFamily="Rounded Elegance"
+                                        Foreground="White"
+                                        Margin="-0,0,0,0"
+                                        TextOptions.TextRenderingMode="Aliased"
+                                        Click="Master_File_Click">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="#83502E"/>
+                                        <Setter Property="Cursor" Value="Hand"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#a26838"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Width="180"
+                                        Height="50"
+                                        CornerRadius="30,30,30,30"
+                                        Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="CENTER"
+                                                      Margin="0,0,0,0"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </StackPanel>
+
+
+                        <!--EDIT PATIENT-->
+
+                        <StackPanel Width="180" Margin="0,-50,1140,0">
+                            <Button Content="EDIT PATIENT"
+                                        FontSize="20"
+                                        FontFamily="Rounded Elegance"
+                                        Foreground="White"
+                                        Margin="-0,0,0,0"
+                                        TextOptions.TextRenderingMode="Aliased"
+                                        Click="Master_File_Click">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="#bd7e4a"/>
+                                        <Setter Property="Cursor" Value="Hand"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#a26838"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Width="180"
+                                        Height="50"
+                                        CornerRadius="30,30,30,30"
+                                        Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="CENTER"
+                                                      Margin="0,0,0,0"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </StackPanel>
+
+                        <!--DELETE PATIENT-->
+
+                        <StackPanel Width="180" Margin="0,-50,650,0">
+                            <Button Content="DELETE PATIENT"
+                                        FontSize="20"
+                                        FontFamily="Rounded Elegance"
+                                        Foreground="White"
+                                        Margin="-0,0,0,0"
+                                        TextOptions.TextRenderingMode="Aliased"
+                                        Click="Master_File_Click">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="#31170a"/>
+                                        <Setter Property="Cursor" Value="Hand"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#a26838"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Width="180"
+                                        Height="50"
+                                        CornerRadius="30,30,30,30"
+                                        Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="CENTER"
+                                                      Margin="0,0,0,0"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </StackPanel>
+
+
+
+
+                    </StackPanel>
+                </StackPanel>
+
+
+
+            </StackPanel>
+        </Grid>
     </Grid>
 </UserControl>
