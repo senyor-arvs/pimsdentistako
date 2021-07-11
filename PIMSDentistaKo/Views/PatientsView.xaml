@@ -40,8 +40,9 @@
                            />
                 </StackPanel>
 
-                <StackPanel Width="150"
-                            Margin="0,-38,320,0">
+                <StackPanel Width="200"
+                            Margin="0,-38,200,0">
+                    <!--
                     <Button>
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
@@ -60,6 +61,12 @@
                             </StackPanel>
                         </Button.Content>
                     </Button>
+                    -->
+                    <ComboBox Height="35"
+                              Width="200"
+                              x:Name="searchByComboBox">
+                        <ComboBoxItem Content=""/>
+                    </ComboBox>
                 </StackPanel>
 
                 <StackPanel Height="850">
