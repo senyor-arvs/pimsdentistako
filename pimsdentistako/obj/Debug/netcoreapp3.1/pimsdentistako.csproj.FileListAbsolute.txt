@@ -133,3 +133,5 @@ C:\Users\RCS\source\repos\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\
 C:\Users\RCS\source\repos\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.dll
 C:\Users\RCS\source\repos\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.pdb
 C:\Users\RCS\source\repos\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.genruntimeconfig.cache
+C:\Users\RCS\Source\Repos\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\Window1.g.cs
+C:\Users\RCS\Source\Repos\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\PatientsView.g.cs
