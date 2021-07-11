@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using pimsdentistako.ViewModels;
+using pimsdentistako.Views;
 
 namespace pimsdentistako
 {
@@ -101,6 +102,12 @@ namespace pimsdentistako
         private void AppointmentsButton_Click(object sender, RoutedEventArgs e)
         {
             DataContext = new AppointmentsViewModel();
+        }
+
+        private void dentalRecordsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DentalRecordsView dentalRecordsView = new DentalRecordsView();
+            dentalRecordsView.Show();
         }
     }
 }
