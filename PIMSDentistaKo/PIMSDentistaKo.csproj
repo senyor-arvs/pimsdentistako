@@ -16,6 +16,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="fonts\LEMONMILK-Bold.otf" />
+    <None Remove="fonts\LEMONMILK-BoldItalic.otf" />
+    <None Remove="fonts\LEMONMILK-Light.otf" />
+    <None Remove="fonts\LEMONMILK-LightItalic.otf" />
+    <None Remove="fonts\LEMONMILK-Medium.otf" />
+    <None Remove="fonts\LEMONMILK-MediumItalic.otf" />
+    <None Remove="fonts\LEMONMILK-Regular.otf" />
+    <None Remove="fonts\LEMONMILK-RegularItalic.otf" />
+    <None Remove="fonts\Rounded_Elegance.ttf" />
     <None Remove="images\backup.png" />
     <None Remove="images\close.png" />
     <None Remove="images\home.png" />
@@ -34,6 +43,33 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="fonts\LEMONMILK-Bold.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fonts\LEMONMILK-BoldItalic.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fonts\LEMONMILK-Light.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fonts\LEMONMILK-LightItalic.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fonts\LEMONMILK-Medium.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fonts\LEMONMILK-MediumItalic.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fonts\LEMONMILK-Regular.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fonts\LEMONMILK-RegularItalic.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fonts\Rounded_Elegance.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\backup.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

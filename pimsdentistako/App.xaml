@@ -4,6 +4,14 @@
              xmlns:local="clr-namespace:pimsdentistako"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <FontFamily x:Key="LEMON MILK Regular">pack://application:,,,/fonts/#LEMON MILK</FontFamily>
+        <FontFamily x:Key="LEMON MILK Bold">pack://application:,,,/fonts/#LEMON MILK Bold</FontFamily>
+        <FontFamily x:Key="LEMON MILK Bold Italic">pack://application:,,,/fonts/#LEMON MILK Bold Italic</FontFamily>
+        <FontFamily x:Key="LEMON MILK Light">pack://application:,,,/fonts/#LEMON MILK Light</FontFamily>
+        <FontFamily x:Key="LEMON MILK Light Italic">pack://application:,,,/fonts/#LEMON MILK Light Italic</FontFamily>
+        <FontFamily x:Key="LEMON MILK Medium">pack://application:,,,/fonts/#LEMON MILK Medium</FontFamily>
+        <FontFamily x:Key="LEMON MILK Medium Italic">pack://application:,,,/fonts/#LEMON MILK Medium Italic</FontFamily>
+        <FontFamily x:Key="LEMON MILK Regular Italic">pack://application:,,,/fonts/#LEMON MILK Italic</FontFamily>
+        <FontFamily x:Key="Rounded Elegance">pack://application:,,,/fonts/#Rounded Elegance</FontFamily>
     </Application.Resources>
 </Application>
