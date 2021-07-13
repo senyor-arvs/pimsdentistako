@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\App.xaml
-6939045002
+71681631204
 
-17-537920081
+19391692504
 194-1589228522
-Components\CustomCalendar.xaml;MainWindow.xaml;Views\AppointmentsView.xaml;Views\DashboardView.xaml;Views\DentalRecordsView.xaml;Views\PatientsView.xaml;
+Components\CustomCalendar.xaml;MainWindow.xaml;Views\AppointmentsView.xaml;Views\DashboardView.xaml;Views\DentalRecordsView.xaml;Views\PatientsView.xaml;Views\UserAccountView.xaml;
 
-False
+True
 

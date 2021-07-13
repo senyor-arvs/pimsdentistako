@@ -27,6 +27,9 @@
         <DataTemplate x:Name="patientsView" DataType="{x:Type viewmodels:PatientsViewModel}">
             <views:PatientsView/>
         </DataTemplate>
+        <DataTemplate x:Name="userAccountView" DataType="{x:Type viewmodels:UserAccountViewModel}">
+            <views:UserAccountView/>
+        </DataTemplate>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -414,10 +417,10 @@
 
                             <!-- User Account -->
                             <StackPanel Margin="0,20,0,0" HorizontalAlignment="Left">
-                                <Button Content="User Account"
+                                <Button x:Name="userAccountBtn" Content="User Account"
                             FontSize="32"
                             FontFamily="{StaticResource Rounded Elegance}"
-                            Foreground="White">
+                            Foreground="White" Click="userAccountBtn_Click">
                                     <Button.Style>
                                         <Style TargetType="Button">
                                             <Setter Property="Background" Value="#bd7e4a"/>
