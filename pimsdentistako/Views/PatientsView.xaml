@@ -16,32 +16,32 @@
             <StackPanel Margin="30,30,0,0">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Name="Header" Text="Patients" 
-                           FontFamily="Rounded Elegance"
+                           FontFamily="{StaticResource Rounded Elegance}"
                            FontSize="110"
                            Foreground="#191715"/>
 
                 </StackPanel>
 
-                <StackPanel Margin="420,-70,0,0">
-                    <TextBlock Text="TOTAL:"
-                           FontFamily="Rounded Elegance"
-                           FontSize="60"
+                <StackPanel Margin="0,-10,0,0">
+                    <TextBlock Text="TOTAL: 16000"
+                           FontFamily="{StaticResource Rounded Elegance}"
+                           FontSize="35"
                            Foreground="#502e18"
                            TextOptions.TextFormattingMode="Display"
                            />
                 </StackPanel>
 
-                <StackPanel Margin="520,-10,0,0">
+                <StackPanel Margin="0,0,0,0">
                     <TextBlock Text="Search by:"
-                           FontFamily="Rounded Elegance"
-                           FontSize="40"
+                           FontFamily="{StaticResource Rounded Elegance}"
+                           FontSize="35"
                            Foreground="#502e18"
                            TextOptions.TextFormattingMode="Display"
                            />
                 </StackPanel>
 
                 <StackPanel Width="200"
-                            Margin="0,-38,200,0">
+                            Margin="-1320,-38,0,0">
                     <!--
                     <Button>
                         <Button.Content>
@@ -69,8 +69,25 @@
                     </ComboBox>
                 </StackPanel>
 
+                <StackPanel Margin="400,-40,0,0">
+                    <TextBlock Text="TextBlock:"
+                           FontFamily="{StaticResource Rounded Elegance}"
+                           FontSize="35"
+                           Foreground="#502e18"
+                           TextOptions.TextFormattingMode="Display"
+                           />
+                </StackPanel>
+
+                <StackPanel Width="200" Margin="-550,-40,0,0">
+                    <ComboBox Height="35"
+                              Width="200"
+                              x:Name="searchByComboBox1">
+                        <ComboBoxItem Content=""/>
+                    </ComboBox>
+                </StackPanel>
+
                 <StackPanel Height="850">
-                    <StackPanel Margin="0,50,0,0">
+                    <StackPanel Margin="0,20,0,0">
                         <!--DATA GRID-->
                         <StackPanel HorizontalAlignment="Left" 
                                     Width="750">
@@ -93,7 +110,7 @@
                                            Height="40"
                                            HorizontalAlignment="Left"
                                            FontSize="25"
-                                           FontFamily="LEMON MILK Light"/>
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
                                 <TextBox x:Name="Name"
                                          Width="300"
                                          Height="40"
@@ -106,7 +123,7 @@
                                            Height="40"
                                            HorizontalAlignment="Left"
                                            FontSize="25"
-                                           FontFamily="LEMON MILK Light"/>
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
                                 <TextBox x:Name="MiddleName"
                                          Width="300"
                                          Height="40"
@@ -119,7 +136,7 @@
                                            Height="40"
                                            HorizontalAlignment="Left"
                                            FontSize="25"
-                                           FontFamily="LEMON MILK Light"/>
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
                                 <TextBox x:Name="LastName"
                                          Width="300"
                                          Height="40"
@@ -132,7 +149,7 @@
                                            Height="40"
                                            HorizontalAlignment="Left"
                                            FontSize="25"
-                                           FontFamily="LEMON MILK Light"/>
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
                                 <TextBox x:Name="Nickname"
                                          Width="300"
                                          Height="40"
@@ -140,13 +157,13 @@
                             </StackPanel>
 
                             <StackPanel Margin="750,-200,0,0">
-                                <TextBlock Text="Suffix"
+                                <TextBlock Text="Sex"
                                            Width="300"
                                            Height="40"
                                            HorizontalAlignment="Left"
                                            FontSize="25"
-                                           FontFamily="LEMON MILK Light"/>
-                                <TextBox x:Name="Suffix"
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
+                                <TextBox x:Name="Sex"
                                          Width="300"
                                          Height="40"
                                          HorizontalAlignment="Left"/>
@@ -158,7 +175,7 @@
                                            Height="40"
                                            HorizontalAlignment="Left"
                                            FontSize="25"
-                                           FontFamily="LEMON MILK Light"/>
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
                                 <TextBox x:Name="CivilStatus"
                                          Width="300"
                                          Height="40"
@@ -171,7 +188,7 @@
                                            Height="40"
                                            HorizontalAlignment="Left"
                                            FontSize="25"
-                                           FontFamily="LEMON MILK Light"/>
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
                                 <TextBox x:Name="Address"
                                          Width="300"
                                          Height="40"
@@ -184,7 +201,7 @@
                                            Height="40"
                                            HorizontalAlignment="Left"
                                            FontSize="25"
-                                           FontFamily="LEMON MILK Light"/>
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
                                 <TextBox x:Name="Email"
                                          Width="300"
                                          Height="40"
@@ -196,7 +213,8 @@
                                            Width="300"
                                            Height="40"
                                            HorizontalAlignment="Left"
-                                           FontSize="25"/>
+                                           FontSize="25"
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
                                 <TextBox x:Name="MobileNumber"
                                          Width="300"
                                          Height="40"
@@ -209,7 +227,7 @@
                                            Height="40"
                                            HorizontalAlignment="Left"
                                            FontSize="25"
-                                           FontFamily="LEMON MILK Light"/>
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
                                 <TextBox x:Name="HomeNumber"
                                          Width="300"
                                          Height="40"
@@ -222,7 +240,7 @@
                                            Height="40"
                                            HorizontalAlignment="Left"
                                            FontSize="25"
-                                           FontFamily="LEMON MILK Light"/>
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
                                 <TextBox x:Name="DateOfBirth"
                                          Width="300"
                                          Height="40"
@@ -235,7 +253,7 @@
                                            Height="40"
                                            HorizontalAlignment="Left"
                                            FontSize="25"
-                                           FontFamily="LEMON MILK Light"/>
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
                                 <TextBox x:Name="RefferedBy"
                                          Width="300"
                                          Height="40"
@@ -248,7 +266,7 @@
                                            Height="40"
                                            HorizontalAlignment="Left"
                                            FontSize="25"
-                                           FontFamily="LEMON MILK Light"/>
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
                                 <TextBox x:Name="Occupation"
                                          Width="300"
                                          Height="40"
@@ -261,7 +279,7 @@
                                            Height="40"
                                            HorizontalAlignment="Left"
                                            FontSize="25"
-                                           FontFamily="LEMON MILK Light"/>
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
                                 <TextBox x:Name="Company"
                                          Width="300"
                                          Height="40"
@@ -274,7 +292,7 @@
                                            Height="40"
                                            HorizontalAlignment="Left"
                                            FontSize="25"
-                                           FontFamily="LEMON MILK Light"/>
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
                                 <TextBox x:Name="OfficeNumber"
                                          Width="300"
                                          Height="40"
@@ -287,7 +305,7 @@
                                            Height="40"
                                            HorizontalAlignment="Left"
                                            FontSize="25"
-                                           FontFamily="LEMON MILK Light"/>
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
                                 <TextBox x:Name="FaxNumber"
                                          Width="300"
                                          Height="40"
@@ -300,9 +318,22 @@
                                            Height="40"
                                            HorizontalAlignment="Left"
                                            FontSize="25"
-                                           FontFamily="LEMON MILK Light"/>
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
                                 <TextBox x:Name="Age"
                                          Width="100"
+                                         Height="40"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="1450,-100,0,0">
+                                <TextBlock Text="Suffix"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="25"
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
+                                <TextBox x:Name="Suffix"
+                                         Width="300"
                                          Height="40"
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
@@ -310,10 +341,10 @@
                         </StackPanel>
 
                         <!--Treatment Plan-->
-                        <StackPanel Margin="200,-35,0,0">
+                        <StackPanel Margin="200,-30,0,0">
                             <Button Content="TREATMENT PLAN"
                                         FontSize="20"
-                                        FontFamily="Rounded Elegance"
+                                        FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="White"
                                         Margin="-0,0,0,0"
                                         TextOptions.TextRenderingMode="Aliased" Click="Master_File_Click"
@@ -331,7 +362,7 @@
                                 </Button.Style>
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
-                                        <Border Width="180"
+                                        <Border Width="200"
                                         Height="50"
                                         CornerRadius="30,30,30,30"
                                         Background="{TemplateBinding Background}">
@@ -348,7 +379,7 @@
                         <StackPanel Margin="700,-50,0,0">
                             <Button Content="DENTAL RECORD"
                                         FontSize="20"
-                                        FontFamily="Rounded Elegance"
+                                        FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="White"
                                         Margin="-0,0,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
@@ -366,7 +397,7 @@
                                 </Button.Style>
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
-                                        <Border Width="180"
+                                        <Border Width="200"
                                         Height="50"
                                         CornerRadius="30,30,30,30"
                                         Background="{TemplateBinding Background}">
@@ -383,7 +414,7 @@
                         <StackPanel Margin="1200,-50,0,0">
                             <Button Content="EMERGENCY INFO"
                                         FontSize="20"
-                                        FontFamily="Rounded Elegance"
+                                        FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="White"
                                         Margin="-0,0,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
@@ -401,7 +432,7 @@
                                 </Button.Style>
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
-                                        <Border Width="180"
+                                        <Border Width="200"
                                         Height="50"
                                         CornerRadius="30,30,30,30"
                                         Background="{TemplateBinding Background}">
@@ -420,7 +451,7 @@
                         <StackPanel Width="180" Margin="0,20,1630,0">
                             <Button Content="ADD PATIENT"
                                         FontSize="20"
-                                        FontFamily="Rounded Elegance"
+                                        FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="White"
                                         Margin="-0,0,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
@@ -457,7 +488,7 @@
                         <StackPanel Width="180" Margin="0,-50,1140,0">
                             <Button Content="EDIT PATIENT"
                                         FontSize="20"
-                                        FontFamily="Rounded Elegance"
+                                        FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="White"
                                         Margin="-0,0,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
@@ -493,7 +524,7 @@
                         <StackPanel Width="180" Margin="0,-50,650,0">
                             <Button Content="DELETE PATIENT"
                                         FontSize="20"
-                                        FontFamily="Rounded Elegance"
+                                        FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="White"
                                         Margin="-0,0,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
