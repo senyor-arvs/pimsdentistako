@@ -513,13 +513,13 @@
 
                         <!--Dental Records-->
                         <StackPanel Margin="700,-50,0,0">
-                            <Button x:Name="dentalRecordBtn" Content="DENTAL RECORD"
+                            <Button Content="DENTAL RECORD"
                                         FontSize="20"
                                         FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="White"
                                         Margin="-0,0,0,0"
-                                        TextOptions.TextRenderingMode="Aliased" Click="dentalRecordBtn_Click"
-                                        >
+                                        TextOptions.TextRenderingMode="Aliased"
+                                        Click="Master_File_Click">
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#bd7e4a"/>

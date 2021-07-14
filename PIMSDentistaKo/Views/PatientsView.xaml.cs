@@ -10,7 +10,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using pimsdentistako.Views;
 
 namespace pimsdentistako.Views
 {
@@ -31,12 +30,6 @@ namespace pimsdentistako.Views
         private void Master_File_Click(object sender, RoutedEventArgs e)
         {
 
-        }
-
-        private void dentalRecordBtn_Click(object sender, RoutedEventArgs e)
-        {
-            DentalRecordsView dentalRecordsView = new DentalRecordsView();
-            dentalRecordsView.Show();
         }
     }
 }
