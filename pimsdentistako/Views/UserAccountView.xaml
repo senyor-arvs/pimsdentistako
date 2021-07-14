@@ -5,13 +5,18 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:pimsdentistako.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="650">
+             Height="450"
+             Width="650"
+             >
     <Grid Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="120"/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
@@ -35,5 +40,66 @@
                 </StackPanel>
             </StackPanel>
         </Grid>
+        <Grid Grid.Row="1"
+              Margin="0 0 20 0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock HorizontalAlignment="Right"
+                           Text="Username"
+                           Margin="0 12 12 0"
+                           Grid.Row="0"/>
+                <TextBlock HorizontalAlignment="Right"
+                               Text="Old Password"
+                               Margin="0 12 12 0"
+                           Grid.Row="1"/>
+                <TextBlock HorizontalAlignment="Right"
+                               Text="New Password"
+                               Margin="0 12 12 0"
+                           Grid.Row="2"/>
+                <TextBlock HorizontalAlignment="Right"
+                               Text="Re-type Password"
+                               Margin="0 12 12 12"
+                           Grid.Row="3"/>
+
+                <TextBox Margin="8"
+                         Grid.Row="0"
+                         Grid.Column="1"
+                         x:Name="usernameTxtBox"/>
+                <TextBox Margin="8"
+                         Grid.Row="1"
+                         Grid.Column="1"
+                         x:Name="oldPasswordTxtBox"/>
+                <TextBox Margin="8"
+                         Grid.Row="2"
+                         Grid.Column="1"
+                         x:Name="newPasswordTxtBox"/>
+                <TextBox Margin="8"
+                         Grid.Row="3"
+                         Grid.Column="1"
+                         x:Name="retypePasswordTxtBox"/>
+
+            </Grid>
+        </Grid>
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Button Width="120"
+                    Height="30"
+                    Content="UPDATE"
+                    Margin="12"/>
+            <Button Width="120"
+                    Height="30"
+                    Content="SAVE"
+                    Margin="12"/>
+        </StackPanel>
     </Grid>
 </UserControl>
