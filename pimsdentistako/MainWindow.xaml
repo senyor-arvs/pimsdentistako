@@ -39,7 +39,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Grid Background="#191715" Grid.Column="0" MaxWidth="520" HorizontalAlignment="Left">
+        <Grid Background="#191715" Grid.Column="0" MaxWidth="530" HorizontalAlignment="Left">
             <Viewbox Stretch="Uniform" VerticalAlignment="Top">
                 <StackPanel>
                     <!-- Upper Header -->
