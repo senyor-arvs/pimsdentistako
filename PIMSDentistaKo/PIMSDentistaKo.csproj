@@ -16,6 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Database\PIMSDentistaKo.mdb" />
     <None Remove="fonts\LEMONMILK-Bold.otf" />
     <None Remove="fonts\LEMONMILK-BoldItalic.otf" />
     <None Remove="fonts\LEMONMILK-Light.otf" />
@@ -44,6 +45,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Database\PIMSDentistaKo.mdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="fonts\LEMONMILK-Bold.otf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
