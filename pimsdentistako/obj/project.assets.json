@@ -708,19 +708,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kristian\\.nuget\\packages\\": {}
+    "C:\\Users\\RCS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\pimsdentistako.csproj",
+      "projectUniqueName": "C:\\Users\\RCS\\source\\repos\\Electives\\pimsdentistako\\pimsdentistako.csproj",
       "projectName": "pimsdentistako",
-      "projectPath": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\pimsdentistako.csproj",
-      "packagesPath": "C:\\Users\\Kristian\\.nuget\\packages\\",
-      "outputPath": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\obj\\",
+      "projectPath": "C:\\Users\\RCS\\source\\repos\\Electives\\pimsdentistako\\pimsdentistako.csproj",
+      "packagesPath": "C:\\Users\\RCS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\RCS\\source\\repos\\Electives\\pimsdentistako\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Kristian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\RCS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -728,11 +728,11 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.telerik.com/nuget": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -744,6 +744,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "System.Data.Odbc": {
             "target": "Package",
@@ -772,7 +773,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
