@@ -39,7 +39,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Grid Background="#191715" Grid.Column="0" MaxWidth="520" HorizontalAlignment="Left">
+        <Grid Background="#191715" Grid.Column="0" MaxWidth="530" HorizontalAlignment="Left">
             <Viewbox Stretch="Uniform" VerticalAlignment="Top">
                 <StackPanel>
                     <!-- Upper Header -->
@@ -385,9 +385,9 @@
                             <!-- Utility -->
                             <StackPanel Margin="0,20,0,0" HorizontalAlignment="Left">
                                 <Button Content="Utility"
-                            FontSize="32"
-                            FontFamily="{StaticResource Rounded Elegance}"
-                            Foreground="White">
+                                        FontSize="32"
+                                        FontFamily="{StaticResource Rounded Elegance}"
+                                        Foreground="White">
                                     <Button.Style>
                                         <Style TargetType="Button">
                                             <Setter Property="Background" Value="#bd7e4a"/>
@@ -428,39 +428,6 @@
                                             <Style.Triggers>
                                                 <Trigger Property="IsMouseOver" Value="True">
                                                     <Setter Property="Background" Value="#a26838"/>
-                                                </Trigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </Button.Style>
-
-                                    <Button.Template>
-                                        <ControlTemplate TargetType="Button">
-                                            <Border Width="400"
-                                        Height="50"
-                                        CornerRadius="0,30,30,0"
-                                        Background="{TemplateBinding Background}">
-                                                <ContentPresenter VerticalAlignment="Center"
-                                                      HorizontalAlignment="Left"
-                                                      Margin="65,0,0,0"/>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </StackPanel>
-
-                            <StackPanel Margin="0,20,0,0" HorizontalAlignment="Left">
-                                <Button Content="Dental Records"
-                                        x:Name="dentalRecordsBtn"
-                                        FontSize="32"
-                                        FontFamily="Rounded Elegance"
-                                        Foreground="White" Click="dentalRecordsBtn_Click">
-                                    <Button.Style>
-                                        <Style TargetType="Button">
-                                            <Setter Property="Background" Value="SlateGray"/>
-                                            <Setter Property="Cursor" Value="Hand"/>
-                                            <Style.Triggers>
-                                                <Trigger Property="IsMouseOver" Value="True">
-                                                    <Setter Property="Background" Value="Gray"/>
                                                 </Trigger>
                                             </Style.Triggers>
                                         </Style>
