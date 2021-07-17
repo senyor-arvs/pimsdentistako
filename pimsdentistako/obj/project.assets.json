@@ -708,19 +708,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RCS\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\RCS\\source\\repos\\Electives\\pimsdentistako\\pimsdentistako.csproj",
+      "projectUniqueName": "D:\\ARVIN 2ND SEM\\another\\pimsdentistako\\pimsdentistako.csproj",
       "projectName": "pimsdentistako",
-      "projectPath": "C:\\Users\\RCS\\source\\repos\\Electives\\pimsdentistako\\pimsdentistako.csproj",
-      "packagesPath": "C:\\Users\\RCS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\RCS\\source\\repos\\Electives\\pimsdentistako\\obj\\",
+      "projectPath": "D:\\ARVIN 2ND SEM\\another\\pimsdentistako\\pimsdentistako.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\ARVIN 2ND SEM\\another\\pimsdentistako\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\RCS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -732,7 +732,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -744,7 +743,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "System.Data.Odbc": {
             "target": "Package",
@@ -773,7 +771,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
