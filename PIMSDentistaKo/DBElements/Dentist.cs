@@ -21,5 +21,23 @@ namespace pimsdentistako.DBElements
         public string DentistSuffix { get => dentistSuffix; set => dentistSuffix = value; }
         public string DentistLicenseNumber { get => dentistLicenseNumber; set => dentistLicenseNumber = value; }
         public string DentistPTRNumber { get => dentistPTRNumber; set => dentistPTRNumber = value; }
+
+
+        public string getFullName()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(noValueFilledReplacer(this.dentistFirstName)).Append(" ")
+                .Append(noValueFilledReplacer(this.dentistMiddleName)).Append(" ")
+                .Append(noValueFilledReplacer(this.dentistLastName)).Append(" ")
+                .Append(noValueFilledReplacer(this.dentistSuffix));
+            return sb.ToString();
+        }
+
+        public string noValueFilledReplacer(string field)
+        {
+            return field.Equals("-") ? "" : field;
+        }
     }
+
+ 
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace pimsdentistako.DBElements
 {
-    class UserAccount
+    public class UserAccount
     {
         private string dentistID;
         private string username;
