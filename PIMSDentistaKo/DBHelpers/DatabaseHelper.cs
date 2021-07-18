@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Data.OleDb;
-using pimsdentistako.DBElement;
+using pimsdentistako.DBElements;
 using System.Collections.ObjectModel;
 using System.Windows;
 

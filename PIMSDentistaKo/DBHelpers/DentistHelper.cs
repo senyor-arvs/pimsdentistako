@@ -5,7 +5,7 @@ using System.Windows;
 using System.Data.OleDb;
 using System.Linq;
 using System.Collections.ObjectModel;
-using pimsdentistako.DBElement;
+using pimsdentistako.DBElements;
 using static pimsdentistako.DBHelpers.DatabaseHelper;
 using static pimsdentistako.DBHelpers.UserAccountHelper;
 

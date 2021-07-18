@@ -4,7 +4,7 @@ using System.Text;
 using System.Linq;
 using System.Data.OleDb;
 using System.Collections.ObjectModel;
-using pimsdentistako.DBElement;
+using pimsdentistako.DBElements;
 using static pimsdentistako.DBHelpers.DatabaseHelper;
 
 namespace pimsdentistako.DBHelpers

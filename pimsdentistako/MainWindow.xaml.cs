@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 using pimsdentistako.ViewModels;
 using pimsdentistako.Views;
 using pimsdentistako.DBHelpers;
-using pimsdentistako.DBElement;
+using pimsdentistako.DBElements;
 using System.Collections.ObjectModel;
 
 namespace pimsdentistako
