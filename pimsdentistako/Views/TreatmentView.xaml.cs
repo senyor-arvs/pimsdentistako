@@ -22,7 +22,9 @@ namespace pimsdentistako.Views
     /// </summary>
     public partial class TreatmentView : UserControl
     {
-        OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        private static readonly OleDbConnection conn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;" +
+              @"Data Source=|DataDirectory|\Database\PIMSDentistaKo.mdb;" +
+              "Jet OLEDB:Database Password = dQXpe}3]?Rx&.7zh*cZ^;");
         ObservableCollection<Treatment> treatmentList = new ObservableCollection<Treatment>();
         public TreatmentView()
         {
