@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace pimsdentistako.DBElements
+namespace pimsdentistako.DBElement
 {
     public class TreatmentType
     {

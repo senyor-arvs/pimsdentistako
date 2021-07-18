@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace pimsdentistako.DBElements
+namespace pimsdentistako.DBElement
 {
-    class UserAccount
+    public class UserAccount
     {
         private string dentistID;
         private string username;
