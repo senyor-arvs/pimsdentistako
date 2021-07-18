@@ -232,7 +232,6 @@ C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\pimsd
 C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.pdb
 C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.genruntimeconfig.cache
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.dll.config
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.AssemblyReference.cache
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TreatmentView.g.cs
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TreatmentView.baml
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\bin\Debug\netcoreapp3.1\Database\PIMSDentistaKo.mdb

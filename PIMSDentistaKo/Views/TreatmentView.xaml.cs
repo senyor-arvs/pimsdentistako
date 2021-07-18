@@ -53,7 +53,7 @@ namespace pimsdentistako.Views
                     treatmentList.Add(treatment);
                 }
             } 
-            catch (Exception e)
+            catch (InvalidOperationException e)
             {
                 MessageBox.Show(e.Message);
             }
