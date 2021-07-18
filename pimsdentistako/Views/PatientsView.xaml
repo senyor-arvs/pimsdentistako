@@ -67,10 +67,10 @@
                         <!--DATA GRID-->
                         <StackPanel HorizontalAlignment="Left" 
                                     Width="750">
-                            <DataGrid x:Name="patientDataGrid" Height="650" Width="700" FontSize="25" FontFamily="LEMON MILK" Background="#FFF7F7F7" BorderBrush="#FF688CAF" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" SelectionChanged="patientDataGrid_SelectionChanged">
+                            <DataGrid x:Name="patientDataGrid" Height="650" Width="700" FontSize="25" FontFamily="LEMON MILK" Background="#FFF7F7F7" BorderBrush="#FF688CAF" FontWeight="Normal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ColumnWidth="*" SelectionChanged="patientDataGrid_SelectionChanged">
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Header="Patient No."/>
-                                    <DataGridTextColumn Header="Patient"/>
+                                    <DataGridTextColumn Header="Patient No." Width="*"/>
+                                    <DataGridTextColumn Header="Patient" Width="*"/>
                                 </DataGrid.Columns>
 
 
