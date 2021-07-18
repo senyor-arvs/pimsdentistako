@@ -16,6 +16,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Database\PIMSDentistaKo.mdb" />
+    <None Remove="fonts\LEMONMILK-Bold.otf" />
+    <None Remove="fonts\LEMONMILK-BoldItalic.otf" />
+    <None Remove="fonts\LEMONMILK-Light.otf" />
+    <None Remove="fonts\LEMONMILK-LightItalic.otf" />
+    <None Remove="fonts\LEMONMILK-Medium.otf" />
+    <None Remove="fonts\LEMONMILK-MediumItalic.otf" />
+    <None Remove="fonts\LEMONMILK-Regular.otf" />
+    <None Remove="fonts\LEMONMILK-RegularItalic.otf" />
+    <None Remove="fonts\Rounded_Elegance.ttf" />
     <None Remove="images\backup.png" />
     <None Remove="images\close.png" />
     <None Remove="images\home.png" />
@@ -26,6 +36,7 @@
     <None Remove="images\next.png" />
     <None Remove="images\person.png" />
     <None Remove="images\report.png" />
+    <None Remove="images\search.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,6 +45,36 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Database\PIMSDentistaKo.mdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fonts\LEMONMILK-Bold.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fonts\LEMONMILK-BoldItalic.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fonts\LEMONMILK-Light.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fonts\LEMONMILK-LightItalic.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fonts\LEMONMILK-Medium.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fonts\LEMONMILK-MediumItalic.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fonts\LEMONMILK-Regular.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fonts\LEMONMILK-RegularItalic.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fonts\Rounded_Elegance.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\backup.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -64,6 +105,9 @@
     <Resource Include="images\report.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="images\search.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -79,6 +123,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>
