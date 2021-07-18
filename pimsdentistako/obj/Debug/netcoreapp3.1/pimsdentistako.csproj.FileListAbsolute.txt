@@ -168,3 +168,5 @@ D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debu
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\App.baml
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\UserAccountView.g.cs
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\UserAccountView.baml
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.dll.config
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csprojAssemblyReference.cache

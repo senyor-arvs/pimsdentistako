@@ -229,8 +229,8 @@
                                       HorizontalAlignment="Center" 
                                       SelectionChanged="patientDataGrid_SelectionChanged">
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Header="Patient No." MinWidth="200"/>
-                                    <DataGridTextColumn Header="Patient" MinWidth="498"/>
+                                    <DataGridTextColumn Header="Number" MinWidth="200"/>
+                                    <DataGridTextColumn Header="Name" MinWidth="498"/>
                                 </DataGrid.Columns>
 
 
