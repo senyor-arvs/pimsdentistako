@@ -21,6 +21,9 @@
             <views:DashboardView/>
         </DataTemplate>
         <!-- Add the remaining views below -->
+        <DataTemplate x:Name="treatmentView" DataType="{x:Type viewmodels:TreatmentViewModel}">
+            <views:TreatmentView/>
+        </DataTemplate>
         <DataTemplate x:Name="appointmentsView" DataType="{x:Type viewmodels:AppointmentsViewModel}">
             <views:AppointmentsView/>
         </DataTemplate>
@@ -167,7 +170,7 @@
                             HorizontalAlignment="Left">
                                 <Button Content="Dentist"
                                         FontSize="32"
-                                        FontFamily="Rounded Elegance"
+                                        FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="#191715"
                                         Margin="80,20,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
@@ -212,12 +215,12 @@
                             HorizontalAlignment="Left">
                                 <Button Content="Treatment"
                                         FontSize="32"
-                                        FontFamily="Rounded Elegance"
+                                        FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="#191715"
                                         Margin="80,20,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
                                         IsEnabled="False"
-                                        Name="TreatmentButton">
+                                        Name="TreatmentButton" Click="TreatmentButton_Click">
                                     <Button.Style>
                                         <Style TargetType="Button">
                                             <Setter Property="Background" Value="White"/>
@@ -296,7 +299,7 @@
                             HorizontalAlignment="Left">
                                 <Button Content="Appointments"
                                         FontSize="32"
-                                        FontFamily="Rounded Elegance"
+                                        FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="#191715"
                                         Margin="80,20,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
@@ -341,7 +344,7 @@
                             HorizontalAlignment="Left">
                                 <Button Content="Patients"
                                         FontSize="32"
-                                        FontFamily="Rounded Elegance"
+                                        FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="#191715"
                                         Margin="80,20,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
