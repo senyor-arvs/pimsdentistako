@@ -214,8 +214,7 @@
                 <StackPanel Height="850">
                     <StackPanel Margin="0,20,0,0" Width="1786">
                         <!--DATA GRID-->
-                        <StackPanel HorizontalAlignment="Left" 
-                                    >
+                        <StackPanel HorizontalAlignment="Left">
                             <DataGrid ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}"
                                       Style="{DynamicResource DataGridStyle1}"
                                       x:Name="patientDataGrid" 
@@ -232,10 +231,7 @@
                                     <DataGridTextColumn Header="Patient No." MinWidth="200"/>
                                     <DataGridTextColumn Header="Patient" MinWidth="498"/>
                                 </DataGrid.Columns>
-
-
                             </DataGrid>
-
                         </StackPanel>
 
                         <!--TextBox Area-->
