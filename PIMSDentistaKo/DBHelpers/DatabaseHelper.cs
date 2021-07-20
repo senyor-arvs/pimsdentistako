@@ -5,6 +5,8 @@ using System.Data.OleDb;
 using pimsdentistako.DBElements;
 using System.Collections.ObjectModel;
 using System.Windows;
+using System.Configuration;
+using System.Windows.Controls;
 
 namespace pimsdentistako.DBHelpers
 {
@@ -12,7 +14,14 @@ namespace pimsdentistako.DBHelpers
     {
         //Provider=Microsoft.Jet.OLEDB.4.0;Data Source = C:\mydatabase.mdb;Jet OLEDB:Database Password = MyDbPassword;
         private static OleDbConnection _CONNECTION_OBJ;
-        
+        private static bool dEBUG;
+
+        public static readonly string BLANK_INPUT = "-";
+        public static readonly string EMPTY_INPUT = "";
+        public static readonly string WHITE_SPACE_INPUT = " ";
+
+        public static bool DEBUG { get => dEBUG; set => dEBUG = value; }
+
         public class ConnectionState
         {
             public static readonly string STATE_CLOSE = "Closed";
@@ -27,7 +36,7 @@ namespace pimsdentistako.DBHelpers
         public static void TestConnection() //use only for testing connection
         {
 
-            _CONNECTION_OBJ.Close(); //will thorw an exception if something is wrong
+            requestConnection(ConnectionState.STATE_OPEN);
             MessageBox.Show("Connection State: " + GetConnectionObject().State.ToString());
         }
 
@@ -35,9 +44,7 @@ namespace pimsdentistako.DBHelpers
         {
             if (_CONNECTION_OBJ == null)
             {
-                _CONNECTION_OBJ = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;" +
-                    @"Data Source=|DataDirectory|\Database\PIMSDentistaKo.mdb;" +
-                    "Jet OLEDB:Database Password = dQXpe}3]?Rx&.7zh*cZ^;");
+                _CONNECTION_OBJ = new OleDbConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             }
             return true;
         }
@@ -54,7 +61,7 @@ namespace pimsdentistako.DBHelpers
             if (state.Equals(ConnectionState.STATE_OPEN) && GetConnectionState().Equals(ConnectionState.STATE_CLOSE))
             {
                 _CONNECTION_OBJ.Open();
-            } 
+            }
             else if (state.Equals(ConnectionState.STATE_CLOSE) && GetConnectionState().Equals(ConnectionState.STATE_OPEN))
             {
                 _CONNECTION_OBJ.Close();
@@ -66,16 +73,16 @@ namespace pimsdentistako.DBHelpers
             return obj1.Equals(obj2);
         }
 
-        public static Int64 GetAvailableID(string Table) //returns 0 if value is DBNull
+        public static long GetMaxID(string Table) //returns 1 if value is DBNull
         {
             string activeIDCol = "";
 
             if (compare(Table, DBNames.TableNames.DENTAL_REC))
             {
                 activeIDCol = DBNames.ColumnNames.Dental_Record[0];
-            } 
+            }
             else if (compare(Table, DBNames.TableNames.DENTIST))
-            { 
+            {
                 activeIDCol = DBNames.ColumnNames.Dentist[0];
             }
             else if (compare(Table, DBNames.TableNames.EMERGENCY_INFO))
@@ -106,13 +113,61 @@ namespace pimsdentistako.DBHelpers
             requestConnection(ConnectionState.STATE_OPEN);
             OleDbCommand maxIdCommand = new OleDbCommand("SELECT MAX(" + activeIDCol + ") FROM " + Table, GetConnectionObject());
             object obj = maxIdCommand.ExecuteScalar();
-            Int32 maxAvailble = -1;
+            int maxAvailble;
             if (obj != null && DBNull.Value != obj)
             {
-                maxAvailble = (Int32)obj;
+                maxAvailble = (int)obj;
+                return maxAvailble += 1;
             }
-            maxAvailble += 1;
+            maxAvailble = 1;
             return maxAvailble;
+        }
+
+        //Replaces "-" to ""
+        public static string BlankInputFieldReplacer(string field)
+        {
+            return field.Equals(BLANK_INPUT) ? EMPTY_INPUT : field;
+        }
+
+        //CHECK IF THE USER DOES NOT ENTER ANY VALUE IF NOT REPLACE IT WITH BLANK_INPUT "-"
+        public static string CheckNullEmptyInput(TextBox tb)
+        {
+            return String.IsNullOrEmpty(tb.Text) ? BLANK_INPUT : tb.Text.Trim();
+        }
+
+        //USE ONLY IN DEBUGGING MODE
+        public static void DisplayInMessageBox(string fromSource, Exception e)
+        {
+            MessageBox.Show(e.Message, "Debugger of: " + fromSource);
+        }
+
+        // square brackets to prevent query params being detected as reserved keyword
+        public static string Preserved(string to_isolate)
+        {
+            StringBuilder sb = new StringBuilder();
+            return sb.Append("[").Append(to_isolate).Append("]").ToString();
+        }
+
+        //add square braces to provided array of string column names
+        public static string[] BatchPreserved(string[] columns_or_tables)
+        {
+            for (int i = 0; i < columns_or_tables.Length; i++)
+            {
+                columns_or_tables[i] = Preserved(columns_or_tables[i]);
+            }
+            return columns_or_tables;
+        }
+
+        //check the index of active datagrid if valid to prevent access out of range or negative index
+        public static bool IsSelectedIndexValid(int selected_index, int your_list_count)
+        {
+            return !(selected_index >= your_list_count || selected_index < 0);
+        }
+
+        //convert date string to DateTime
+        public static DateTime ConvertToDateTime(string date_string)
+        {
+            return Convert.ToDateTime(date_string);
         }
     }
 }

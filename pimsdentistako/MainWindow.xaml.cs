@@ -34,7 +34,6 @@ namespace pimsdentistako
             Mainscreen.Width = 1920 * 0.95;
             DatabaseHelper.Init();
         }
-
         private void ProfilePicture_LeftClick(object sender, MouseButtonEventArgs e)
         {
             MessageBox.Show("Hello!");
