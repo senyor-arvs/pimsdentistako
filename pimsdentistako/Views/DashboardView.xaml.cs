@@ -1,17 +1,10 @@
-﻿using pimsdentistako.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
+
+using pimsdentistako.DBHelpers;
 
 namespace pimsdentistako.Views
 {
@@ -32,6 +25,19 @@ namespace pimsdentistako.Views
             };
             timer.Tick += timer_Tick;
             timer.Start();
+
+            DatabaseHelper.Init();
+            PatientHelper.InitList();
+            string totalPatient = "0";
+            int total = PatientHelper.PatientList.Count;
+            if (total >= 19999)
+            {
+                totalPatient = "20000+";
+            } else
+            {
+                totalPatient = total.ToString();
+            }
+            txtBlockPatientsTotal.Text = totalPatient;
         }
 
         private void showDateBtn_Click(object sender, RoutedEventArgs e)

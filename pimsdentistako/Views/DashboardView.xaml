@@ -625,7 +625,8 @@
                                            FontSize="25"
                                            FontFamily="{StaticResource Rounded Elegance}"
                                            HorizontalAlignment="Right"/>
-                                    <TextBlock Text="324"
+                                    <TextBlock Text="0"
+                                           x:Name="txtBlockPatientsTotal"
                                            FontSize="70"
                                            FontFamily="{StaticResource LEMON MILK Regular}"
                                            HorizontalAlignment="Right"/>
@@ -649,7 +650,7 @@
                                            FontSize="25"
                                            FontFamily="{StaticResource Rounded Elegance}"
                                            HorizontalAlignment="Right"/>
-                                    <TextBlock Text="6"
+                                    <TextBlock Text="0"
                                            FontSize="70"
                                            FontFamily="{StaticResource LEMON MILK Regular}"
                                            HorizontalAlignment="Right"/>

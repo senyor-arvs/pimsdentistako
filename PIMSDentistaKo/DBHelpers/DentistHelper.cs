@@ -14,9 +14,13 @@ namespace pimsdentistako.DBHelpers
 {
     public class DentistHelper
     {
+        private static TextBlock textCount;
         private static readonly string myTable = DBNames.TableNames.DENTIST;
         private static readonly string[] col = DBNames.ColumnNames.Dentist;
         private static int currentSelection;
+
+        //attach here the textblock where the count of patient are displayed
+        public static TextBlock TextCount { get => textCount; set => textCount = value; }
 
         public static ObservableCollection<Dentist> DentistList { get; set; }
         public static DataGrid MyDataGrid { get; set; }
@@ -29,7 +33,7 @@ namespace pimsdentistako.DBHelpers
             {
                 requestConnection(ConnectionState.STATE_OPEN);
                 DentistList = new ObservableCollection<Dentist>();
-                OleDbCommand getAllDentistCommand = new OleDbCommand("SELECT * FROM " + DBNames.TableNames.DENTIST, GetConnectionObject());
+                OleDbCommand getAllDentistCommand = new OleDbCommand("SELECT * FROM " + myTable, GetConnectionObject());
                 OleDbDataReader dataReader = getAllDentistCommand.ExecuteReader();
 
                 while (dataReader.Read())
@@ -267,8 +271,9 @@ namespace pimsdentistako.DBHelpers
         }
         public static void reorderDentistList() //sort the list ascending use only i needed to sort list
         {
+            if (TextCount != null) TextCount.Text = DentistList.Count.ToString();
             DentistList = new ObservableCollection<Dentist>(DentistList.OrderBy(i => Convert.ToUInt64(i.DentistID))); //sort via ID
-            MyDataGrid.ItemsSource = DentistList;
+            if(MyDataGrid != null) MyDataGrid.ItemsSource = DentistList;
         }
 
         #region DATAGRID LISTENERS AND HANDLERS

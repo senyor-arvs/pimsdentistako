@@ -69,6 +69,7 @@ namespace pimsdentistako.DBHelpers
                 catch (InvalidCastException e)
                 {
                     maxAvailable = 0;
+                    if (DEBUG) DatabaseHelper.DisplayInMessageBox(myTable, e);
                 }
 
                 Treatment treatment = new Treatment
@@ -163,6 +164,7 @@ namespace pimsdentistako.DBHelpers
             return actionState;
         }
 
+        //TODO ATTACH DATA GRID
         public static void reorderTreatmentList() //sort the list ascending
         {
             TreatmentList = new ObservableCollection<Treatment>(TreatmentList.OrderBy(i => Convert.ToUInt64(i.TreatmentID))); //sort via ID
