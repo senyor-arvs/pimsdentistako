@@ -38,7 +38,6 @@ namespace pimsdentistako.Views
         private void updateTreatmentButton_Click(object sender, RoutedEventArgs e)
         {
             var selectedIndex = treatmentDataGrid.SelectedIndex;
-            MessageBox.Show(treatmentTxtBox.Text + " " + TreatmentList[selectedIndex].TreatmentName);
             Treatment updatedTreatment = new Treatment
             {
                 TreatmentID = TreatmentList[selectedIndex].TreatmentID,
@@ -49,6 +48,7 @@ namespace pimsdentistako.Views
 
         private void treatmentDataGrid_SelChanged(object sender, SelectionChangedEventArgs e)
         {
+            treatmentTxtBox.IsReadOnly = false;
             try
             {
                 var data = treatmentDataGrid.SelectedItem;
@@ -76,6 +76,7 @@ namespace pimsdentistako.Views
         {
             var selectedIndex = treatmentDataGrid.SelectedIndex;
             DeleteTreatment(TreatmentList[selectedIndex].TreatmentID);
+            treatmentTxtBox.Clear();
         }
     }
 }
