@@ -25,6 +25,8 @@ namespace pimsdentistako.DBHelpers
             public static readonly string SUPER_ADMIN = "super_admin";
         }
 
+        //WORKING
+        //INIT UNDER USER ACCOUNTS
         public static bool InitList()
         {
             bool actionState = false;
@@ -52,6 +54,7 @@ namespace pimsdentistako.DBHelpers
             }
             catch (Exception)
             {
+
             }
             finally
             {
@@ -60,26 +63,26 @@ namespace pimsdentistako.DBHelpers
             return actionState;
         }
 
+        //WORKING
         //set initList param to true if you want to init list automatically - on user acc section it can be false
-        public static bool AddUserAccount(UserAccount user, bool initList) //automatically called inside dentisthelper
+        public static bool AddUserAccount(UserAccount user) //automatically called inside dentisthelper
         {
-            if (initList) InitList();
             bool actionState = false;
             try
             {
                 requestConnection(ConnectionState.STATE_OPEN);
 
                 StringBuilder query = new StringBuilder();
-                query.Append("@INSERT INTO ").Append(myTable).Append(" (")
+                query.Append("INSERT INTO ").Append(myTable).Append(" (")
                     .Append(col[1]).Append(", ")
                     .Append(col[2]).Append(", ")
-                    .Append(col[3]).Append(", ")
-                    .Append(col[4]).Append(")")
-                    .Append(" VALUES (@dentistID, @uname, @pass, @remark)");
+                    .Append(Preserved(new String(col[3]))).Append(", ")
+                    .Append(col[4]).Append(") ")
+                    .Append(" VALUES (@id, @uname, @pass, @remark)");
 
                 OleDbCommand insertCommand = new OleDbCommand(query.ToString(), GetConnectionObject());
 
-                insertCommand.Parameters.Add(new OleDbParameter("@dentistID", user.DentistID));
+                insertCommand.Parameters.Add(new OleDbParameter("@id", user.DentistID));
                 insertCommand.Parameters.Add(new OleDbParameter("@uname", user.Username));
                 insertCommand.Parameters.Add(new OleDbParameter("@pass", user.Password));
                 insertCommand.Parameters.Add(new OleDbParameter("@remark", user.UserAccountRemarks));
@@ -91,16 +94,18 @@ namespace pimsdentistako.DBHelpers
                     reorderAccountList();
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-            }finally
+                if (DEBUG) DatabaseHelper.DisplayInMessageBox(myTable, e);
+            }
+            finally
             {
                 requestConnection(ConnectionState.STATE_CLOSE);
             }
             return actionState;
         }
 
-        //INIT UNDER USER ACCOUNTS
+        //TODO UNTESTED UPDATE USER ACC
         public static bool UpdateUserAccount(string new_password) //use only for admin - only password can be changed
         {
             bool actionState = false;
@@ -110,8 +115,8 @@ namespace pimsdentistako.DBHelpers
                 requestConnection(ConnectionState.STATE_OPEN);
 
                 StringBuilder query = new StringBuilder();
-                query.Append("@UPDATE ").Append(myTable).Append(" SET ")
-                    .Append(col[2]).Append("='@pass' ")
+                query.Append("UPDATE ").Append(myTable).Append(" SET ")
+                    .Append(col[3]).Append("='@pass' ")
                     .Append("WHERE ").Append(col[3]).Append("=@remark");
 
                 OleDbCommand updateCommand = new OleDbCommand(query.ToString(), GetConnectionObject());
@@ -120,22 +125,25 @@ namespace pimsdentistako.DBHelpers
                 updateCommand.Parameters.Add(new OleDbParameter("@remark", AccoutRemarks.ADMIN));
 
                 bool affectedRows = updateCommand.ExecuteNonQuery() > 0;
+                bool removed = false;
                 UserAccount toRemove = AccountList.Single(i => i.UserAccountRemarks.Equals(AccoutRemarks.ADMIN)); //access the old one
-
                 UserAccount newUser = toRemove;
                 newUser.Password = new_password;
-
-                bool removed = AccountList.Remove(toRemove); //remove it
-                if (actionState && removed)
+                if (affectedRows)
+                {
+                    removed = AccountList.Remove(toRemove); //remove it
+                }
+                if (affectedRows && removed)
                 {
                     AccountList.Add(newUser);
                     reorderAccountList();
                 }
                 actionState = affectedRows && removed;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-            } 
+                if (DEBUG) DatabaseHelper.DisplayInMessageBox(myTable, e);
+            }
             finally
             {
                 requestConnection(ConnectionState.STATE_CLOSE);
@@ -143,25 +151,77 @@ namespace pimsdentistako.DBHelpers
             return actionState;
         }
 
-        public static bool DeleteUserAccount(string dentistID, bool initList) //use only for non admin accounts - Automatically Called Inside DentistHelper
+        //WORKING CALLED INSIDE UPDATE DENTIST
+        public static bool UpdateUserName(string newUserName, string dentistID) //use only for admin - only password can be changed
         {
-            if (initList) InitList();
             bool actionState = false;
-            //do not allow deletion of admin account
-            if (AccountList.Single(i => i.DentistID.Equals(dentistID)).UserAccountRemarks.Equals(AccoutRemarks.ADMIN))
-            {
-                return actionState;
-            }
             try
             {
                 requestConnection(ConnectionState.STATE_OPEN);
-                OleDbCommand deleteCommand = new OleDbCommand("DELETE FROM " + myTable + " WHERE " + col[1] + "='" + dentistID + "';", GetConnectionObject());
-                actionState = deleteCommand.ExecuteNonQuery() > 0;
-            }
-            catch (Exception)
-            {
 
-            } finally
+                StringBuilder query = new StringBuilder();
+                query.Append("UPDATE ").Append(myTable).Append(" SET ")
+                    .Append(col[2]).Append("= ? ")
+                    .Append("WHERE ").Append(col[1]).Append("= ?");
+
+                OleDbCommand updateCommand = new OleDbCommand(query.ToString(), GetConnectionObject());
+
+                updateCommand.Parameters.Add(new OleDbParameter("@uname", newUserName));
+                updateCommand.Parameters.Add(new OleDbParameter("@id", dentistID));
+
+                bool affectedRows = updateCommand.ExecuteNonQuery() > 0;
+                bool removed = false;
+
+                UserAccount toRemove = AccountList.Single(i => i.DentistID.Equals(dentistID)); //access the old one
+                UserAccount newUser = toRemove;
+                newUser.Username = newUserName;
+                if (affectedRows)
+                {
+                    removed = AccountList.Remove(toRemove); //remove it
+                }
+                if (affectedRows && removed)
+                {
+                    AccountList.Add(newUser);
+                    reorderAccountList();
+                }
+                actionState = affectedRows && removed;
+            }
+            catch (Exception e)
+            {
+                if (DEBUG) DatabaseHelper.DisplayInMessageBox(myTable, e);
+            }
+            finally
+            {
+                requestConnection(ConnectionState.STATE_CLOSE);
+            }
+            return actionState;
+        }
+
+        //WORKING
+        public static bool DeleteUserAccount(string dentistID) //use only for non admin accounts - Automatically Called Inside DentistHelper
+        {
+            bool actionState = false;
+            if (DentistHelper.IsAdmin(dentistID)) return actionState;
+            try
+            {
+                requestConnection(ConnectionState.STATE_OPEN);
+
+                OleDbCommand deleteCommand = new OleDbCommand("DELETE FROM " + myTable + " WHERE " + col[1] + "='" + dentistID + "';", GetConnectionObject());
+                bool actionResult = deleteCommand.ExecuteNonQuery() > 0;
+
+                bool removed = false;
+                if (actionResult)
+                {
+                    UserAccount toRemove = AccountList.Single(i => i.DentistID.Equals(dentistID));
+                    removed = AccountList.Remove(toRemove);
+                }
+                actionState = actionResult && removed;
+            }
+            catch (Exception e)
+            {
+                if (DEBUG) DatabaseHelper.DisplayInMessageBox(myTable, e);
+            }
+            finally
             {
                 requestConnection(ConnectionState.STATE_CLOSE);
             }
@@ -170,6 +230,7 @@ namespace pimsdentistako.DBHelpers
 
         private static void reorderAccountList()
         {
+            //TODO ATTACH HERE THE DATA GRID OF USER ACCOUNT
             AccountList = new ObservableCollection<UserAccount>(AccountList.OrderBy(i => Convert.ToUInt64(i.DentistID))); //sort via ID
         }
     }
