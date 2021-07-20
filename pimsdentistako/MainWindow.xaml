@@ -33,6 +33,9 @@
         <DataTemplate x:Name="userAccountView" DataType="{x:Type viewmodels:UserAccountViewModel}">
             <views:UserAccountView/>
         </DataTemplate>
+        <DataTemplate x:Name="dentistView" DataType="{x:Type viewmodels:DentistViewModel}">
+            <views:DentistView/>
+        </DataTemplate>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -175,7 +178,7 @@
                                         Margin="80,20,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
                                         IsEnabled="False"
-                                        Name="DentistButton">
+                                        Name="DentistButton" Click="DentistButton_Click">
                                     <Button.Style>
                                         <Style TargetType="Button">
                                             <Setter Property="Background" Value="White"/>
