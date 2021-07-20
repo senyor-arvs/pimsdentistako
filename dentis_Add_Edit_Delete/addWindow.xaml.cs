@@ -13,8 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.OleDb;
 using System.Data;
-using dentis_Add_Edit_Delete.ELclass;
 using System.Collections.ObjectModel;
+
+using dentis_Add_Edit_Delete.DBElements;
+using dentis_Add_Edit_Delete.DBHelpers;
 
 namespace dentis_Add_Edit_Delete
 {
@@ -23,105 +25,37 @@ namespace dentis_Add_Edit_Delete
     /// </summary>
     public partial class addWindow : Window
     {
-        // private MainWindow main;//
-        private MainWindow parentInstance;
-        ObservableCollection<Dentist> dentistList;
-        OleDbConnection con;
-
-        //private readonly OleDbConnection connection;//
-
-
-        /*OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;" +
-            @"Data Source=|DataDirectory|\database\dentist_database.mdb;" +
-            "User Id = Admin; Password=;");*/
-
-        public addWindow(MainWindow parentInstance)
+    
+        public addWindow()
         {
             InitializeComponent();
-
-            this.parentInstance = parentInstance;
-            con = this.parentInstance.getConnectionObject();
-            this.dentistList = this.parentInstance.getDentistInfo();
-            //main = instance;//
-            //this.connection = instance.GetConnection();//
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-            con.Open();
-
-            OleDbCommand getMaxId = new OleDbCommand("select MAX(dentistId) from [dentist_info]",con);
-            Int32 maxAvailable = (Int32)getMaxId.ExecuteScalar();
-            maxAvailable += 1;
-
-            
-            
-            Dentist dentist = new Dentist
+            DatabaseHelper.DEBUG = true;
+            //Create a Dentist
+            Dentist dentist = new Dentist //dentist ID no input
             {
-                DentistId = maxAvailable.ToString(),
-                DentistFirstName = txtAddFirst.Text,
-                DentistMiddleName = txtAddMiddle.Text,
-                DentistLastName = txtAddLast.Text,
-                DentistSuffix = txtAddSuffix.Text,
-                LicenseNumber = txtAddLicense.Text,
-                PtrNumber = txtAddPtr.Text
-
+                DentistFirstName = DatabaseHelper.CheckNullEmptyInput(txtAddFirst),
+                DentistMiddleName = DatabaseHelper.CheckNullEmptyInput(txtAddMiddle),
+                DentistLastName = DatabaseHelper.CheckNullEmptyInput(txtAddLast),
+                DentistSuffix = DatabaseHelper.CheckNullEmptyInput(txtAddSuffix),
+                DentistLicenseNumber = DatabaseHelper.CheckNullEmptyInput(txtAddLicense),
+                DentistPTRNumber = DatabaseHelper.CheckNullEmptyInput(txtAddPtr)
             };
-             
-            OleDbCommand insertcommand = new OleDbCommand(
-                @"INSERT INTO [dentist_info] (dentistFirstName,dentistMiddleName,dentistLastName,dentistSuffix,LicenseNumber,ptrNumber) VALUES (@fname,@mname,@lname,@suffix,@license,@ptr)",con);
 
-            insertcommand.Parameters.Add(new OleDbParameter("@fname", dentist.DentistFirstName));
-            insertcommand.Parameters.Add(new OleDbParameter("@mname", dentist.DentistMiddleName));
-            insertcommand.Parameters.Add(new OleDbParameter("@lname", dentist.DentistLastName));
-            insertcommand.Parameters.Add(new OleDbParameter("@suffix", dentist.DentistSuffix));
-            insertcommand.Parameters.Add(new OleDbParameter("@license", dentist.LicenseNumber));
-            insertcommand.Parameters.Add(new OleDbParameter("@ptr", dentist.PtrNumber));
-
-            insertcommand.ExecuteNonQuery();
-            con.Close();
-
-            this.dentistList.Add(dentist);
-
-            MainWindow m = new MainWindow();
-            MessageBox.Show("Data is saved.");
+            //ADD DENTIST
+            bool actionResult = DentistHelper.AddDentist(dentist);
+            
+            if(actionResult)
+            {
+                MessageBox.Show("Dentist was Added Successfully.");
+            } else
+            {
+                MessageBox.Show("An error occured while adding the Dentist.");
+            }
             this.Close();
-            
-
-
-
-
-
-
-
-
-
-
-
-            /*
-            connection.Open();
-            OleDbCommand maxCommand = new OleDbCommand("select max(dentistId) from dentist_info", connection);
-            Int32 maxAvailable = (Int32)maxCommand.ExecuteScalar();
-            maxAvailable += 1;
-
-            Dentist dentist = new Dentist
-            
-
-            {
-                DentistId = maxAvailable.ToString(),
-                DentistFirstName = txtAddFirst.Text,
-                DentistMiddleName = txtAddMiddle.Text,
-                DentistLastName = txtAddLicense.Text,
-                DentistSuffix = txtAddSuffix.Text,
-                LicenseNumber = txtAddLicense.Text,
-                PtrNumber = txtAddPtr.Text
-
-            };
-
-            main.dentistInfo.Add(dentist);
-            */
-
         }
 
 

@@ -36,12 +36,12 @@
         
         <Button x:Name="deleteButton"  Content="delete" HorizontalAlignment="Left" Height="40" Margin="500,400,0,0" VerticalAlignment="Top" Width="135" Click="deleteButton_Click"></Button>
 
-        <DataGrid x:Name="dg" Margin="100,220,29,190" SelectionChanged="dg_SelectionChanged" IsReadOnly="True" AutoGenerateColumns="False">
+        <DataGrid x:Name="dg" Margin="100,220,29,190" SelectionChanged="dg_SelectionChanged" IsReadOnly="True" CanUserSortColumns="False" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Width="Auto" Binding="{Binding Path = DentistId}"/>
-                <DataGridTextColumn Header="Dentist Name" Width="Auto" Binding="{Binding Path = DentistFirstName}"/>
-                <DataGridTextColumn Header="License no." Width="Auto" Binding="{Binding Path = LicenseNumber}"/>
-                <DataGridTextColumn Header="Ptr no." Width="Auto" Binding="{Binding Path = PtrNumber}"/>
+                <DataGridTextColumn Header="ID" Width="Auto" Binding="{Binding Path = DentistID}"/>
+                <DataGridTextColumn Header="Dentist Name" Width="Auto" Binding="{Binding Path = DentistFullName}"/>
+                <DataGridTextColumn Header="License no." Width="Auto" Binding="{Binding Path = DentistLicenseNumber}"/>
+                <DataGridTextColumn Header="Ptr no." Width="Auto" Binding="{Binding Path = DentistPTRNumber}"/>
             </DataGrid.Columns>
         </DataGrid>
         

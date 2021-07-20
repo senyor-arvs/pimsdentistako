@@ -9,10 +9,10 @@
     <Grid>
         <StackPanel>
             <Label Content="Delete Confirmation" HorizontalAlignment="Left" Height="74" Margin="135,90,0,0" VerticalAlignment="Top" Width="344" FontSize="35"/>
-            <Label Content="Are you sure you want to delete it?" HorizontalAlignment="Left" Height="43" Margin="180,0,0,0" VerticalAlignment="Center" Width="242" FontSize="15"/>
+            <Label Content="" HorizontalAlignment="Left" Height="Auto" Margin="180,0,0,0" VerticalAlignment="Center" Width="Auto" FontSize="15" x:Name="labelConfirmation"/>
         </StackPanel>
 
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="400,271,0,0" VerticalAlignment="Top" Height="43" Width="79" FontSize="20" Name="btnDeleteCancel"/>
-        <Button Content="Confirm" HorizontalAlignment="Left" Margin="135,271,0,0" VerticalAlignment="Top" Height="43" Width="79" FontSize="20" Name="btnDeleteConfirm"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="400,271,0,0" VerticalAlignment="Top" Height="43" Width="79" FontSize="20" Name="btnDeleteCancel" Click="btnDeleteCancel_Click"/>
+        <Button Content="Confirm" HorizontalAlignment="Left" Margin="135,271,0,0" VerticalAlignment="Top" Height="43" Width="79" FontSize="20" Name="btnDeleteConfirm" Click="btnDeleteConfirm_Click"/>
     </Grid>
 </Window>

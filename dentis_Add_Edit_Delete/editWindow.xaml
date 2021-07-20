@@ -28,7 +28,7 @@
             <TextBox HorizontalAlignment="Left" Margin="262,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" Height="30" Name="txtEditPtr"/>
         </StackPanel>
 
-        <Button Content="Confirm" HorizontalAlignment="Left" Margin="122,490,0,0" VerticalAlignment="Top" Height="35" Width="100" FontSize="25" Name="btnEditConfirm"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="382,490,0,0" VerticalAlignment="Top" Height="35" Width="100" FontSize="25" Name="btnEditCancel"/>
+        <Button Content="Confirm" HorizontalAlignment="Left" Margin="122,490,0,0" VerticalAlignment="Top" Height="35" Width="100" FontSize="25" Name="btnEditConfirm" Click="btnEditConfirm_Click"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="382,490,0,0" VerticalAlignment="Top" Height="35" Width="100" FontSize="25" Name="btnEditCancel" Click="btnEditCancel_Click"/>
     </Grid>
 </Window>
