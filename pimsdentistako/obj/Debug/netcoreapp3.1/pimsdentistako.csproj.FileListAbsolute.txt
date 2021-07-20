@@ -61,7 +61,6 @@ C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistak
 C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.g.cs
 C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.g.cs
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.g.cs
 C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
 C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.cache
@@ -69,7 +68,6 @@ C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistak
 C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.baml
 C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.baml
 C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.baml
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.baml
 C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.g.resources
 C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.Properties.Resources.resources
 C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.GenerateResource.cache
@@ -79,3 +77,7 @@ C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistak
 C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.dll
 C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.pdb
 C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.genruntimeconfig.cache
+C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\AppointmentsView.g.cs
+C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\PatientsView.g.cs
+C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\AppointmentsView.baml
+C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\PatientsView.baml
