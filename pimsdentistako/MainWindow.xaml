@@ -36,6 +36,10 @@
         <DataTemplate x:Name="dentistView" DataType="{x:Type viewmodels:DentistViewModel}">
             <views:DentistView/>
         </DataTemplate>
+        <Style x:Key = "SmoothFormat" TargetType="TextBlock" >
+            <Setter Property="TextOptions.TextFormattingMode" Value="Display"></Setter>
+            <Setter Property="TextOptions.TextRenderingMode" Value="ClearType"></Setter>
+        </Style>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -78,15 +82,18 @@
 
                                 <StackPanel Margin="25,30,0,0" Width="238">
                                     <TextBlock Text="Hello,"
+                                               Style="{StaticResource SmoothFormat}"
                                    Foreground="White"
                                    FontSize="25"
                                    FontFamily="{StaticResource Rounded Elegance}"/>
                                     <TextBlock Text="Dr. Dentista Ko"
+                                               Style="{StaticResource SmoothFormat}"
                                    Foreground="White"
                                    FontSize="25"
                                    FontFamily="{StaticResource Rounded Elegance}"/>
 
                                     <TextBlock Text="Not you? Click here to change user."
+                                               Style="{StaticResource SmoothFormat}"
                                    Foreground="#c09764"
                                    FontSize="18"
                                    FontFamily="{StaticResource Rounded Elegance}"
@@ -121,6 +128,7 @@
                         <StackPanel>
                             <TextBlock 
                                 Text="What would you like to do today?"
+                                Style="{StaticResource SmoothFormat}"
                                Foreground="White"
                                FontSize="20"
                                FontFamily="{StaticResource Rounded Elegance}"
@@ -140,7 +148,7 @@
                                         FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="White"
                                         Margin="-0,0,0,0"
-                                        TextOptions.TextRenderingMode="Aliased"
+                                        TextOptions.TextRenderingMode="Auto"
                                         Click="Master_File_Click">    
                                     <Button.Style>
                                         <Style TargetType="Button">
@@ -265,6 +273,7 @@
                                 <Button Content="Transactions"
                             FontSize="32"
                             FontFamily="{StaticResource Rounded Elegance}"
+                            TextOptions.TextRenderingMode="Auto"
                             Foreground="White"
                             Name="transactionsBtn"
                             Click="transactionsBtn_Click">
@@ -392,9 +401,11 @@
                             <!-- Utility -->
                             <StackPanel Margin="0,20,0,0" HorizontalAlignment="Left">
                                 <Button Content="Utility"
+                                        TextOptions.TextRenderingMode="Auto"
                                         FontSize="32"
                                         FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="White">
+                                    
                                     <Button.Style>
                                         <Style TargetType="Button">
                                             <Setter Property="Background" Value="#bd7e4a"/>
@@ -425,6 +436,7 @@
                             <!-- User Account -->
                             <StackPanel Margin="0,20,0,0" HorizontalAlignment="Left">
                                 <Button x:Name="userAccountBtn" Content="User Account"
+                            TextOptions.TextRenderingMode="Auto"
                             FontSize="32"
                             FontFamily="{StaticResource Rounded Elegance}"
                             Foreground="White" Click="userAccountBtn_Click">
@@ -496,6 +508,7 @@
                             </Button>
                             <StackPanel Margin="20,0,0,0" VerticalAlignment="Center">
                                 <TextBlock Text="Navigate to the Dashboard"
+                                           Style="{StaticResource SmoothFormat}"
                                Foreground="White"
                                FontFamily="{StaticResource Rounded Elegance}"
                                FontSize="20"

@@ -1,21 +1,12 @@
-﻿
-<<<<<<< HEAD
-
+﻿C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+FC:\Users\PCB\pimsdentistako\pimsdentistako\App.xaml;;
 FC:\Users\PCB\pimsdentistako\pimsdentistako\Components\CustomCalendar.xaml;;
 FC:\Users\PCB\pimsdentistako\pimsdentistako\MainWindow.xaml;;
-FC:\Users\PCB\pimsdentistako\pimsdentistako\Views\DashboardView.xaml;;
 FC:\Users\PCB\pimsdentistako\pimsdentistako\Views\AppointmentsView.xaml;;
+FC:\Users\PCB\pimsdentistako\pimsdentistako\Views\DashboardView.xaml;;
+FC:\Users\PCB\pimsdentistako\pimsdentistako\Views\DentalRecordsView.xaml;;
+FC:\Users\PCB\pimsdentistako\pimsdentistako\Views\DentistView.xaml;;
 FC:\Users\PCB\pimsdentistako\pimsdentistako\Views\PatientsView.xaml;;
-=======
-FD:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\App.xaml;;
-FD:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\Components\CustomCalendar.xaml;;
-FD:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\MainWindow.xaml;;
-FD:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\Views\AppointmentsView.xaml;;
-FD:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\Views\DashboardView.xaml;;
-FD:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\Views\DentalRecordsView.xaml;;
-FD:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\Views\DentistView.xaml;;
-FD:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\Views\PatientsView.xaml;;
-FD:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\Views\TreatmentView.xaml;;
-FD:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\Views\UserAccountView.xaml;;
->>>>>>> 725301eac981368435821a9cf5e0fe0daf98178b
+FC:\Users\PCB\pimsdentistako\pimsdentistako\Views\TreatmentView.xaml;;
+FC:\Users\PCB\pimsdentistako\pimsdentistako\Views\UserAccountView.xaml;;
 
