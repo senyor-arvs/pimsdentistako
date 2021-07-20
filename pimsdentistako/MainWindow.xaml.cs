@@ -13,6 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using pimsdentistako.ViewModels;
+using pimsdentistako.Views;
+using pimsdentistako.DBHelpers;
+using pimsdentistako.DBElements;
+using System.Collections.ObjectModel;
 
 namespace pimsdentistako
 {
@@ -28,8 +32,8 @@ namespace pimsdentistako
             DataContext = new DashboardViewModel(DateTime.Today);
             Mainscreen.Height = 1080 * 0.95;
             Mainscreen.Width = 1920 * 0.95;
+            DatabaseHelper.Init();
         }
-
         private void ProfilePicture_LeftClick(object sender, MouseButtonEventArgs e)
         {
             MessageBox.Show("Hello!");
@@ -37,7 +41,7 @@ namespace pimsdentistako
 
         private void transactionsBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (AppointmentsButton.IsEnabled == true && PatientsButton.IsEnabled == true)
+            if (AppointmentsButton.IsEnabled && PatientsButton.IsEnabled)
             {
                 AppointmentsButton.IsEnabled = false; // drop down menu item
                 PatientsButton.IsEnabled = false; // drop down menu item
@@ -64,7 +68,7 @@ namespace pimsdentistako
 
         private void Master_File_Click(object sender, RoutedEventArgs e)
         {
-            if (DentistButton.IsEnabled == true && TreatmentButton.IsEnabled == true)
+            if (DentistButton.IsEnabled && TreatmentButton.IsEnabled)
             {
                 DentistButton.IsEnabled = false; // drop down menu item
                 TreatmentButton.IsEnabled = false; // drop down menu item
@@ -101,6 +105,27 @@ namespace pimsdentistako
         private void AppointmentsButton_Click(object sender, RoutedEventArgs e)
         {
             DataContext = new AppointmentsViewModel();
+        }
+
+        private void dentalRecordsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DentalRecordsView dentalRecordsView = new DentalRecordsView();
+            dentalRecordsView.Show();
+        }
+
+        private void userAccountBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new UserAccountViewModel();
+        }
+
+        private void TreatmentButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new TreatmentViewModel();
+        }
+
+        private void DentistButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new DentistViewModel();
         }
     }
 }

@@ -4,17 +4,30 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\
+=======
+D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\
+>>>>>>> 725301eac981368435821a9cf5e0fe0daf98178b
 pimsdentistako
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+<<<<<<< HEAD
 C:\Users\PCB\pimsdentistako\pimsdentistako\App.xaml
 51792488181
 
 131858838285
 192-1533232326
 Components\CustomCalendar.xaml;MainWindow.xaml;Views\AppointmentsView.xaml;Views\DashboardView.xaml;Views\PatientsView.xaml;
+=======
+D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\App.xaml
+9639811888
+1715304544
+35-1776651506
+1941952104453
+Components\CustomCalendar.xaml;MainWindow.xaml;Views\AppointmentsView.xaml;Views\DashboardView.xaml;Views\DentalRecordsView.xaml;Views\DentistView.xaml;Views\PatientsView.xaml;Views\TreatmentView.xaml;Views\UserAccountView.xaml;
+>>>>>>> 725301eac981368435821a9cf5e0fe0daf98178b
 
 False
 

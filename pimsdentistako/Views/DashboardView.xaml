@@ -488,7 +488,7 @@
 
                     <!-- Dashboard Title -->
                     <TextBlock Name="Header" Text="Dashboard" 
-                           FontFamily="Rounded Elegance"
+                           FontFamily="{StaticResource Rounded Elegance}"
                            FontSize="110"
                            Foreground="#191715"/>
 
@@ -601,9 +601,14 @@
 
                 <!-- Status Report and Statistics -->
                 <StackPanel Margin="10,-20,0,0">
+<<<<<<< HEAD
 
                     <TextBlock TextOptions.TextRenderingMode="ClearType" Text="S t a t u s   R e p o r t   &amp;   S t a t i s t i c s"
                            FontFamily="Rounded Elegance"
+=======
+                    <TextBlock Text="S t a t u s   R e p o r t   &amp;   S t a t i s t i c s"
+                           FontFamily="{StaticResource Rounded Elegance}"
+>>>>>>> 725301eac981368435821a9cf5e0fe0daf98178b
                            FontSize="25"
                            Foreground="#502e18"
                            TextOptions.TextFormattingMode="Display"
@@ -624,15 +629,15 @@
                                 <StackPanel Margin="20">
                                     <TextBlock Text="You currently have"
                                            FontSize="25"
-                                           FontFamily="Rounded Elegance"
+                                           FontFamily="{StaticResource Rounded Elegance}"
                                            HorizontalAlignment="Right"/>
                                     <TextBlock Text="324"
                                            FontSize="70"
-                                           FontFamily="LEMON MILK Regular"
+                                           FontFamily="{StaticResource LEMON MILK Regular}"
                                            HorizontalAlignment="Right"/>
                                     <TextBlock Text="patients."
                                            FontSize="25"
-                                           FontFamily="Rounded Elegance"
+                                           FontFamily="{StaticResource Rounded Elegance}"
                                            HorizontalAlignment="Right"
                                            Foreground=" #c09764"/>
                                 </StackPanel>
@@ -648,22 +653,22 @@
                                 <StackPanel Margin="20">
                                     <TextBlock Text="You have"
                                            FontSize="25"
-                                           FontFamily="Rounded Elegance"
+                                           FontFamily="{StaticResource Rounded Elegance}"
                                            HorizontalAlignment="Right"/>
                                     <TextBlock Text="6"
                                            FontSize="70"
-                                           FontFamily="LEMON MILK Regular"
+                                           FontFamily="{StaticResource LEMON MILK Regular}"
                                            HorizontalAlignment="Right"/>
 
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                                         <TextBlock Text="appointments"
                                            FontSize="25"
-                                           FontFamily="Rounded Elegance"
+                                           FontFamily="{StaticResource Rounded Elegance}"
                                            HorizontalAlignment="Right"
                                            Foreground=" #c09764"/>
                                         <TextBlock Text="  today."
                                            FontSize="25"
-                                           FontFamily="Rounded Elegance"
+                                           FontFamily="{StaticResource Rounded Elegance}"
                                            HorizontalAlignment="Right"
                                            Foreground="#191715"/>
                                     </StackPanel>
@@ -710,7 +715,7 @@
                             <StackPanel VerticalAlignment="Center" Margin="20">
                                 <TextBlock Text="View the Reports"
                                Foreground="#191715"
-                               FontFamily="Rounded Elegance"
+                               FontFamily="{StaticResource Rounded Elegance}"
                                FontSize="20"
                                />
                             </StackPanel>
@@ -755,7 +760,7 @@
                             <StackPanel VerticalAlignment="Center" Margin="20">
                                 <TextBlock Text="Backup your Data"
                                Foreground="#191715"
-                               FontFamily="Rounded Elegance"
+                               FontFamily="{StaticResource Rounded Elegance}"
                                FontSize="20"
                                />
                             </StackPanel>
@@ -825,10 +830,10 @@
                                             <StackPanel Orientation="Horizontal">
                                                 <TextBlock Text="Name of Patient:"
                                                        FontSize="20"
-                                                       FontFamily="LEMON MILK Light"/>
+                                                       FontFamily="{StaticResource LEMON MILK Light}"/>
                                                 <TextBlock Text="Cruz Jr., Alberto"
                                                        FontSize="20"
-                                                       FontFamily="Rounded Elegance"
+                                                       FontFamily="{StaticResource Rounded Elegance}"
                                                        Margin="10,0,0,0"
                                                        VerticalAlignment="Center"/>
                                             </StackPanel>
@@ -836,10 +841,10 @@
                                                     Margin="0,5,0,0">
                                                 <TextBlock Text="Contact No:"
                                                        FontSize="20"
-                                                       FontFamily="LEMON MILK Light"/>
+                                                       FontFamily="{StaticResource LEMON MILK Light}"/>
                                                 <TextBlock Text="09292903671"
                                                        FontSize="20"
-                                                       FontFamily="Rounded Elegance"
+                                                       FontFamily="{StaticResource Rounded Elegance}"
                                                        Margin="10,0,0,0"
                                                        VerticalAlignment="Center"/>
                                             </StackPanel>
@@ -847,10 +852,10 @@
                                                     Margin="0,5,0,0">
                                                 <TextBlock Text="Time of Appointment"
                                                        FontSize="20"
-                                                       FontFamily="LEMON MILK Light"/>
+                                                       FontFamily="{StaticResource LEMON MILK Light}"/>
                                                 <TextBlock Text="8:00 AM - June 16, 2021"
                                                        FontSize="20"
-                                                       FontFamily="Rounded Elegance"
+                                                       FontFamily="{StaticResource Rounded Elegance}"
                                                        Margin="10,0,0,0"
                                                        VerticalAlignment="Center"/>
                                             </StackPanel>
@@ -858,10 +863,10 @@
                                                     Margin="0,5,0,0">
                                                 <TextBlock Text="Reason:"
                                                        FontSize="20"
-                                                       FontFamily="LEMON MILK Light"/>
+                                                       FontFamily="{StaticResource LEMON MILK Light}"/>
                                                 <TextBlock Text="Daily Bracket Cleanup"
                                                        FontSize="20"
-                                                       FontFamily="Rounded Elegance"
+                                                       FontFamily="{StaticResource Rounded Elegance}"
                                                        Margin="10,0,0,0"
                                                        VerticalAlignment="Center"/>
                                             </StackPanel>
@@ -869,10 +874,10 @@
                                                     Margin="0,5,0,0" Height="69">
                                                 <TextBlock Text="Additional Notes (If Any):"
                                                        FontSize="20"
-                                                       FontFamily="LEMON MILK Light"/>
+                                                       FontFamily="{StaticResource LEMON MILK Light}"/>
                                                 <TextBlock Text="Matagal nang hindi bumabalik para mapalitan ang rubber ng brackets niya."
                                                        FontSize="20"
-                                                       FontFamily="Rounded Elegance"
+                                                       FontFamily="{StaticResource Rounded Elegance}"
                                                        Margin="10,0,0,0"
                                                        TextWrapping="Wrap" Width="413"/>
                                             </StackPanel>
@@ -884,7 +889,7 @@
                                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="-20,0,0,10">
                                                 <TextBlock Text="Next Patient"
                                                            Foreground="#191715"
-                                                           FontFamily="Rounded Elegance"
+                                                           FontFamily="{StaticResource Rounded Elegance}"
                                                            FontSize="15"
                                                            VerticalAlignment="Center"
                                                            Margin="0,0,10,0"
@@ -928,7 +933,7 @@
                                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                                                 <TextBlock Text="Details"
                                                            Foreground="#191715"
-                                                           FontFamily="Rounded Elegance"
+                                                           FontFamily="{StaticResource Rounded Elegance}"
                                                            FontSize="15"
                                                            VerticalAlignment="Center"
                                                            Margin="0,0,10,0"/>
@@ -978,7 +983,7 @@
                                     <TextBlock Text="Patient No.1"
                                        Foreground="White"
                                        FontSize="30"
-                                       FontFamily="LEMON MILK"
+                                       FontFamily="{StaticResource LEMON MILK Regular}"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Center"/>
                                 </Border>

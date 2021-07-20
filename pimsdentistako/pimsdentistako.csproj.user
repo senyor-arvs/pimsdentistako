@@ -16,7 +16,16 @@
     <Compile Update="Views\DashboardView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\DentalRecordsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\PatientsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\TreatmentView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\UserAccountView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -33,7 +42,16 @@
     <Page Update="Views\DashboardView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\DentalRecordsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\PatientsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TreatmentView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserAccountView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

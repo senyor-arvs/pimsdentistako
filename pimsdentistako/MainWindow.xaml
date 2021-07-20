@@ -21,11 +21,20 @@
             <views:DashboardView/>
         </DataTemplate>
         <!-- Add the remaining views below -->
+        <DataTemplate x:Name="treatmentView" DataType="{x:Type viewmodels:TreatmentViewModel}">
+            <views:TreatmentView/>
+        </DataTemplate>
         <DataTemplate x:Name="appointmentsView" DataType="{x:Type viewmodels:AppointmentsViewModel}">
             <views:AppointmentsView/>
         </DataTemplate>
         <DataTemplate x:Name="patientsView" DataType="{x:Type viewmodels:PatientsViewModel}">
             <views:PatientsView/>
+        </DataTemplate>
+        <DataTemplate x:Name="userAccountView" DataType="{x:Type viewmodels:UserAccountViewModel}">
+            <views:UserAccountView/>
+        </DataTemplate>
+        <DataTemplate x:Name="dentistView" DataType="{x:Type viewmodels:DentistViewModel}">
+            <views:DentistView/>
         </DataTemplate>
     </Window.Resources>
     <Grid>
@@ -36,7 +45,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Grid Background="#191715" Grid.Column="0" MaxWidth="520" HorizontalAlignment="Left">
+        <Grid Background="#191715" Grid.Column="0" MaxWidth="530" HorizontalAlignment="Left">
             <Viewbox Stretch="Uniform" VerticalAlignment="Top">
                 <StackPanel>
                     <!-- Upper Header -->
@@ -47,7 +56,7 @@
                            Foreground="White"
                            FontSize="35"
                            Margin="0,35,0,0" 
-                           FontFamily="Rounded Elegance"/>
+                           FontFamily="{StaticResource Rounded Elegance}"/>
                         </StackPanel>
                     </Viewbox>
                     <!-- Icon & Greetings -->
@@ -71,16 +80,16 @@
                                     <TextBlock Text="Hello,"
                                    Foreground="White"
                                    FontSize="25"
-                                   FontFamily="Rounded Elegance"/>
+                                   FontFamily="{StaticResource Rounded Elegance}"/>
                                     <TextBlock Text="Dr. Dentista Ko"
                                    Foreground="White"
                                    FontSize="25"
-                                   FontFamily="Rounded Elegance"/>
+                                   FontFamily="{StaticResource Rounded Elegance}"/>
 
                                     <TextBlock Text="Not you? Click here to change user."
                                    Foreground="#c09764"
                                    FontSize="18"
-                                   FontFamily="Rounded Elegance"
+                                   FontFamily="{StaticResource Rounded Elegance}"
                                    TextWrapping="Wrap"
                                    Margin="0,10,0,0"/>
                                 </StackPanel>
@@ -114,7 +123,7 @@
                                 Text="What would you like to do today?"
                                Foreground="White"
                                FontSize="20"
-                               FontFamily="Rounded Elegance"
+                               FontFamily="{StaticResource Rounded Elegance}"
                                Margin="45,45,0,0"
                                TextWrapping="Wrap" Width="276"/>
                         </StackPanel>
@@ -128,7 +137,7 @@
                             HorizontalAlignment="Left">
                                 <Button Content="Master Files"
                                         FontSize="32"
-                                        FontFamily="Rounded Elegance"
+                                        FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="White"
                                         Margin="-0,0,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
@@ -165,12 +174,12 @@
                             HorizontalAlignment="Left">
                                 <Button Content="Dentist"
                                         FontSize="32"
-                                        FontFamily="Rounded Elegance"
+                                        FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="#191715"
                                         Margin="80,20,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
                                         IsEnabled="False"
-                                        Name="DentistButton">
+                                        Name="DentistButton" Click="DentistButton_Click">
                                     <Button.Style>
                                         <Style TargetType="Button">
                                             <Setter Property="Background" Value="White"/>
@@ -210,12 +219,12 @@
                             HorizontalAlignment="Left">
                                 <Button Content="Treatment"
                                         FontSize="32"
-                                        FontFamily="Rounded Elegance"
+                                        FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="#191715"
                                         Margin="80,20,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
                                         IsEnabled="False"
-                                        Name="TreatmentButton">
+                                        Name="TreatmentButton" Click="TreatmentButton_Click">
                                     <Button.Style>
                                         <Style TargetType="Button">
                                             <Setter Property="Background" Value="White"/>
@@ -255,7 +264,7 @@
                             <StackPanel Margin="0,20,0,0" HorizontalAlignment="Left">
                                 <Button Content="Transactions"
                             FontSize="32"
-                            FontFamily="Rounded Elegance"
+                            FontFamily="{StaticResource Rounded Elegance}"
                             Foreground="White"
                             Name="transactionsBtn"
                             Click="transactionsBtn_Click">
@@ -294,7 +303,7 @@
                             HorizontalAlignment="Left">
                                 <Button Content="Appointments"
                                         FontSize="32"
-                                        FontFamily="Rounded Elegance"
+                                        FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="#191715"
                                         Margin="80,20,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
@@ -339,7 +348,7 @@
                             HorizontalAlignment="Left">
                                 <Button Content="Patients"
                                         FontSize="32"
-                                        FontFamily="Rounded Elegance"
+                                        FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="#191715"
                                         Margin="80,20,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
@@ -383,9 +392,9 @@
                             <!-- Utility -->
                             <StackPanel Margin="0,20,0,0" HorizontalAlignment="Left">
                                 <Button Content="Utility"
-                            FontSize="32"
-                            FontFamily="Rounded Elegance"
-                            Foreground="White">
+                                        FontSize="32"
+                                        FontFamily="{StaticResource Rounded Elegance}"
+                                        Foreground="White">
                                     <Button.Style>
                                         <Style TargetType="Button">
                                             <Setter Property="Background" Value="#bd7e4a"/>
@@ -415,10 +424,10 @@
 
                             <!-- User Account -->
                             <StackPanel Margin="0,20,0,0" HorizontalAlignment="Left">
-                                <Button Content="User Account"
+                                <Button x:Name="userAccountBtn" Content="User Account"
                             FontSize="32"
-                            FontFamily="Rounded Elegance"
-                            Foreground="White">
+                            FontFamily="{StaticResource Rounded Elegance}"
+                            Foreground="White" Click="userAccountBtn_Click">
                                     <Button.Style>
                                         <Style TargetType="Button">
                                             <Setter Property="Background" Value="#bd7e4a"/>
@@ -488,7 +497,7 @@
                             <StackPanel Margin="20,0,0,0" VerticalAlignment="Center">
                                 <TextBlock Text="Navigate to the Dashboard"
                                Foreground="White"
-                               FontFamily="Rounded Elegance"
+                               FontFamily="{StaticResource Rounded Elegance}"
                                FontSize="20"
                                />
                             </StackPanel>
