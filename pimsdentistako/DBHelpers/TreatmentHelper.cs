@@ -71,8 +71,6 @@ namespace pimsdentistako.DBHelpers
                     maxAvailable = 0;
                 }
 
-                MessageBox.Show(maxAvailable.ToString());
-
                 Treatment treatment = new Treatment
                 {
                     TreatmentID = maxAvailable.ToString(),
@@ -126,8 +124,6 @@ namespace pimsdentistako.DBHelpers
                 updateCommand.Parameters.Add(new OleDbParameter("@treatmentName", treatment.TreatmentName));
                 updateCommand.Parameters.Add(new OleDbParameter("@treatmentID", treatment.TreatmentID));
                 
-                
-
                 bool affectedRows = updateCommand.ExecuteNonQuery() > 0;
 
                 TreatmentList[selectedIndex] = treatment;
