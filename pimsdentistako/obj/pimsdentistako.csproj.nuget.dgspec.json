@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\pimsdentistako.csproj": {}
+    "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj": {}
   },
   "projects": {
-    "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\pimsdentistako.csproj": {
+    "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\pimsdentistako.csproj",
+        "projectUniqueName": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj",
         "projectName": "pimsdentistako",
-        "projectPath": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\pimsdentistako.csproj",
+        "projectPath": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj",
         "packagesPath": "C:\\Users\\Kristian\\.nuget\\packages\\",
-        "outputPath": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\obj\\",
+        "outputPath": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\pimsdentistako\\pimsdentistako\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kristian\\AppData\\Roaming\\NuGet\\NuGet.Config",
