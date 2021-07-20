@@ -6,5 +6,6 @@ namespace pimsdentistako.ViewModels
 {
     public class TreatmentViewModel
     {
+
     }
 }

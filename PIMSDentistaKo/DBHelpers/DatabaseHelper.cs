@@ -68,7 +68,7 @@ namespace pimsdentistako.DBHelpers
             }
         }
 
-        private static bool compare(string obj1, string obj2)
+        public static bool compare(string obj1, string obj2)
         {
             return obj1.Equals(obj2);
         }
@@ -168,6 +168,29 @@ namespace pimsdentistako.DBHelpers
         public static DateTime ConvertToDateTime(string date_string)
         {
             return Convert.ToDateTime(date_string);
+        }
+
+        //INTELLIGENT ALGORITHM TO BIND NAMES ALTHOUGH BLANK INPUTS EXIST
+        public static string BindFieldsByCondition(string condition_string, string string_to_add_if_match, int condition_mode, bool enableMiddleDot, params string[] strings_to_check)
+        {
+            int counter = 0;
+            StringBuilder sb = new StringBuilder();
+            foreach (string item in strings_to_check)
+            {
+                bool checker = item.Equals(condition_string);
+                if (condition_mode != 0) //invert the condition if not in 0 mode
+                {
+                    checker = !checker;
+                }
+                if (checker)
+                {
+                    sb.Append(item);
+                    if (counter == 1 && enableMiddleDot) sb.Append("."); //dot for middle initial
+                    sb.Append(string_to_add_if_match);
+                }
+                counter++;
+            }
+            return sb.ToString().Trim(); ;
         }
     }
 }
