@@ -53,6 +53,7 @@ namespace pimsdentistako.DBHelpers
 
         public static bool AddTreatment(String treatmentName)
         {
+            int maxAvailable;
             bool actionState = false;
             try
             {
@@ -60,8 +61,15 @@ namespace pimsdentistako.DBHelpers
 
                 // Get max number of ID
                 OleDbCommand getMaxID = new OleDbCommand("SELECT MAX(" + col[0] + ") from " + myTable, GetConnectionObject());
-                Int32 maxAvailable = (Int32)getMaxID.ExecuteScalar();
-                maxAvailable += 1;
+                try
+                {
+                    maxAvailable = (int)getMaxID.ExecuteScalar();
+                    maxAvailable += 1;
+                }
+                catch (InvalidCastException e)
+                {
+                    maxAvailable = 0;
+                }
 
                 MessageBox.Show(maxAvailable.ToString());
 
