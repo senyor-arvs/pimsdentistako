@@ -1,4 +1,4 @@
-﻿using pimsdentistako.Utils;
+﻿using pimsdentistako.DBElements;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static pimsdentistako.DBHelpers.TreatmentHelper;
 
 namespace pimsdentistako.Views
 {
@@ -22,42 +23,59 @@ namespace pimsdentistako.Views
     /// </summary>
     public partial class TreatmentView : UserControl
     {
-        OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-        ObservableCollection<Treatment> treatmentList = new ObservableCollection<Treatment>();
         public TreatmentView()
         {
             InitializeComponent();
-            treatmentDataGrid.ItemsSource = treatmentList;
-            loadData();
+            InitList();
+            treatmentDataGrid.ItemsSource = TreatmentList;
         }
 
         private void addTreatmentButton_Click(object sender, RoutedEventArgs e)
         {
-
+            _ = AddTreatment(treatmentTxtBox.Text.Trim());
         }
 
-        private void loadData()
+        private void updateTreatmentButton_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedIndex = treatmentDataGrid.SelectedIndex;
+            MessageBox.Show(treatmentTxtBox.Text + " " + TreatmentList[selectedIndex].TreatmentName);
+            Treatment updatedTreatment = new Treatment
+            {
+                TreatmentID = TreatmentList[selectedIndex].TreatmentID,
+                TreatmentName = treatmentTxtBox.Text
+            };
+            UpdateTreatment(updatedTreatment, selectedIndex);
+        }
+
+        private void treatmentDataGrid_SelChanged(object sender, SelectionChangedEventArgs e)
         {
             try
             {
-                conn.Open();
-                OleDbCommand command = new OleDbCommand("SELECT * FROM Treatment", conn);
-                OleDbDataReader dataReader = command.ExecuteReader();
-
-                while (dataReader.Read())
-                {
-                    Treatment treatment = new Treatment(
-                        treatmentID: dataReader["treatmentID"].ToString(),
-                        treatmentName: dataReader["treatmentName"].ToString()
-                    );
-                    treatmentList.Add(treatment);
-                }
-            } 
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
+                var data = treatmentDataGrid.SelectedItem;
+                string treatmentName = (treatmentDataGrid.SelectedCells[0].Column.GetCellContent(data) as TextBlock).Text;
+                treatmentTxtBox.Text = treatmentName;
             }
-            
+            catch (Exception)
+            {
+                if (sender != null)
+                {
+                    DataGrid grid = sender as DataGrid;
+                    if (grid != null && grid.SelectedItems != null && grid.SelectedItems.Count == 1)
+                    {
+                        DataGridRow dgr = grid.ItemContainerGenerator.ContainerFromItem(grid.SelectedItem) as DataGridRow;
+                        if (!dgr.IsMouseOver)
+                        {
+                            (dgr as DataGridRow).IsSelected = false;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void deleteTreatmentButton_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedIndex = treatmentDataGrid.SelectedIndex;
+            DeleteTreatment(TreatmentList[selectedIndex].TreatmentID);
         }
     }
 }

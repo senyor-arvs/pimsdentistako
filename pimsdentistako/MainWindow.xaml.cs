@@ -122,5 +122,10 @@ namespace pimsdentistako
         {
             DataContext = new TreatmentViewModel();
         }
+
+        private void DentistButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new DentistViewModel();
+        }
     }
 }
