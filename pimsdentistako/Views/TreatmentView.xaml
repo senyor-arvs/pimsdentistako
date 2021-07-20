@@ -85,7 +85,6 @@
                              Width="300"
                              x:Name="treatmentTxtBox"/>
                     <DataGrid ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" 
-                              ItemsSource="{Binding TreatmentList}"
                               Height="200"
                               x:Name="treatmentDataGrid"
                               IsReadOnly="True"
