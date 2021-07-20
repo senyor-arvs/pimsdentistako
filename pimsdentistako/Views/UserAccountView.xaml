@@ -34,8 +34,10 @@
                            Height="40"/>
                     <StackPanel VerticalAlignment="Center"
                                 Margin="10 0 0 0">
-                        <TextBlock Text="Name of admin"/>
-                        <TextBlock Text="Administrator"/>
+                        <TextBlock Text="Name of admin"
+                                   FontFamily="{StaticResource Rounded Elegance}"/>
+                        <TextBlock Text="Administrator"
+                                   FontFamily="{StaticResource Rounded Elegance}"/>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
@@ -55,17 +57,21 @@
                 </Grid.RowDefinitions>
                 <TextBlock HorizontalAlignment="Right"
                            Text="Username"
+                           FontFamily="{StaticResource Rounded Elegance}"
                            Margin="0 12 12 0"
                            Grid.Row="0"/>
                 <TextBlock HorizontalAlignment="Right"
                                Text="Old Password"
+                           FontFamily="{StaticResource Rounded Elegance}"
                                Margin="0 12 12 0"
                            Grid.Row="1"/>
                 <TextBlock HorizontalAlignment="Right"
+                           FontFamily="{StaticResource Rounded Elegance}"
                                Text="New Password"
                                Margin="0 12 12 0"
                            Grid.Row="2"/>
                 <TextBlock HorizontalAlignment="Right"
+                           FontFamily="{StaticResource Rounded Elegance}"
                                Text="Re-type Password"
                                Margin="0 12 12 12"
                            Grid.Row="3"/>
@@ -73,18 +79,22 @@
                 <TextBox Margin="8"
                          Grid.Row="0"
                          Grid.Column="1"
+                         FontFamily="{StaticResource Rounded Elegance}"
                          x:Name="usernameTxtBox"/>
                 <TextBox Margin="8"
                          Grid.Row="1"
                          Grid.Column="1"
+                         FontFamily="{StaticResource Rounded Elegance}"
                          x:Name="oldPasswordTxtBox"/>
                 <TextBox Margin="8"
                          Grid.Row="2"
                          Grid.Column="1"
+                         FontFamily="{StaticResource Rounded Elegance}"
                          x:Name="newPasswordTxtBox"/>
                 <TextBox Margin="8"
                          Grid.Row="3"
                          Grid.Column="1"
+                         FontFamily="{StaticResource Rounded Elegance}"
                          x:Name="retypePasswordTxtBox"/>
 
             </Grid>
@@ -92,14 +102,67 @@
         <StackPanel Grid.Row="2"
                     Orientation="Horizontal"
                     HorizontalAlignment="Center">
-            <Button Width="120"
+            <Button x:Name="updateButton"
+                    Width="120"
                     Height="30"
                     Content="UPDATE"
-                    Margin="12"/>
-            <Button Width="120"
+                    Foreground="White"
+                    FontFamily="{StaticResource LEMON MILK Regular}"
+                    Margin="12" Click="updateButton_Click">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#83502E"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#a26838"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="80"
+                                        Height="30"
+                                        CornerRadius="20,20,20,20"
+                                        Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="saveButton"
+                    Width="120"
                     Height="30"
+                    Visibility="Hidden"
+                    Foreground="White"
+                    FontFamily="{StaticResource LEMON MILK Regular}"
                     Content="SAVE"
-                    Margin="12"/>
+                    Margin="12" Click="saveButton_Click">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#bd7e4a"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#a26838"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="80"
+                                        Height="30"
+                                        CornerRadius="20,20,20,20"
+                                        Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
         </StackPanel>
     </Grid>
 </UserControl>
