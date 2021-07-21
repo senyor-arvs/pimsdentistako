@@ -22,5 +22,17 @@ namespace pimsdentistako.Views
         {
             InitializeComponent();
         }
+
+        private void updateButton_Click(object sender, RoutedEventArgs e)
+        {
+            saveButton.Visibility = Visibility.Visible;
+            updateButton.Visibility = Visibility.Hidden;
+        }
+
+        private void saveButton_Click(object sender, RoutedEventArgs e)
+        {
+            saveButton.Visibility = Visibility.Hidden;
+            updateButton.Visibility = Visibility.Visible;
+        }
     }
 }

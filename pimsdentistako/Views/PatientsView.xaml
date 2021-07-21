@@ -158,12 +158,21 @@
                 </StackPanel>
 
                 <StackPanel Margin="0,-10,0,0">
-                    <TextBlock Text="TOTAL: 16000"
+                    <WrapPanel>
+                        <TextBlock x:Name="txtTotalPatientLabel" Text="TOTAL:"
                            FontFamily="{StaticResource Rounded Elegance}"
                            FontSize="35"
                            Foreground="#502e18"
                            TextOptions.TextFormattingMode="Display"
                            />
+                        <TextBlock x:Name="txtTotalPatient" Text="0"
+                           Margin="10,0,0,0"
+                           FontFamily="{StaticResource Rounded Elegance}"
+                           FontSize="35"
+                           Foreground="#502e18"
+                           TextOptions.TextFormattingMode="Display"
+                           />
+                    </WrapPanel>
                 </StackPanel>
 
                 <StackPanel Margin="0,0,0,0"
@@ -180,13 +189,11 @@
                               Width="190"
                               Margin="10 0 0 0"
                               x:Name="searchByComboBox"
-                              FontSize="20">
-                        <ComboBoxItem Content="Patient No."/>
-                        <ComboBoxItem Content="Last Name"/>
-                        <ComboBoxItem Content="First Name"/>
+                              FontSize="20" SelectionChanged="searchByComboBox_SelChanged">
                     </ComboBox>
 
                     <TextBlock Text="TextBlock:"
+                               x:Name="searchTxt"
                            FontFamily="{StaticResource Rounded Elegance}"
                            Margin="30 0 0 0"
                            FontSize="25"
@@ -203,9 +210,20 @@
                     <Button x:Name="searchButton"
                             Margin="10 0 0 0"
                             Width="40"
-                            Background="#bd7e4a">
+                            Background="#bd7e4a"
+                            Click="searchButton_Click">
                         <StackPanel>
                             <Image Source="../images/search.png"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="clearSearchButton"
+                            Margin="40 0 0 0"
+                            Width="40"
+                            Click="clearSearchButton_Click"
+                            Background="#bd7e4a">
+                        <StackPanel>
+                            <Image Source="../images/close.png"/>
                         </StackPanel>
                     </Button>
 
@@ -218,6 +236,12 @@
                             <DataGrid ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}"
                                       Style="{DynamicResource DataGridStyle1}"
                                       x:Name="patientDataGrid" 
+                                      IsReadOnly="True"
+                                      CanUserReorderColumns="False"
+                                      CanUserSortColumns="False"
+                                      CanUserDeleteRows="False"
+                                      CanUserResizeRows="False"
+                                      AutoGenerateColumns="False"
                                       Height="650"
                                       Width="700" 
                                       FontSize="25" 
@@ -228,8 +252,8 @@
                                       HorizontalAlignment="Center" 
                                       SelectionChanged="patientDataGrid_SelectionChanged">
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Header="Patient No." MinWidth="200"/>
-                                    <DataGridTextColumn Header="Patient" MinWidth="498"/>
+                                    <DataGridTextColumn Header="Patient No." MinWidth="200" Binding="{Binding Path=PatientID}"/>
+                                    <DataGridTextColumn Header="Patient" MinWidth="498" Binding="{Binding Path=PatientFullName}"/>
                                 </DataGrid.Columns>
                             </DataGrid>
                         </StackPanel>
@@ -246,6 +270,7 @@
                                 <TextBox x:Name="Name"
                                          Width="300"
                                          Height="30"
+                                         FontSize="20"
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
@@ -259,6 +284,7 @@
                                 <TextBox x:Name="MiddleName"
                                          Width="300"
                                          Height="30"
+                                         FontSize="20"
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
@@ -272,6 +298,7 @@
                                 <TextBox x:Name="LastName"
                                          Width="300"
                                          Height="30"
+                                         FontSize="20"
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
@@ -285,6 +312,7 @@
                                 <TextBox x:Name="Nickname"
                                          Width="300"
                                          Height="30"
+                                         FontSize="20"
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
@@ -298,6 +326,7 @@
                                 <TextBox x:Name="Sex"
                                          Width="300"
                                          Height="30"
+                                         FontSize="20"
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
@@ -311,6 +340,7 @@
                                 <TextBox x:Name="CivilStatus"
                                          Width="300"
                                          Height="30"
+                                         FontSize="20"
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
@@ -324,6 +354,7 @@
                                 <TextBox x:Name="Address"
                                          Width="300"
                                          Height="30"
+                                         FontSize="20"
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
@@ -337,6 +368,7 @@
                                 <TextBox x:Name="Email"
                                          Width="300"
                                          Height="30"
+                                         FontSize="20"
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
@@ -350,6 +382,7 @@
                                 <TextBox x:Name="MobileNumber"
                                          Width="300"
                                          Height="30"
+                                         FontSize="20"
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
@@ -363,6 +396,7 @@
                                 <TextBox x:Name="HomeNumber"
                                          Width="300"
                                          Height="30"
+                                         FontSize="20"
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
@@ -376,6 +410,7 @@
                                 <TextBox x:Name="DateOfBirth"
                                          Width="300"
                                          Height="30"
+                                         FontSize="20"
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
@@ -389,6 +424,7 @@
                                 <TextBox x:Name="RefferedBy"
                                          Width="300"
                                          Height="30"
+                                         FontSize="20"
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
@@ -402,6 +438,7 @@
                                 <TextBox x:Name="Occupation"
                                          Width="300"
                                          Height="30"
+                                         FontSize="20"
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
@@ -415,6 +452,7 @@
                                 <TextBox x:Name="Company"
                                          Width="300"
                                          Height="30"
+                                         FontSize="20"
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
@@ -428,6 +466,7 @@
                                 <TextBox x:Name="OfficeNumber"
                                          Width="300"
                                          Height="30"
+                                         FontSize="20"
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
@@ -441,6 +480,7 @@
                                 <TextBox x:Name="FaxNumber"
                                          Width="300"
                                          Height="30"
+                                         FontSize="20"
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
@@ -454,6 +494,7 @@
                                 <TextBox x:Name="Age"
                                          Width="100"
                                          Height="30"
+                                         FontSize="20"
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
@@ -467,6 +508,7 @@
                                 <TextBox x:Name="Suffix"
                                          Width="300"
                                          Height="30"
+                                         FontSize="20"
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 

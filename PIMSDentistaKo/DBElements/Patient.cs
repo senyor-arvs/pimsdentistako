@@ -25,6 +25,7 @@ namespace pimsdentistako.DBElements
         private string patientCompany;
         private string patientOfficeNumber;
         private string patientFaxNumber;
+        private string patientFullName;
 
         public string PatientID { get => patientID; set => patientID = value; }
         public string PatientFirstName { get => patientFirstName; set => patientFirstName = value; }
@@ -44,6 +45,14 @@ namespace pimsdentistako.DBElements
         public string PatientCompany { get => patientCompany; set => patientCompany = value; }
         public string PatientOfficeNumber { get => patientOfficeNumber; set => patientOfficeNumber = value; }
         public string PatientFaxNumber { get => patientFaxNumber; set => patientFaxNumber = value; }
+        public string PatientFullName
+        {
+            get
+            {
+                return DatabaseHelper.BindFieldsByCondition(DatabaseHelper.BLANK_INPUT, DatabaseHelper.WHITE_SPACE_INPUT, 1, true, PatientFirstName, PatientMiddleName, PatientLastName, PatientSuffix);
+            }
+            set => patientFullName = value;
+        }
 
         public static string GetAgeByBirth(string date_of_birth)
         {
