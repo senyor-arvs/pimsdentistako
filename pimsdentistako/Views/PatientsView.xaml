@@ -189,10 +189,11 @@
                               Width="190"
                               Margin="10 0 0 0"
                               x:Name="searchByComboBox"
-                              FontSize="20">
+                              FontSize="20" SelectionChanged="searchByComboBox_SelChanged">
                     </ComboBox>
 
                     <TextBlock Text="TextBlock:"
+                               x:Name="searchTxt"
                            FontFamily="{StaticResource Rounded Elegance}"
                            Margin="30 0 0 0"
                            FontSize="25"
