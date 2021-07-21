@@ -303,7 +303,6 @@ namespace pimsdentistako.DBHelpers
             {
                 Dentist selected = DentistList[currentSelection];
                 string[] values = {
-                selected.DentistID,
                 selected.DentistFirstName,
                 selected.DentistMiddleName,
                 selected.DentistLastName,

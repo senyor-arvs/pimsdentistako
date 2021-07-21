@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pimsdentistako.Windows"
         mc:Ignorable="d"
-        Title="DentistEditWindow" Height="800" Width="1000">
+        Title="DentistEditWindow" Height="800" Width="1000" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -42,7 +42,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="2" Grid.Column="0" Margin="20,50,20,100" >
-            <Button Content="CONFIRM" Height="75" Width="250" Foreground="White" FontSize="40" Name="Confirm_btn" FontFamily="{StaticResource Rounded Elegance}">
+            <Button Click="Confirm_btn_Click" Content="CONFIRM" Height="75" Width="250" Foreground="White" FontSize="40" Name="Confirm_btn" FontFamily="{StaticResource Rounded Elegance}">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Background" Value="#bd7e4a"/>

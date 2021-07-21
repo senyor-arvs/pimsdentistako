@@ -43,23 +43,31 @@
             
             <!--text blocks and text boxes-->
             <StackPanel Grid.Row="1" Grid.Column="1" Margin="0,0,20,0" >
-                <TextBox  Height="40" x:Name="txtFirst" FontSize="30"/>
-                <TextBox   Margin="0,5,0,0" Height="40" x:Name="txtMiddle" FontSize="30"/>
-                <TextBox   Margin="0,5,0,0" Height="40" x:Name="txtLast" FontSize="30"/>
-                <TextBox   Margin="0,5,0,0" Height="40" x:Name="txtSuffix" FontSize="30"/>
-                <TextBox   Margin="0,5,0,0" Height="40" x:Name="txtLicense" FontSize="30"/>
-                <TextBox   Margin="0,5,0,0"  Height="40" x:Name="txtPtr" FontSize="30"/>
+                <TextBox  VerticalContentAlignment="Center" Height="40" x:Name="txtFirst" FontSize="30"/>
+                <TextBox   VerticalContentAlignment="Center" Margin="0,5,0,0" Height="40" x:Name="txtMiddle" FontSize="30"/>
+                <TextBox   VerticalContentAlignment="Center" Margin="0,5,0,0" Height="40" x:Name="txtLast" FontSize="30"/>
+                <TextBox   VerticalContentAlignment="Center" Margin="0,5,0,0" Height="40" x:Name="txtSuffix" FontSize="30"/>
+                <TextBox   VerticalContentAlignment="Center" Margin="0,5,0,0" Height="40" x:Name="txtLicense" FontSize="30"/>
+                <TextBox   VerticalContentAlignment="Center" Margin="0,5,0,0"  Height="40" x:Name="txtPtr" FontSize="30"/>
             </StackPanel>
 
             
             <!--datagrid-->
             <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
-                <DataGrid Height="300" Width="1000" Margin="0,25,0,0">
+                <DataGrid Height="300" Width="1000" Margin="0,25,0,0"
+                          SelectionChanged="dg_SelectionChanged"
+                          IsReadOnly="True"
+                          CanUserReorderColumns="False"
+                          CanUserSortColumns="False"
+                          CanUserDeleteRows="False"
+                          CanUserResizeRows="False"
+                          AutoGenerateColumns="False"
+                          x:Name="dentistDataGrid">        
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="ID" MinWidth="200" FontFamily="{StaticResource Rounded Elegance}"/>
-                        <DataGridTextColumn Header="Dentist Name" MinWidth="200" FontFamily="{StaticResource Rounded Elegance}"/>
-                        <DataGridTextColumn Header="License Number" MinWidth="200" FontFamily="{StaticResource Rounded Elegance}"/>
-                        <DataGridTextColumn Header="Ptr Number" MinWidth="200" FontFamily="{StaticResource Rounded Elegance}"/>
+                        <DataGridTextColumn Binding="{Binding Path=DentistID}" Width="*" Header="ID" MinWidth="200" FontFamily="{StaticResource Rounded Elegance}"/>
+                        <DataGridTextColumn Binding="{Binding Path=DentistFullName}" Width="*" Header="Dentist Name" MinWidth="200" FontFamily="{StaticResource Rounded Elegance}"/>
+                        <DataGridTextColumn Binding="{Binding Path=DentistLicenseNumber}" Width="*" Header="License Number" MinWidth="200" FontFamily="{StaticResource Rounded Elegance}"/>
+                        <DataGridTextColumn Binding="{Binding Path=DentistPTRNumber}" Width="*" Header="Ptr Number" MinWidth="200" FontFamily="{StaticResource Rounded Elegance}"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>
