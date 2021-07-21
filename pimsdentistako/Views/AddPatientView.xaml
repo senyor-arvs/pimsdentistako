@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pimsdentistako.Views"
         mc:Ignorable="d"
-        Title="AddPatientView" Height="1000" Width="1440">
+        Title="AddPatientView" Height="900" Width="1440">
     <Grid Margin="45">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -232,6 +232,7 @@
             </StackPanel>
             <StackPanel Grid.Column="1">
                 <TextBlock Text="Emergency Information"
+                           FontFamily="{StaticResource LEMON MILK Bold}"
                            HorizontalAlignment="Center"
                            Margin="0 50 0 0"
                            FontSize="30"/>
@@ -247,6 +248,7 @@
                         <RowDefinition Height="80"/>
                     </Grid.RowDefinitions>
                     <TextBlock Text="Name"
+                               FontFamily="{StaticResource Rounded Elegance}"
                                FontSize="24"
                                HorizontalAlignment="Right"
                                VerticalAlignment="Center"
@@ -259,6 +261,7 @@
                              VerticalAlignment="Center"/>
                     
                     <TextBlock Text="Home Number"
+                               FontFamily="{StaticResource Rounded Elegance}"
                                FontSize="24"
                                HorizontalAlignment="Right"
                                VerticalAlignment="Center"
@@ -271,6 +274,7 @@
                              FontSize="24"/>
                     
                     <TextBlock Text="Relationship"
+                               FontFamily="{StaticResource Rounded Elegance}"
                                FontSize="24"
                                HorizontalAlignment="Right"
                                VerticalAlignment="Center"
@@ -283,6 +287,7 @@
                              FontSize="24"/>
                     
                     <TextBlock Text="Office Number"
+                               FontFamily="{StaticResource Rounded Elegance}"
                                FontSize="24"
                                HorizontalAlignment="Right"
                                VerticalAlignment="Center"
@@ -295,17 +300,70 @@
                              FontSize="24"/>
                 </Grid>
                 <StackPanel Orientation="Horizontal"
-                            HorizontalAlignment="Center">
+                            HorizontalAlignment="Center"
+                            Margin="0 60 0 0">
                     <Button Width="200"
                             Height="50"
                             Margin="0 40 40 0"
                             FontSize="24"
-                            Content="Save Patient"/>
+                            Foreground="White"
+                            FontFamily="{StaticResource LEMON MILK Regular}"
+                            Content="Save Patient">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#83502E"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#a26838"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="200"
+                                        Height="50"
+                                        CornerRadius="30,30,30,30"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="CENTER"
+                                                      Margin="0,0,0,0"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
                     <Button Width="200"
                             Height="50"
                             FontSize="24"
                             Margin="0 40 0 0"
-                            Content="Cancel"/>
+                            Content="Cancel"
+                            Foreground="White"
+                            FontFamily="{StaticResource LEMON MILK Regular}">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Black"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#a26838"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="180"
+                                        Height="50"
+                                        CornerRadius="30,30,30,30"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="CENTER"
+                                                      Margin="0,0,0,0"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
                 </StackPanel>
             </StackPanel>
         </Grid>
