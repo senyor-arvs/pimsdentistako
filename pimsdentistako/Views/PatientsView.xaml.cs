@@ -60,7 +60,7 @@ namespace pimsdentistako.Views
 
         private void searchByComboBox_SelChanged(object sender, SelectionChangedEventArgs e)
         {
-            searchTxt.Text = searchByComboBox.Text;
+            PatientHelper.ListenToComboBoxSelection(searchTxt);
         }
     }
 }
