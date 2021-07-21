@@ -1,26 +1,16 @@
-<<<<<<< HEAD
-﻿C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
-FC:\Users\PCB\pimsdentistako\pimsdentistako\App.xaml;;
-FC:\Users\PCB\pimsdentistako\pimsdentistako\Components\CustomCalendar.xaml;;
-FC:\Users\PCB\pimsdentistako\pimsdentistako\MainWindow.xaml;;
-FC:\Users\PCB\pimsdentistako\pimsdentistako\Views\AppointmentsView.xaml;;
-FC:\Users\PCB\pimsdentistako\pimsdentistako\Views\DashboardView.xaml;;
-FC:\Users\PCB\pimsdentistako\pimsdentistako\Views\DentalRecordsView.xaml;;
-FC:\Users\PCB\pimsdentistako\pimsdentistako\Views\DentistView.xaml;;
-FC:\Users\PCB\pimsdentistako\pimsdentistako\Views\PatientsView.xaml;;
-FC:\Users\PCB\pimsdentistako\pimsdentistako\Views\TreatmentView.xaml;;
-FC:\Users\PCB\pimsdentistako\pimsdentistako\Views\UserAccountView.xaml;;
-=======
 ﻿
-FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\App.xaml;;
-FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Components\CustomCalendar.xaml;;
-FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\MainWindow.xaml;;
-FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Views\AppointmentsView.xaml;;
-FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Views\DashboardView.xaml;;
-FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Views\DentalRecordsView.xaml;;
-FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Views\DentistView.xaml;;
-FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Views\PatientsView.xaml;;
-FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Views\TreatmentView.xaml;;
-FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Views\UserAccountView.xaml;;
->>>>>>> 1788273f7792760033321b29ee3d3c4ef7ad8d4d
+FC:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\App.xaml;;
+FC:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\Components\CustomCalendar.xaml;;
+FC:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\MainWindow.xaml;;
+FC:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\Views\AddPatientView.xaml;;
+FC:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\Views\AppointmentsView.xaml;;
+FC:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\Views\DashboardView.xaml;;
+FC:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\Views\DentalRecordsView.xaml;;
+FC:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\Views\DentistView.xaml;;
+FC:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\Views\PatientsView.xaml;;
+FC:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\Views\TreatmentView.xaml;;
+FC:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\Views\UserAccountView.xaml;;
+FC:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\Windows\DentistAddWindow.xaml;;
+FC:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\Windows\DentistDeleteWindow.xaml;;
+FC:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\Windows\DentistEditWindow.xaml;;
 

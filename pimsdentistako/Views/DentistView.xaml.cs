@@ -12,6 +12,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using pimsdentistako.Windows;
 
+using pimsdentistako.DBElements;
+using pimsdentistako.DBHelpers;
+
 namespace pimsdentistako.Views
 {
     /// <summary>
@@ -22,26 +25,15 @@ namespace pimsdentistako.Views
         public DentistView()
         {
             InitializeComponent();
+            DentistHelper.MyDataGrid = dentistDataGrid;
+            DentistHelper.InitList();
+            
         }
 
         private void dg_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
-        }
-
-        private void newButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void editButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void deleteButton_Click(object sender, RoutedEventArgs e)
-        {
-
+            DentistHelper.ListenToDataGrid();
+            DentistHelper.DisplaySelected(txtFirst, txtMiddle, txtLast, txtSuffix, txtLicense, txtPtr);
         }
 
         private void New_btn_Click(object sender, RoutedEventArgs e)
@@ -52,15 +44,20 @@ namespace pimsdentistako.Views
 
         private void Edit_btn_Click(object sender, RoutedEventArgs e)
         {
-            DentistEditWindow editWindow = new DentistEditWindow();
-            editWindow.Show();
-
+            if (!DentistHelper.IsCurrentlySelectedNull())
+            {
+                DentistEditWindow editW = new DentistEditWindow();
+                editW.Show();
+            }
         }
 
         private void Delete_btn_Click(object sender, RoutedEventArgs e)
         {
-            DentistDeleteWindow deleteWindow = new DentistDeleteWindow();
-            deleteWindow.Show();
+            if (!DentistHelper.IsCurrentlySelectedNull())
+            {
+                DentistDeleteWindow delW = new DentistDeleteWindow();
+                delW.Show();
+            }
         }
     }
 }
