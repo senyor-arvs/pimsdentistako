@@ -1,6 +1,19 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
+    "C:\\Users\\PCB\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\PCB\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PCB\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj",
+        "projectName": "pimsdentistako",
+        "projectPath": "C:\\Users\\PCB\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj",
+        "packagesPath": "C:\\Users\\PCB\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PCB\\pimsdentistako\\pimsdentistako\\obj\\",
+=======
     "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\pimsdentistako.csproj": {}
   },
   "projects": {
@@ -12,9 +25,10 @@
         "projectPath": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\pimsdentistako.csproj",
         "packagesPath": "C:\\Users\\Kristian\\.nuget\\packages\\",
         "outputPath": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\obj\\",
+>>>>>>> 1788273f7792760033321b29ee3d3c4ef7ad8d4d
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kristian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PCB\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,8 +36,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.telerik.com/nuget": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {

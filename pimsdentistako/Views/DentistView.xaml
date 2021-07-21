@@ -5,8 +5,136 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:pimsdentistako.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+             d:DesignHeight="1080" d:DesignWidth="1440">
+    <UserControl.Resources>
+        <Style x:Key="ItemsPresenterStyle1" TargetType="{x:Type ItemsPresenter}">
+            <Setter Property="TextElement.FontFamily" Value="{StaticResource LEMON MILK Light}"/>
+        </Style>
+    </UserControl.Resources>
+    <Border Padding="0">
+        <Grid Margin="0,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>         <!-- TEXT BLOCKS = DENTIST NAME,ID -->      <!-- buttons new and edit-->
+                <ColumnDefinition/>         <!--TEXT BOXES-->                           <!-- button delete -->
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>            <!--text blocks and text boxes-->
+                <RowDefinition Height="2*"/>            <!--datagrid-->
+                <RowDefinition/>            <!--buttons-->
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Column="0" Grid.Row="0">
+                <TextBlock Text="Dentist" FontSize="80" Foreground="#191715" FontFamily="{StaticResource Rounded Elegance}"/>
+            </StackPanel>
             
-    </Grid>
+            
+            <!--text blocks and text boxes-->
+            <StackPanel Grid.Row="1" Grid.Column="0" Margin="20,0,0,0">
+                <TextBlock Text="First Name" FontSize="30" FontFamily="{StaticResource LEMON MILK Light}" />
+                <TextBlock Text="Middle Name" FontSize="30" Margin="0,5,0,0" FontFamily="{StaticResource LEMON MILK Light}"/>
+                <TextBlock Text="Last Name" FontSize="30" Margin="0,5,0,0" FontFamily="{StaticResource LEMON MILK Light}" />
+                <TextBlock Text="Suffix (Optional)" FontSize="30" Margin="0,5,0,0" FontFamily="{StaticResource LEMON MILK Light}"/>
+                <TextBlock Text="License Number" FontSize="30" Margin="0,5,0,0" FontFamily="{StaticResource LEMON MILK Light}"/>
+                <TextBlock Text="Ptr. Number" FontSize="30" Margin="0,5,0,0" FontFamily="{StaticResource LEMON MILK Light}"/>
+            </StackPanel>
+
+            
+            <!--text blocks and text boxes-->
+            <StackPanel Grid.Row="1" Grid.Column="1" Margin="0,0,20,0" >
+                <TextBox  Height="40" x:Name="txtFirst" FontSize="30"/>
+                <TextBox   Margin="0,5,0,0" Height="40" x:Name="txtMiddle" FontSize="30"/>
+                <TextBox   Margin="0,5,0,0" Height="40" x:Name="txtLast" FontSize="30"/>
+                <TextBox   Margin="0,5,0,0" Height="40" x:Name="txtSuffix" FontSize="30"/>
+                <TextBox   Margin="0,5,0,0" Height="40" x:Name="txtLicense" FontSize="30"/>
+                <TextBox   Margin="0,5,0,0"  Height="40" x:Name="txtPtr" FontSize="30"/>
+            </StackPanel>
+
+            
+            <!--datagrid-->
+            <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+                <DataGrid Height="300" Width="1000" Margin="0,25,0,0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" MinWidth="200" FontFamily="{StaticResource Rounded Elegance}"/>
+                        <DataGridTextColumn Header="Dentist Name" MinWidth="200" FontFamily="{StaticResource Rounded Elegance}"/>
+                        <DataGridTextColumn Header="License Number" MinWidth="200" FontFamily="{StaticResource Rounded Elegance}"/>
+                        <DataGridTextColumn Header="Ptr Number" MinWidth="200" FontFamily="{StaticResource Rounded Elegance}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+
+            
+            <!--buttons-->
+            <StackPanel Grid.Row="3" Grid.Column="0" Margin="20,50,75,0">
+                <Button  Content="New" Height="50" Width="400" Foreground="White" FontSize="20" Name="New_btn" FontFamily="{StaticResource Rounded Elegance}" Click="New_btn_Click"  >
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#83502E"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#a26838"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button  Content="Edit" Height="50" Width="400" Margin="0,50,0,50" Foreground="White" FontSize="20" Name="Edit_btn" FontFamily="{StaticResource Rounded Elegance}" Click="Edit_btn_Click">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#bd7e4a"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#a26838"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </StackPanel>
+
+            
+            <!--buttons-->
+            <StackPanel Grid.Row="3" Grid.Column="1" Margin="20,50,75,100">
+                <Button Content="Delete" Height="50" Width="400" Foreground="White" FontSize="20" Name="Delete_btn" FontFamily="{StaticResource Rounded Elegance}" Click="Delete_btn_Click">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#31170a"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#a26838"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </StackPanel>
+
+            
+            
+            <!--PANGALAN NG MGA TEXT BOX-->
+            
+            
+            <!--txtFirst-->
+            <!--txtMiddle-->
+            <!--txtLast-->
+            <!--txtSuffix-->
+            <!--txtLicense-->
+            <!--txtPtr-->
+
+
+
+            <!--PANGALAN NG MGA BUTTON-->
+            <!--New_btn-->
+            <!--Edit_btn-->
+            <!--Delete_btn-->
+
+
+        </Grid>
+    </Border>
 </UserControl>
+    
+    

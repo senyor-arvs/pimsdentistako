@@ -1,0 +1,34 @@
+﻿<Window x:Class="dentis_Add_Edit_Delete.editWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dentis_Add_Edit_Delete"
+        mc:Ignorable="d"
+        Title="editWindow" Height="600" Width="600">
+    <Grid>
+        <StackPanel>
+            <Label Content="Id" HorizontalAlignment="Left" Margin="105,68,0,0" VerticalAlignment="Top" Height="33" Width="73" FontSize="15"/>
+            <Label Content="First Name" HorizontalAlignment="Left" Margin="104,10,0,0" VerticalAlignment="Top" FontSize="15"/>
+            <Label Content="Middle Name" HorizontalAlignment="Left" Margin="105,10,0,0" VerticalAlignment="Top" FontSize="15"/>
+            <Label Content="Last Name" HorizontalAlignment="Left" Margin="105,10,0,0" VerticalAlignment="Top" FontSize="15"/>
+            <Label Content="Suffix (Optional)" HorizontalAlignment="Left" Margin="105,10,0,0" VerticalAlignment="Top" FontSize="15"/>
+            <Label Content="License no." HorizontalAlignment="Left" Margin="105,10,0,0" VerticalAlignment="Top" FontSize="15"/>
+            <Label Content="PTR no." HorizontalAlignment="Left" Margin="105,10,0,0" VerticalAlignment="Top" FontSize="15"/>
+
+        </StackPanel>
+
+        <StackPanel>
+            <TextBox HorizontalAlignment="Left" Margin="262,68,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" Height="30" Name="txtEditId"/>
+            <TextBox HorizontalAlignment="Left" Margin="262,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" Height="30" Name="txtEditFirst"/>
+            <TextBox HorizontalAlignment="Left" Margin="262,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" Height="30" Name="txtEditMiddle"/>
+            <TextBox HorizontalAlignment="Left" Margin="262,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" Height="30" Name="txtEditLast"/>
+            <TextBox HorizontalAlignment="Left" Margin="262,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" Height="30" Name="txtEditSuffix"/>
+            <TextBox HorizontalAlignment="Left" Margin="262,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" Height="30" Name="txtEditLicense"/>
+            <TextBox HorizontalAlignment="Left" Margin="262,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" Height="30" Name="txtEditPtr"/>
+        </StackPanel>
+
+        <Button Content="Confirm" HorizontalAlignment="Left" Margin="122,490,0,0" VerticalAlignment="Top" Height="35" Width="100" FontSize="25" Name="btnEditConfirm" Click="btnEditConfirm_Click"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="382,490,0,0" VerticalAlignment="Top" Height="35" Width="100" FontSize="25" Name="btnEditCancel" Click="btnEditCancel_Click"/>
+    </Grid>
+</Window>

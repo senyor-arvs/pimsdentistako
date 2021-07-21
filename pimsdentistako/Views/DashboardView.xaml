@@ -474,6 +474,10 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key = "SmoothFormat" TargetType="TextBlock" >
+            <Setter Property="TextOptions.TextFormattingMode" Value="Display"></Setter>
+            <Setter Property="TextOptions.TextRenderingMode" Value="ClearType"></Setter>
+        </Style>
     </UserControl.Resources>
 
     <!-- d:DesignHeight="1080" d:DesignWidth="1390"-->
@@ -489,6 +493,7 @@
                     <!-- Dashboard Title -->
                     <TextBlock Name="Header" Text="Dashboard" 
                            FontFamily="{StaticResource Rounded Elegance}"
+                           Style="{StaticResource SmoothFormat}"
                            FontSize="110"
                            Foreground="#191715"/>
 
@@ -601,8 +606,10 @@
 
                 <!-- Status Report and Statistics -->
                 <StackPanel Margin="10,-20,0,0">
-                    <TextBlock Text="S t a t u s   R e p o r t   &amp;   S t a t i s t i c s"
-                           FontFamily="{StaticResource Rounded Elegance}"
+
+                    <TextBlock TextOptions.TextRenderingMode="ClearType" Text="S t a t u s   R e p o r t   &amp;   S t a t i s t i c s"
+                           Style="{StaticResource SmoothFormat}"
+                           FontFamily="Rounded Elegance"
                            FontSize="25"
                            Foreground="#502e18"
                            TextOptions.TextFormattingMode="Display"
@@ -622,6 +629,7 @@
                                 BorderThickness="2">
                                 <StackPanel Margin="20">
                                     <TextBlock Text="You currently have"
+                                           Style="{StaticResource SmoothFormat}"
                                            FontSize="25"
                                            FontFamily="{StaticResource Rounded Elegance}"
                                            HorizontalAlignment="Right"/>
@@ -647,6 +655,7 @@
                                 BorderThickness="2">
                                 <StackPanel Margin="20">
                                     <TextBlock Text="You have"
+                                               Style="{StaticResource SmoothFormat}"
                                            FontSize="25"
                                            FontFamily="{StaticResource Rounded Elegance}"
                                            HorizontalAlignment="Right"/>
@@ -657,11 +666,13 @@
 
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                                         <TextBlock Text="appointments"
+                                                   Style="{StaticResource SmoothFormat}"
                                            FontSize="25"
                                            FontFamily="{StaticResource Rounded Elegance}"
                                            HorizontalAlignment="Right"
                                            Foreground=" #c09764"/>
                                         <TextBlock Text="  today."
+                                                   Style="{StaticResource SmoothFormat}"
                                            FontSize="25"
                                            FontFamily="{StaticResource Rounded Elegance}"
                                            HorizontalAlignment="Right"
@@ -709,6 +720,7 @@
                             </Button>
                             <StackPanel VerticalAlignment="Center" Margin="20">
                                 <TextBlock Text="View the Reports"
+                                           Style="{StaticResource SmoothFormat}"
                                Foreground="#191715"
                                FontFamily="{StaticResource Rounded Elegance}"
                                FontSize="20"
@@ -754,6 +766,7 @@
 
                             <StackPanel VerticalAlignment="Center" Margin="20">
                                 <TextBlock Text="Backup your Data"
+                                           Style="{StaticResource SmoothFormat}"
                                Foreground="#191715"
                                FontFamily="{StaticResource Rounded Elegance}"
                                FontSize="20"
@@ -827,6 +840,7 @@
                                                        FontSize="20"
                                                        FontFamily="{StaticResource LEMON MILK Light}"/>
                                                 <TextBlock Text="Cruz Jr., Alberto"
+                                                           Style="{StaticResource SmoothFormat}"
                                                        FontSize="20"
                                                        FontFamily="{StaticResource Rounded Elegance}"
                                                        Margin="10,0,0,0"
@@ -838,6 +852,7 @@
                                                        FontSize="20"
                                                        FontFamily="{StaticResource LEMON MILK Light}"/>
                                                 <TextBlock Text="09292903671"
+                                                           Style="{StaticResource SmoothFormat}"
                                                        FontSize="20"
                                                        FontFamily="{StaticResource Rounded Elegance}"
                                                        Margin="10,0,0,0"
@@ -849,6 +864,7 @@
                                                        FontSize="20"
                                                        FontFamily="{StaticResource LEMON MILK Light}"/>
                                                 <TextBlock Text="8:00 AM - June 16, 2021"
+                                                           Style="{StaticResource SmoothFormat}"
                                                        FontSize="20"
                                                        FontFamily="{StaticResource Rounded Elegance}"
                                                        Margin="10,0,0,0"
@@ -860,6 +876,7 @@
                                                        FontSize="20"
                                                        FontFamily="{StaticResource LEMON MILK Light}"/>
                                                 <TextBlock Text="Daily Bracket Cleanup"
+                                                           Style="{StaticResource SmoothFormat}"
                                                        FontSize="20"
                                                        FontFamily="{StaticResource Rounded Elegance}"
                                                        Margin="10,0,0,0"
@@ -871,6 +888,7 @@
                                                        FontSize="20"
                                                        FontFamily="{StaticResource LEMON MILK Light}"/>
                                                 <TextBlock Text="Matagal nang hindi bumabalik para mapalitan ang rubber ng brackets niya."
+                                                           Style="{StaticResource SmoothFormat}"
                                                        FontSize="20"
                                                        FontFamily="{StaticResource Rounded Elegance}"
                                                        Margin="10,0,0,0"
@@ -883,6 +901,7 @@
                                             <!-- Next Patient -->
                                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="-20,0,0,10">
                                                 <TextBlock Text="Next Patient"
+                                                           Style="{StaticResource SmoothFormat}"
                                                            Foreground="#191715"
                                                            FontFamily="{StaticResource Rounded Elegance}"
                                                            FontSize="15"
@@ -927,6 +946,7 @@
                                             <!-- Additional Details -->
                                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                                                 <TextBlock Text="Details"
+                                                           Style="{StaticResource SmoothFormat}"
                                                            Foreground="#191715"
                                                            FontFamily="{StaticResource Rounded Elegance}"
                                                            FontSize="15"
