@@ -35,7 +35,7 @@ namespace pimsdentistako.Views
         private void patientDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             PatientHelper.ListenToDataGrid();
-            PatientHelper.DisplaySelected(Name,MiddleName,LastName,Suffix,Nickname,Sex,CivilStatus,Address,Email,MobileNumber,HomeNumber,DateOfBirth,RefferedBy,Occupation,Company,OfficeNumber,FaxNumber,Age);
+            PatientHelper.DisplaySelected(nameTxtBox,MiddleName,LastName,Suffix,Nickname,Sex,CivilStatus,Address,Email,MobileNumber,HomeNumber,DateOfBirth,RefferedBy,Occupation,Company,OfficeNumber,FaxNumber,Age);
         }
         private void Master_File_Click(object sender, RoutedEventArgs e)
         {
@@ -61,6 +61,12 @@ namespace pimsdentistako.Views
         private void searchByComboBox_SelChanged(object sender, SelectionChangedEventArgs e)
         {
             PatientHelper.ListenToComboBoxSelection(searchTxt);
+        }
+
+        private void AddPatientButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddPatientView addPatientView = new AddPatientView();
+            addPatientView.Show();
         }
     }
 }

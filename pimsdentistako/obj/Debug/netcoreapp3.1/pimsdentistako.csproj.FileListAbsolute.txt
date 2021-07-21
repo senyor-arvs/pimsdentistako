@@ -1,174 +1,11 @@
-D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\App.g.cs
-D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.cache
-D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.g.cs
-D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.lref
-D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.exe
-D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.deps.json
-D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.json
-D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.dev.json
-D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.dll
-D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.pdb
-D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.baml
-D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.g.resources
-D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfoInputs.cache
-D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfo.cs
-D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.CoreCompileInputs.cache
-D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.dll
-D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.pdb
-D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.genruntimeconfig.cache
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.g.cs
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.baml
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.g.cs
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.baml
-E:\Programming\C#\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.exe
-E:\Programming\C#\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.deps.json
-E:\Programming\C#\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.json
-E:\Programming\C#\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.dev.json
-E:\Programming\C#\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.dll
-E:\Programming\C#\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.pdb
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.g.cs
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.g.cs
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.g.cs
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.g.cs
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\App.g.cs
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.cache
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.lref
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.baml
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.baml
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.baml
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.baml
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.g.resources
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfoInputs.cache
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfo.cs
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.CoreCompileInputs.cache
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.dll
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.pdb
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.genruntimeconfig.cache
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.Properties.Resources.resources
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.GenerateResource.cache
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.Properties.Resources.resources
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.GenerateResource.cache
-E:\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.AssemblyReference.cache
-<<<<<<< HEAD
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.exe
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.deps.json
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.json
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.dev.json
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.pdb
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.AssemblyReference.cache
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.g.cs
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.g.cs
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.g.cs
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\App.g.cs
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.cache
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.lref
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.baml
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.baml
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.baml
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.g.resources
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.Properties.Resources.resources
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.GenerateResource.cache
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfoInputs.cache
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfo.cs
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.CoreCompileInputs.cache
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.pdb
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.genruntimeconfig.cache
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\AppointmentsView.g.cs
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\PatientsView.g.cs
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\AppointmentsView.baml
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\PatientsView.baml
-=======
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.exe
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.deps.json
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.json
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.dev.json
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.dll
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.pdb
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csprojAssemblyReference.cache
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.g.cs
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.g.cs
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.g.cs
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.g.cs
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\App.g.cs
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.cache
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.lref
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.baml
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.baml
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.baml
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.baml
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.g.resources
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.Properties.Resources.resources
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.GenerateResource.cache
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfoInputs.cache
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfo.cs
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.dll
-D:\ARVIN 2ND SEM\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.pdb
-D:\arvin\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.exe
-D:\arvin\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.deps.json
-D:\arvin\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.json
-D:\arvin\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.dev.json
-D:\arvin\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.dll
-D:\arvin\Repos\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.pdb
-D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csprojAssemblyReference.cache
-D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.g.cs
-D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.g.cs
-D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.g.cs
-D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.g.cs
-D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\App.g.cs
-D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
-D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.cache
-D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.lref
-D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.baml
-D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.baml
-D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.baml
-D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.baml
-D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.g.resources
-D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.Properties.Resources.resources
-D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.GenerateResource.cache
-D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfoInputs.cache
-D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfo.cs
-D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.dll
-D:\arvin\Repos\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.pdb
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.exe
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.deps.json
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.json
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.dev.json
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.pdb
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.AssemblyReference.cache
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.g.cs
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.g.cs
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.g.cs
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.g.cs
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\App.g.cs
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.cache
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.lref
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.baml
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.baml
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.baml
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TransactionView.baml
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.g.resources
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.Properties.Resources.resources
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.GenerateResource.cache
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfoInputs.cache
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfo.cs
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.CoreCompileInputs.cache
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.pdb
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.genruntimeconfig.cache
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\AppointmentsView.g.cs
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\PatientsView.g.cs
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\AppointmentsView.baml
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\PatientsView.baml
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DentalRecordsView.g.cs
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DentalRecordsView.baml
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.exe
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\bin\Debug\netcoreapp3.1\Database\PIMSDentistaKo.mdb
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.dll.config
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.deps.json
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.json
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.dev.json
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.dll
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.pdb
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
@@ -196,192 +33,45 @@ D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\bin\Debu
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.CopyComplete
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\App.baml
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\UserAccountView.g.cs
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\UserAccountView.baml
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.exe
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.deps.json
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.json
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.dev.json
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.pdb
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\System.Data.Odbc.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\System.Data.OleDb.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\freebsd\lib\netcoreapp2.0\System.Data.Odbc.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\linux\lib\netcoreapp2.0\System.Data.Odbc.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\osx\lib\netcoreapp2.0\System.Data.Odbc.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Data.Odbc.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Data.OleDb.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.AssemblyReference.cache
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.g.cs
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.g.cs
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\Views\AppointmentsView.g.cs
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.g.cs
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DentalRecordsView.g.cs
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\Views\PatientsView.g.cs
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\Views\UserAccountView.g.cs
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\App.g.cs
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.cache
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.lref
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\App.baml
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.baml
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.baml
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\Views\AppointmentsView.baml
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.baml
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DentalRecordsView.baml
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\Views\PatientsView.baml
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\Views\UserAccountView.baml
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.g.resources
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.Properties.Resources.resources
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.GenerateResource.cache
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfoInputs.cache
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfo.cs
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.CoreCompileInputs.cache
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.CopyComplete
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.dll
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.pdb
-C:\Users\RCS\source\repos\Electives\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.genruntimeconfig.cache
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.dll.config
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TreatmentView.g.cs
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TreatmentView.baml
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\bin\Debug\netcoreapp3.1\Database\PIMSDentistaKo.mdb
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_Content.g.cs
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.g.cs
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\AddPatientView.g.cs
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\AppointmentsView.g.cs
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.g.cs
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DentalRecordsView.g.cs
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DentistView.g.cs
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\PatientsView.g.cs
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TreatmentView.g.cs
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\UserAccountView.g.cs
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Windows\DentistAddWindow.g.cs
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Windows\DentistDeleteWindow.g.cs
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Windows\DentistEditWindow.g.cs
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\App.g.cs
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_Content.g.cs
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.cache
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.lref
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\App.baml
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.baml
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.baml
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\AddPatientView.baml
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\AppointmentsView.baml
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.baml
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DentalRecordsView.baml
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DentistView.baml
-<<<<<<< HEAD
-D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.AssemblyReference.cache
->>>>>>> 725301eac981368435821a9cf5e0fe0daf98178b
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\Database\PIMSDentistaKo.mdb
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.dll.config
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\System.Data.Odbc.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\System.Data.OleDb.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\freebsd\lib\netcoreapp2.0\System.Data.Odbc.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\linux\lib\netcoreapp2.0\System.Data.Odbc.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\osx\lib\netcoreapp2.0\System.Data.Odbc.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Data.Odbc.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Data.OleDb.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DentalRecordsView.g.cs
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DentistView.g.cs
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TreatmentView.g.cs
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\UserAccountView.g.cs
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_Content.g.cs
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\App.baml
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DentalRecordsView.baml
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DentistView.baml
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TreatmentView.baml
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\UserAccountView.baml
-C:\Users\PCB\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.CopyComplete
-=======
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.exe
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.dll.config
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.deps.json
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.json
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.runtimeconfig.dev.json
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\pimsdentistako.pdb
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\System.Data.Odbc.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\System.Data.OleDb.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\freebsd\lib\netcoreapp2.0\System.Data.Odbc.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\linux\lib\netcoreapp2.0\System.Data.Odbc.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\osx\lib\netcoreapp2.0\System.Data.Odbc.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Data.Odbc.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Data.OleDb.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.AssemblyReference.cache
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.g.cs
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.g.cs
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\AppointmentsView.g.cs
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.g.cs
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DentalRecordsView.g.cs
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DentistView.g.cs
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\PatientsView.g.cs
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TreatmentView.g.cs
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\UserAccountView.g.cs
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\App.g.cs
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.cache
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_MarkupCompile.lref
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\App.baml
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Components\CustomCalendar.baml
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\MainWindow.baml
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\AppointmentsView.baml
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DashboardView.baml
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DentalRecordsView.baml
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\DentistView.baml
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\PatientsView.baml
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TreatmentView.baml
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Views\UserAccountView.baml
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.g.resources
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.Properties.Resources.resources
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.GenerateResource.cache
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfoInputs.cache
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfo.cs
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.CoreCompileInputs.cache
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.CopyComplete
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.dll
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.pdb
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.genruntimeconfig.cache
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\bin\Debug\netcoreapp3.1\Database\PIMSDentistaKo.mdb
-C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako_Content.g.cs
->>>>>>> 1788273f7792760033321b29ee3d3c4ef7ad8d4d
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\PatientsView.baml
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\TreatmentView.baml
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Views\UserAccountView.baml
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Windows\DentistAddWindow.baml
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Windows\DentistDeleteWindow.baml
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Windows\DentistEditWindow.baml
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.g.resources
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.Properties.Resources.resources
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.GenerateResource.cache
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfoInputs.cache
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.AssemblyInfo.cs
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.CoreCompileInputs.cache
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.CopyComplete
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.dll
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.pdb
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.genruntimeconfig.cache

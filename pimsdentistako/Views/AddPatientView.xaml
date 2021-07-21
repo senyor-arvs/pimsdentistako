@@ -241,10 +241,10 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
                     </Grid.RowDefinitions>
                     <TextBlock Text="Name"
                                FontSize="24"
@@ -294,6 +294,19 @@
                              VerticalAlignment="Center"
                              FontSize="24"/>
                 </Grid>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <Button Width="200"
+                            Height="50"
+                            Margin="0 40 40 0"
+                            FontSize="24"
+                            Content="Save Patient"/>
+                    <Button Width="200"
+                            Height="50"
+                            FontSize="24"
+                            Margin="0 40 0 0"
+                            Content="Cancel"/>
+                </StackPanel>
             </StackPanel>
         </Grid>
     </Grid>

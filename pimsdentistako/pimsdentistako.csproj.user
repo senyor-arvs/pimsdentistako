@@ -10,6 +10,9 @@
     <Compile Update="Components\CustomCalendar.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\AddPatientView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\AppointmentsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -28,21 +31,15 @@
     <Compile Update="Views\UserAccountView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Windows\DentistAddWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Windows\DentistDeleteWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Windows\DentistEditWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Components\CustomCalendar.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddPatientView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AppointmentsView.xaml">
@@ -61,15 +58,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\UserAccountView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Windows\DentistAddWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Windows\DentistDeleteWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Windows\DentistEditWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

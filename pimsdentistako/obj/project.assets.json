@@ -708,19 +708,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PCB\\.nuget\\packages\\": {}
+    "C:\\Users\\Kristian\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PCB\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj",
+      "projectUniqueName": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\pimsdentistako.csproj",
       "projectName": "pimsdentistako",
-      "projectPath": "C:\\Users\\PCB\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj",
-      "packagesPath": "C:\\Users\\PCB\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PCB\\pimsdentistako\\pimsdentistako\\obj\\",
+      "projectPath": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\pimsdentistako.csproj",
+      "packagesPath": "C:\\Users\\Kristian\\.nuget\\packages\\",
+      "outputPath": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\PCB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kristian\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -728,7 +728,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.telerik.com/nuget": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -776,13 +777,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\PCB\\pimsdentistako\\pimsdentistako\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
