@@ -37,6 +37,7 @@
                         <TextBlock Text="Name of admin"
                                    FontFamily="{StaticResource Rounded Elegance}"/>
                         <TextBlock Text="Administrator"
+                                   x:Name="administratorName"
                                    FontFamily="{StaticResource Rounded Elegance}"/>
                     </StackPanel>
                 </StackPanel>
@@ -80,22 +81,30 @@
                          Grid.Row="0"
                          Grid.Column="1"
                          FontFamily="{StaticResource Rounded Elegance}"
-                         x:Name="usernameTxtBox"/>
+                         x:Name="usernameTxtBox"
+                         VerticalContentAlignment="Center"
+                         IsReadOnly="True"/>
                 <TextBox Margin="8"
                          Grid.Row="1"
                          Grid.Column="1"
+                         VerticalContentAlignment="Center"
                          FontFamily="{StaticResource Rounded Elegance}"
-                         x:Name="oldPasswordTxtBox"/>
+                         x:Name="oldPasswordTxtBox"
+                         IsReadOnly="True"/>
                 <TextBox Margin="8"
                          Grid.Row="2"
                          Grid.Column="1"
+                         VerticalContentAlignment="Center"
                          FontFamily="{StaticResource Rounded Elegance}"
-                         x:Name="newPasswordTxtBox"/>
+                         x:Name="newPasswordTxtBox"
+                         IsReadOnly="True"/>
                 <TextBox Margin="8"
                          Grid.Row="3"
                          Grid.Column="1"
+                         VerticalContentAlignment="Center"
                          FontFamily="{StaticResource Rounded Elegance}"
-                         x:Name="retypePasswordTxtBox"/>
+                         x:Name="retypePasswordTxtBox"
+                         IsReadOnly="True"/>
 
             </Grid>
         </Grid>

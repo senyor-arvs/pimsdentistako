@@ -11,6 +11,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using pimsdentistako.DBHelpers;
+using pimsdentistako.DBElements;
+
 namespace pimsdentistako.Views
 {
     /// <summary>
@@ -21,18 +24,43 @@ namespace pimsdentistako.Views
         public UserAccountView()
         {
             InitializeComponent();
+            UserAccountHelper.InitList();
+            administratorName.Text = UserAccountHelper.GetAdminFullName();
+            usernameTxtBox.Text = administratorName.Text;
         }
 
         private void updateButton_Click(object sender, RoutedEventArgs e)
         {
             saveButton.Visibility = Visibility.Visible;
             updateButton.Visibility = Visibility.Hidden;
+            setTxtBoxEnable(false);
         }
+        
 
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
-            saveButton.Visibility = Visibility.Hidden;
-            updateButton.Visibility = Visibility.Visible;
+            if (UserAccountHelper.UpdatePassword(oldPasswordTxtBox, newPasswordTxtBox, retypePasswordTxtBox))
+            {
+                DatabaseHelper.DisplayDialog("Password Changed", "Your password was changed.");
+                saveButton.Visibility = Visibility.Hidden;
+                updateButton.Visibility = Visibility.Visible;
+                setTxtBoxEnable(true);
+                setTextBoxTextCleared();
+            }
+        }
+
+        private void setTxtBoxEnable(bool enable)
+        {
+            oldPasswordTxtBox.IsReadOnly = enable;
+            newPasswordTxtBox.IsReadOnly = enable;
+            retypePasswordTxtBox.IsReadOnly = enable;
+        }
+
+        private void setTextBoxTextCleared()
+        {
+            oldPasswordTxtBox.Clear();
+            newPasswordTxtBox.Clear();
+            retypePasswordTxtBox.Clear();
         }
     }
 }

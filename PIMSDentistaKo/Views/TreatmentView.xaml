@@ -208,16 +208,19 @@
                              Width="300"
                              x:Name="treatmentTypeTxtBox"/>
                     <DataGrid ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}"
+                              x:Name="treatmentTypeDataGrid"
                               IsReadOnly="True"
                               CanUserReorderColumns="False"
                               CanUserSortColumns="False"
                               CanUserDeleteRows="False"
                               CanUserResizeRows="False"
                               AutoGenerateColumns="False"
-                              Height="200">
+                              Height="200"
+                              SelectionChanged="treatmentTypeDataGrid_SelectionChanged">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Type"
-                                                MinWidth="120"/>
+                                                MinWidth="120"
+                                                Binding="{Binding Path= TreatmentTypeName}"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <StackPanel Margin="0 24 0 24"
