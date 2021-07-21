@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using pimsdentistako.Windows;
 
 namespace pimsdentistako.Views
 {
@@ -21,6 +22,45 @@ namespace pimsdentistako.Views
         public DentistView()
         {
             InitializeComponent();
+        }
+
+        private void dg_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void newButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void editButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void deleteButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void New_btn_Click(object sender, RoutedEventArgs e)
+        {
+            DentistAddWindow addWindow = new DentistAddWindow();
+            addWindow.Show();
+        }
+
+        private void Edit_btn_Click(object sender, RoutedEventArgs e)
+        {
+            DentistEditWindow editWindow = new DentistEditWindow();
+            editWindow.Show();
+
+        }
+
+        private void Delete_btn_Click(object sender, RoutedEventArgs e)
+        {
+            DentistDeleteWindow deleteWindow = new DentistDeleteWindow();
+            deleteWindow.Show();
         }
     }
 }

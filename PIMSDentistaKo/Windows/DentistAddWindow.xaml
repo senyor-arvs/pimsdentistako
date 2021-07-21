@@ -1,0 +1,82 @@
+﻿<Window x:Class="pimsdentistako.Windows.DentistAddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pimsdentistako.Windows"
+        mc:Ignorable="d"
+        Title="DentistAddWindow" Height="800" Width="1000">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="180" />
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+            <TextBlock Text="Add Dentist" FontSize="80" Foreground="#191715" HorizontalAlignment="Center" Margin="0,50,0,50"/>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="1" Grid.Column="0" Margin="75,25,0,0">
+            <TextBlock Text="First Name" FontSize="25" />
+            <TextBlock Text="Middle Name" FontSize="25" Margin="0,20,0,0"/>
+            <TextBlock Text="Last Name" FontSize="25" Margin="0,20,0,0" />
+            <TextBlock Text="Suffix (Optional)" FontSize="25" Margin="0,20,0,0"/>
+            <TextBlock Text="License Number" FontSize="25" Margin="0,20,0,0"/>
+            <TextBlock Text="Ptr. Number" FontSize="25" Margin="0,20,0,0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="20,25,50,0" >
+            <TextBox  Height="33" x:Name="txtAddFirst" FontSize="25"/>
+            <TextBox   Margin="0,20,0,0" Height="33" x:Name="txtAddMiddle" FontSize="25"/>
+            <TextBox   Margin="0,20,0,0" Height="33" x:Name="txtAddLast" FontSize="25"/>
+            <TextBox   Margin="0,20,0,0" Height="33" x:Name="txtAddSuffix" FontSize="25"/>
+            <TextBox   Margin="0,20,0,0" Height="33" x:Name="txtAddLicense" FontSize="25"/>
+            <TextBox   Margin="0,20,0,0"  Height="33" x:Name="txtAddPtr" FontSize="25"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="0" Margin="20,50,20,100" Grid.ColumnSpan="2">
+            <Button Content="ADD" Height="75" Width="300" Foreground="White" FontSize="40" Name="Add_btn" FontFamily="{StaticResource Rounded Elegance}" >
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#bd7e4a"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#a26838"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </StackPanel>
+
+        
+        <!--PANGALAN NG TEXTBOX-->
+
+        <!--txtAddFirst-->
+        <!--txtAddMiddle-->
+        <!--txtAddLast-->
+        <!--txtAddSuffix-->
+        <!--txtAddLicense-->
+        <!--txtAddPtr-->
+
+        
+        
+        
+        
+        <!--PANGALAN NG button-->
+
+        <!--Add_btn-->
+        
+
+
+    </Grid>
+</Window>
