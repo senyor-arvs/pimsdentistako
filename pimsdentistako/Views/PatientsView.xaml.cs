@@ -57,5 +57,10 @@ namespace pimsdentistako.Views
         {
             PatientHelper.ListenToClearSearch(txtBoxSearch);
         }
+
+        private void searchByComboBox_SelChanged(object sender, SelectionChangedEventArgs e)
+        {
+            searchTxt.Text = searchByComboBox.Text;
+        }
     }
 }
