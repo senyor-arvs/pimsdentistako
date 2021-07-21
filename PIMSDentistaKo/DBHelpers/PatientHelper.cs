@@ -28,6 +28,7 @@ namespace pimsdentistako.DBHelpers
             {
                 comboBox = value;
                 comboBox.ItemsSource = SearchByMenu.MENU;
+                comboBox.SelectedIndex = 0;
             }
         }
 
@@ -39,7 +40,7 @@ namespace pimsdentistako.DBHelpers
             public static readonly string NULL = "NUN";
             private static ObservableCollection<string> mENU = new ObservableCollection<string>()
             {
-                 PATIENT_NO, FIRST_NAME,LAST_NAME
+                 PATIENT_NO, FIRST_NAME, LAST_NAME
             };
             public static ObservableCollection<string> MENU { get => mENU; }
 
@@ -51,21 +52,30 @@ namespace pimsdentistako.DBHelpers
                 else if (DatabaseHelper.compare(selected_searchby_menu, LAST_NAME)) return col[3];
                 return NULL;
             }
+
+            public static string GetActiveMenu(string selected_searchby_menu)
+            {
+                string[] col = DBNames.ColumnNames.Patient;
+                if (DatabaseHelper.compare(selected_searchby_menu, PATIENT_NO)) return PATIENT_NO;
+                else if (DatabaseHelper.compare(selected_searchby_menu, FIRST_NAME)) return FIRST_NAME;
+                else if (DatabaseHelper.compare(selected_searchby_menu, LAST_NAME)) return LAST_NAME;
+                return NULL;
+            }
         }
 
         //attach here the textblock where the count of patient are displayed
         public static TextBlock TextCount { get => textCount; set => textCount = value; }
 
         //WORKING
-        public static bool InitList() //RUN ON DENTIST VIEW BEFORE GETTING THE DENTIST OBJECT - This will also refresh the List
+        public static bool InitList() //Initialize the List of patients retreive from database
         {
             bool actionState = false;
             try
             {
                 requestConnection(ConnectionState.STATE_OPEN);
                 PatientList = new ObservableCollection<Patient>();
-                OleDbCommand getAllDentistCommand = new OleDbCommand("SELECT * FROM " + myTable, GetConnectionObject());
-                OleDbDataReader dataReader = getAllDentistCommand.ExecuteReader();
+                OleDbCommand getAllPatientsCommand = new OleDbCommand("SELECT * FROM " + myTable, GetConnectionObject());
+                OleDbDataReader dataReader = getAllPatientsCommand.ExecuteReader();
 
                 while (dataReader.Read())
                 {
@@ -223,12 +233,12 @@ namespace pimsdentistako.DBHelpers
         #region SEARCH LISTENERS
         public static void ListenToSearch(TextBox searchTextBox)
         {
-            if (!DatabaseHelper.CheckNullEmptyInput(searchTextBox).Equals(DatabaseHelper.BLANK_INPUT) && MyComboBox.SelectedIndex != -1)
+            if (!DatabaseHelper.CheckNullEmptyInput(searchTextBox).Equals(DatabaseHelper.BLANK_INPUT) && DatabaseHelper.IsSelectedIndexValid(MyComboBox.SelectedIndex, SearchByMenu.MENU.Count))
             {
                 string activeCol = PatientHelper.SearchByMenu.GetActiveColumn(PatientHelper.SearchByMenu.MENU[MyComboBox.SelectedIndex]);
                 string pattern = searchTextBox.Text;
                 bool action = PatientHelper.PatientSearch(activeCol, pattern);
-                if(action) initSearch++;
+                initSearch++;
             }
         }
 
@@ -237,10 +247,18 @@ namespace pimsdentistako.DBHelpers
             if(initSearch > 0)
             {
                 initSearch = 0;
-                MyComboBox.SelectedIndex = -1;
+                MyComboBox.SelectedIndex = 0;
                 searchTextBox.Clear();
                 PatientHelper.InitList();
                 PatientHelper.reorderPatientList();
+            }
+        }
+
+        public static void ListenToComboBoxSelection(TextBlock textBlock)
+        {
+            if (DatabaseHelper.IsSelectedIndexValid(MyComboBox.SelectedIndex, SearchByMenu.MENU.Count))
+            {
+                textBlock.Text = SearchByMenu.GetActiveMenu(PatientHelper.SearchByMenu.MENU[MyComboBox.SelectedIndex]);
             }
         }
 

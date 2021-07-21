@@ -5,6 +5,7 @@ using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Windows;
+using System.Windows.Controls;
 using pimsdentistako.DBElements;
 using static pimsdentistako.DBHelpers.DatabaseHelper;
 
@@ -12,12 +13,16 @@ namespace pimsdentistako.DBHelpers
 {
     public class TreatmentHelper
     {
-
+        public static long ACTIVE_TREATMENT_ID;
+        private static int currentSelection;
+        public static List<string> treatmentIDS = new List<string>();
         private static readonly string myTable = DBNames.TableNames.TREATMENT;
         private static readonly string[] col = DBNames.ColumnNames.Treatment;
 
+        public static DataGrid MyDataGrid { get; set; } //data grid 
+
         public static ObservableCollection<Treatment> TreatmentList { get; set; }
-        public static bool InitList() //RUN ON DENTIST VIEW BEFORE GETTING THE DENTIST OBJECT - This will also refresh the List
+        public static bool InitList() //INTIALIZE THE LIST OF TREATMENTS
         {
             bool actionState = false;
             try
@@ -36,13 +41,14 @@ namespace pimsdentistako.DBHelpers
                     };
 
                     TreatmentList.Add(treatment);
+                    treatmentIDS.Add(treatment.TreatmentID);
                 }
+                TreatmentTypeHelper.InitList(treatmentIDS); //initialize the list of treatment types
                 reorderTreatmentList();
-                actionState = true;
             }
             catch (OleDbException e)
             {
-                Console.WriteLine(e.Message);
+                if (DEBUG) DatabaseHelper.DisplayInMessageBox(myTable, e);
             }
             finally
             {
@@ -164,10 +170,44 @@ namespace pimsdentistako.DBHelpers
             return actionState;
         }
 
-        //TODO ATTACH DATA GRID
         public static void reorderTreatmentList() //sort the list ascending
         {
             TreatmentList = new ObservableCollection<Treatment>(TreatmentList.OrderBy(i => Convert.ToUInt64(i.TreatmentID))); //sort via ID
+            if (MyDataGrid != null) MyDataGrid.ItemsSource = TreatmentList;
         }
+
+        #region DATAGRID LISTENERS AND HANDLERS
+        //implement this trategy in all helpers
+        //listens to data grid selections - you must add data grid to helper before everything
+        public static void ListenToDataGrid()
+        {
+            currentSelection = MyDataGrid.SelectedIndex;
+        }
+
+        //RETURNS the currently selected Dentist based on the inside currentSelection attribute
+        public static Treatment CurrentlySelectedTreatment()
+        {
+            return DatabaseHelper.IsSelectedIndexValid(currentSelection, TreatmentList.Count) ? TreatmentList[currentSelection] : null;
+        }
+
+        //check if handler is grabbing a null dentist
+        public static bool IsCurrentlySelectedNull()
+        {
+            return CurrentlySelectedTreatment() == null;
+        }
+
+        //Use this for displaying data current selected on DataGrid on the Provided TextBoxes
+        public static void DisplaySelected(params TextBox[] textBox)
+        {
+            if (DatabaseHelper.IsSelectedIndexValid(currentSelection, TreatmentList.Count))
+            {
+                ACTIVE_TREATMENT_ID = Convert.ToInt64(CurrentlySelectedTreatment().TreatmentID);
+                for (int i = 0; i < textBox.Length; i++)
+                {
+                    textBox[i].Text = CurrentlySelectedTreatment().TreatmentName;
+                }
+            }
+        }
+        #endregion DATAGRID LISTENERS AND HANDLERS
     }
 }

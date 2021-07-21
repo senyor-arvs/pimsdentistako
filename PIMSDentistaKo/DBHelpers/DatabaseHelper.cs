@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Windows;
 using System.Configuration;
 using System.Windows.Controls;
+using System.Windows.Threading;
 
 namespace pimsdentistako.DBHelpers
 {
@@ -191,6 +192,26 @@ namespace pimsdentistako.DBHelpers
                 counter++;
             }
             return sb.ToString().Trim(); ;
+        }
+
+        public static bool IsTextBoxTextNullEmpty(TextBox textBox)
+        {
+            return String.IsNullOrEmpty(textBox.Text);
+        }
+
+        public static void DisplayWarningDialog(string dialog_label, string dialog_content)
+        {
+            MessageBox.Show(dialog_content, dialog_label, MessageBoxButton.OK, MessageBoxImage.Warning);
+        }
+
+        public static void DisplayErrorDialog(string dialog_label, string dialog_content)
+        {
+            MessageBox.Show(dialog_content, dialog_label, MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+        public static void DisplayDialog(string dialog_label, string dialog_content)
+        {
+            MessageBox.Show(dialog_content, dialog_label, MessageBoxButton.OK, MessageBoxImage.None);
         }
     }
 }
