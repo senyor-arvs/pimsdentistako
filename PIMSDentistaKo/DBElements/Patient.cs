@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using pimsdentistako.DBHelpers;
 
 namespace pimsdentistako.DBElements
@@ -56,13 +54,19 @@ namespace pimsdentistako.DBElements
 
         public static string GetAgeByBirth(string date_of_birth)
         {
-            DateTime dateOfBirth = DatabaseHelper.ConvertToDateTime(date_of_birth);
-            DateTime today = DateTime.Now;
-            int age = today.Year - dateOfBirth.Year;
+            try
+            {
+                DateTime dateOfBirth = DatabaseHelper.ConvertToDateTime(date_of_birth);
+                DateTime today = DateTime.Now;
+                int age = today.Year - dateOfBirth.Year;
 
-            if (dateOfBirth >= today.AddYears(-age)) age--;
+                if (dateOfBirth >= today.AddYears(-age)) age--;
 
-            return age.ToString();
+                return age.ToString();
+            } catch (Exception)
+            {
+                return DatabaseHelper.BLANK_INPUT;
+            }
         }
     }
 }

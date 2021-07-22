@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 
@@ -172,6 +171,155 @@ namespace pimsdentistako.DBHelpers
             }
 
             return foundSomething;
+        }
+
+        //RETURNS the last record
+        public static Patient GetLastRecord()
+        {
+            Patient patient = new Patient();
+            try
+            {
+                requestConnection(ConnectionState.STATE_OPEN);
+                StringBuilder sb = new StringBuilder();
+                sb.Append("SELECT * FROM ").Append(myTable)
+                    .Append(" WHERE ").Append(col[0])
+                    .Append(" = (SELECT MAX(").Append(col[0])
+                    .Append(") FROM ")
+                    .Append(myTable).Append(")");
+
+                //"SELECT * FROM " + myTable + " WHERE " + col[0] + " = (SELECT MAX(" + col[0] + ") FROM " + myTable + ")"
+                OleDbCommand getLastRecordCommand = new OleDbCommand(sb.ToString(), GetConnectionObject());
+                OleDbDataReader dataReader = getLastRecordCommand.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    patient = new Patient
+                    {
+                        PatientID = dataReader[col[0]].ToString(),
+                        PatientFirstName = dataReader[col[1]].ToString(),
+                        PatientMiddleName = dataReader[col[2]].ToString(),
+                        PatientLastName = dataReader[col[3]].ToString(),
+                        PatientSuffix = dataReader[col[4]].ToString(),
+                        PatientNickname = dataReader[col[5]].ToString(),
+                        PatientCivilStatus = dataReader[col[6]].ToString(),
+                        PatientAddress = dataReader[col[7]].ToString(),
+                        PatientEmail = dataReader[col[8]].ToString(),
+                        PatientMobileNumber = dataReader[col[9]].ToString(),
+                        PatientHomeNumber = dataReader[col[10]].ToString(),
+                        PatientBirthdate = dataReader[col[11]].ToString(),
+                        PatientSex = dataReader[col[12]].ToString(),
+                        PatientReferredBy = dataReader[col[13]].ToString(),
+                        PatientOccupation = dataReader[col[14]].ToString(),
+                        PatientCompany = dataReader[col[15]].ToString(),
+                        PatientOfficeNumber = dataReader[col[16]].ToString(),
+                        PatientFaxNumber = dataReader[col[17]].ToString()
+                    };
+                }
+            }
+            catch (Exception e)
+            {
+                if (DEBUG) DatabaseHelper.DisplayInMessageBox(myTable, e);
+            }
+            finally
+            {
+                requestConnection(ConnectionState.STATE_CLOSE);
+            }
+            return patient;
+        }
+
+
+        //TODO PATIENT ADDING - IMPLEMENT EMERGENCY INFORMATION ADDING
+        public static bool AddPatient(Patient patient, EmergencyInfo emergency)
+        {
+            bool actionState = false;
+            try
+            {
+                requestConnection(ConnectionState.STATE_OPEN);
+
+                StringBuilder query = new StringBuilder();
+                query.Append("INSERT INTO ").Append(myTable).Append(" (")
+                    .Append(col[1]).Append(", ")
+                    .Append(col[2]).Append(", ")
+                    .Append(col[3]).Append(", ")
+                    .Append(col[4]).Append(", ")
+                    .Append(col[5]).Append(", ")
+                    .Append(col[6]).Append(", ")
+                    .Append(col[7]).Append(", ")
+                    .Append(col[8]).Append(", ")
+                    .Append(col[9]).Append(", ")
+                    .Append(col[10]).Append(", ")
+                    .Append(col[11]).Append(", ")
+                    .Append(col[12]).Append(", ")
+                    .Append(col[13]).Append(", ")
+                    .Append(col[14]).Append(", ")
+                    .Append(col[15]).Append(", ")
+                    .Append(col[16]).Append(", ")
+                    .Append(col[17]).Append(") ")
+                    .Append("VALUES ").Append(" (")
+                    .Append("@fname").Append(", ")
+                    .Append("@midname").Append(", ")
+                    .Append("@lastname").Append(", ")
+                    .Append("@suffixname").Append(", ")
+                    .Append("@nickname").Append(", ")
+                    .Append("@civilstat").Append(", ")
+                    .Append("@addr").Append(", ")
+                    .Append("@ead").Append(", ")
+                    .Append("@mobileno").Append(", ")
+                    .Append("@homeno").Append(", ")
+                    .Append("@dob").Append(", ")
+                    .Append("@sex").Append(", ")
+                    .Append("@refer").Append(", ")
+                    .Append("@occup").Append(", ")
+                    .Append("@comp").Append(", ")
+                    .Append("@officeno").Append(", ")
+                    .Append("@faxno").Append(")");
+
+                OleDbCommand insertCommand = new OleDbCommand(query.ToString(), GetConnectionObject());
+
+                insertCommand.Parameters.Add(new OleDbParameter("@fname", patient.PatientFirstName));
+                insertCommand.Parameters.Add(new OleDbParameter("@midname", patient.PatientMiddleName));
+                insertCommand.Parameters.Add(new OleDbParameter("@lastname", patient.PatientLastName));
+                insertCommand.Parameters.Add(new OleDbParameter("@suffixname", patient.PatientSuffix));
+                insertCommand.Parameters.Add(new OleDbParameter("@nickname", patient.PatientNickname));
+                insertCommand.Parameters.Add(new OleDbParameter("@civilstat", patient.PatientCivilStatus));
+                insertCommand.Parameters.Add(new OleDbParameter("@addr", patient.PatientAddress));
+                insertCommand.Parameters.Add(new OleDbParameter("@ead", patient.PatientEmail));
+                insertCommand.Parameters.Add(new OleDbParameter("@mobileno", patient.PatientMobileNumber));
+                insertCommand.Parameters.Add(new OleDbParameter("@homeno", patient.PatientHomeNumber));
+                insertCommand.Parameters.Add(new OleDbParameter("@dob", patient.PatientBirthdate));
+                insertCommand.Parameters.Add(new OleDbParameter("@sex", patient.PatientSex));
+                insertCommand.Parameters.Add(new OleDbParameter("@refer", patient.PatientReferredBy));
+                insertCommand.Parameters.Add(new OleDbParameter("@occup", patient.PatientOccupation));
+                insertCommand.Parameters.Add(new OleDbParameter("@comp", patient.PatientCompany));
+                insertCommand.Parameters.Add(new OleDbParameter("@officeno", patient.PatientOfficeNumber));
+                insertCommand.Parameters.Add(new OleDbParameter("@faxno", patient.PatientFaxNumber));
+
+                bool result = insertCommand.ExecuteNonQuery() > 0;
+                bool addEmergencyInfo = false;
+                bool added = false;
+                Patient patientRecent  = new Patient();
+
+                if (result)
+                {
+                    patientRecent = GetLastRecord();
+                    addEmergencyInfo = EmergencyInfoHelper.AddEmergencyInfo(patientRecent.PatientID, emergency);
+                }
+                if (result && addEmergencyInfo)
+                {
+                    PatientList.Add(patientRecent);
+                    added = true;
+                    reorderPatientList();
+                }
+                actionState = result && addEmergencyInfo && added;
+            } catch (Exception e)
+            {
+                if (DEBUG) DatabaseHelper.DisplayInMessageBox(myTable, e);
+            }
+            finally
+            {
+                requestConnection(ConnectionState.STATE_CLOSE);
+            }
+            return actionState;
         }
 
 
