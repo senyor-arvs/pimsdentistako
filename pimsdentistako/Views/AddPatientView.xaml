@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pimsdentistako.Views"
         mc:Ignorable="d"
-        Title="AddPatientView" Height="900" Width="1440">
+        Title="AddPatientView" Height="900" Width="1440" WindowStartupLocation="CenterScreen" MouseDown="Window_MouseDown">
     <Grid Margin="45">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -23,7 +23,7 @@
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0"
                         Margin="0 0 24 0">
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Visibility="Hidden" Orientation="Horizontal">
                     <TextBlock Text="Patient No.:"
                            FontFamily="{StaticResource Rounded Elegance}"
                            FontSize="35"
@@ -31,6 +31,7 @@
                            VerticalAlignment="Center"/>
                     <TextBox x:Name="patientNumber"
                              FontSize="35"
+                             IsReadOnly="True"
                              VerticalAlignment="Center"
                              Margin="30 24 0 0"
                              Width="500"/>
@@ -155,7 +156,8 @@
                         <TextBlock Text="Date of Birth"
                                    FontFamily="{StaticResource Rounded Elegance}"
                                    FontSize="24"/>
-                        <TextBox x:Name="birthDateTxtBox"
+                        <DatePicker x:Name="birthDateTxtBox"
+                                    SelectedDateChanged="birthDateTxtBox_SelectedDateChanged"
                                  FontSize="24"/>
                     </StackPanel>
 
@@ -216,6 +218,7 @@
                                    FontFamily="{StaticResource Rounded Elegance}"
                                    FontSize="24"/>
                         <TextBox x:Name="ageTxtBox"
+                                 IsReadOnly="True"
                                  FontSize="24"/>
                     </StackPanel>
 
@@ -258,9 +261,10 @@
                     <TextBox Grid.Column="1"
                              Grid.Row="0"
                              FontSize="24"
+                             Name="emergencyNameTxtBox"
                              VerticalAlignment="Center"/>
                     
-                    <TextBlock Text="Home Number"
+                    <TextBlock Text="Mobile Number"
                                FontFamily="{StaticResource Rounded Elegance}"
                                FontSize="24"
                                HorizontalAlignment="Right"
@@ -270,6 +274,7 @@
                                Grid.Row="1"/>
                     <TextBox Grid.Column="1"
                              Grid.Row="1"
+                             x:Name="emergencyHomeNumberTxtBox"
                              VerticalAlignment="Center"
                              FontSize="24"/>
                     
@@ -283,6 +288,7 @@
                                Grid.Row="2"/>
                     <TextBox Grid.Column="1"
                              Grid.Row="2"
+                             x:Name="emergencyRelationshipTxtBox"
                              VerticalAlignment="Center"
                              FontSize="24"/>
                     
@@ -296,6 +302,7 @@
                                Grid.Row="3"/>
                     <TextBox Grid.Column="1"
                              Grid.Row="3"
+                             x:Name="emergencyOfficeNumTxtBox"
                              VerticalAlignment="Center"
                              FontSize="24"/>
                 </Grid>
@@ -304,11 +311,13 @@
                             Margin="0 60 0 0">
                     <Button Width="200"
                             Height="50"
+                            x:Name="savePatientButton"
                             Margin="0 40 40 0"
                             FontSize="24"
                             Foreground="White"
                             FontFamily="{StaticResource LEMON MILK Regular}"
-                            Content="Save Patient">
+                            Content="Save Patient"
+                            Click="savePatientButton_Click">
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="Background" Value="#83502E"/>
@@ -338,6 +347,8 @@
                             FontSize="24"
                             Margin="0 40 0 0"
                             Content="Cancel"
+                            x:Name="cancelButton"
+                            Click="cancelButton_Click"
                             Foreground="White"
                             FontFamily="{StaticResource LEMON MILK Regular}">
                         <Button.Style>
