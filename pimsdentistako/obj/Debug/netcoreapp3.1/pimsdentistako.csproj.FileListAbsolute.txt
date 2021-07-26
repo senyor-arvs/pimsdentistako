@@ -75,6 +75,5 @@ D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debu
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.genruntimeconfig.cache
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Windows\AddPatientView.g.cs
 D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\Windows\AddPatientView.baml
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\pimsdentistako.csproj.AssemblyReference.cache
 D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Windows\EditPatientWindow.g.cs
 D:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\Windows\EditPatientWindow.baml

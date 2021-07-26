@@ -319,7 +319,7 @@
                             FontSize="24"
                             Foreground="White"
                             FontFamily="{StaticResource LEMON MILK Regular}"
-                            Content="Save Patient"
+                            Content="Save"
                             Click="savePatientButton_Click">
                         <Button.Style>
                             <Style TargetType="Button">
@@ -345,7 +345,7 @@
                                 </ControlTemplate>
                             </Button.Template>
                         </Button>
-                        <Button x:Name="cancelBtn" Width="200"
+                        <Button Width="200"
                             Height="50"
                             FontSize="24"
                             Margin="0 40 0 0"
@@ -353,7 +353,7 @@
                             x:Name="cancelButton"
                             Click="cancelButton_Click"
                             Foreground="White"
-                            FontFamily="{StaticResource LEMON MILK Regular}" Click="cancelBtn_Click">
+                            FontFamily="{StaticResource LEMON MILK Regular}">
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Background" Value="Black"/>

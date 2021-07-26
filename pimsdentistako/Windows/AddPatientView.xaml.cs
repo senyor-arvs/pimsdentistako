@@ -7,7 +7,7 @@ using pimsdentistako.DBElements;
 using pimsdentistako.DBHelpers;
 using static pimsdentistako.DBHelpers.EmergencyInfoHelper;
 
-namespace pimsdentistako.Views
+namespace pimsdentistako.Windows
 {
     /// <summary>
     /// Interaction logic for AddPatientView.xaml
