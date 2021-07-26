@@ -136,6 +136,11 @@ namespace pimsdentistako.DBHelpers
             return String.IsNullOrEmpty(tb.Text) ? BLANK_INPUT : tb.Text.Trim();
         }
 
+        public static string CheckNullEmptyInput(DatePicker dp)
+        {
+            return String.IsNullOrEmpty(dp.Text) ? BLANK_INPUT : dp.Text.Trim();
+        }
+
         //USE ONLY IN DEBUGGING MODE
         public static void DisplayInMessageBox(string fromSource, Exception e)
         {
@@ -197,6 +202,10 @@ namespace pimsdentistako.DBHelpers
         public static bool IsTextBoxTextNullEmpty(TextBox textBox)
         {
             return String.IsNullOrEmpty(textBox.Text);
+        }
+        public static bool IsTextBoxTextNullEmpty(DatePicker datePicker)
+        {
+            return String.IsNullOrEmpty(datePicker.Text);
         }
 
         public static void DisplayWarningDialog(string dialog_label, string dialog_content)
