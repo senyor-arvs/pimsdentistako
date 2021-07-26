@@ -1,4 +1,4 @@
-﻿<Window x:Class="pimsdentistako.Views.AddPatientView"
+﻿<Window x:Class="pimsdentistako.Windows.AddPatientView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -49,7 +49,7 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <StackPanel Margin="0 20 0 0"
+                    <StackPanel Margin="0 20 20 0"
                                 Grid.Row="0"
                                 Grid.Column="0">
                         <TextBlock Text="First Name"
@@ -59,7 +59,7 @@
                                  FontSize="24"/>
                     </StackPanel>
 
-                    <StackPanel Margin="0 20 0 0"
+                    <StackPanel Margin="0 20 20 0"
                                 Grid.Row="1"
                                 Grid.Column="0">
                         <TextBlock Text="Middle Name"
@@ -69,7 +69,7 @@
                                  FontSize="24"/>
                     </StackPanel>
 
-                    <StackPanel Margin="0 20 0 0"
+                    <StackPanel Margin="0 20 20 0"
                                 Grid.Row="2"
                                 Grid.Column="0">
                         <TextBlock Text="Last Name"
@@ -79,7 +79,7 @@
                                  FontSize="24"/>
                     </StackPanel>
 
-                    <StackPanel Margin="0 20 0 0"
+                    <StackPanel Margin="0 20 20 0"
                                 Grid.Row="3"
                                 Grid.Column="0">
                         <TextBlock Text="Nick Name"
@@ -89,7 +89,7 @@
                                  FontSize="24"/>
                     </StackPanel>
 
-                    <StackPanel Margin="0 20 0 0"
+                    <StackPanel Margin="0 20 20 0"
                                 Grid.Row="4"
                                 Grid.Column="0">
                         <TextBlock Text="Sex"
@@ -99,7 +99,7 @@
                                  FontSize="24"/>
                     </StackPanel>
 
-                    <StackPanel Margin="0 20 0 0"
+                    <StackPanel Margin="0 20 20 0"
                                 Grid.Row="5"
                                 Grid.Column="0">
                         <TextBlock Text="Civil Status"
@@ -109,7 +109,7 @@
                                  FontSize="24"/>
                     </StackPanel>
 
-                    <StackPanel Margin="0 20 0 0"
+                    <StackPanel Margin="0 20 20 0"
                                 Grid.Row="0"
                                 Grid.Column="1">
                         <TextBlock Text="Address"
@@ -119,7 +119,7 @@
                                  FontSize="24"/>
                     </StackPanel>
 
-                    <StackPanel Margin="0 20 0 0"
+                    <StackPanel Margin="0 20 20 0"
                                 Grid.Row="1"
                                 Grid.Column="1">
                         <TextBlock Text="Email"
@@ -129,7 +129,7 @@
                                  FontSize="24"/>
                     </StackPanel>
 
-                    <StackPanel Margin="0 20 0 0"
+                    <StackPanel Margin="0 20 20 0"
                                 Grid.Row="2"
                                 Grid.Column="1">
                         <TextBlock Text="Mobile Number"
@@ -139,7 +139,7 @@
                                  FontSize="24"/>
                     </StackPanel>
 
-                    <StackPanel Margin="0 20 0 0"
+                    <StackPanel Margin="0 20 20 0"
                                 Grid.Row="3"
                                 Grid.Column="1">
                         <TextBlock Text="Home Number"
@@ -149,7 +149,7 @@
                                  FontSize="24"/>
                     </StackPanel>
 
-                    <StackPanel Margin="0 20 0 0"
+                    <StackPanel Margin="0 20 20 0"
                                 Grid.Row="4"
                                 Grid.Column="1">
                         <TextBlock Text="Date of Birth"
@@ -159,7 +159,7 @@
                                  FontSize="24"/>
                     </StackPanel>
 
-                    <StackPanel Margin="0 20 0 0"
+                    <StackPanel Margin="0 20 20 0"
                                 Grid.Row="5"
                                 Grid.Column="1">
                         <TextBlock Text="Referred By:"
@@ -169,7 +169,7 @@
                                  FontSize="24"/>
                     </StackPanel>
 
-                    <StackPanel Margin="0 20 0 0"
+                    <StackPanel Margin="0 20 20 0"
                                 Grid.Row="0"
                                 Grid.Column="2">
                         <TextBlock Text="Occupation"
@@ -179,7 +179,7 @@
                                  FontSize="24"/>
                     </StackPanel>
 
-                    <StackPanel Margin="0 20 0 0"
+                    <StackPanel Margin="0 20 20 0"
                                 Grid.Row="1"
                                 Grid.Column="2">
                         <TextBlock Text="Company"
@@ -189,7 +189,7 @@
                                  FontSize="24"/>
                     </StackPanel>
 
-                    <StackPanel Margin="0 20 0 0"
+                    <StackPanel Margin="0 20 20 0"
                                 Grid.Row="2"
                                 Grid.Column="2">
                         <TextBlock Text="Office Number"
@@ -199,7 +199,7 @@
                                  FontSize="24"/>
                     </StackPanel>
 
-                    <StackPanel Margin="0 20 0 0"
+                    <StackPanel Margin="0 20 20 0"
                                 Grid.Row="3"
                                 Grid.Column="2">
                         <TextBlock Text="Fax Number"
@@ -209,7 +209,7 @@
                                  FontSize="24"/>
                     </StackPanel>
 
-                    <StackPanel Margin="0 20 0 0"
+                    <StackPanel Margin="0 20 20 0"
                                 Grid.Row="4"
                                 Grid.Column="2">
                         <TextBlock Text="Age"
@@ -219,7 +219,7 @@
                                  FontSize="24"/>
                     </StackPanel>
 
-                    <StackPanel Margin="0 20 0 0"
+                    <StackPanel Margin="0 20 20 0"
                                 Grid.Row="5"
                                 Grid.Column="2">
                         <TextBlock Text="Suffix"
@@ -230,24 +230,27 @@
                     </StackPanel>
                 </Grid>
             </StackPanel>
-            <StackPanel Grid.Column="1">
-                <TextBlock Text="Emergency Information"
+            <Border Grid.Column="1"
+                    BorderBrush="Black"
+                    BorderThickness="1">
+                <StackPanel >
+                    <TextBlock Text="Emergency Information"
                            FontFamily="{StaticResource LEMON MILK Bold}"
                            HorizontalAlignment="Center"
                            Margin="0 50 0 0"
                            FontSize="30"/>
-                <Grid Margin="0 24 0 0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="80"/>
-                        <RowDefinition Height="80"/>
-                        <RowDefinition Height="80"/>
-                        <RowDefinition Height="80"/>
-                    </Grid.RowDefinitions>
-                    <TextBlock Text="Name"
+                    <Grid Margin="0 24 20 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="80"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="Name"
                                FontFamily="{StaticResource Rounded Elegance}"
                                FontSize="24"
                                HorizontalAlignment="Right"
@@ -255,12 +258,12 @@
                                Margin="0 0 20 0"
                                Grid.Column="0"
                                Grid.Row="0"/>
-                    <TextBox Grid.Column="1"
+                        <TextBox Grid.Column="1"
                              Grid.Row="0"
                              FontSize="24"
                              VerticalAlignment="Center"/>
-                    
-                    <TextBlock Text="Home Number"
+
+                        <TextBlock Text="Home Number"
                                FontFamily="{StaticResource Rounded Elegance}"
                                FontSize="24"
                                HorizontalAlignment="Right"
@@ -268,12 +271,12 @@
                                Margin="0 0 20 0"
                                Grid.Column="0"
                                Grid.Row="1"/>
-                    <TextBox Grid.Column="1"
+                        <TextBox Grid.Column="1"
                              Grid.Row="1"
                              VerticalAlignment="Center"
                              FontSize="24"/>
-                    
-                    <TextBlock Text="Relationship"
+
+                        <TextBlock Text="Relationship"
                                FontFamily="{StaticResource Rounded Elegance}"
                                FontSize="24"
                                HorizontalAlignment="Right"
@@ -281,12 +284,12 @@
                                Margin="0 0 20 0"
                                Grid.Column="0"
                                Grid.Row="2"/>
-                    <TextBox Grid.Column="1"
+                        <TextBox Grid.Column="1"
                              Grid.Row="2"
                              VerticalAlignment="Center"
                              FontSize="24"/>
-                    
-                    <TextBlock Text="Office Number"
+
+                        <TextBlock Text="Office Number"
                                FontFamily="{StaticResource Rounded Elegance}"
                                FontSize="24"
                                HorizontalAlignment="Right"
@@ -294,78 +297,79 @@
                                Margin="0 0 20 0"
                                Grid.Column="0"
                                Grid.Row="3"/>
-                    <TextBox Grid.Column="1"
+                        <TextBox Grid.Column="1"
                              Grid.Row="3"
                              VerticalAlignment="Center"
                              FontSize="24"/>
-                </Grid>
-                <StackPanel Orientation="Horizontal"
+                    </Grid>
+                    <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Center"
                             Margin="0 60 0 0">
-                    <Button Width="200"
+                        <Button Width="200"
                             Height="50"
                             Margin="0 40 40 0"
                             FontSize="24"
                             Foreground="White"
                             FontFamily="{StaticResource LEMON MILK Regular}"
-                            Content="Save Patient">
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#83502E"/>
-                                <Setter Property="Cursor" Value="Hand"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#a26838"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="200"
+                            Content="Save">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="#83502E"/>
+                                    <Setter Property="Cursor" Value="Hand"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#a26838"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Width="200"
                                         Height="50"
                                         CornerRadius="30,30,30,30"
                                         Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
+                                        <ContentPresenter VerticalAlignment="Center"
                                                       HorizontalAlignment="CENTER"
                                                       Margin="0,0,0,0"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                    <Button Width="200"
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                        <Button x:Name="cancelBtn" Width="200"
                             Height="50"
                             FontSize="24"
                             Margin="0 40 0 0"
                             Content="Cancel"
                             Foreground="White"
-                            FontFamily="{StaticResource LEMON MILK Regular}">
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="Black"/>
-                                <Setter Property="Cursor" Value="Hand"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#a26838"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="180"
+                            FontFamily="{StaticResource LEMON MILK Regular}" Click="cancelBtn_Click">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Black"/>
+                                    <Setter Property="Cursor" Value="Hand"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#a26838"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Width="180"
                                         Height="50"
                                         CornerRadius="30,30,30,30"
                                         Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
+                                        <ContentPresenter VerticalAlignment="Center"
                                                       HorizontalAlignment="CENTER"
                                                       Margin="0,0,0,0"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
+            </Border>
         </Grid>
     </Grid>
 </Window>

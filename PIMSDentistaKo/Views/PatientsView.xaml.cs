@@ -10,7 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using pimsdentistako.Views;
+using pimsdentistako.Windows;
 
 using pimsdentistako.DBHelpers;
 using pimsdentistako.DBElements;
@@ -67,6 +67,11 @@ namespace pimsdentistako.Views
         {
             AddPatientView addPatientView = new AddPatientView();
             addPatientView.Show();
+        }
+
+        private void editPatientButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

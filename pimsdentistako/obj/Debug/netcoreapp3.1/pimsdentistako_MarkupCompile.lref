@@ -1,8 +1,7 @@
-﻿D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
-FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\App.xaml;;
+﻿
+FD:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\App.xaml;;
 FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Components\CustomCalendar.xaml;;
 FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\MainWindow.xaml;;
-FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Views\AddPatientView.xaml;;
 FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Views\AppointmentsView.xaml;;
 FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Views\DashboardView.xaml;;
 FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Views\DentalRecordsView.xaml;;
@@ -10,7 +9,9 @@ FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Views\D
 FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Views\PatientsView.xaml;;
 FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Views\TreatmentView.xaml;;
 FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Views\UserAccountView.xaml;;
+FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Windows\AddPatientView.xaml;;
 FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Windows\DentistAddWindow.xaml;;
 FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Windows\DentistDeleteWindow.xaml;;
 FD:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\Windows\DentistEditWindow.xaml;;
+FD:\User\KRISTIAN\Documents\Programming\C#\pimsdentistako\pimsdentistako\Windows\EditPatientWindow.xaml;;
 

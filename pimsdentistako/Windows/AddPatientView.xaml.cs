@@ -10,7 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace pimsdentistako.Views
+namespace pimsdentistako.Windows
 {
     /// <summary>
     /// Interaction logic for AddPatientView.xaml
@@ -20,6 +20,11 @@ namespace pimsdentistako.Views
         public AddPatientView()
         {
             InitializeComponent();
+        }
+
+        private void cancelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

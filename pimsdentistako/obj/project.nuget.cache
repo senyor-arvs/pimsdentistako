@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TTr5tukg0yDU8zH4C3iqxJIoYx1PyJWRuVnvKLwSYjen0gzaH7b81pWUJPxwWVbzzUIVH2pXKhP96CZ1OvKX0w==",
+  "dgSpecHash": "UIEWB7+awaYLMQnXUyBE/IHWkhdfX1sC6DvwjuwGaBnkvpngItzYEup+8jRijdKisuR6NpSMPwQGOnLYtuoO+A==",
   "success": true,
-  "projectFilePath": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\PIMSDentistaKo\\pimsdentistako\\pimsdentistako.csproj",
+  "projectFilePath": "D:\\User\\KRISTIAN\\Documents\\Programming\\C#\\pimsdentistako\\pimsdentistako\\pimsdentistako.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kristian\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\Kristian\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
