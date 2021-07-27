@@ -12,7 +12,7 @@
     <Compile Update="Components\CustomCalendar.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Windows\AddPatientView.xaml.cs">
+    <Compile Update="Windows\AddPatientWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\AppointmentsView.xaml.cs">
@@ -21,7 +21,7 @@
     <Compile Update="Views\DashboardView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\DentalRecordsView.xaml.cs">
+    <Compile Update="Windows\DentalRecordsWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\PatientsView.xaml.cs">
@@ -41,7 +41,7 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Windows\AddPatientView.xaml">
+    <Page Update="Windows\AddPatientWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AppointmentsView.xaml">
@@ -50,7 +50,7 @@
     <Page Update="Views\DashboardView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\DentalRecordsView.xaml">
+    <Page Update="Windows\DentalRecordsWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\PatientsView.xaml">

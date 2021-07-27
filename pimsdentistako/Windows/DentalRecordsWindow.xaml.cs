@@ -1,14 +1,14 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace pimsdentistako.Views
+namespace pimsdentistako.Windows
 {
     /// <summary>
     /// Interaction logic for DentalRecordsView.xaml
     /// </summary>
-    public partial class DentalRecordsView : Window
+    public partial class DentalRecordsWindow : Window
     {
-        public DentalRecordsView()
+        public DentalRecordsWindow()
         {
             InitializeComponent();
         }

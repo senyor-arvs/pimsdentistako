@@ -230,27 +230,29 @@
                     </StackPanel>
                 </Grid>
             </StackPanel>
-            <Border Grid.Column="1"
-                    BorderBrush="Black"
-                    BorderThickness="1">
-                <StackPanel>
-                    <TextBlock Text="Emergency Information"
+
+            <StackPanel Grid.Column="1"
+                        Margin="0 20 0 0">
+                <Border BorderBrush="Black"
+                        BorderThickness="2">
+                    <StackPanel Margin="0 0 0 20">
+                        <TextBlock Text="Emergency Information"
                            FontFamily="{StaticResource LEMON MILK Bold}"
                            HorizontalAlignment="Center"
-                           Margin="0 50 0 0"
+                           Margin="0 20 0 0"
                            FontSize="30"/>
-                    <Grid Margin="0 24 24 0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="80"/>
-                            <RowDefinition Height="80"/>
-                            <RowDefinition Height="80"/>
-                            <RowDefinition Height="80"/>
-                        </Grid.RowDefinitions>
-                        <TextBlock Text="Name"
+                        <Grid Margin="0 24 24 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80"/>
+                                <RowDefinition Height="80"/>
+                                <RowDefinition Height="80"/>
+                                <RowDefinition Height="80"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="Name"
                                FontFamily="{StaticResource Rounded Elegance}"
                                FontSize="24"
                                HorizontalAlignment="Right"
@@ -258,12 +260,12 @@
                                Margin="0 0 20 0"
                                Grid.Column="0"
                                Grid.Row="0"/>
-                        <TextBox Grid.Column="1"
+                            <TextBox Grid.Column="1"
                              Grid.Row="0"
                              FontSize="24"
                              VerticalAlignment="Center"/>
 
-                        <TextBlock Text="Home Number"
+                            <TextBlock Text="Home Number"
                                FontFamily="{StaticResource Rounded Elegance}"
                                FontSize="24"
                                HorizontalAlignment="Right"
@@ -271,12 +273,12 @@
                                Margin="0 0 20 0"
                                Grid.Column="0"
                                Grid.Row="1"/>
-                        <TextBox Grid.Column="1"
+                            <TextBox Grid.Column="1"
                              Grid.Row="1"
                              VerticalAlignment="Center"
                              FontSize="24"/>
 
-                        <TextBlock Text="Relationship"
+                            <TextBlock Text="Relationship"
                                FontFamily="{StaticResource Rounded Elegance}"
                                FontSize="24"
                                HorizontalAlignment="Right"
@@ -284,12 +286,12 @@
                                Margin="0 0 20 0"
                                Grid.Column="0"
                                Grid.Row="2"/>
-                        <TextBox Grid.Column="1"
+                            <TextBox Grid.Column="1"
                              Grid.Row="2"
                              VerticalAlignment="Center"
                              FontSize="24"/>
 
-                        <TextBlock Text="Office Number"
+                            <TextBlock Text="Office Number"
                                FontFamily="{StaticResource Rounded Elegance}"
                                FontSize="24"
                                HorizontalAlignment="Right"
@@ -297,79 +299,81 @@
                                Margin="0 0 20 0"
                                Grid.Column="0"
                                Grid.Row="3"/>
-                        <TextBox Grid.Column="1"
+                            <TextBox Grid.Column="1"
                              Grid.Row="3"
                              VerticalAlignment="Center"
                              FontSize="24"/>
-                    </Grid>
-                    <StackPanel Orientation="Horizontal"
+                        </Grid>
+                    </StackPanel>
+                </Border>
+                <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Center"
-                            Margin="0 60 0 0">
-                        <Button Width="200"
+                            Margin="0 50 0 0">
+                    <Button Width="auto"
                             Height="50"
                             Margin="0 40 40 0"
                             FontSize="24"
                             Foreground="White"
                             FontFamily="{StaticResource LEMON MILK Regular}"
                             Content="Save">
-                            <Button.Style>
-                                <Style TargetType="Button">
-                                    <Setter Property="Background" Value="#83502E"/>
-                                    <Setter Property="Cursor" Value="Hand"/>
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#a26838"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Button.Style>
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <Border Width="200"
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#83502E"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#a26838"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="200"
                                         Height="50"
                                         CornerRadius="30,30,30,30"
                                         Background="{TemplateBinding Background}">
-                                        <ContentPresenter VerticalAlignment="Center"
+                                    <ContentPresenter VerticalAlignment="Center"
                                                       HorizontalAlignment="CENTER"
                                                       Margin="0,0,0,0"/>
-                                    </Border>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-                        <Button Width="200"
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button Width="auto"
                             Height="50"
                             FontSize="24"
                             Margin="0 40 0 0"
                             Content="Cancel"
+                            x:Name="cancelBtn"
                             Foreground="White"
-                            FontFamily="{StaticResource LEMON MILK Regular}">
-                            <Button.Style>
-                                <Style TargetType="Button">
-                                    <Setter Property="Background" Value="Black"/>
-                                    <Setter Property="Cursor" Value="Hand"/>
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#a26838"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Button.Style>
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <Border Width="180"
+                            FontFamily="{StaticResource LEMON MILK Regular}" Click="cancelBtn_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Black"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#a26838"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="180"
                                         Height="50"
                                         CornerRadius="30,30,30,30"
                                         Background="{TemplateBinding Background}">
-                                        <ContentPresenter VerticalAlignment="Center"
+                                    <ContentPresenter VerticalAlignment="Center"
                                                       HorizontalAlignment="CENTER"
                                                       Margin="0,0,0,0"/>
-                                    </Border>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-                    </StackPanel>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
                 </StackPanel>
-            </Border>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>

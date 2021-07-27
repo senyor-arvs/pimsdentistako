@@ -12,9 +12,9 @@ namespace pimsdentistako.Windows
     /// <summary>
     /// Interaction logic for AddPatientView.xaml
     /// </summary>
-    public partial class AddPatientView : Window
+    public partial class AddPatientWindow : Window
     {
-        public AddPatientView()
+        public AddPatientWindow()
         {
             InitializeComponent();
         }
@@ -133,7 +133,7 @@ namespace pimsdentistako.Windows
 
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void birthDateTxtBox_SelectedDateChanged(object sender, SelectionChangedEventArgs e)

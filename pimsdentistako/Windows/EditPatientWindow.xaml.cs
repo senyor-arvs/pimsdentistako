@@ -21,5 +21,10 @@ namespace pimsdentistako.Windows
         {
             InitializeComponent();
         }
+
+        private void cancelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -245,7 +245,7 @@
                                       Height="650"
                                       Width="700" 
                                       FontSize="25" 
-                                      FontFamily="LEMON MILK" 
+                                      FontFamily="{StaticResource LEMON MILK Regular}" 
                                       Background="#FFF7F7F7" 
                                       BorderBrush="#FF688CAF" 
                                       FontWeight="Normal" 
@@ -259,7 +259,7 @@
                         </StackPanel>
 
                         <!--TextBox Area-->
-                        <StackPanel Margin="-20,-650,0,0">
+                        <StackPanel Margin="-20,-650,0,0" Width="1799">
                             <StackPanel Margin="750,0,0,0">
                                 <TextBlock Text="First Name"
                                            Width="300"
@@ -521,8 +521,7 @@
                                         FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="White"
                                         Margin="-0,0,0,0"
-                                        TextOptions.TextRenderingMode="Aliased" Click="Master_File_Click"
-                                        >
+                                        TextOptions.TextRenderingMode="Aliased">
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#83502E"/>
@@ -551,13 +550,13 @@
 
                         <!--Dental Records-->
                         <StackPanel Margin="950,-50,0,0" Width="200" HorizontalAlignment="Left">
-                            <Button Content="DENTAL RECORD"
+                            <Button x:Name="dentalRecordButton" Content="DENTAL RECORD"
                                         FontSize="20"
                                         FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="White"
                                         Margin="-0,0,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
-                                        Click="Master_File_Click" Width="200">
+                                        Click="dentalRecordButton_Click" Width="200">
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#bd7e4a"/>
@@ -592,7 +591,7 @@
                                         Foreground="White"
                                         Margin="-0,0,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
-                                        Click="Master_File_Click" Width="200">
+                                        Width="200">
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#31170a"/>
@@ -660,13 +659,13 @@
                         <!--EDIT PATIENT-->
 
                         <StackPanel Width="180" Margin="265,-50,0,0" HorizontalAlignment="Left">
-                            <Button Content="EDIT PATIENT"
+                            <Button x:Name="editPatientButton" Content="EDIT PATIENT"
                                         FontSize="20"
                                         FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="White"
                                         Margin="-0,0,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
-                                        Click="Master_File_Click">
+                                        Click="editPatientButton_Click">
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#bd7e4a"/>
@@ -697,12 +696,13 @@
 
                         <StackPanel Width="180" Margin="450,-50,0,0" HorizontalAlignment="Left">
                             <Button Content="DELETE PATIENT"
+                                    x:Name="deletePatientButton"
                                         FontSize="20"
                                         FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="White"
                                         Margin="-0,0,0,0"
                                         TextOptions.TextRenderingMode="Aliased"
-                                        Click="Master_File_Click">
+                                        Click="deletePatient_Click">
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#31170a"/>
