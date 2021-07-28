@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pimsdentistako.Windows"
         mc:Ignorable="d"
-        Title="DentistDeleteWindow" Height="500" Width="800" WindowStartupLocation="CenterScreen">
+        Title="DentistDeleteWindow" Height="480" Width="700" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -20,16 +20,36 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
-            <TextBlock Text="Delete Confirmation" FontSize="60" Foreground="#191715" HorizontalAlignment="Center" Margin="0,75,0,0"/>
+            <TextBlock Text="Delete Confirmation" 
+                       FontSize="60" 
+                       Foreground="#191715" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,75,0,0"
+                       FontFamily="{StaticResource Rounded Elegance}"/>
         </StackPanel>
         
         
         <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
-            <TextBlock Text="Are you sure you want to delete?" TextAlignment="Center" x:Name="labelConfirmation" FontSize="40" Foreground="Red" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+            <TextBlock Text="Are you sure you want to delete?"
+                       FontFamily="{StaticResource Rounded Elegance}"
+                       TextAlignment="Center" 
+                       x:Name="labelConfirmation" 
+                       FontSize="40" 
+                       Foreground="Red" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,20,0,0"/>
         </StackPanel>
         
         <StackPanel Grid.Row="2" Grid.Column="0" Margin="20,0,20,100" >
-            <Button Click="Confirm_btn_Click" Content="CONFIRM" Height="59" Width="200" Foreground="White" FontSize="30" Name="Confirm_btn" FontFamily="{StaticResource Rounded Elegance}">
+            <Button Click="Confirm_btn_Click"
+                    Content="CONFIRM" 
+                    VerticalAlignment="Center" 
+                    Height="55"
+                    Width="200" 
+                    Foreground="White" 
+                    FontSize="30" 
+                    Name="Confirm_btn" 
+                    FontFamily="{StaticResource Rounded Elegance}">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Background" Value="#bd7e4a"/>
@@ -46,7 +66,7 @@
 
 
         <StackPanel Grid.Row="2" Grid.Column="1" Margin="20,0,20,100" >
-            <Button Content="CANCEL" Height="59" Width="200" Foreground="White" FontSize="30" Name="Cancel_btn" FontFamily="{StaticResource Rounded Elegance}" Click="Cancel_btn_Click_1">
+            <Button Content="CANCEL" Height="55" Width="200" Foreground="White" FontSize="30" Name="Cancel_btn" FontFamily="{StaticResource Rounded Elegance}" Click="Cancel_btn_Click_1">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Background" Value="#31170a"/>

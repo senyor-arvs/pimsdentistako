@@ -1,0 +1,389 @@
+﻿<Window x:Class="pimsdentistako.Windows.AddPatientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pimsdentistako.Views"
+        mc:Ignorable="d"
+        Title="AddPatientView" Height="805" Width="1440" WindowStartupLocation="CenterScreen" MouseDown="Window_MouseDown">
+    <Grid Margin="45">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="130"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Add Patient Information"
+                   FontFamily="{StaticResource Rounded Elegance}"
+                   FontSize="75"
+                   VerticalAlignment="Top"
+                   Grid.Row="0"/>
+        <Grid Grid.Row="1" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="500"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0"
+                        Margin="0 0 24 0"
+                        VerticalAlignment="Top">
+                <StackPanel Visibility="Collapsed" Orientation="Horizontal">
+                    <TextBlock Text="Patient No.:"
+                           FontFamily="{StaticResource Rounded Elegance}"
+                           FontSize="35"
+                           Margin="0 24 0 0"
+                           VerticalAlignment="Center"/>
+                    <TextBox x:Name="patientNumber"
+                             FontSize="35"
+                             IsReadOnly="True"
+                             VerticalAlignment="Center"
+                             Margin="30 24 0 0"
+                             Width="500"/>
+                </StackPanel>
+                <Grid Margin="0 25 0 0"
+                      VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Margin="0 20 20 0"
+                                Grid.Row="0"
+                                Grid.Column="0">
+                        <TextBlock Text="First Name"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="24"/>
+                        <TextBox x:Name="firstNameTxtBox"
+                                 FontSize="24"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0 20 20 0"
+                                Grid.Row="1"
+                                Grid.Column="0">
+                        <TextBlock Text="Middle Name"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="24"/>
+                        <TextBox x:Name="middleNameTxtBox"
+                                 FontSize="24"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0 20 20 0"
+                                Grid.Row="2"
+                                Grid.Column="0">
+                        <TextBlock Text="Last Name"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="24"/>
+                        <TextBox x:Name="lastNameTxtBox"
+                                 FontSize="24"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0 20 20 0"
+                                Grid.Row="3"
+                                Grid.Column="0">
+                        <TextBlock Text="Nick Name"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="24"/>
+                        <TextBox x:Name="nickNameTxtBox"
+                                 FontSize="24"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0 20 20 0"
+                                Grid.Row="4"
+                                Grid.Column="0">
+                        <TextBlock Text="Sex"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="24"/>
+                        <TextBox x:Name="sexTxtBox"
+                                 FontSize="24"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0 20 20 0"
+                                Grid.Row="5"
+                                Grid.Column="0">
+                        <TextBlock Text="Civil Status"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="24"/>
+                        <TextBox x:Name="civilStatusTxtBox"
+                                 FontSize="24"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0 20 20 0"
+                                Grid.Row="0"
+                                Grid.Column="1">
+                        <TextBlock Text="Address"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="24"/>
+                        <TextBox x:Name="addressTxtBox"
+                                 FontSize="24"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0 20 20 0"
+                                Grid.Row="1"
+                                Grid.Column="1">
+                        <TextBlock Text="Email"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="24"/>
+                        <TextBox x:Name="emailTxtBox"
+                                 FontSize="24"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0 20 20 0"
+                                Grid.Row="2"
+                                Grid.Column="1">
+                        <TextBlock Text="Mobile Number"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="24"/>
+                        <TextBox x:Name="mobileNumberTxtBox"
+                                 FontSize="24"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0 20 20 0"
+                                Grid.Row="3"
+                                Grid.Column="1">
+                        <TextBlock Text="Home Number"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="24"/>
+                        <TextBox x:Name="homeNumberTxtBox"
+                                 FontSize="24"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0 20 20 0"
+                                Grid.Row="4"
+                                Grid.Column="1">
+                        <TextBlock Text="Date of Birth"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="24"/>
+                        <DatePicker x:Name="birthDateTxtBox"
+                                    SelectedDateChanged="birthDateTxtBox_SelectedDateChanged"
+                                 FontSize="24"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0 20 20 0"
+                                Grid.Row="5"
+                                Grid.Column="1">
+                        <TextBlock Text="Referred By:"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="24"/>
+                        <TextBox x:Name="referredTxtBox"
+                                 FontSize="24"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0 20 20 0"
+                                Grid.Row="0"
+                                Grid.Column="2">
+                        <TextBlock Text="Occupation"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="24"/>
+                        <TextBox x:Name="occupationTxtBox"
+                                 FontSize="24"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0 20 20 0"
+                                Grid.Row="1"
+                                Grid.Column="2">
+                        <TextBlock Text="Company"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="24"/>
+                        <TextBox x:Name="companyTxtBox"
+                                 FontSize="24"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0 20 20 0"
+                                Grid.Row="2"
+                                Grid.Column="2">
+                        <TextBlock Text="Office Number"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="24"/>
+                        <TextBox x:Name="officeNumberTxtBox"
+                                 FontSize="24"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0 20 20 0"
+                                Grid.Row="3"
+                                Grid.Column="2">
+                        <TextBlock Text="Fax Number"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="24"/>
+                        <TextBox x:Name="faxTxtBox"
+                                 FontSize="24"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0 20 20 0"
+                                Grid.Row="4"
+                                Grid.Column="2">
+                        <TextBlock Text="Age"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="24"/>
+                        <TextBox x:Name="ageTxtBox"
+                                 IsReadOnly="True"
+                                 FontSize="24"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0 20 20 0"
+                                Grid.Row="5"
+                                Grid.Column="2">
+                        <TextBlock Text="Suffix"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="24"/>
+                        <TextBox x:Name="suffixTxtBox"
+                                 FontSize="24"/>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <Border BorderBrush="Black"
+                        BorderThickness="2">
+                    <StackPanel>
+                        <TextBlock Text="Emergency Information"
+                           FontFamily="{StaticResource LEMON MILK Bold}"
+                           HorizontalAlignment="Center"
+                           Margin="0 30 0 0"
+                           FontSize="30"/>
+                        <Grid Margin="0 24 20 20">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80"/>
+                                <RowDefinition Height="80"/>
+                                <RowDefinition Height="80"/>
+                                <RowDefinition Height="80"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="Name"
+                               FontFamily="{StaticResource Rounded Elegance}"
+                               FontSize="24"
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Center"
+                               Margin="0 0 20 0"
+                               Grid.Column="0"
+                               Grid.Row="0"/>
+                            <TextBox Grid.Column="1"
+                             Grid.Row="0"
+                             FontSize="24"
+                             Name="emergencyNameTxtBox"
+                             VerticalAlignment="Center"/>
+
+                            <TextBlock Text="Mobile Number"
+                               FontFamily="{StaticResource Rounded Elegance}"
+                               FontSize="24"
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Center"
+                               Margin="0 0 20 0"
+                               Grid.Column="0"
+                               Grid.Row="1"/>
+                            <TextBox Grid.Column="1"
+                             Grid.Row="1"
+                             x:Name="emergencyHomeNumberTxtBox"
+                             VerticalAlignment="Center"
+                             FontSize="24"/>
+
+                            <TextBlock Text="Relationship"
+                               FontFamily="{StaticResource Rounded Elegance}"
+                               FontSize="24"
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Center"
+                               Margin="0 0 20 0"
+                               Grid.Column="0"
+                               Grid.Row="2"/>
+                            <TextBox Grid.Column="1"
+                             Grid.Row="2"
+                             x:Name="emergencyRelationshipTxtBox"
+                             VerticalAlignment="Center"
+                             FontSize="24"/>
+
+                            <TextBlock Text="Office Number"
+                               FontFamily="{StaticResource Rounded Elegance}"
+                               FontSize="24"
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Center"
+                               Margin="0 0 20 0"
+                               Grid.Column="0"
+                               Grid.Row="3"/>
+                            <TextBox Grid.Column="1"
+                             Grid.Row="3"
+                             x:Name="emergencyOfficeNumTxtBox"
+                             VerticalAlignment="Center"
+                             FontSize="24"/>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="0 0 0 0">
+                    <Button Width="200"
+                            Height="50"
+                            x:Name="savePatientButton"
+                            Margin="0 40 40 0"
+                            FontSize="24"
+                            Foreground="White"
+                            FontFamily="{StaticResource LEMON MILK Regular}"
+                            Content="Save"
+                            Click="savePatientButton_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#83502E"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#a26838"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="200"
+                                        Height="50"
+                                        CornerRadius="30,30,30,30"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="CENTER"
+                                                      Margin="0,0,0,0"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button Width="200"
+                            Height="50"
+                            FontSize="24"
+                            Margin="0 40 0 0"
+                            Content="Cancel"
+                            x:Name="cancelButton"
+                            Click="cancelButton_Click"
+                            Foreground="White"
+                            FontFamily="{StaticResource LEMON MILK Regular}">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Black"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#a26838"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="180"
+                                        Height="50"
+                                        CornerRadius="30,30,30,30"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="CENTER"
+                                                      Margin="0,0,0,0"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

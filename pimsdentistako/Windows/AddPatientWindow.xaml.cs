@@ -7,14 +7,14 @@ using pimsdentistako.DBElements;
 using pimsdentistako.DBHelpers;
 using static pimsdentistako.DBHelpers.EmergencyInfoHelper;
 
-namespace pimsdentistako.Views
+namespace pimsdentistako.Windows
 {
     /// <summary>
     /// Interaction logic for AddPatientView.xaml
     /// </summary>
-    public partial class AddPatientView : Window
+    public partial class AddPatientWindow : Window
     {
-        public AddPatientView()
+        public AddPatientWindow()
         {
             InitializeComponent();
         }
@@ -133,7 +133,7 @@ namespace pimsdentistako.Views
 
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void birthDateTxtBox_SelectedDateChanged(object sender, SelectionChangedEventArgs e)

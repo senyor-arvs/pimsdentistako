@@ -107,12 +107,6 @@ namespace pimsdentistako
             DataContext = new AppointmentsViewModel();
         }
 
-        private void dentalRecordsBtn_Click(object sender, RoutedEventArgs e)
-        {
-            DentalRecordsView dentalRecordsView = new DentalRecordsView();
-            dentalRecordsView.Show();
-        }
-
         private void userAccountBtn_Click(object sender, RoutedEventArgs e)
         {
             DataContext = new UserAccountViewModel();

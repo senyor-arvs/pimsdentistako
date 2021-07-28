@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup />
+  <PropertyGroup>
+    <ShowAllFiles>true</ShowAllFiles>
+  </PropertyGroup>
   <ItemGroup>
     <ApplicationDefinition Update="App.xaml">
       <SubType>Designer</SubType>
@@ -10,7 +12,7 @@
     <Compile Update="Components\CustomCalendar.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\AddPatientView.xaml.cs">
+    <Compile Update="Windows\AddPatientWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\AppointmentsView.xaml.cs">
@@ -19,7 +21,7 @@
     <Compile Update="Views\DashboardView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\DentalRecordsView.xaml.cs">
+    <Compile Update="Windows\DentalRecordsWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\PatientsView.xaml.cs">
@@ -39,7 +41,7 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\AddPatientView.xaml">
+    <Page Update="Windows\AddPatientWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AppointmentsView.xaml">
@@ -48,7 +50,7 @@
     <Page Update="Views\DashboardView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\DentalRecordsView.xaml">
+    <Page Update="Windows\DentalRecordsWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\PatientsView.xaml">
