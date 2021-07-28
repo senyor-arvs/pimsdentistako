@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pimsdentistako", "pimsdentistako\pimsdentistako.csproj", "{33889720-B2D2-4E51-B7B5-3238B599BC40}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PIMSDentistaKoSetup", "PIMSDentistaKoSetup\PIMSDentistaKoSetup.vdproj", "{EF52FE87-4FFA-4C93-BC69-866C494FA22D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +19,14 @@ Global
 		{33889720-B2D2-4E51-B7B5-3238B599BC40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33889720-B2D2-4E51-B7B5-3238B599BC40}.Debug|x86.ActiveCfg = Debug|x86
 		{33889720-B2D2-4E51-B7B5-3238B599BC40}.Debug|x86.Build.0 = Debug|x86
-		{33889720-B2D2-4E51-B7B5-3238B599BC40}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{33889720-B2D2-4E51-B7B5-3238B599BC40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33889720-B2D2-4E51-B7B5-3238B599BC40}.Release|Any CPU.ActiveCfg = Release|x86
+		{33889720-B2D2-4E51-B7B5-3238B599BC40}.Release|Any CPU.Build.0 = Release|x86
 		{33889720-B2D2-4E51-B7B5-3238B599BC40}.Release|x86.ActiveCfg = Release|x86
 		{33889720-B2D2-4E51-B7B5-3238B599BC40}.Release|x86.Build.0 = Release|x86
+		{EF52FE87-4FFA-4C93-BC69-866C494FA22D}.Debug|Any CPU.ActiveCfg = Debug
+		{EF52FE87-4FFA-4C93-BC69-866C494FA22D}.Debug|x86.ActiveCfg = Debug
+		{EF52FE87-4FFA-4C93-BC69-866C494FA22D}.Release|Any CPU.ActiveCfg = Release
+		{EF52FE87-4FFA-4C93-BC69-866C494FA22D}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
