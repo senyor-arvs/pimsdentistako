@@ -303,6 +303,20 @@
                             </StackPanel>
 
                             <StackPanel Margin="750,0,0,0">
+                                <TextBlock Text="Suffix"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="20"
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
+                                <TextBox x:Name="Suffix"
+                                         Width="300"
+                                         Height="30"
+                                         FontSize="20"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="750,0,0,0">
                                 <TextBlock Text="Nickname"
                                            Width="300"
                                            Height="40"
@@ -345,34 +359,6 @@
                             </StackPanel>
 
                             <StackPanel Margin="750,0,0,0">
-                                <TextBlock Text="Address"
-                                           Width="300"
-                                           Height="40"
-                                           HorizontalAlignment="Left"
-                                           FontSize="20"
-                                           FontFamily="{StaticResource LEMON MILK Light}"/>
-                                <TextBox x:Name="Address"
-                                         Width="300"
-                                         Height="30"
-                                         FontSize="20"
-                                         HorizontalAlignment="Left"/>
-                            </StackPanel>
-
-                            <StackPanel Margin="750,0,0,0">
-                                <TextBlock Text="Email"
-                                           Width="300"
-                                           Height="40"
-                                           HorizontalAlignment="Left"
-                                           FontSize="20"
-                                           FontFamily="{StaticResource LEMON MILK Light}"/>
-                                <TextBox x:Name="Email"
-                                         Width="300"
-                                         Height="30"
-                                         FontSize="20"
-                                         HorizontalAlignment="Left"/>
-                            </StackPanel>
-
-                            <StackPanel Margin="750,0,0,0">
                                 <TextBlock Text="Mobile Number"
                                            Width="300"
                                            Height="40"
@@ -386,7 +372,37 @@
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
+                            <StackPanel Margin="750,0,0,0">
+                                <TextBlock Text="Address"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="20"
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
+                                <TextBox x:Name="Address"
+                                         Width="300"
+                                         Height="30"
+                                         FontSize="20"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
                             <StackPanel Margin="1100,-630,0,0">
+                                <TextBlock Text="Email"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="20"
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
+                                <TextBox x:Name="Email"
+                                         Width="300"
+                                         Height="30"
+                                         FontSize="20"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            
+
+                            <StackPanel Margin="1100,-560,0,0">
                                 <TextBlock Text="Home Number"
                                            Width="300"
                                            Height="40"
@@ -400,7 +416,7 @@
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
-                            <StackPanel Margin="1100,-560,0,0">
+                            <StackPanel Margin="1100,-490,0,0">
                                 <TextBlock Text="Date of Birth"
                                            Width="300"
                                            Height="40"
@@ -414,77 +430,7 @@
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
-                            <StackPanel Margin="1100,-490,0,0">
-                                <TextBlock Text="Reffered By"
-                                           Width="300"
-                                           Height="40"
-                                           HorizontalAlignment="Left"
-                                           FontSize="20"
-                                           FontFamily="{StaticResource LEMON MILK Light}"/>
-                                <TextBox x:Name="RefferedBy"
-                                         Width="300"
-                                         Height="30"
-                                         FontSize="20"
-                                         HorizontalAlignment="Left"/>
-                            </StackPanel>
-
                             <StackPanel Margin="1100,-420,0,0">
-                                <TextBlock Text="Occupation"
-                                           Width="300"
-                                           Height="40"
-                                           HorizontalAlignment="Left"
-                                           FontSize="20"
-                                           FontFamily="{StaticResource LEMON MILK Light}"/>
-                                <TextBox x:Name="Occupation"
-                                         Width="300"
-                                         Height="30"
-                                         FontSize="20"
-                                         HorizontalAlignment="Left"/>
-                            </StackPanel>
-
-                            <StackPanel Margin="1100,-350,0,0">
-                                <TextBlock Text="Company"
-                                           Width="300"
-                                           Height="40"
-                                           HorizontalAlignment="Left"
-                                           FontSize="20"
-                                           FontFamily="{StaticResource LEMON MILK Light}"/>
-                                <TextBox x:Name="Company"
-                                         Width="300"
-                                         Height="30"
-                                         FontSize="20"
-                                         HorizontalAlignment="Left"/>
-                            </StackPanel>
-
-                            <StackPanel Margin="1100,-280,0,0">
-                                <TextBlock Text="Office Number"
-                                           Width="300"
-                                           Height="40"
-                                           HorizontalAlignment="Left"
-                                           FontSize="20"
-                                           FontFamily="{StaticResource LEMON MILK Light}"/>
-                                <TextBox x:Name="OfficeNumber"
-                                         Width="300"
-                                         Height="30"
-                                         FontSize="20"
-                                         HorizontalAlignment="Left"/>
-                            </StackPanel>
-
-                            <StackPanel Margin="1100,-210,0,0">
-                                <TextBlock Text="Fax Number"
-                                           Width="300"
-                                           Height="40"
-                                           HorizontalAlignment="Left"
-                                           FontSize="20"
-                                           FontFamily="{StaticResource LEMON MILK Light}"/>
-                                <TextBox x:Name="FaxNumber"
-                                         Width="300"
-                                         Height="30"
-                                         FontSize="20"
-                                         HorizontalAlignment="Left"/>
-                            </StackPanel>
-
-                            <StackPanel Margin="1100,-140,0,0">
                                 <TextBlock Text="Age"
                                            Width="100"
                                            Height="40"
@@ -498,19 +444,79 @@
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
 
-                            <StackPanel Margin="1100,-70,0,0">
-                                <TextBlock Text="Suffix"
+                            <StackPanel Margin="1100,-350,0,0">
+                                <TextBlock Text="Reffered By"
                                            Width="300"
                                            Height="40"
                                            HorizontalAlignment="Left"
                                            FontSize="20"
                                            FontFamily="{StaticResource LEMON MILK Light}"/>
-                                <TextBox x:Name="Suffix"
+                                <TextBox x:Name="RefferedBy"
                                          Width="300"
                                          Height="30"
                                          FontSize="20"
                                          HorizontalAlignment="Left"/>
                             </StackPanel>
+
+                            <StackPanel Margin="1100,-280,0,0">
+                                <TextBlock Text="Occupation"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="20"
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
+                                <TextBox x:Name="Occupation"
+                                         Width="300"
+                                         Height="30"
+                                         FontSize="20"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="1100,-210,0,0">
+                                <TextBlock Text="Company"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="20"
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
+                                <TextBox x:Name="Company"
+                                         Width="300"
+                                         Height="30"
+                                         FontSize="20"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="1100,-140,0,0">
+                                <TextBlock Text="Office Number"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="20"
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
+                                <TextBox x:Name="OfficeNumber"
+                                         Width="300"
+                                         Height="30"
+                                         FontSize="20"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="1100,-70,0,0">
+                                <TextBlock Text="Fax Number"
+                                           Width="300"
+                                           Height="40"
+                                           HorizontalAlignment="Left"
+                                           FontSize="20"
+                                           FontFamily="{StaticResource LEMON MILK Light}"/>
+                                <TextBox x:Name="FaxNumber"
+                                         Width="300"
+                                         Height="30"
+                                         FontSize="20"
+                                         HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                            
+
+                            
 
                         </StackPanel>
 
