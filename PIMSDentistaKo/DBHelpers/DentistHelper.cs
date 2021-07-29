@@ -7,6 +7,7 @@ using pimsdentistako.DBElements;
 using static pimsdentistako.DBHelpers.DatabaseHelper;
 using static pimsdentistako.DBHelpers.UserAccountHelper;
 using System.Windows.Controls;
+using System.Collections.Generic;
 
 namespace pimsdentistako.DBHelpers
 {
@@ -31,8 +32,8 @@ namespace pimsdentistako.DBHelpers
             {
                 requestConnection(ConnectionState.STATE_OPEN);
                 DentistList = new ObservableCollection<Dentist>();
-                OleDbCommand getAllDentistCommand = new OleDbCommand("SELECT * FROM " + myTable, GetConnectionObject());
-                OleDbDataReader dataReader = getAllDentistCommand.ExecuteReader();
+                OleDbCommand getAllDentistCommand = DatabaseHelper.SelectAllCommand(myTable);
+                OleDbDataReader dataReader = getAllDentistCommand.ExecuteReader();;
 
                 while (dataReader.Read())
                 {
@@ -74,15 +75,8 @@ namespace pimsdentistako.DBHelpers
             try
             {
                 requestConnection(ConnectionState.STATE_OPEN);
-                StringBuilder sb = new StringBuilder();
-                sb.Append("SELECT * FROM ").Append(myTable)
-                    .Append(" WHERE ").Append(col[0])
-                    .Append(" = (SELECT MAX(").Append(col[0])
-                    .Append(") FROM ")
-                    .Append(myTable).Append(")");
 
-                //"SELECT * FROM " + myTable + " WHERE " + col[0] + " = (SELECT MAX(" + col[0] + ") FROM " + myTable + ")"
-                OleDbCommand getLastRecordCommand = new OleDbCommand(sb.ToString(), GetConnectionObject());
+                OleDbCommand getLastRecordCommand = DatabaseHelper.LastRecordCommand(myTable, col[0]);
                 OleDbDataReader dataReader = getLastRecordCommand.ExecuteReader();
 
                 while (dataReader.Read())
@@ -118,24 +112,15 @@ namespace pimsdentistako.DBHelpers
             try
             {
                 requestConnection(ConnectionState.STATE_OPEN);
-                StringBuilder query = new StringBuilder();
-                query.Append("INSERT INTO ").Append(myTable).Append(" (")
-                    .Append(col[1]).Append(", ")
-                    .Append(col[2]).Append(", ")
-                    .Append(col[3]).Append(", ")
-                    .Append(col[4]).Append(", ")
-                    .Append(col[5]).Append(", ")
-                    .Append(col[6]).Append(")")
-                    .Append(" VALUES (@fName, @midName, @lastName, @suffix, @lic, @ptr)");
-
-                OleDbCommand insertCommand = new OleDbCommand(query.ToString(), GetConnectionObject());
-
-                insertCommand.Parameters.Add(new OleDbParameter("@fName", dentist.DentistFirstName));
-                insertCommand.Parameters.Add(new OleDbParameter("@midName", dentist.DentistMiddleName));
-                insertCommand.Parameters.Add(new OleDbParameter("@lastName", dentist.DentistLastName));
-                insertCommand.Parameters.Add(new OleDbParameter("@suffix", dentist.DentistSuffix));
-                insertCommand.Parameters.Add(new OleDbParameter("@lic", dentist.DentistLicenseNumber));
-                insertCommand.Parameters.Add(new OleDbParameter("@ptr", dentist.DentistPTRNumber));
+                OleDbCommand insertCommand = DatabaseHelper.AddCommand(myTable, col, 1, 6, new List<string>
+                {
+                    dentist.DentistFirstName,
+                    dentist.DentistMiddleName,
+                    dentist.DentistLastName,
+                    dentist.DentistSuffix,
+                    dentist.DentistLicenseNumber,
+                    dentist.DentistPTRNumber
+                });
 
                 bool initial_adding = insertCommand.ExecuteNonQuery() > 0;
 
@@ -243,7 +228,7 @@ namespace pimsdentistako.DBHelpers
             {
                 requestConnection(ConnectionState.STATE_OPEN);
 
-                OleDbCommand deleteCommand = new OleDbCommand("DELETE FROM " + myTable + " WHERE " + col[0] + "= " + dentistID + ";", GetConnectionObject());
+                OleDbCommand deleteCommand = DatabaseHelper.DeleteCommand(myTable, col[0], dentistID, true);
                 bool affectedRows = deleteCommand.ExecuteNonQuery() > 0;
 
                 bool accountRemoved = false;

@@ -6,6 +6,7 @@ using System.Collections.ObjectModel;
 using pimsdentistako.DBElements;
 using static pimsdentistako.DBHelpers.DatabaseHelper;
 using System.Windows.Controls;
+using System.Collections.Generic;
 
 namespace pimsdentistako.DBHelpers
 {
@@ -34,7 +35,7 @@ namespace pimsdentistako.DBHelpers
             {
                 requestConnection(ConnectionState.STATE_OPEN);
                 AccountList = new ObservableCollection<UserAccount>();
-                OleDbCommand getAllAccountCommand = new OleDbCommand("SELECT * FROM " + DBNames.TableNames.USER_ACC, GetConnectionObject());
+                OleDbCommand getAllAccountCommand = DatabaseHelper.SelectAllCommand(myTable);
                 OleDbDataReader dataReader = getAllAccountCommand.ExecuteReader();
 
                 while (dataReader.Read())
@@ -63,6 +64,7 @@ namespace pimsdentistako.DBHelpers
             return actionState;
         }
 
+        //HANDLER FOR UPDATING USER ACC ADMIN PASSWORD
         internal static bool UpdatePassword(TextBox oldPasswordTxtBox, TextBox newPasswordTxtBox, TextBox retypePasswordTxtBox)
         {
             if (!DatabaseHelper.IsTextBoxTextNullEmpty(oldPasswordTxtBox))
@@ -121,20 +123,13 @@ namespace pimsdentistako.DBHelpers
             {
                 requestConnection(ConnectionState.STATE_OPEN);
 
-                StringBuilder query = new StringBuilder();
-                query.Append("INSERT INTO ").Append(myTable).Append(" (")
-                    .Append(col[1]).Append(", ")
-                    .Append(col[2]).Append(", ")
-                    .Append(Preserved(new String(col[3]))).Append(", ")
-                    .Append(col[4]).Append(") ")
-                    .Append(" VALUES (@id, @uname, @pass, @remark)");
-
-                OleDbCommand insertCommand = new OleDbCommand(query.ToString(), GetConnectionObject());
-
-                insertCommand.Parameters.Add(new OleDbParameter("@id", user.DentistID));
-                insertCommand.Parameters.Add(new OleDbParameter("@uname", user.Username));
-                insertCommand.Parameters.Add(new OleDbParameter("@pass", user.Password));
-                insertCommand.Parameters.Add(new OleDbParameter("@remark", user.UserAccountRemarks));
+                OleDbCommand insertCommand = DatabaseHelper.AddCommand(myTable, col, 1, 4, new List<string>
+                {
+                    user.DentistID,
+                    user.Username,
+                    user.Password,
+                    user.UserAccountRemarks
+                });
 
                 actionState = insertCommand.ExecuteNonQuery() > 0;
                 if (actionState)
@@ -257,8 +252,7 @@ namespace pimsdentistako.DBHelpers
             try
             {
                 requestConnection(ConnectionState.STATE_OPEN);
-
-                OleDbCommand deleteCommand = new OleDbCommand("DELETE FROM " + myTable + " WHERE " + col[1] + "='" + dentistID + "';", GetConnectionObject());
+                OleDbCommand deleteCommand = DatabaseHelper.DeleteCommand(myTable, col[1], dentistID, false);
                 bool actionResult = deleteCommand.ExecuteNonQuery() > 0;
 
                 bool removed = false;

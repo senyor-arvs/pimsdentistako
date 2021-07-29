@@ -47,7 +47,7 @@ namespace pimsdentistako.DBElements
         {
             get
             {
-                return DatabaseHelper.BindFieldsByCondition(DatabaseHelper.BLANK_INPUT, DatabaseHelper.WHITE_SPACE_INPUT, 1, true, PatientFirstName, PatientMiddleName, PatientLastName, PatientSuffix);
+                return DatabaseHelper.BindFieldsByCondition(DatabaseHelper.BLANK_INPUT, DatabaseHelper.WHITE_SPACE_INPUT, 1, PatientMiddleName.Length <= 1, PatientFirstName, PatientMiddleName, PatientLastName, PatientSuffix);
             }
             set => patientFullName = value;
         }
