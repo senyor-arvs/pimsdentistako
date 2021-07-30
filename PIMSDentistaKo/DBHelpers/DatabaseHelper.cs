@@ -130,23 +130,6 @@ namespace pimsdentistako.DBHelpers
             return field.Equals(BLANK_INPUT) ? EMPTY_INPUT : field;
         }
 
-        //CHECK IF THE USER DOES NOT ENTER ANY VALUE IF NOT REPLACE IT WITH BLANK_INPUT "-"
-        public static string CheckNullEmptyInput(TextBox tb)
-        {
-            return String.IsNullOrEmpty(tb.Text) ? BLANK_INPUT : tb.Text.Trim();
-        }
-
-        public static string CheckNullEmptyInput(DatePicker dp)
-        {
-            return String.IsNullOrEmpty(dp.Text) ? BLANK_INPUT : dp.Text.Trim();
-        }
-
-        //USE ONLY IN DEBUGGING MODE
-        public static void DisplayInMessageBox(string fromSource, Exception e)
-        {
-            MessageBox.Show(e.Message, "Debugger of: " + fromSource);
-        }
-
         // square brackets to prevent query params being detected as reserved keyword
         public static string Preserved(string to_isolate)
         {
@@ -199,6 +182,27 @@ namespace pimsdentistako.DBHelpers
             return sb.ToString().Trim(); ;
         }
 
+        #region INPUT CHECKER
+        public static bool IsValueNull(string field)
+        {
+            return string.IsNullOrEmpty(field);
+        }
+
+        public static string isMatchThenReplace(bool conditionBool, string valTrue, string valFalse)
+        {
+            return conditionBool ? valTrue : valFalse;
+        }
+
+        //CHECK IF THE USER DOES NOT ENTER ANY VALUE IF NOT REPLACE IT WITH BLANK_INPUT "-"
+        public static string CheckNullEmptyInput(TextBox tb)
+        {
+            return String.IsNullOrEmpty(tb.Text) ? BLANK_INPUT : tb.Text.Trim();
+        }
+        public static string CheckNullEmptyInput(DatePicker dp)
+        {
+            return String.IsNullOrEmpty(dp.Text) ? BLANK_INPUT : dp.Text.Trim();
+        }
+
         public static bool IsTextBoxTextNullEmpty(TextBox textBox)
         {
             return String.IsNullOrEmpty(textBox.Text);
@@ -207,20 +211,120 @@ namespace pimsdentistako.DBHelpers
         {
             return String.IsNullOrEmpty(datePicker.Text);
         }
+        #endregion INPUT CHECKER
+
+        #region DIALOGS
+        //USE ONLY IN DEBUGGING MODE
+        public static void DisplayInMessageBox(string fromSource, Exception e)
+        {
+            Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Action)(() =>
+            {
+                MessageBox.Show(e.Message, "Debugger of: " + fromSource);
+            }));
+        }
 
         public static void DisplayWarningDialog(string dialog_label, string dialog_content)
         {
-            MessageBox.Show(dialog_content, dialog_label, MessageBoxButton.OK, MessageBoxImage.Warning);
+            Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Action)(() =>
+            {
+                MessageBox.Show(dialog_content, dialog_label, MessageBoxButton.OK, MessageBoxImage.Warning);
+            }));
         }
 
         public static void DisplayErrorDialog(string dialog_label, string dialog_content)
         {
-            MessageBox.Show(dialog_content, dialog_label, MessageBoxButton.OK, MessageBoxImage.Error);
+            Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Action)(() => { 
+                MessageBox.Show(dialog_content, dialog_label, MessageBoxButton.OK, MessageBoxImage.Error); 
+            }));
         }
 
         public static void DisplayDialog(string dialog_label, string dialog_content)
         {
-            MessageBox.Show(dialog_content, dialog_label, MessageBoxButton.OK, MessageBoxImage.None);
+            Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Action)(() => { 
+                MessageBox.Show(dialog_content, dialog_label, MessageBoxButton.OK, MessageBoxImage.None); 
+            }));
         }
+        #endregion DIALOGS
+
+        #region COMMON QUERY METHODS
+
+        public static OleDbCommand SelectAllCommand(string myTable)
+        {
+            return new OleDbCommand("SELECT * FROM " + myTable, GetConnectionObject());
+        }
+        public static OleDbCommand SelectAllThatSatisfiesCommand(string myTable, string activeCol, string value, bool isNumber)
+        {
+            if (isNumber)
+            {
+                return new OleDbCommand("SELECT * FROM " + myTable + " WHERE " + activeCol + " = " + value, GetConnectionObject());
+            }
+            return new OleDbCommand("SELECT * FROM " + myTable + " WHERE " + activeCol + " = '" + value + "'", GetConnectionObject());
+        }
+
+        public static OleDbCommand LastRecordCommand(string myTable, string idColumn)
+        {
+            //"SELECT * FROM " + myTable + " WHERE " + col[0] + " = (SELECT MAX(" + col[0] + ") FROM " + myTable + ")"
+            StringBuilder sb = new StringBuilder();
+            sb.Append("SELECT * FROM ").Append(myTable)
+                .Append(" WHERE ").Append(idColumn)
+                .Append(" = (SELECT MAX(").Append(idColumn)
+                .Append(") FROM ")
+                .Append(myTable).Append(")");
+            return new OleDbCommand(sb.ToString(), GetConnectionObject());
+        }
+
+        public static OleDbCommand AddCommand(string myTable, string[] columns, int startIndex, int endIndex, List<string> valueSourceList)
+        {
+            char comma = ',';
+            char closingPar = ')';
+            char whiteSpace = ' ';
+
+            StringBuilder query = new StringBuilder();
+            StringBuilder valuesString = new StringBuilder("VALUES (");
+            List<string> valuesPlaceHolder = new List<string>();
+
+            query.Append("INSERT INTO ").Append(myTable).Append(" (");
+
+            for(int i = startIndex; i <= endIndex; i++)
+            {
+                string placeHolder = "@" + i;
+                query.Append("[").Append(columns[i]).Append("]");
+                valuesString.Append(placeHolder);
+                valuesPlaceHolder.Add(placeHolder);
+
+                if (i == endIndex)
+                {
+                    query.Append(closingPar);
+                    valuesString.Append(closingPar);
+                }
+                else 
+                {
+                    query.Append(comma);
+                    valuesString.Append(comma).Append(whiteSpace);
+                }
+                query.Append(whiteSpace);
+            }
+
+            OleDbCommand insertCommand = new OleDbCommand(query.Append(valuesString).ToString(), GetConnectionObject());
+
+            for(int i = 0; i < valueSourceList.Count; i++)
+            {
+                insertCommand.Parameters.Add(new OleDbParameter(valuesPlaceHolder[i], valueSourceList[i]));
+            }
+            return insertCommand;
+        }
+
+        public static OleDbCommand DeleteCommand(string myTable, string activeColumn, string testParam, bool isParamNumber)
+        {
+            if (isParamNumber)
+            {
+                //numbers in testParam must not contain '' so it is detected by ACCESS as number type not text
+                return new OleDbCommand("DELETE FROM " + myTable + " WHERE [" + activeColumn + "]=" + testParam + ";", GetConnectionObject());
+            }
+            return new OleDbCommand("DELETE FROM " + myTable + " WHERE [" + activeColumn + "]='" + testParam + "';", GetConnectionObject());
+
+        }
+
+        #endregion COMMON QUERY METHODS
     }
 }

@@ -29,7 +29,7 @@ namespace pimsdentistako.DBHelpers
             {
                 requestConnection(ConnectionState.STATE_OPEN);
                 TreatmentList = new ObservableCollection<Treatment>();
-                OleDbCommand getAllTreatmentCommand = new OleDbCommand("SELECT * FROM " + myTable, GetConnectionObject());
+                OleDbCommand getAllTreatmentCommand = DatabaseHelper.SelectAllCommand(myTable);
                 OleDbDataReader dataReader = getAllTreatmentCommand.ExecuteReader();
 
                 while (dataReader.Read())
@@ -57,6 +57,7 @@ namespace pimsdentistako.DBHelpers
             return actionState;
         }
 
+        //TODO UPDATE ADDING PROCESS SEQUENCE
         public static bool AddTreatment(String treatmentName)
         {
             int maxAvailable;
@@ -108,7 +109,7 @@ namespace pimsdentistako.DBHelpers
             }
             return actionState;
         }
-
+        //TODO UPDATE, UPDATE PROCESS SEQUENCE
         public static bool UpdateTreatment(Treatment treatment, int selectedIndex)
         {
             bool actionState = false;

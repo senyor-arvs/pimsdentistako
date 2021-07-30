@@ -7,6 +7,7 @@ using System.Data.OleDb;
 using System.Windows.Controls;
 using pimsdentistako.DBElements;
 using static pimsdentistako.DBHelpers.DatabaseHelper;
+using System.Collections.Generic;
 
 namespace pimsdentistako.DBHelpers
 {
@@ -31,12 +32,14 @@ namespace pimsdentistako.DBHelpers
             }
         }
 
+        #region SEARCH BY MENU CLASS
         public static class SearchByMenu
         {
             public static readonly string PATIENT_NO = "Patient No.";
             public static readonly string FIRST_NAME = "First Name";
             public static readonly string LAST_NAME = "Last Name";
             public static readonly string NULL = "NUN";
+
             private static ObservableCollection<string> mENU = new ObservableCollection<string>()
             {
                  PATIENT_NO, FIRST_NAME, LAST_NAME
@@ -52,6 +55,7 @@ namespace pimsdentistako.DBHelpers
                 return NULL;
             }
 
+            [Obsolete("Redundant Functionality", true)]
             public static string GetActiveMenu(string selected_searchby_menu)
             {
                 string[] col = DBNames.ColumnNames.Patient;
@@ -61,6 +65,51 @@ namespace pimsdentistako.DBHelpers
                 return NULL;
             }
         }
+        #endregion SEARCH BY MENU CLASS
+
+        #region FIELD MENUS
+        public static class FieldMenu
+        {
+            //menu for sex
+            public static readonly string MALE = "Male";
+            public static readonly string FEMALE = "Female";
+            //menu for civil status
+            public static readonly string SINGLE = "Single";
+            public static readonly string MARRIED = "Married";
+            public static readonly string DIVORCED = "Divorced";
+            public static readonly string SEPARATED = "Separated";
+
+            //company
+            public static readonly string DEFAULT_COMPANY = "Regular Patient";
+
+            //menu names
+            public static readonly int SEX_MENU = 0;
+            public static readonly int CIVIL_STAT_MENU = 1;
+
+            private static ObservableCollection<string> sexMenu = new ObservableCollection<string>()
+            {
+                 FEMALE, MALE
+            };
+
+            private static ObservableCollection<string> civilStatMenu = new ObservableCollection<string>()
+            {
+                 SINGLE, MARRIED, DIVORCED, SEPARATED
+            };
+            public static ObservableCollection<string> SexMenu { get => sexMenu;}
+            public static ObservableCollection<string> CivilStatMenu { get => civilStatMenu;}
+
+            public static int GetIndexOfCivilStatusItem(string patientCivilStatus)
+            {
+                return CivilStatMenu.IndexOf(patientCivilStatus);
+            }
+
+            public static int GetIndexOfSexItem(string patientSex)
+            {
+                return SexMenu.IndexOf(patientSex);
+            }
+        }
+
+        #endregion FIELD MENUS
 
         //attach here the textblock where the count of patient are displayed
         public static TextBlock TextCount { get => textCount; set => textCount = value; }
@@ -73,7 +122,7 @@ namespace pimsdentistako.DBHelpers
             {
                 requestConnection(ConnectionState.STATE_OPEN);
                 PatientList = new ObservableCollection<Patient>();
-                OleDbCommand getAllPatientsCommand = new OleDbCommand("SELECT * FROM " + myTable, GetConnectionObject());
+                OleDbCommand getAllPatientsCommand = DatabaseHelper.SelectAllCommand(myTable);
                 OleDbDataReader dataReader = getAllPatientsCommand.ExecuteReader();
 
                 while (dataReader.Read())
@@ -180,15 +229,8 @@ namespace pimsdentistako.DBHelpers
             try
             {
                 requestConnection(ConnectionState.STATE_OPEN);
-                StringBuilder sb = new StringBuilder();
-                sb.Append("SELECT * FROM ").Append(myTable)
-                    .Append(" WHERE ").Append(col[0])
-                    .Append(" = (SELECT MAX(").Append(col[0])
-                    .Append(") FROM ")
-                    .Append(myTable).Append(")");
-
-                //"SELECT * FROM " + myTable + " WHERE " + col[0] + " = (SELECT MAX(" + col[0] + ") FROM " + myTable + ")"
-                OleDbCommand getLastRecordCommand = new OleDbCommand(sb.ToString(), GetConnectionObject());
+                
+                OleDbCommand getLastRecordCommand = DatabaseHelper.LastRecordCommand(myTable, col[0]);
                 OleDbDataReader dataReader = getLastRecordCommand.ExecuteReader();
 
                 while (dataReader.Read())
@@ -227,8 +269,7 @@ namespace pimsdentistako.DBHelpers
             return patient;
         }
 
-
-        //TODO PATIENT ADDING - IMPLEMENT EMERGENCY INFORMATION ADDING
+        //WORKING
         public static bool AddPatient(Patient patient, EmergencyInfo emergency)
         {
             bool actionState = false;
@@ -236,63 +277,26 @@ namespace pimsdentistako.DBHelpers
             {
                 requestConnection(ConnectionState.STATE_OPEN);
 
-                StringBuilder query = new StringBuilder();
-                query.Append("INSERT INTO ").Append(myTable).Append(" (")
-                    .Append(col[1]).Append(", ")
-                    .Append(col[2]).Append(", ")
-                    .Append(col[3]).Append(", ")
-                    .Append(col[4]).Append(", ")
-                    .Append(col[5]).Append(", ")
-                    .Append(col[6]).Append(", ")
-                    .Append(col[7]).Append(", ")
-                    .Append(col[8]).Append(", ")
-                    .Append(col[9]).Append(", ")
-                    .Append(col[10]).Append(", ")
-                    .Append(col[11]).Append(", ")
-                    .Append(col[12]).Append(", ")
-                    .Append(col[13]).Append(", ")
-                    .Append(col[14]).Append(", ")
-                    .Append(col[15]).Append(", ")
-                    .Append(col[16]).Append(", ")
-                    .Append(col[17]).Append(") ")
-                    .Append("VALUES ").Append(" (")
-                    .Append("@fname").Append(", ")
-                    .Append("@midname").Append(", ")
-                    .Append("@lastname").Append(", ")
-                    .Append("@suffixname").Append(", ")
-                    .Append("@nickname").Append(", ")
-                    .Append("@civilstat").Append(", ")
-                    .Append("@addr").Append(", ")
-                    .Append("@ead").Append(", ")
-                    .Append("@mobileno").Append(", ")
-                    .Append("@homeno").Append(", ")
-                    .Append("@dob").Append(", ")
-                    .Append("@sex").Append(", ")
-                    .Append("@refer").Append(", ")
-                    .Append("@occup").Append(", ")
-                    .Append("@comp").Append(", ")
-                    .Append("@officeno").Append(", ")
-                    .Append("@faxno").Append(")");
-
-                OleDbCommand insertCommand = new OleDbCommand(query.ToString(), GetConnectionObject());
-
-                insertCommand.Parameters.Add(new OleDbParameter("@fname", patient.PatientFirstName));
-                insertCommand.Parameters.Add(new OleDbParameter("@midname", patient.PatientMiddleName));
-                insertCommand.Parameters.Add(new OleDbParameter("@lastname", patient.PatientLastName));
-                insertCommand.Parameters.Add(new OleDbParameter("@suffixname", patient.PatientSuffix));
-                insertCommand.Parameters.Add(new OleDbParameter("@nickname", patient.PatientNickname));
-                insertCommand.Parameters.Add(new OleDbParameter("@civilstat", patient.PatientCivilStatus));
-                insertCommand.Parameters.Add(new OleDbParameter("@addr", patient.PatientAddress));
-                insertCommand.Parameters.Add(new OleDbParameter("@ead", patient.PatientEmail));
-                insertCommand.Parameters.Add(new OleDbParameter("@mobileno", patient.PatientMobileNumber));
-                insertCommand.Parameters.Add(new OleDbParameter("@homeno", patient.PatientHomeNumber));
-                insertCommand.Parameters.Add(new OleDbParameter("@dob", patient.PatientBirthdate));
-                insertCommand.Parameters.Add(new OleDbParameter("@sex", patient.PatientSex));
-                insertCommand.Parameters.Add(new OleDbParameter("@refer", patient.PatientReferredBy));
-                insertCommand.Parameters.Add(new OleDbParameter("@occup", patient.PatientOccupation));
-                insertCommand.Parameters.Add(new OleDbParameter("@comp", patient.PatientCompany));
-                insertCommand.Parameters.Add(new OleDbParameter("@officeno", patient.PatientOfficeNumber));
-                insertCommand.Parameters.Add(new OleDbParameter("@faxno", patient.PatientFaxNumber));
+                OleDbCommand insertCommand = DatabaseHelper.AddCommand(myTable, col, 1, 17, new List<string>
+                {
+                    patient.PatientFirstName,
+                    patient.PatientMiddleName,
+                    patient.PatientLastName,
+                    patient.PatientSuffix,
+                    patient.PatientNickname,
+                    patient.PatientCivilStatus,
+                    patient.PatientAddress,
+                    patient.PatientEmail,
+                    patient.PatientMobileNumber,
+                    patient.PatientHomeNumber,
+                    patient.PatientBirthdate,
+                    patient.PatientSex,
+                    patient.PatientReferredBy,
+                    patient.PatientOccupation,
+                    patient.PatientCompany,
+                    patient.PatientOfficeNumber,
+                    patient.PatientFaxNumber,
+                });
 
                 bool result = insertCommand.ExecuteNonQuery() > 0;
                 bool addEmergencyInfo = false;
@@ -322,6 +326,81 @@ namespace pimsdentistako.DBHelpers
             return actionState;
         }
 
+        public static bool UpdatePatient(Patient patient, EmergencyInfo emergencyInfo)
+        {
+            bool actionState = false;
+
+            try
+            {
+                requestConnection(ConnectionState.STATE_OPEN);
+
+                StringBuilder query = new StringBuilder();
+                query.Append("UPDATE ").Append(myTable).Append(" SET ")
+                    .Append(col[1]).Append("= ?, ")
+                    .Append(col[2]).Append("= ?, ")
+                    .Append(col[3]).Append("= ?, ")
+                    .Append(col[4]).Append("= ?, ")
+                    .Append(col[5]).Append("= ?, ")
+                    .Append(col[6]).Append("= ?, ")
+                    .Append(col[7]).Append("= ?, ")
+                    .Append(col[8]).Append("= ?, ")
+                    .Append(col[9]).Append("= ?, ")
+                    .Append(col[10]).Append("= ?, ")
+                    .Append(col[11]).Append("= ?, ")
+                    .Append(col[12]).Append("= ?, ")
+                    .Append(col[13]).Append("= ?, ")
+                    .Append(col[14]).Append("= ?, ")
+                    .Append(col[15]).Append("= ?, ")
+                    .Append(col[16]).Append("= ?, ")
+                    .Append(col[17]).Append("= ? ")
+                    .Append("WHERE ").Append(col[0]).Append("= ?");
+
+                OleDbCommand updateCommand = new OleDbCommand(query.ToString(), GetConnectionObject());
+
+                updateCommand.Parameters.Add(new OleDbParameter("@fname", patient.PatientFirstName));
+                updateCommand.Parameters.Add(new OleDbParameter("@midName", patient.PatientMiddleName));
+                updateCommand.Parameters.Add(new OleDbParameter("@lastName", patient.PatientLastName));
+                updateCommand.Parameters.Add(new OleDbParameter("@suffix", patient.PatientSuffix));
+                updateCommand.Parameters.Add(new OleDbParameter("@nickName", patient.PatientNickname));
+                updateCommand.Parameters.Add(new OleDbParameter("@civilStat", patient.PatientCivilStatus));
+                updateCommand.Parameters.Add(new OleDbParameter("@addr", patient.PatientAddress));
+                updateCommand.Parameters.Add(new OleDbParameter("@email", patient.PatientEmail));
+                updateCommand.Parameters.Add(new OleDbParameter("@mobileNum", patient.PatientMobileNumber));
+                updateCommand.Parameters.Add(new OleDbParameter("@homeNum", patient.PatientHomeNumber));
+                updateCommand.Parameters.Add(new OleDbParameter("@birth", patient.PatientBirthdate));
+                updateCommand.Parameters.Add(new OleDbParameter("@sex", patient.PatientSex));
+                updateCommand.Parameters.Add(new OleDbParameter("@referr", patient.PatientReferredBy));
+                updateCommand.Parameters.Add(new OleDbParameter("@occupation", patient.PatientOccupation));
+                updateCommand.Parameters.Add(new OleDbParameter("@comp", patient.PatientCompany));
+                updateCommand.Parameters.Add(new OleDbParameter("@officeNum", patient.PatientOfficeNumber));
+                updateCommand.Parameters.Add(new OleDbParameter("@fax", patient.PatientFaxNumber));
+                updateCommand.Parameters.Add(new OleDbParameter("@id", patient.PatientID));
+
+                bool affectedRows = updateCommand.ExecuteNonQuery() > 0;
+                bool updateEmergencyInfo = false;
+
+                if (affectedRows) updateEmergencyInfo = EmergencyInfoHelper.UpdateEmergencyInformation(emergencyInfo);
+                bool removed = false;
+
+                if (affectedRows && updateEmergencyInfo)
+                {
+                    Patient toRemove = PatientList.Single(i => i.PatientID.Equals(patient.PatientID)); //access the old one
+                    removed = PatientList.Remove(toRemove); //remove it
+                    PatientList.Add(patient); //add the new one
+                    reorderPatientList();
+                }
+                actionState = affectedRows && removed;
+            } catch (Exception e)
+            {
+                if (DEBUG) DatabaseHelper.DisplayInMessageBox(myTable, e);
+            } finally
+            {
+                requestConnection(ConnectionState.STATE_CLOSE);
+            }
+
+            return actionState;
+        }
+
 
         #region DATAGRID LISTENERS AND HANDLERS
         //implement this trategy in all helpers
@@ -331,13 +410,13 @@ namespace pimsdentistako.DBHelpers
             currentSelection = MyDataGrid.SelectedIndex;
         }
 
-        //RETURNS the currently selected Dentist based on the inside currentSelection attribute
+        //RETURNS the currently selected Patient based on the inside currentSelection attribute
         public static Patient CurrentlySelectedPatient()
         {
             return DatabaseHelper.IsSelectedIndexValid(currentSelection, PatientList.Count) ? PatientList[currentSelection] : null;
         }
 
-        //check if handler is grabbing a null dentist
+        //check if handler is grabbing a null patient
         public static bool IsCurrentlySelectedNull()
         {
             return CurrentlySelectedPatient() == null;
@@ -383,10 +462,10 @@ namespace pimsdentistako.DBHelpers
         {
             if (!DatabaseHelper.CheckNullEmptyInput(searchTextBox).Equals(DatabaseHelper.BLANK_INPUT) && DatabaseHelper.IsSelectedIndexValid(MyComboBox.SelectedIndex, SearchByMenu.MENU.Count))
             {
-                string activeCol = PatientHelper.SearchByMenu.GetActiveColumn(PatientHelper.SearchByMenu.MENU[MyComboBox.SelectedIndex]);
+                string activeCol = SearchByMenu.GetActiveColumn(SearchByMenu.MENU[MyComboBox.SelectedIndex]);
                 string pattern = searchTextBox.Text;
-                bool action = PatientHelper.PatientSearch(activeCol, pattern);
-                initSearch++;
+                _ = PatientSearch(activeCol, pattern);
+                if(initSearch == 0) initSearch++;
             }
         }
 
@@ -406,7 +485,8 @@ namespace pimsdentistako.DBHelpers
         {
             if (DatabaseHelper.IsSelectedIndexValid(MyComboBox.SelectedIndex, SearchByMenu.MENU.Count))
             {
-                textBlock.Text = SearchByMenu.GetActiveMenu(PatientHelper.SearchByMenu.MENU[MyComboBox.SelectedIndex]);
+                //textBlock.Text = SearchByMenu.GetActiveMenu(PatientHelper.SearchByMenu.MENU[MyComboBox.SelectedIndex]);
+                textBlock.Text = PatientHelper.SearchByMenu.MENU[MyComboBox.SelectedIndex];
             }
         }
 

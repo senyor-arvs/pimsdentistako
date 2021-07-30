@@ -12,7 +12,7 @@
     <Compile Update="Components\CustomCalendar.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Windows\AddPatientWindow.xaml.cs">
+    <Compile Update="Windows\AddEditPatientWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\AppointmentsView.xaml.cs">
@@ -41,7 +41,7 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Windows\AddPatientWindow.xaml">
+    <Page Update="Windows\AddEditPatientWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AppointmentsView.xaml">

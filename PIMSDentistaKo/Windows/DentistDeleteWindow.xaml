@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pimsdentistako.Windows"
         mc:Ignorable="d"
-        Title="DentistDeleteWindow" Height="480" Width="700" WindowStartupLocation="CenterScreen">
+        Height="480" Width="700" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>

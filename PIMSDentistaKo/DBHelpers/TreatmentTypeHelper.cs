@@ -23,7 +23,7 @@ namespace pimsdentistako.DBHelpers
         public static Dictionary<long, ObservableCollection<TreatmentType>> TreatmentTypeDictionary { get => treatmentTypeDictionary; set => treatmentTypeDictionary = value; }
 
         //WORKING
-        public static bool InitList(List<string> ID_LIST) //Initialize the List of patients retreive from database
+        public static bool InitList(List<string> ID_LIST) //Initialize the List of type based on treatment retreive from database
         {
             bool actionState = false;
             try
@@ -31,7 +31,7 @@ namespace pimsdentistako.DBHelpers
                 requestConnection(ConnectionState.STATE_OPEN);
                 treatmentTypeDictionary = new Dictionary<long, ObservableCollection<TreatmentType>>();
 
-                OleDbCommand getAllTreatmentTypesCommand = new OleDbCommand("SELECT * FROM " + myTable, GetConnectionObject());
+                OleDbCommand getAllTreatmentTypesCommand = DatabaseHelper.SelectAllCommand(myTable);
                 OleDbDataReader dataReader = getAllTreatmentTypesCommand.ExecuteReader();
 
                 ObservableCollection<TreatmentType> typeList = new ObservableCollection<TreatmentType>();

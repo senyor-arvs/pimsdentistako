@@ -55,18 +55,19 @@ namespace pimsdentistako.Views
 
         private void AddPatientButton_Click(object sender, RoutedEventArgs e)
         {
-            AddPatientWindow addPatientView = new AddPatientWindow();
+            AddEditPatientWindow addPatientView = new AddEditPatientWindow(0);
             addPatientView.Show();
         }
 
         private void editPatientButton_Click(object sender, RoutedEventArgs e)
         {
-            EditPatientWindow editPatientWindow = new EditPatientWindow();
-            editPatientWindow.Show();
+            AddEditPatientWindow addPatientView = new AddEditPatientWindow(1);
+            addPatientView.Show();
         }
 
         private void deletePatient_Click(object sender, RoutedEventArgs e)
         {
+            //TODO IMPLEMENT CONFIRMATION DIALOG ON PATIENT DELETE
             MessageBox.Show("Deleted.");
         }
 
