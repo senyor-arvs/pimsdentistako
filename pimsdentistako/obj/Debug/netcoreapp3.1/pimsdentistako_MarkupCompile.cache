@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\RCS\source\repos\Electives\PIMSDentistaKo\obj\Debug\netcoreapp3.1\
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\
 pimsdentistako
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-C:\Users\RCS\source\repos\Electives\PIMSDentistaKo\App.xaml
-14689912114
+D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\App.xaml
+13-1330564847
 1715304544
-41719648505
-194-989584113
-Components\CustomCalendar.xaml;MainWindow.xaml;Views\AppointmentsView.xaml;Views\DashboardView.xaml;Views\DentistView.xaml;Views\PatientsView.xaml;Views\TreatmentView.xaml;Views\UserAccountView.xaml;Windows\AddPatientWindow.xaml;Windows\DentalRecordsWindow.xaml;Windows\DentistAddWindow.xaml;Windows\DentistDeleteWindow.xaml;Windows\DentistEditWindow.xaml;Windows\EditPatientWindow.xaml;
+40-98296355
+1941952104453
+Components\CustomCalendar.xaml;MainWindow.xaml;Views\AppointmentsView.xaml;Views\DashboardView.xaml;Views\DentistView.xaml;Views\PatientsView.xaml;Views\TreatmentView.xaml;Views\UserAccountView.xaml;Windows\AddEditPatientWindow.xaml;Windows\DentalRecordsWindow.xaml;Windows\DentistAddWindow.xaml;Windows\DentistDeleteWindow.xaml;Windows\DentistEditWindow.xaml;
 
-True
+False
 
