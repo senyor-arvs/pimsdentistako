@@ -11,5 +11,10 @@ namespace pimsdentistako.Views
         {
             InitializeComponent();
         }
+
+        private void appointmentsDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -9,6 +9,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Components\AppointmentCalendar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Components\CustomCalendar.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -35,6 +38,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Components\AppointmentCalendar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Components\CustomCalendar.xaml">
       <SubType>Designer</SubType>
     </Page>
