@@ -481,12 +481,12 @@
     </UserControl.Resources>
     <StackPanel>
         <Viewbox Stretch="Uniform">
-            <Calendar x:Name="myCalendar"
+            <Calendar x:Name="appointmentCalendar"
                       Style="{DynamicResource CalendarStyle1}" 
                       CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" 
                       CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}"
                       BorderBrush="White"
-                      Foreground="#FF363636">
+                      Foreground="#FF363636" SelectedDatesChanged="appointmentCalendar_SelectedDatesChanged">
             </Calendar>
         </Viewbox>
         <!--

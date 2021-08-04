@@ -22,5 +22,10 @@ namespace pimsdentistako.Components
         {
             InitializeComponent();
         }
+
+        private void appointmentCalendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Mouse.Capture(null);
+        }
     }
 }
