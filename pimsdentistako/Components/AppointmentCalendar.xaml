@@ -51,7 +51,7 @@
                             <Border BorderBrush="{TemplateBinding BorderBrush}" 
                                     BorderThickness="{TemplateBinding BorderThickness}" 
                                     Background="{TemplateBinding Background}" 
-                                    CornerRadius="20">
+                                    CornerRadius="5">
                                 <Grid>
                                     <Grid.Resources>
                                         <ControlTemplate x:Key="PreviousButtonTemplate" TargetType="{x:Type Button}">
@@ -158,34 +158,38 @@
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
                                     <Button x:Name="PART_HeaderButton" 
-                                            Grid.Column="2" 
+                                            Grid.Column="1" 
                                             FontWeight="Bold" 
                                             Focusable="False" 
                                             FontSize="10" 
                                             HorizontalAlignment="Center" 
-                                            Margin="0,0,20,0"
+                                            Margin="0,0,15,0"
                                             Grid.Row="0"
                                             Template="{StaticResource HeaderButtonTemplate}"
                                             VerticalAlignment="Bottom" 
                                             Background="Black"/>
+                                    <Button x:Name="PART_PreviousButton"
+                                            Grid.Column="0"
+                                            Grid.Row="0"
+                                            Focusable="False"
+                                            Margin="0, 8, 0,0"
+                                            Height="17"
+                                            Width="17"
+                                            Template="{StaticResource PreviousButtonTemplate}"/>
+                                    <Button x:Name="PART_NextButton"
+                                            Grid.Row="0"
+                                            Grid.Column="2"
+                                            Focusable="False" 
+                                            HorizontalAlignment="Right" 
+                                            Height="17" 
+                                            Width="17"  
+                                            Template="{StaticResource NextButtonTemplate}"
+                                            Margin="0, 8, 20,0"/>
                                     <StackPanel Grid.Column="0"
                                                 Grid.Row="0"
                                                 Margin="20,13,10,5"
                                                 Orientation="Horizontal">
-                                        <Button x:Name="PART_PreviousButton" 
-                                                Focusable="False"
-                                                Height="17"
-                                                Width="17"
-                                                Grid.Row="0"
-                                                Template="{StaticResource PreviousButtonTemplate}"/>
-                                        <Button x:Name="PART_NextButton"
-                                                Focusable="False" 
-                                                HorizontalAlignment="Right" 
-                                                Height="17" 
-                                                Width="17" 
-                                                Grid.Row="0"
-                                                Template="{StaticResource NextButtonTemplate}"
-                                                Margin="6,0,0,0"/>
+                                        
                                     </StackPanel>
                                     <Grid x:Name="PART_MonthView" 
                                           Grid.ColumnSpan="3" 
@@ -219,10 +223,10 @@
                                           Grid.Row="1"
                                           Visibility="Hidden">
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="90"/>
-                                            <ColumnDefinition Width="90"/>
-                                            <ColumnDefinition Width="90"/>
-                                            <ColumnDefinition Width="90"/>
+                                            <ColumnDefinition Width="50"/>
+                                            <ColumnDefinition Width="50"/>
+                                            <ColumnDefinition Width="50"/>
+                                            <ColumnDefinition Width="50"/>
                                         </Grid.ColumnDefinitions>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="60"/>
@@ -482,7 +486,8 @@
                       CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" 
                       CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}"
                       BorderBrush="White"
-                      Foreground="#FF363636" Height="326" Width="251"/>
+                      Foreground="#FF363636">
+            </Calendar>
         </Viewbox>
         <!--
         <TextBlock x:Name="myTextBlock" 

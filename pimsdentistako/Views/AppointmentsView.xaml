@@ -54,7 +54,7 @@
             <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
             <Setter Property="BorderBrush" Value="#bd7e4a"/>
-            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderThickness" Value="3"/>
             <Setter Property="RowDetailsVisibilityMode" Value="VisibleWhenSelected"/>
             <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
             <Setter Property="ScrollViewer.PanningMode" Value="Both"/>
@@ -66,7 +66,8 @@
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 Padding="{TemplateBinding Padding}"
-                                SnapsToDevicePixels="True">
+                                SnapsToDevicePixels="True"
+                                CornerRadius="5">
                             <ScrollViewer x:Name="DG_ScrollViewer" Focusable="false">
                                 <ScrollViewer.Template>
                                     <ControlTemplate TargetType="{x:Type ScrollViewer}">
@@ -172,10 +173,10 @@
                 </Grid.ColumnDefinitions>
                 <components:AppointmentCalendar HorizontalAlignment="Center" Margin="0,0,0,10" Width="706"/>
                 <StackPanel Grid.Column="1"
-                            Margin="20 0 0 0">
+                            Margin="20 9 0 0">
                     <DataGrid ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" Style="{DynamicResource DataGridStyle1}" x:Name="appointmentsDataGrid"
                               FontSize="18"
-                              Height="784"
+                              Height="824"
                               SelectionChanged="appointmentsDataGrid_SelectionChanged"
                               Width="666">
                         <DataGrid.Columns>
@@ -192,12 +193,12 @@
                         </DataGrid.Columns>
                     </DataGrid>
                     <StackPanel Orientation="Horizontal"
-                                Margin="0 77 0 0">
+                                Margin="0 25 0 0">
                         <Button x:Name="AddButton"
                                 Width="150"
                                 Height="55"
                                 Content="Add"
-                                FontSize="30"
+                                FontSize="24"
                                 Foreground="White">
                             <Button.Style>
                                 <Style TargetType="Button">
@@ -227,7 +228,7 @@
                                 Width="150"
                                 Content="Update"
                                 Foreground="White"
-                                FontSize="30">
+                                FontSize="24">
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Background" Value="#bd7e4a"/>
@@ -256,7 +257,7 @@
                                 Width="150"
                                 Content="Delete"
                                 Foreground="White"
-                                FontSize="30">
+                                FontSize="24">
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Background" Value="Black"/>
