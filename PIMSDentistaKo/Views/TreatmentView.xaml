@@ -55,6 +55,44 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <SolidColorBrush x:Key="{x:Static DataGrid.FocusBorderBrushKey}" Color="#FF000000"/>
+        <Style x:Key="DataGridCellStyle1" TargetType="{x:Type DataGridCell}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontFamily" Value="{StaticResource Rounded Elegance}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="True">
+                            <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                    <Setter Property="BorderBrush" Value="{DynamicResource {x:Static DataGrid.FocusBorderBrushKey}}"/>
+                </Trigger>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsSelected" Value="true"/>
+                        <Condition Property="Selector.IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}}"/>
+                </MultiTrigger>
+                <Trigger Property="IsEnabled" Value="false">
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </UserControl.Resources>
     <Grid Background="White">
         <Grid Margin="24">
@@ -85,7 +123,7 @@
                              Width="300"
                              x:Name="treatmentTxtBox"
                              IsReadOnly="True"/>
-                    <DataGrid ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" 
+                    <DataGrid CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" 
                               Height="200"
                               x:Name="treatmentDataGrid"
                               IsReadOnly="True"
@@ -137,7 +175,7 @@
                         </Button>
                         <Button Content="Delete"
                                 x:Name="deleteTreatmentButton"
-                                
+                                Visibility="Collapsed"
                                 Margin="12 0 0 0"
                                         FontSize="12"
                                         FontFamily="{StaticResource LEMON MILK Regular}"
@@ -168,6 +206,7 @@
                         </Button>
                     </StackPanel>
                     <Button Content="Update"
+                            Visibility="Hidden"
                             x:Name="updateTreatmentButton"
                                 Margin="0 0 100 0"
                                         FontSize="12"
@@ -208,6 +247,7 @@
                              Width="300"
                              x:Name="treatmentTypeTxtBox"/>
                     <DataGrid ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}"
+                              CellStyle="{DynamicResource DataGridCellStyle1}"
                               x:Name="treatmentTypeDataGrid"
                               IsReadOnly="True"
                               CanUserReorderColumns="False"
@@ -227,6 +267,7 @@
                                 Orientation="Horizontal"
                                 HorizontalAlignment="Center">
                         <Button Content="Add"
+                                Visibility="Collapsed"
                                 x:Name="addTreatmentTypeButton"
                                 Margin="0 0 12 0"
                                         FontSize="12"
@@ -258,7 +299,7 @@
                         </Button>
                         <Button Content="Delete"
                                 x:Name="deleteTreatmentTypeButton"
-                                
+                                Visibility="Collapsed"
                                 Margin="12 0 0 0"
                                         FontSize="12"
                                         FontFamily="{StaticResource LEMON MILK Regular}"
@@ -290,6 +331,7 @@
                     </StackPanel>
                     <Button Content="Update"
                             x:Name="updateTreatmentTypeButton"
+                            Visibility="Hidden"
                                 Margin="0 0 100 0"
                                         FontSize="12"
                                         FontFamily="{StaticResource LEMON MILK Regular}"
