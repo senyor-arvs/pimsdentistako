@@ -42,7 +42,7 @@
 
   <ItemGroup>
     <Content Include="Database\PIMSDentistaKo.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
