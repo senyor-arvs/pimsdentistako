@@ -5,7 +5,107 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:pimsdentistako.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="500" d:DesignWidth="800">
+             d:DesignHeight="500" d:DesignWidth="800"
+    xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
+    <Window.Resources>
+        <Style x:Key="ColumnHeaderGripperStyle" TargetType="{x:Type Thumb}">
+            <Setter Property="Width" Value="8"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Cursor" Value="SizeWE"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="{x:Static DataGrid.FocusBorderBrushKey}" Color="#FF000000"/>
+        <Style x:Key="DataGridCellStyle1" TargetType="{x:Type DataGridCell}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontFamily" Value="{StaticResource Rounded Elegance}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="True">
+                            <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                    <Setter Property="BorderBrush" Value="{DynamicResource {x:Static DataGrid.FocusBorderBrushKey}}"/>
+                </Trigger>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsSelected" Value="true"/>
+                        <Condition Property="Selector.IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}}"/>
+                </MultiTrigger>
+                <Trigger Property="IsEnabled" Value="false">
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="ColumnHeaderGripperStyle1" TargetType="{x:Type Thumb}">
+            <Setter Property="Width" Value="8"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Cursor" Value="SizeWE"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="DataGridColumnHeaderStyle1" TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="Background" Value="#bd7e4a"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="{StaticResource Rounded Elegance}"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+                        <Grid>
+                            <theme:DataGridHeaderBorder Background="{TemplateBinding Background}" 
+                                                        BorderThickness="{TemplateBinding BorderThickness}" 
+                                                        BorderBrush="{TemplateBinding BorderBrush}" 
+                                                        IsClickable="{TemplateBinding CanUserSort}" 
+                                                        IsPressed="{TemplateBinding IsPressed}" 
+                                                        IsHovered="{TemplateBinding IsMouseOver}" 
+                                                        Padding="{TemplateBinding Padding}" 
+                                                        SeparatorBrush="{TemplateBinding SeparatorBrush}" 
+                                                        SortDirection="{TemplateBinding SortDirection}" 
+                                                        SeparatorVisibility="{TemplateBinding SeparatorVisibility}">
+                                <ContentPresenter HorizontalAlignment="Center" 
+                                                  RecognizesAccessKey="True"
+                                                  Margin="5 0 5 0"
+                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
+                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </theme:DataGridHeaderBorder>
+                            <Thumb x:Name="PART_LeftHeaderGripper" HorizontalAlignment="Left" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                            <Thumb x:Name="PART_RightHeaderGripper" HorizontalAlignment="Right" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Viewbox Stretch="Uniform"
              HorizontalAlignment="Center">
         <Grid Background="White">
@@ -28,8 +128,9 @@
                     Grid.Row="0"
                     Grid.RowSpan="5"
                     Grid.ColumnSpan="2"
-                    Margin="0 0 0 50">
+                    Margin="0 0 20 50">
                 <TextBlock Text="Dental Records"
+                           FontFamily="{StaticResource Rounded Elegance}"
                        FontSize="24"
                        Margin="15 30 15 15"/>
                 <Grid>
@@ -46,8 +147,24 @@
                     <StackPanel Grid.Column="1"
                             VerticalAlignment="Center"
                             Margin="20 0 0 0">
-                        <TextBlock Text="Patient Name"/>
-                        <TextBlock Text="Patient Number"/>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Patient Name:"
+                                   FontFamily="{StaticResource Rounded Elegance}"/>
+                            <TextBlock Text="Patient Name"
+                                       FontFamily="{StaticResource Rounded Elegance}"
+                                       x:Name="patientNameTxt"
+                                       Margin="5 0 0 0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Patient Number: "
+                                   FontFamily="{StaticResource Rounded Elegance}"/>
+                            <TextBlock Text="Patient Number"
+                                       FontFamily="{StaticResource Rounded Elegance}"
+                                       x:Name="patientNumberTxt"
+                                       Margin="5 0 0 0"/>
+                        </StackPanel>
+                        
+                        
                     </StackPanel>
                 </Grid>
                 <Grid Margin="0 20 0 0">
@@ -66,91 +183,105 @@
                     </Grid.RowDefinitions>
 
                     <TextBlock Text="Treatment Date"
-                            FontSize="15"
-                            HorizontalAlignment="Center"
+                               FontFamily="{StaticResource Rounded Elegance}"
+                            FontSize="13"
+                            HorizontalAlignment="Right"
                             VerticalAlignment="Center"
                             Grid.Column="0"
                             Grid.Row="0"
                             Margin="10 5 10 5"/>
                     <TextBox FontSize="15"
+                             FontFamily="{StaticResource Rounded Elegance}"
                          VerticalAlignment="Center"
                          Grid.Column="1"
                          Grid.Row="0"
                          Margin="0 5 0 5"/>
 
-                    <TextBlock Text="Treatment Date"
-                            FontSize="15"
-                            HorizontalAlignment="Center"
+                    <TextBlock Text="Treatment Time"
+                               FontFamily="{StaticResource Rounded Elegance}"
+                            FontSize="13"
+                            HorizontalAlignment="Right"
                             VerticalAlignment="Center"
                             Grid.Column="0"
                             Grid.Row="1"
-                            Margin="0 5 0 5"/>
+                            Margin="10 5 10 5"/>
                     <TextBox FontSize="15"
+                             FontFamily="{StaticResource Rounded Elegance}"
                              VerticalAlignment="Center"
                              Grid.Column="1"
                              Grid.Row="1"
                              Margin="0 5 0 5"/>
 
-                    <TextBlock Text="Treatment Date"
-                            FontSize="15"
-                            HorizontalAlignment="Center"
+                    <TextBlock Text="Dentist"
+                               FontFamily="{StaticResource Rounded Elegance}"
+                            FontSize="13"
+                            HorizontalAlignment="Right"
                             VerticalAlignment="Center"
                             Grid.Column="0"
                             Grid.Row="2"
-                            Margin="0 5 0 5"/>
+                            Margin="10 5 10 5"/>
                     <TextBox FontSize="15"
+                             FontFamily="{StaticResource Rounded Elegance}"
                             VerticalAlignment="Center"
                             Grid.Column="1"
                             Grid.Row="2"
                             Margin="0 5 0 5"/>
 
-                    <TextBlock Text="Treatment Date"
-                            FontSize="15"
-                            HorizontalAlignment="Center"
+                    <TextBlock Text="Treatment"
+                               FontFamily="{StaticResource Rounded Elegance}"
+                            FontSize="13"
+                            HorizontalAlignment="Right"
                             VerticalAlignment="Center"
                             Grid.Column="0"
                             Grid.Row="3"
-                            Margin="0 5 0 5"/>
+                            Margin="10 5 10 5"/>
                     <TextBox FontSize="15"
+                             FontFamily="{StaticResource Rounded Elegance}"
                             VerticalAlignment="Center"
                             Grid.Column="1"
                             Grid.Row="3"
                             Margin="0 5 0 5"/>
 
-                    <TextBlock Text="Treatment Date"
-                            FontSize="15"
-                            HorizontalAlignment="Center"
+                    <TextBlock Text="Treatment Type"
+                               FontFamily="{StaticResource Rounded Elegance}"
+                            FontSize="13"
+                            HorizontalAlignment="Right"
                             VerticalAlignment="Center"
                             Grid.Column="0"
                             Grid.Row="4"
-                            Margin="0 5 0 5"/>
+                            Margin="10 5 10 5"/>
                     <TextBox FontSize="15"
+                             FontFamily="{StaticResource Rounded Elegance}"
                             VerticalAlignment="Center"
                             Grid.Column="1"
                             Grid.Row="4"
                             Margin="0 5 0 5"/>
 
-                    <TextBlock Text="Treatment Date"
-                            FontSize="15"
-                            HorizontalAlignment="Center"
+                    <TextBlock Text="Total Price"
+                               FontFamily="{StaticResource Rounded Elegance}"
+                            FontSize="13"
+                            HorizontalAlignment="Right"
                             VerticalAlignment="Center"
                             Grid.Column="0"
                             Grid.Row="5"
-                            Margin="0 5 0 5"/>
+                            Margin="10 5 10 5"/>
                     <TextBox FontSize="15"
+                             FontFamily="{StaticResource Rounded Elegance}"
                             VerticalAlignment="Center"
                             Grid.Column="1"
                             Grid.Row="5"
                             Margin="0 5 0 5"/>
 
-                    <TextBlock Text="Treatment Date"
-                            FontSize="15"
-                            HorizontalAlignment="Center"
+                    <TextBlock Text="Tooth Number"
+                               FontFamily="{StaticResource Rounded Elegance}"
+                            FontSize="13"
+                            HorizontalAlignment="Right"
                             VerticalAlignment="Center"
                             Grid.Column="0"
                             Grid.Row="6"
-                            Margin="0 5 0 5"/>
+                            Margin="10 5 10 5"/>
                     <TextBox FontSize="15"
+                             FontFamily="{StaticResource Rounded Elegance}"
                             VerticalAlignment="Center"
                             Grid.Column="1"
                             Grid.Row="6"
@@ -164,15 +295,19 @@
                         Margin="20">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Month"
+                               FontFamily="{StaticResource Rounded Elegance}"
                                HorizontalAlignment="Center"
                                Margin="3"/>
                     <TextBox x:Name="txtBoxMonth"
+                             FontFamily="{StaticResource Rounded Elegance}"
                              Margin="3"
                              Width="100"/>
                     <TextBlock Text="Year"
+                               FontFamily="{StaticResource Rounded Elegance}"
                                HorizontalAlignment="Center"
                                Margin="20 3 3 3"/>
                     <TextBox x:Name="txtBoxYear"
+                             FontFamily="{StaticResource Rounded Elegance}"
                              Margin="3"
                              Width="100"/>
                     <Button x:Name="searchBtn"
@@ -181,27 +316,29 @@
                             Margin="30 3 3 3"/>
                 </StackPanel>
                 <StackPanel Margin="0 20 0 0">
-                    <DataGrid Height="265"
+                    <DataGrid Height="252"
+                              CanUserResizeColumns="False"
+                              CanUserResizeRows="False"
+                              CellStyle="{DynamicResource DataGridCellStyle1}"
+                              ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}"
                               x:Name="datagridDentalRecords" SelectionChanged="datagridDentalRecords_SelectionChanged">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Record Date"/>
-                            <DataGridTextColumn Header="Record Time"/>
+                            <DataGridTextColumn Header="Date Added"/>
+                            <DataGridTextColumn Header="Time Added"/>
                             <DataGridTextColumn Header="Dentist"/>
                             <DataGridTextColumn Header="Treatment"/>
                             <DataGridTextColumn Header="Price"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    
                 </StackPanel>
-                
-            </StackPanel>
-            <Button Content="Delete"
-                    Margin="10 50 10 -10"
+                <Button Content="Delete"
+                        HorizontalAlignment="Right"
+                        Margin="0 20 0 0"
                     Width="75"
                     Height="30"
                     Grid.Row="4"
-                    Grid.Column="5"
-                    />
+                    Grid.Column="5"/>
+            </StackPanel>
         </Grid>
     </Viewbox>
 </Window>
