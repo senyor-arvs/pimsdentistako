@@ -128,6 +128,7 @@
                               x:Name="treatmentDataGrid"
                               IsReadOnly="True"
                               CanUserReorderColumns="False"
+                              CanUserResizeColumns="False"
                               CanUserSortColumns="False"
                               CanUserDeleteRows="False"
                               CanUserResizeRows="False"
@@ -245,7 +246,8 @@
                                FontFamily="{DynamicResource Rounded Elegance}"/>
                     <TextBox Margin="0 12 0 12"
                              Width="300"
-                             x:Name="treatmentTypeTxtBox"/>
+                             x:Name="treatmentTypeTxtBox"
+                             IsReadOnly="True"/>
                     <DataGrid ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}"
                               CellStyle="{DynamicResource DataGridCellStyle1}"
                               x:Name="treatmentTypeDataGrid"
@@ -254,6 +256,7 @@
                               CanUserSortColumns="False"
                               CanUserDeleteRows="False"
                               CanUserResizeRows="False"
+                              CanUserResizeColumns="False"
                               AutoGenerateColumns="False"
                               Height="200"
                               SelectionChanged="treatmentTypeDataGrid_SelectionChanged">

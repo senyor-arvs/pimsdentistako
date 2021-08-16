@@ -523,6 +523,8 @@
                         <!--Treatment Plan-->
                         <StackPanel Margin="740,0,0,0" HorizontalAlignment="Left">
                             <Button Content="TREATMENT PLAN"
+                                    x:Name="treatmentPlanButton"
+                                    IsEnabled="False"
                                         FontSize="20"
                                         FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="White"
@@ -535,6 +537,9 @@
                                         <Style.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
                                                 <Setter Property="Background" Value="#a26838"/>
+                                            </Trigger>
+                                            <Trigger Property="IsEnabled" Value="False">
+                                                <Setter Property="Background" Value="LightGray"/>
                                             </Trigger>
                                         </Style.Triggers>
                                     </Style>
@@ -557,12 +562,13 @@
                         <!--Dental Records-->
                         <StackPanel Margin="950,-50,0,0" Width="200" HorizontalAlignment="Left">
                             <Button x:Name="dentalRecordButton" Content="DENTAL RECORD"
-                                        FontSize="20"
-                                        FontFamily="{StaticResource Rounded Elegance}"
-                                        Foreground="White"
-                                        Margin="-0,0,0,0"
-                                        TextOptions.TextRenderingMode="Aliased"
-                                        Click="dentalRecordButton_Click" Width="200">
+                                    FontSize="20"
+                                    IsEnabled="False"
+                                    FontFamily="{StaticResource Rounded Elegance}"
+                                    Foreground="White"
+                                    Margin="-0,0,0,0"
+                                    TextOptions.TextRenderingMode="Aliased"
+                                    Click="dentalRecordButton_Click" Width="200">
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#bd7e4a"/>
@@ -570,6 +576,9 @@
                                         <Style.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
                                                 <Setter Property="Background" Value="#a26838"/>
+                                            </Trigger>
+                                            <Trigger Property="IsEnabled" Value="False">
+                                                <Setter Property="Background" Value="LightGray"/>
                                             </Trigger>
                                         </Style.Triggers>
                                     </Style>
@@ -591,13 +600,15 @@
 
                         <!--Emergency Info-->
                         <StackPanel Margin="1160,-50,0,0" Width="200" HorizontalAlignment="Left">
-                            <Button Content="EMERGENCY INFO"
-                                        FontSize="20"
-                                        FontFamily="{StaticResource Rounded Elegance}"
-                                        Foreground="White"
-                                        Margin="-0,0,0,0"
-                                        TextOptions.TextRenderingMode="Aliased"
-                                        Width="200">
+                            <Button x:Name="emergencyInfoButton"
+                                    Content="EMERGENCY INFO"
+                                    IsEnabled="False"
+                                    FontSize="20"
+                                    FontFamily="{StaticResource Rounded Elegance}"
+                                    Foreground="White"
+                                    Margin="-0,0,0,0"
+                                    TextOptions.TextRenderingMode="Aliased"
+                                    Width="200">
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#31170a"/>
@@ -605,6 +616,9 @@
                                         <Style.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
                                                 <Setter Property="Background" Value="#a26838"/>
+                                            </Trigger>
+                                            <Trigger Property="IsEnabled" Value="False">
+                                                <Setter Property="Background" Value="LightGray"/>
                                             </Trigger>
                                         </Style.Triggers>
                                     </Style>

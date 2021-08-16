@@ -34,6 +34,9 @@ namespace pimsdentistako.Views
 
         private void patientDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            treatmentPlanButton.IsEnabled = true;
+            emergencyInfoButton.IsEnabled = true;
+            dentalRecordButton.IsEnabled = true;
             PatientHelper.ListenToDataGrid();
             PatientHelper.DisplaySelected(nameTxtBox,MiddleName,LastName,Suffix,Nickname,Sex,CivilStatus,Address,Email,MobileNumber,HomeNumber,DateOfBirth,RefferedBy,Occupation,Company,OfficeNumber,FaxNumber,Age);
         }
@@ -73,7 +76,9 @@ namespace pimsdentistako.Views
 
         private void dentalRecordButton_Click(object sender, RoutedEventArgs e)
         {
-            DentalRecordsWindow dentalRecordsWindow = new DentalRecordsWindow();
+            var patientNumber = PatientHelper.CurrentlySelectedPatient().PatientID;
+            var patientName = PatientHelper.CurrentlySelectedPatient().PatientFullName;
+            DentalRecordsWindow dentalRecordsWindow = new DentalRecordsWindow(PatientName: patientName, PatientNumber: patientNumber);
             dentalRecordsWindow.Show();
         }
     }
