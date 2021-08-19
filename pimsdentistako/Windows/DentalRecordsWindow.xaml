@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:pimsdentistako.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="500" d:DesignWidth="800"
+             d:DesignHeight="500" d:DesignWidth="900"
     xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
     <Window.Resources>
         <Style x:Key="ColumnHeaderGripperStyle" TargetType="{x:Type Thumb}">
@@ -128,7 +128,7 @@
                     Grid.Row="0"
                     Grid.RowSpan="5"
                     Grid.ColumnSpan="2"
-                    Margin="0 0 20 50">
+                    Margin="10 0 20 50">
                 <TextBlock Text="Dental Records"
                            FontFamily="{StaticResource Rounded Elegance}"
                        FontSize="24"
@@ -163,8 +163,6 @@
                                        x:Name="patientNumberTxt"
                                        Margin="5 0 0 0"/>
                         </StackPanel>
-                        
-                        
                     </StackPanel>
                 </Grid>
                 <Grid Margin="0 20 0 0">
@@ -297,6 +295,7 @@
                     <TextBlock Text="Month"
                                FontFamily="{StaticResource Rounded Elegance}"
                                HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
                                Margin="3"/>
                     <TextBox x:Name="txtBoxMonth"
                              FontFamily="{StaticResource Rounded Elegance}"
@@ -305,6 +304,7 @@
                     <TextBlock Text="Year"
                                FontFamily="{StaticResource Rounded Elegance}"
                                HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
                                Margin="20 3 3 3"/>
                     <TextBox x:Name="txtBoxYear"
                              FontFamily="{StaticResource Rounded Elegance}"
@@ -334,10 +334,36 @@
                 <Button Content="Delete"
                         HorizontalAlignment="Right"
                         Margin="0 20 0 0"
-                    Width="75"
-                    Height="30"
-                    Grid.Row="4"
-                    Grid.Column="5"/>
+                        Width="75"
+                        Height="30"
+                        Foreground="White"
+                        FontFamily="{StaticResource LEMON MILK Regular}"
+                        Grid.Row="4"
+                        Grid.Column="5">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#31170a"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#a26838"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="{TemplateBinding Width}"
+                                        Height="{TemplateBinding Height}"
+                                        CornerRadius="15"
+                                        Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="CENTER"
+                                                      Margin="0,0,0,0"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
             </StackPanel>
         </Grid>
     </Viewbox>

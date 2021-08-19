@@ -81,5 +81,13 @@ namespace pimsdentistako.Views
             DentalRecordsWindow dentalRecordsWindow = new DentalRecordsWindow(PatientName: patientName, PatientNumber: patientNumber);
             dentalRecordsWindow.Show();
         }
+
+        private void treatmentPlanButton_Click(object sender, RoutedEventArgs e)
+        {
+            var patientNumber = PatientHelper.CurrentlySelectedPatient().PatientID;
+            var patientName = PatientHelper.CurrentlySelectedPatient().PatientFullName;
+            TreatmentPlanWindow treatmentPlanWindow = new TreatmentPlanWindow(patientName, patientNumber);
+            treatmentPlanWindow.Show();
+        }
     }
 }

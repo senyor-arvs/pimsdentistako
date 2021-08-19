@@ -529,7 +529,7 @@
                                         FontFamily="{StaticResource Rounded Elegance}"
                                         Foreground="White"
                                         Margin="-0,0,0,0"
-                                        TextOptions.TextRenderingMode="Aliased">
+                                        TextOptions.TextRenderingMode="Aliased" Click="treatmentPlanButton_Click">
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#83502E"/>

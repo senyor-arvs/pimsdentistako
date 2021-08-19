@@ -39,6 +39,9 @@
     <Compile Update="Views\UserAccountView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\TreatmentPlanWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Components\AppointmentCalendar.xaml">
@@ -72,6 +75,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\UserAccountView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\TreatmentPlanWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
