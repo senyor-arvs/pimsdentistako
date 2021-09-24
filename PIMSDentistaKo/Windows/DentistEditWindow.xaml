@@ -5,93 +5,152 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pimsdentistako.Windows"
         mc:Ignorable="d"
-        Title="Edit Dentist Information" Height="800" Width="1000" WindowStartupLocation="CenterScreen">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+        Title="Edit Dentist Information" 
+        Height="700" 
+        Width="1000" 
+        WindowStartupLocation="CenterScreen" 
+        Loaded="Window_Loaded" 
+        Closed="Window_Closed"
+        MouseDown="Window_MouseDown"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None"
+        >
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="180" />
-            <RowDefinition/>
-            <RowDefinition Height="auto"/>
-        </Grid.RowDefinitions>
+    <Border Background="White" CornerRadius="30" BorderBrush="#191715" BorderThickness="1">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
-            <TextBlock Text="Edit Dentist" FontSize="70" Foreground="#191715" HorizontalAlignment="Center" Margin="0,50,0,50"/>
-        </StackPanel>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="180" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-
-        <StackPanel Grid.Row="1" Grid.Column="0" Margin="75,25,0,0">
-            <TextBlock Text="First Name" FontSize="25" />
-            <TextBlock Text="Middle Name" FontSize="25" Margin="0,20,0,0"/>
-            <TextBlock Text="Last Name" FontSize="25" Margin="0,20,0,0" />
-            <TextBlock Text="Suffix (Optional)" FontSize="25" Margin="0,20,0,0"/>
-            <TextBlock Text="License Number" FontSize="25" Margin="0,20,0,0"/>
-            <TextBlock Text="Ptr. Number" FontSize="25" Margin="0,20,0,0"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="1" Grid.Column="1" Margin="20,25,50,0" >
-            <TextBox  Height="33" x:Name="txtEditFirst" FontSize="25"/>
-            <TextBox   Margin="0,20,0,0" Height="33" x:Name="txtEditMiddle" FontSize="25"/>
-            <TextBox   Margin="0,20,0,0" Height="33" x:Name="txtEditLast" FontSize="25"/>
-            <TextBox   Margin="0,20,0,0" Height="33" x:Name="txtEditSuffix" FontSize="25"/>
-            <TextBox   Margin="0,20,0,0" Height="33" x:Name="txtEditLicense" FontSize="25"/>
-            <TextBox   Margin="0,20,0,0"  Height="33" x:Name="txtEditPtr" FontSize="25"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="2" Grid.Column="0" Margin="20,50,20,100" >
-            <Button Click="Confirm_btn_Click" Content="CONFIRM" Height="75" Width="250" Foreground="White" FontSize="40" Name="Confirm_btn" FontFamily="{StaticResource Rounded Elegance}">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Background" Value="#bd7e4a"/>
-                        <Setter Property="Cursor" Value="Hand"/>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#a26838"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-        </StackPanel>
-        
-        
-        <StackPanel Grid.Row="2" Grid.Column="1" Margin="20,50,20,100" >
-            <Button Content="CANCEL" Height="75" Width="250" Foreground="White" FontSize="40" Name="Cancel_btn" FontFamily="{StaticResource Rounded Elegance}" Click="Cancel_btn_Click">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Background" Value="#31170a"/>
-                        <Setter Property="Cursor" Value="Hand"/>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#a26838"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-        </StackPanel>
-        
-        <!--PANGALAN NG MGA TEXT BOX-->
-        
-        <!--txtEditFirst-->
-        <!--txtEditMiddle-->
-        <!--txtEditLast-->
-        <!--txtEditSuffix-->
-        <!--txtEditLicense-->
-        <!--txtEditPtr-->
+            <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+                <TextBlock Text="Edit Dentist" FontSize="70" Foreground="#191715" HorizontalAlignment="Center" Margin="0,50,0,50"/>
+            </StackPanel>
 
 
-        <!--PANGALAN NG BUTTON-->
+            <StackPanel Grid.Row="1" Grid.Column="0" Margin="75,25,0,0">
+                <TextBlock Text="First Name" FontSize="25" />
+                <TextBlock Text="Middle Name" FontSize="25" Margin="0,20,0,0"/>
+                <TextBlock Text="Last Name" FontSize="25" Margin="0,20,0,0" />
+                <TextBlock Text="Suffix (Optional)" FontSize="25" Margin="0,20,0,0"/>
+                <TextBlock Text="License Number" FontSize="25" Margin="0,20,0,0"/>
+                <TextBlock Text="Ptr. Number" FontSize="25" Margin="0,20,0,0"/>
+            </StackPanel>
 
-        <!--Confirm_btn-->
-        <!--Cancel_btn-->
+            <StackPanel Grid.Row="1" Grid.Column="1" Margin="20,25,50,0" >
+                <TextBox  Height="33" x:Name="txtEditFirst" FontSize="25"/>
+                <TextBox   Margin="0,20,0,0" Height="33" x:Name="txtEditMiddle" FontSize="25"/>
+                <TextBox   Margin="0,20,0,0" Height="33" x:Name="txtEditLast" FontSize="25"/>
+                <TextBox   Margin="0,20,0,0" Height="33" x:Name="txtEditSuffix" FontSize="25"/>
+                <TextBox   Margin="0,20,0,0" Height="33" x:Name="txtEditLicense" FontSize="25"/>
+                <TextBox   Margin="0,20,0,0"  Height="33" x:Name="txtEditPtr" FontSize="25"/>
+            </StackPanel>
+
+            <Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2"
+                  Margin="30, 60, 30, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Confirm Button -->
+                <Button Grid.Column="0" Content="CONFIRM"
+                                        x:Name="Confirm_btn"
+                                        Click="Confirm_btn_Click"
+                                        FontSize="25"
+                                        FontFamily="{StaticResource Rounded Elegance}"
+                                        Foreground="White"
+                                        Margin="20,0,20,0"
+                                        TextOptions.TextRenderingMode="Aliased">
+
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#de9e48"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#EBB265"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Height="70" CornerRadius="30,30,30,30" 
+                                                Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="CENTER"
+                                                      Margin="0,0,0,0"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+
+                </Button>
+
+                <!-- Cancel Button -->
+                <Button Grid.Column="1" Margin="20, 0, 20, 0" Content="CANCEL"
+                                        x:Name="Cancel_btn"
+                                        Click="Cancel_btn_Click"
+                                        FontSize="25"
+                                        FontFamily="{StaticResource Rounded Elegance}"
+                                        Foreground="White"
+                                        TextOptions.TextRenderingMode="Aliased">
+
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#83502E"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#a26838"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Height="70" CornerRadius="30,30,30,30" 
+                                                Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="CENTER"
+                                                      Margin="0,0,0,0"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+
+                </Button>
+            </Grid>
+
+            <!--PANGALAN NG MGA TEXT BOX-->
+
+            <!--txtEditFirst-->
+            <!--txtEditMiddle-->
+            <!--txtEditLast-->
+            <!--txtEditSuffix-->
+            <!--txtEditLicense-->
+            <!--txtEditPtr-->
+
+
+            <!--PANGALAN NG BUTTON-->
+
+            <!--Confirm_btn-->
+            <!--Cancel_btn-->
 
 
 
 
-    </Grid>
+        </Grid>
+    </Border>
+    
     
 </Window>

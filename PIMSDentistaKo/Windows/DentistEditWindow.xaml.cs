@@ -2,6 +2,7 @@
 
 using pimsdentistako.DBHelpers;
 using pimsdentistako.DBElements;
+using pimsdentistako.Callbacks;
 
 namespace pimsdentistako.Windows
 {
@@ -10,7 +11,10 @@ namespace pimsdentistako.Windows
     /// </summary>
     public partial class DentistEditWindow : Window
     {
+        private IWindowCloseListener windowCloseListener;
         private Dentist active;
+
+        public IWindowCloseListener WindowCloseListener { get => windowCloseListener; set => windowCloseListener = value; }
 
         public DentistEditWindow()
         {
@@ -49,6 +53,21 @@ namespace pimsdentistako.Windows
                DatabaseHelper.DisplayErrorDialog("Update Dentist", "Ann error occured while updating Dentist.\nNothing was changed.");
             }
             this.Close();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            CallBackHelper.WindowCloseHelper.OnLoadedConfig(this, WindowCloseListener);
+        }
+
+        private void Window_Closed(object sender, System.EventArgs e)
+        {
+            CallBackHelper.WindowCloseHelper.OnCloseConfig(this, WindowCloseListener);
+        }
+
+        private void Window_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == System.Windows.Input.MouseButtonState.Pressed) this.DragMove();
         }
     }
 }

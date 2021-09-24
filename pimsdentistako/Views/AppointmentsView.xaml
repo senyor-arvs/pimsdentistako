@@ -199,7 +199,7 @@
                                 Height="55"
                                 Content="Add"
                                 FontSize="24"
-                                Foreground="White">
+                                Foreground="White" Click="AddButton_Click">
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Background" Value="#83502E"/>
@@ -224,6 +224,7 @@
                             </Button.Template>
                         </Button>
                         <Button x:Name="UpdateButton"
+                                Click="UpdateButton_Click"
                                 Margin="20 0 0 0"
                                 Width="150"
                                 Content="Update"
