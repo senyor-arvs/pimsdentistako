@@ -2,13 +2,14 @@
 using System.Windows.Controls;
 using pimsdentistako.DBHelpers;
 using pimsdentistako.Windows;
+using pimsdentistako.Callbacks;
 
 namespace pimsdentistako.Views
 {
     /// <summary>
     /// Interaction logic for TreatmentView.xaml
     /// </summary>
-    public partial class TreatmentView : UserControl
+    public partial class TreatmentView : UserControl, IWindowCloseListener
     {
         public TreatmentView()
         {
@@ -28,6 +29,7 @@ namespace pimsdentistako.Views
                 MessageBox.Show("Please specify the name of the Treatment that you want to add.", "Treatment Adding", MessageBoxButton.OK, MessageBoxImage.Warning);
             }*/
             AddEditTreatmentWindow addEditTreatmentWindow = new AddEditTreatmentWindow(mode: 0);
+            addEditTreatmentWindow.WindowCloseListener = this;
             addEditTreatmentWindow.Show();
         }
 
@@ -45,6 +47,7 @@ namespace pimsdentistako.Views
                 treatmentName: treatmentTxtBox.Text,
                 dataGrid_SelectedIndex: treatmentDataGrid.SelectedIndex
             );
+            addEditTreatmentWindow.WindowCloseListener = this;
             addEditTreatmentWindow.Show();
         }
 
@@ -74,6 +77,9 @@ namespace pimsdentistako.Views
             treatmentTxtBox.Clear();*/
         }
 
-      
+        public void OnWindowClose(bool isClosed)
+        {
+            Window.GetWindow(this).IsEnabled = isClosed;
+        }
     }
 }
