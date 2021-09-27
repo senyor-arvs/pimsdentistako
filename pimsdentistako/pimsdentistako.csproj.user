@@ -15,6 +15,12 @@
     <Compile Update="Components\CustomCalendar.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\PatientSelectionView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\UtilityView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Windows\AddEditPatientWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -24,7 +30,13 @@
     <Compile Update="Views\DashboardView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\AddEditTreatmentPlanWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Windows\AddEditTreatmentWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DeleteConfimationWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Windows\DentalRecordsWindow.xaml.cs">
@@ -39,7 +51,16 @@
     <Compile Update="Views\UserAccountView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\EmergencyInfoWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\MoveTreatmentPlanWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Windows\TreatmentPlanWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\UpdateAppointmentWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -53,6 +74,12 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\PatientSelectionView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UtilityView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Windows\AddEditPatientWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -62,7 +89,13 @@
     <Page Update="Views\DashboardView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Windows\AddEditTreatmentPlanWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Windows\AddEditTreatmentWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DeleteConfimationWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\DentalRecordsWindow.xaml">
@@ -77,7 +110,16 @@
     <Page Update="Views\UserAccountView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Windows\EmergencyInfoWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\MoveTreatmentPlanWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Windows\TreatmentPlanWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\UpdateAppointmentWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

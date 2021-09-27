@@ -5,23 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pimsdentistako.Windows"
         mc:Ignorable="d"
-        Title="AddEditTreatmentWindow" Height="260" Width="400">
-    <Grid Background="White">
-        <StackPanel Margin="30">
-            <TextBlock x:Name="titleTxt"
+        Title="AddEditTreatmentWindow" 
+        Height="260" Width="400" 
+        Loaded="Window_Loaded" 
+        Closed="Window_Closed"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None"
+        MouseDown="Window_MouseDown"
+        >
+
+    <Border Background="White" CornerRadius="15" BorderBrush="#191715" BorderThickness="1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0"
+                       x:Name="titleTxt"
+                       Text="Add Treatment"
+                       TextAlignment="Center"
+                       VerticalAlignment="Center"
                        FontFamily="{StaticResource Rounded Elegance}"
-                       FontSize="32"
-                       Margin="0 0 0 20"/>
-            <TextBox x:Name="treatmentNameTxtBox"
+                       FontSize="30"
+                       Margin="0 20 0 20"/>
+
+            <TextBox Grid.Row="1"
+                x:Name="treatmentNameTxtBox"
                      Width="300"
                      FontSize="24"
                      FontFamily="{StaticResource Rounded Elegance}"
-                     Margin="0 0 0 20"/>
-            <!-- Buttons -->
-            <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Center">
+                     VerticalAlignment="Center"/>
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
                 <!-- ADD/EDIT Button -->
                 <Button x:Name="addEditButton"
+                        Grid.Column="0"
                         Width="100"
                         Height="40"
                         Content="Add"
@@ -52,15 +78,15 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                
+
                 <!-- Cancel Button -->
                 <Button x:Name="CancelButton"
+                        Grid.Column="1"
                         Width="100"
                         Height="40"
                         Content="Cancel"
                         FontSize="17"
-                        Foreground="White"
-                        Margin="20 0 0 0" Click="CancelButton_Click">
+                        Foreground="White" Click="CancelButton_Click">
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="Background" Value="Black"/>
@@ -86,7 +112,10 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-            </StackPanel>
-        </StackPanel>
-    </Grid>
+            </Grid>
+            
+         
+        </Grid>
+    </Border>
+    
 </Window>

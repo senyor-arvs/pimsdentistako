@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using pimsdentistako.Callbacks;
 
 namespace pimsdentistako.Windows
 {
@@ -22,6 +23,9 @@ namespace pimsdentistako.Windows
         private int mode;
         private string treatmentName;
         private int dataGrid_SelectedIndex;
+
+        public IWindowCloseListener WindowCloseListener { get; set; }
+
         public AddEditTreatmentWindow(int mode, string treatmentName = "", int dataGrid_SelectedIndex = 0)
         {
             this.mode = mode;
@@ -73,6 +77,23 @@ namespace pimsdentistako.Windows
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            CallBackHelper.WindowCloseHelper.OnLoadedConfig(this, WindowCloseListener);
+        }
+
+        
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            CallBackHelper.WindowCloseHelper.OnCloseConfig(this, WindowCloseListener);
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed) this.DragMove();
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Windows.Input;
 using pimsdentistako.DBElements;
 using pimsdentistako.DBHelpers;
 using static pimsdentistako.DBHelpers.EmergencyInfoHelper;
+using pimsdentistako.Callbacks;
 
 namespace pimsdentistako.Windows
 {
@@ -20,6 +21,8 @@ namespace pimsdentistako.Windows
         private readonly string EditingPatient = "Editing Patient";
 
         private int mode;
+
+        public IWindowCloseListener WindowCloseListener { get; set; }
 
         public AddEditPatientWindow(int mode)
         {
@@ -64,18 +67,11 @@ namespace pimsdentistako.Windows
             faxTxtBox.Text = selected.PatientFaxNumber;
 
             EmergencyInfo emergencyInfo = RetrievePatientEmergencyInfo(selected.PatientID);
-            emergencyNameTxtBox.Text = DatabaseHelper.isMatchThenReplace(DatabaseHelper.IsValueNull(emergencyInfo.ContactName), "-", emergencyInfo.ContactName);
-            emergencyHomeNumberTxtBox.Text = DatabaseHelper.isMatchThenReplace(DatabaseHelper.IsValueNull(emergencyInfo.ContactNumber), "-",emergencyInfo.ContactNumber);
-            emergencyRelationshipTxtBox.Text = DatabaseHelper.isMatchThenReplace(DatabaseHelper.IsValueNull(emergencyInfo.ContactRelationship), "-", emergencyInfo.ContactRelationship);
-
-            if (!DatabaseHelper.IsValueNull(emergencyInfo.ContactOfficeNumberRemarks))
-            {
-                emergencyOfficeNumTxtBox.Text = emergencyInfo.ContactOfficeNumberRemarks.Equals(OfficeNumberRemarks.SAME_TO_PATIENT) ? 
-                    selected.PatientOfficeNumber : emergencyInfo.ContactOfficeNumber;
-            } else
-            {
-                emergencyOfficeNumTxtBox.Text = DatabaseHelper.BLANK_INPUT;
-            }
+            DisplayInfoOnWindow(selected, emergencyInfo, 
+                emergencyNameTxtBox, 
+                emergencyRelationshipTxtBox,
+                emergencyHomeNumberTxtBox,
+                emergencyOfficeNumTxtBox);
         }
 
         private void savePatientButton_Click(object sender, RoutedEventArgs e)
@@ -260,5 +256,16 @@ namespace pimsdentistako.Windows
         {
             ageTxtBox.Text = Patient.GetAgeByBirth(birthDateTxtBox.Text);
         }
+
+        private void MainWindowAddEdit_Loaded(object sender, RoutedEventArgs e)
+        {
+            CallBackHelper.WindowCloseHelper.OnLoadedConfig(this, WindowCloseListener);
+        }
+
+        private void MainWindowAddEdit_Closed(object sender, System.EventArgs e)
+        {
+            CallBackHelper.WindowCloseHelper.OnCloseConfig(this, WindowCloseListener);
+        }
+
     }
 }

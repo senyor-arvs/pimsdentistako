@@ -1,0 +1,284 @@
+﻿<Window x:Class="pimsdentistako.Windows.UpdateAppointmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pimsdentistako.Windows"
+        mc:Ignorable="d"
+        Title="UpdateAppointmentWindow" 
+        Height="420" 
+        Width="590"
+        Closed="Window_Closed"
+        Loaded="Window_Loaded"
+        MouseDown="Window_MouseDown"
+        Activated="Window_Activated"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        >
+
+    <Border Background="White" CornerRadius="20" BorderBrush="#191715" BorderThickness="1">
+        <Border Margin="40, 10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <!-- Selected Patient Layout -->
+                <Grid Grid.Row="0" Margin="0, 20, 0, 20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- User Icon -->
+                    <Image Width="60" Height="60" Source="/images/ic_user.png"/>
+
+                    <!-- Selected Patient Detail Layout-->
+                    <StackPanel VerticalAlignment="Center" Grid.Column="1" Orientation="Vertical">
+                        <TextBlock x:Name="txtBlockPatientName"
+                               Text="-"
+                               FontFamily="{StaticResource Rounded Elegance}"
+                               Margin="10 0 0 0"
+                               FontSize="20"
+                               VerticalAlignment="Center"
+                               Foreground="#191715"
+                               TextWrapping="Wrap"
+                               TextOptions.TextFormattingMode="Display" />
+
+                        <TextBlock x:Name="txtBlockPatientNumber"
+                               Text="-"
+                               FontFamily="{StaticResource Rounded Elegance}"
+                               Margin="10 10 0 0"
+                               FontSize="20"
+                               TextWrapping="Wrap"
+                               VerticalAlignment="Center"
+                               Foreground="#191715"
+                               TextOptions.TextFormattingMode="Display" />
+                    </StackPanel>
+
+                    <Button Grid.Column="2" 
+                            x:Name="btnCloseUpdateAppointmentWindow"
+                            Width="40"
+                            Height="40"
+                            HorizontalAlignment="Center"
+                            Margin="0, 0, 0, 20"
+                            Click="btnCloseUpdateAppointmentWindow_Click"
+                            Background="#bd7e4a">
+                        <StackPanel>
+                            <Image Source="../images/close_white.png"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+
+                <!-- Central Layout -->
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <!-- Label Date -->
+                    <TextBlock Text="Date"
+                               Grid.Column="0"
+                               Grid.Row="0"
+                               Margin="0, 0, 20, 0"
+                               FontFamily="{DynamicResource Rounded Elegance}"
+                               FontSize="20"
+                               Foreground="#191715"
+                               FontWeight="Bold"
+                               TextWrapping="Wrap"
+                               VerticalAlignment="Center"
+                               TextOptions.TextFormattingMode="Display"
+                               />
+
+                    <!-- Label Time -->
+                    <TextBlock Text="Time"
+                               Grid.Column="0"
+                               Grid.Row="1"
+                               Margin="0, 0, 20, 0"
+                               FontFamily="{DynamicResource Rounded Elegance}"
+                               FontSize="20"
+                               Foreground="#191715"
+                               FontWeight="Bold"
+                               TextWrapping="Wrap"
+                               VerticalAlignment="Center"
+                               TextOptions.TextFormattingMode="Display"
+                               />
+
+                    <!-- Label Treatment -->
+                    <TextBlock Text="Treatment"
+                               Grid.Column="0"
+                               Grid.Row="2"
+                               Margin="0, 0, 20, 0"
+                               FontFamily="{DynamicResource Rounded Elegance}"
+                               FontSize="20"
+                               Foreground="#191715"
+                               FontWeight="Bold"
+                               TextWrapping="Wrap"
+                               VerticalAlignment="Center"
+                               TextOptions.TextFormattingMode="Display"
+                               />
+
+                    <!-- Label Dentist -->
+                    <TextBlock Text="Dentist"
+                               Grid.Column="0"
+                               Grid.Row="3"
+                               Margin="0, 0, 20, 0"
+                               FontFamily="{DynamicResource Rounded Elegance}"
+                               FontSize="20"
+                               Foreground="#191715"
+                               FontWeight="Bold"
+                               TextWrapping="Wrap"
+                               VerticalAlignment="Center"
+                               TextOptions.TextFormattingMode="Display"
+                               />
+
+                    <!-- Input Date -->
+                    <TextBlock Text="-"
+                               x:Name="txtBlockInputDate"
+                               Grid.Column="1"
+                               Grid.Row="0"
+                               FontFamily="{DynamicResource Rounded Elegance}"
+                               FontSize="20"
+                               Foreground="#502e18"
+                               TextWrapping="Wrap"
+                               VerticalAlignment="Center"
+                               TextOptions.TextFormattingMode="Display"
+                               />
+
+                    <!-- Input Time -->
+                    <TextBlock Text="-"
+                               x:Name="txtBlockInputTime"
+                               Grid.Column="1"
+                               Grid.Row="1"
+                               FontFamily="{DynamicResource Rounded Elegance}"
+                               FontSize="20"
+                               Foreground="#502e18"
+                               TextWrapping="Wrap"
+                               VerticalAlignment="Center"
+                               TextOptions.TextFormattingMode="Display"
+                               />
+
+                    <!-- Input Treatment -->
+                    <TextBlock Text="-"
+                               x:Name="txtBlockInputTreatment"
+                               Grid.Column="1"
+                               Grid.Row="2"
+                               FontFamily="{DynamicResource Rounded Elegance}"
+                               FontSize="20"
+                               Foreground="#502e18"
+                               TextWrapping="Wrap"
+                               VerticalAlignment="Center"
+                               TextOptions.TextFormattingMode="Display"
+                               />
+
+                    <!-- Input Dentist -->
+                    <TextBlock Text="-"
+                               x:Name="txtBlockInputDentist"
+                               Grid.Column="1"
+                               Grid.Row="3"
+                               FontFamily="{DynamicResource Rounded Elegance}"
+                               FontSize="20"
+                               Foreground="#502e18"
+                               TextWrapping="Wrap"
+                               VerticalAlignment="Center"
+                               TextOptions.TextFormattingMode="Display"
+                               />
+                </Grid>
+
+                <!-- Bottom Layout -->
+                <Grid Grid.Row="2" Margin="0, 40, 0, 30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Edit Button -->
+                    <Button Grid.Column="0" 
+                            Content="EDIT"
+                            x:Name="btnEdit"
+                            FontSize="15"
+                            FontFamily="{StaticResource Rounded Elegance}"
+                            Foreground="White"
+                            Margin="0, 0, 100, 0" 
+                            TextOptions.TextRenderingMode="Aliased">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#de9e48"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#EBB265"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Height="50" 
+                                        CornerRadius="20" 
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="CENTER"
+                                                      Margin="0,0,0,0"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>
+
+                    <!-- Move Button -->
+                    <Button Grid.Column="1" 
+                            Margin="100 ,0, 0, 0" 
+                            Content="MOVE"
+                            x:Name="btnMove"
+                            Click="btnMove_Click"
+                            FontSize="15"
+                            FontFamily="{StaticResource Rounded Elegance}"
+                            Foreground="White"
+                            TextOptions.TextRenderingMode="Aliased">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#83502E"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#a26838"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Height="50"
+                                        CornerRadius="20" 
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="CENTER"
+                                                      Margin="0,0,0,0"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+            </Grid>
+        </Border>
+    </Border>
+
+</Window>
