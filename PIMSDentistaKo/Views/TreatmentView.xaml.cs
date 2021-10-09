@@ -72,9 +72,10 @@ namespace pimsdentistako.Views
 
         private void deleteTreatmentButton_Click(object sender, RoutedEventArgs e)
         {
-           /* var selectedIndex = treatmentDataGrid.SelectedIndex;
-            DeleteTreatment(TreatmentList[selectedIndex].TreatmentID);
-            treatmentTxtBox.Clear();*/
+
+           var selectedIndex = treatmentDataGrid.SelectedIndex;
+           TreatmentHelper.DeleteTreatment(TreatmentHelper.TreatmentList[selectedIndex].TreatmentID);
+           treatmentTxtBox.Clear(); 
         }
 
         public void OnWindowClose(bool isClosed)
