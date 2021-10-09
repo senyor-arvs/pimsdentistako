@@ -5,6 +5,7 @@ using System.Data.OleDb;
 using pimsdentistako.DBElements;
 using static pimsdentistako.DBHelpers.DatabaseHelper;
 using System.Collections.Generic;
+using System.Windows.Controls;
 
 namespace pimsdentistako.DBHelpers
 {
@@ -151,6 +152,23 @@ namespace pimsdentistako.DBHelpers
                 requestConnection(ConnectionState.STATE_CLOSE);
             }
             return actionState;
+        }
+
+        public static void DisplayInfoOnWindow(Patient patient, EmergencyInfo emergencyInfo, params TextBox[] txt_box)
+        {
+            txt_box[0].Text = DatabaseHelper.isMatchThenReplace(DatabaseHelper.IsValueNull(emergencyInfo.ContactName), "-", emergencyInfo.ContactName);
+            txt_box[1].Text = DatabaseHelper.isMatchThenReplace(DatabaseHelper.IsValueNull(emergencyInfo.ContactRelationship), "-", emergencyInfo.ContactRelationship);
+            txt_box[2].Text = DatabaseHelper.isMatchThenReplace(DatabaseHelper.IsValueNull(emergencyInfo.ContactNumber), "-", emergencyInfo.ContactNumber);
+
+            if (!DatabaseHelper.IsValueNull(emergencyInfo.ContactOfficeNumberRemarks))
+            {
+                txt_box[3].Text = emergencyInfo.ContactOfficeNumberRemarks.Equals(OfficeNumberRemarks.SAME_TO_PATIENT) ?
+                    patient.PatientOfficeNumber : emergencyInfo.ContactOfficeNumber;
+            }
+            else
+            {
+                txt_box[3].Text = DatabaseHelper.BLANK_INPUT;
+            }
         }
     }
 }

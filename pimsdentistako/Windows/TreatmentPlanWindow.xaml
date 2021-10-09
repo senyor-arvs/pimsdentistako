@@ -5,11 +5,590 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pimsdentistako.Windows"
         mc:Ignorable="d"
-        Title="TreatmentPlanWindow" Height="600" Width="1000">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-    </Grid>
+        Title="TreatmentPlanWindow" 
+        Height="700" 
+        Width="1200" 
+        Loaded="Window_Loaded" 
+        Closed="Window_Closed"
+        MouseDown="Window_MouseDown"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None"
+        xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2"
+        >
+
+    <!-- Data Grid Header Theme -->
+    <Window.Resources>
+        <Style x:Key="{ComponentResourceKey ResourceId=DataGridSelectAllButtonStyle, TypeInTargetAssembly={x:Type DataGrid}}" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Rectangle x:Name="Border" Fill="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" SnapsToDevicePixels="True"/>
+                            <Polygon x:Name="Arrow" Fill="Black" HorizontalAlignment="Right" Margin="8,8,3,3" Opacity="0.15" Points="0,10 10,10 10,0" Stretch="Uniform" VerticalAlignment="Bottom"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Stroke" TargetName="Border" Value="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Fill" TargetName="Border" Value="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Visibility" TargetName="Arrow" Value="Collapsed"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ItemsPresenterStyle1" TargetType="{x:Type ItemsPresenter}">
+            <Setter Property="TextElement.FontFamily" Value="{StaticResource LEMON MILK Light}"/>
+        </Style>
+        <Style x:Key="DataGridColumnHeadersPresenterStyle1" TargetType="{x:Type DataGridColumnHeadersPresenter}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridColumnHeadersPresenter}">
+                        <Grid>
+                            <DataGridColumnHeader x:Name="PART_FillerColumnHeader" 
+                                                  IsHitTestVisible="False"
+                                                  Background="#bd7e4a"/>
+                            <ItemsPresenter Style="{DynamicResource ItemsPresenterStyle1}"
+                                            />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="DataGridStyle1" TargetType="{x:Type DataGrid}">
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="RowDetailsVisibilityMode" Value="VisibleWhenSelected"/>
+            <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="Both"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGrid}">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="DG_ScrollViewer" Focusable="false">
+                                <ScrollViewer.Template>
+                                    <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Button Command="{x:Static DataGrid.SelectAllCommand}" Focusable="false" Style="{DynamicResource {ComponentResourceKey ResourceId=DataGridSelectAllButtonStyle, TypeInTargetAssembly={x:Type DataGrid}}}" Visibility="{Binding HeadersVisibility, Converter={x:Static DataGrid.HeadersVisibilityConverter}, ConverterParameter={x:Static DataGridHeadersVisibility.All}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" Width="{Binding CellsPanelHorizontalOffset, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                                            <DataGridColumnHeadersPresenter Style="{DynamicResource DataGridColumnHeadersPresenterStyle1}" x:Name="PART_ColumnHeadersPresenter" Grid.Column="1" Visibility="{Binding HeadersVisibility, Converter={x:Static DataGrid.HeadersVisibilityConverter}, ConverterParameter={x:Static DataGridHeadersVisibility.Column}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                                            <ScrollContentPresenter x:Name="PART_ScrollContentPresenter" Grid.ColumnSpan="2" CanContentScroll="{TemplateBinding CanContentScroll}" Grid.Row="1"/>
+                                            <ScrollBar x:Name="PART_VerticalScrollBar" Grid.Column="2" Maximum="{TemplateBinding ScrollableHeight}" Orientation="Vertical" Grid.Row="1" ViewportSize="{TemplateBinding ViewportHeight}" Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"/>
+                                            <Grid Grid.Column="1" Grid.Row="2">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="{Binding NonFrozenColumnsViewportHorizontalOffset, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <ScrollBar x:Name="PART_HorizontalScrollBar" Grid.Column="1" Maximum="{TemplateBinding ScrollableWidth}" Orientation="Horizontal" ViewportSize="{TemplateBinding ViewportWidth}" Value="{Binding HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"/>
+                                            </Grid>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </ScrollViewer.Template>
+                                <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            </ScrollViewer>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsGrouping" Value="true"/>
+                        <Condition Property="VirtualizingPanel.IsVirtualizingWhenGrouping" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="ColumnHeaderGripperStyle" TargetType="{x:Type Thumb}">
+            <Setter Property="Width" Value="8"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Cursor" Value="SizeWE"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="DataGridColumnHeaderStyle1" TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="Background" Value="#bd7e4a"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="MinHeight" Value="50"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+                        <Grid>
+                            <theme:DataGridHeaderBorder Background="{TemplateBinding Background}" 
+                                                        BorderThickness="{TemplateBinding BorderThickness}" 
+                                                        BorderBrush="{TemplateBinding BorderBrush}" 
+                                                        IsClickable="{TemplateBinding CanUserSort}" 
+                                                        IsPressed="{TemplateBinding IsPressed}" 
+                                                        IsHovered="{TemplateBinding IsMouseOver}" 
+                                                        Padding="10, 0, 10, 0" 
+                                                        SeparatorBrush="{TemplateBinding SeparatorBrush}" 
+                                                        SortDirection="{TemplateBinding SortDirection}" 
+                                                        SeparatorVisibility="{TemplateBinding SeparatorVisibility}">
+                                <ContentPresenter HorizontalAlignment="Center" 
+                                                  RecognizesAccessKey="True" 
+                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
+                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </theme:DataGridHeaderBorder>
+                            <Thumb x:Name="PART_LeftHeaderGripper" HorizontalAlignment="Left" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                            <Thumb x:Name="PART_RightHeaderGripper" HorizontalAlignment="Right" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Border Background="White" CornerRadius="30" BorderBrush="#191715" BorderThickness="1">
+        <Border Margin="30, 10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Header Layout -->
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Treatment Plan Title -->
+                    <TextBlock Grid.Column="0"
+                               Text="Treatment Plan" 
+                               Margin="0, 30, 0, 30"
+                               FontFamily="{StaticResource Rounded Elegance}"
+                               FontSize="40"
+                               VerticalAlignment="Center"
+                               Foreground="#191715"/>  
+
+                    <Button Grid.Column="1" 
+                            x:Name="btnCloseTreatmentPlanWindow"
+                            Click="btnCloseTreatmentPlanWindow_Click"
+                            Width="40"
+                            Height="40"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Background="#bd7e4a">
+                            <StackPanel>
+                                <Image Source="../images/close_white.png"/>
+                            </StackPanel>
+                    </Button>
+                </Grid>
+
+                <!-- Selected Patient Layout -->
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- User Icon -->
+                        <Image Width="60" Height="60" Source="/images/ic_user.png"/>
+
+                        <!-- Selected Patient Detail Layout-->
+                        <StackPanel VerticalAlignment="Center" Grid.Column="1" Orientation="Vertical">
+                            <TextBlock x:Name="txtBlockPatientName"
+                               Text="-"
+                               FontFamily="{StaticResource Rounded Elegance}"
+                               Margin="10 0 0 0"
+                               FontSize="20"
+                               VerticalAlignment="Center"
+                               Foreground="#191715"
+                               TextWrapping="Wrap"
+                               TextOptions.TextFormattingMode="Display" />
+
+                            <TextBlock x:Name="txtBlockPatientNumber"
+                               Text="-"
+                               FontFamily="{StaticResource Rounded Elegance}"
+                               Margin="10 10 0 0"
+                               FontSize="20"
+                               TextWrapping="Wrap"
+                               VerticalAlignment="Center"
+                               Foreground="#191715"
+                               TextOptions.TextFormattingMode="Display" />
+                        </StackPanel>
+
+                    </Grid>
+                    
+                    <!-- Combo Box Status Select Layout -->
+                    <StackPanel Grid.Column ="1" 
+                                Orientation="Horizontal"
+                                VerticalAlignment="Top">
+                        <TextBlock Text="Treatment Status"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="20"
+                                   VerticalAlignment="Center"
+                                   Foreground="#502e18"
+                                   TextOptions.TextFormattingMode="Display"
+                           />
+
+                        <ComboBox Height="35"
+                                  Width="190"
+                                  Margin="10 0 0 0"
+                                  x:Name="searchByComboBox"
+                                  FontSize="20">
+                        </ComboBox>
+                    </StackPanel>
+                </Grid>
+
+                <!-- Center & Buttons Layout-->
+                <Grid Grid.Row="2" Margin="0, 10, 0, 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Data Grid -->
+                    <DataGrid ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}"
+                              Style="{DynamicResource DataGridStyle1}"
+                              x:Name="treatmentPlanDataGrid" 
+                              Grid.Column="1"
+                              Grid.Row="0"
+                              IsReadOnly="True"
+                              CanUserReorderColumns="False"
+                              CanUserSortColumns="False"
+                              CanUserDeleteRows="False"
+                              CanUserResizeRows="False"
+                              AutoGenerateColumns="False"
+                              FontSize="20" 
+                              FontFamily="{StaticResource LEMON MILK Regular}" 
+                              Background="#FFF7F7F7" 
+                              BorderBrush="#FF688CAF" 
+                              FontWeight="Normal">
+                        <DataGrid.Columns>
+                            <!-- TODO UPDATE BINDINGS -->
+                            <DataGridTextColumn Header="Date" MinWidth="100" Width="*"/>
+                            <DataGridTextColumn Header="Time" MinWidth="100" Width="*"/>
+                            <DataGridTextColumn Header="Dentist" MinWidth="120" Width="*"/>
+                            <DataGridTextColumn Header="Treatment" MinWidth="150" Width="*"/>
+                            <DataGridTextColumn Header="Type" MinWidth="100" Width="*"/>
+                            <DataGridTextColumn Header="Price" MinWidth="100" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <!-- Info Layout -->
+                    <Grid VerticalAlignment="Center" 
+                          Grid.Column="0"
+                          Grid.Row="0"
+                          Margin="0, 0, 15, 0"
+                          >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Label Date -->
+                        <TextBlock Text="Date"
+                                   Grid.Column="0"
+                                   Grid.Row="0"
+                                   FontFamily="{DynamicResource Rounded Elegance}"
+                                   FontSize="20"
+                                   Foreground="#502e18"
+                                   TextWrapping="Wrap"
+                                   VerticalAlignment="Center"
+                                   TextOptions.TextFormattingMode="Display"
+                           />
+
+                        <!-- Label Time -->
+                        <TextBlock Text="Time"
+                                   Grid.Column="0"
+                                   Grid.Row="1"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="20"
+                                   Foreground="#502e18"
+                                   TextWrapping="Wrap"
+                                   VerticalAlignment="Center"
+                                   TextOptions.TextFormattingMode="Display"
+                           />
+
+                        <!-- Label Dentist -->
+                        <TextBlock Text="Dentist"
+                                   Grid.Column="0"
+                                   Grid.Row="2"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="20"
+                                   Foreground="#502e18"
+                                   TextWrapping="Wrap"
+                                   VerticalAlignment="Center"
+                                   TextOptions.TextFormattingMode="Display"
+                           />
+
+                        <!-- Label Treatment -->
+                        <TextBlock Text="Treatment"
+                                   Grid.Column="0"
+                                   Grid.Row="3"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="20"
+                                   Foreground="#502e18"
+                                   TextWrapping="Wrap"
+                                   VerticalAlignment="Center"
+                                   TextOptions.TextFormattingMode="Display"
+                           />
+
+                        <!-- Label Type -->
+                        <TextBlock Text="Type"
+                                   Grid.Column="0"
+                                   Grid.Row="4"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="20"
+                                   Foreground="#502e18"
+                                   TextWrapping="Wrap"
+                                   VerticalAlignment="Center"
+                                   TextOptions.TextFormattingMode="Display"
+                           />
+
+                        <!-- Label Given Price -->
+                        <TextBlock Text="Given Price"
+                                   Grid.Column="0"
+                                   Grid.Row="5"
+                                   FontFamily="{StaticResource Rounded Elegance}"
+                                   FontSize="20"
+                                   Foreground="#502e18"
+                                   TextWrapping="Wrap"
+                                   VerticalAlignment="Center"
+                                   TextOptions.TextFormattingMode="Display"
+                           />
+
+                        <!-- TextBox Date -->
+                        <TextBox x:Name="txtBoxInputDate"
+                                 IsReadOnly="True"
+                                 FontSize="20"
+                                 Grid.Column="1"
+                                 Grid.Row="0"
+                                 Text="-"
+                                 Margin="10, 5, 0, 5"
+                                 VerticalAlignment="Center"/>
+
+                        <!-- TextBox Time -->
+                        <TextBox x:Name="txtBoxInputTime"
+                                 FontSize="20"
+                                 IsReadOnly="True"
+                                 Grid.Column="1"
+                                 Grid.Row="1"
+                                 Text="-"
+                                 Margin="10, 5, 0, 5"
+                                 VerticalAlignment="Center"/>
+
+                        <!-- TextBox Dentist -->
+                        <TextBox x:Name="txtBoxInputDentist"
+                                 FontSize="20"
+                                 IsReadOnly="True"
+                                 Grid.Column="1"
+                                 Grid.Row="2"
+                                 Text="-"
+                                 Margin="10, 5, 0, 5"
+                                 VerticalAlignment="Center"/>
+
+                        <!-- TextBox Treatment -->
+                        <TextBox x:Name="txtBoxInputTreatment"
+                                 FontSize="20"
+                                 IsReadOnly="True"
+                                 Grid.Column="1"
+                                 Grid.Row="3"
+                                 Text="-"
+                                 Margin="10, 5, 0, 5"
+                                 VerticalAlignment="Center"/>
+
+                        <!-- TextBox Type -->
+                        <TextBox x:Name="txtBoxInputType"
+                                 FontSize="20"
+                                 IsReadOnly="True"
+                                 Grid.Column="1"
+                                 Grid.Row="4"
+                                 Text="-"
+                                 Margin="10, 5, 0, 5"
+                                 VerticalAlignment="Center"/>
+
+                        <!-- TextBox Given Price -->
+                        <TextBox x:Name="txtBoxInputGivenPrice"
+                                 FontSize="20"
+                                 IsReadOnly="True"
+                                 Grid.Column="1"
+                                 Grid.Row="5"
+                                 Text="-"
+                                 Margin="10, 5, 0, 5"
+                                 VerticalAlignment="Center"/>
+                    </Grid>
+                    
+                    <!-- Buttons Layout -->
+                    <Grid Grid.Column="1" Grid.Row="1"
+                          Margin="0, 10, 0, 10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- New & Update Button -->
+                        <Grid Grid.Column="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- New Button -->
+                            <Button Grid.Column="0" Content="NEW"
+                                    x:Name="btnNewTreatmentPlan"
+                                    FontSize="17"
+                                    FontFamily="{StaticResource Rounded Elegance}"
+                                    Foreground="White"
+                                    Margin="0, 20, 5, 20"
+                                    TextOptions.TextRenderingMode="Aliased">
+
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="#de9e48"/>
+                                        <Setter Property="Cursor" Value="Hand"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#EBB265"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Height="50" CornerRadius="20" 
+                                                Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="CENTER"
+                                                      Margin="0,0,0,0"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+
+                            </Button>
+
+                            <!-- Update Button -->
+                            <Button Grid.Column="1"
+                                    Content="UPDATE"
+                                    x:Name="btnUpdateTreatmentPlan"
+                                    FontSize="17"
+                                    FontFamily="{StaticResource Rounded Elegance}"
+                                    Foreground="White"
+                                    Margin="5, 20, 0, 20"
+                                    TextOptions.TextRenderingMode="Aliased">
+
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="#83502E"/>
+                                        <Setter Property="Cursor" Value="Hand"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#a26838"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Height="50" CornerRadius="20" 
+                                                Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="CENTER"
+                                                      Margin="0,0,0,0"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+
+                            </Button>
+                        </Grid>
+
+                        <!--Delete Button Layout -->
+                        <Grid Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Delete Button -->
+                            <Button Grid.Column="1"
+                                    Content="DELETE"
+                                    x:Name="btnDeleteTreatmentPlan"
+                                    FontSize="17"
+                                    FontFamily="{StaticResource Rounded Elegance}"
+                                    Foreground="White"
+                                    Margin="5, 20, 0, 20"
+                                    TextOptions.TextRenderingMode="Aliased">
+
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="#31170a"/>
+                                        <Setter Property="Cursor" Value="Hand"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#a26838"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Height="50" CornerRadius="20" 
+                                                Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="CENTER"
+                                                      Margin="0,0,0,0"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Border>
+    </Border>
+    
 </Window>

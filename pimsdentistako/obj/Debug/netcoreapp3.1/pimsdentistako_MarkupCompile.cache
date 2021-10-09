@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\obj\Debug\netcoreapp3.1\
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\obj\Debug\netcoreapp3.1\
 pimsdentistako
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\App.xaml
-162096707556
+C:\Users\xenxi\Documents\2020 Programming Files\C sharp\Dentista Ko Software\dev files2\pimsdentistako\pimsdentistako\App.xaml
+22829185843
 1715304544
-44-119388631
-1941952104453
-Components\AppointmentCalendar.xaml;Components\CustomCalendar.xaml;MainWindow.xaml;Views\AppointmentsView.xaml;Views\DashboardView.xaml;Views\DentistView.xaml;Views\PatientsView.xaml;Views\TreatmentView.xaml;Views\UserAccountView.xaml;Windows\AddEditPatientWindow.xaml;Windows\AddEditTreatmentWindow.xaml;Windows\DentalRecordsWindow.xaml;Windows\DentistAddWindow.xaml;Windows\DentistDeleteWindow.xaml;Windows\DentistEditWindow.xaml;Windows\TreatmentPlanWindow.xaml;
+56-962525936
+1941293547421
+Components\AppointmentCalendar.xaml;Components\CustomCalendar.xaml;MainWindow.xaml;Views\AppointmentsView.xaml;Views\DashboardView.xaml;Views\DentistView.xaml;Views\PatientSelectionView.xaml;Views\PatientsView.xaml;Views\TreatmentView.xaml;Views\UserAccountView.xaml;Views\UtilityView.xaml;Windows\AddEditPatientWindow.xaml;Windows\AddEditTreatmentPlanWindow.xaml;Windows\AddEditTreatmentWindow.xaml;Windows\DeleteConfimationWindow.xaml;Windows\DentalRecordsWindow.xaml;Windows\DentistAddWindow.xaml;Windows\DentistEditWindow.xaml;Windows\EmergencyInfoWindow.xaml;Windows\MoveTreatmentPlanWindow.xaml;Windows\TreatmentPlanWindow.xaml;Windows\UpdateAppointmentWindow.xaml;
 
 False
 

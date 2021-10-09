@@ -7,7 +7,7 @@
         xmlns:views="clr-namespace:pimsdentistako.Views"
         xmlns:viewmodels="clr-namespace:pimsdentistako.ViewModels"
         mc:Ignorable="d"
-        WindowStartupLocation="CenterScreen"
+        WindowStartupLocation="CenterOwner"
         WindowState="Normal"
         Title="MainWindow" Height="1080" Width="1920"
         WindowStyle="None"
@@ -35,6 +35,12 @@
         </DataTemplate>
         <DataTemplate x:Name="dentistView" DataType="{x:Type viewmodels:DentistViewModel}">
             <views:DentistView/>
+        </DataTemplate>
+        <DataTemplate x:Name="patientSelectionView" DataType="{x:Type viewmodels:PatientSelectionViewModel}">
+            <views:PatientSelectionView/>
+        </DataTemplate>
+        <DataTemplate x:Name="utilityView" DataType="{x:Type viewmodels:UtilityViewModel}">
+            <views:UtilityView/>
         </DataTemplate>
         <Style x:Key = "SmoothFormat" TargetType="TextBlock" >
             <Setter Property="TextOptions.TextFormattingMode" Value="Display"></Setter>
@@ -401,6 +407,8 @@
                             <!-- Utility -->
                             <StackPanel Margin="0,20,0,0" HorizontalAlignment="Left">
                                 <Button Content="Utility"
+                                        x:Name="btnUtility"
+                                        Click="UtilityButton_CLick"
                                         TextOptions.TextRenderingMode="Auto"
                                         FontSize="32"
                                         FontFamily="{StaticResource Rounded Elegance}"
@@ -521,7 +529,7 @@
         </Grid>
 
         <!-- This is the ContentControl where the views will be displayed. -->
-        <Viewbox Stretch="Uniform" Grid.Column="1" Grid.ColumnSpan="3">
+        <Viewbox Grid.Column="1" Grid.ColumnSpan="3">
             <ContentControl Content="{Binding}"/>
         </Viewbox>
     </Grid>

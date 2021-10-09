@@ -29,7 +29,9 @@
     <None Remove="fonts\Rounded_Elegance.ttf" />
     <None Remove="images\backup.png" />
     <None Remove="images\close.png" />
+    <None Remove="images\close_white.png" />
     <None Remove="images\home.png" />
+    <None Remove="images\ic_user.png" />
     <None Remove="images\Klee.jpg" />
     <None Remove="images\logo.png" />
     <None Remove="images\maximize.png" />
@@ -85,7 +87,13 @@
     <Resource Include="images\close.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="images\close_white.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\ic_user.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="images\Klee.jpg">

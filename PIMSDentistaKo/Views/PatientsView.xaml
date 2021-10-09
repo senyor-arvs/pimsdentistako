@@ -205,6 +205,7 @@
                              Width="159"
                              Margin="10 0 0 0"
                              FontSize="20"
+                             VerticalAlignment="Center"
                              x:Name="txtBoxSearch"/>
 
                     <Button x:Name="searchButton"
@@ -223,7 +224,7 @@
                             Click="clearSearchButton_Click"
                             Background="#bd7e4a">
                         <StackPanel>
-                            <Image Source="../images/close.png"/>
+                            <Image Source="/images/close_white.png"/>
                         </StackPanel>
                     </Button>
 
@@ -245,6 +246,8 @@
                                       Height="650"
                                       Width="700" 
                                       FontSize="25" 
+                                      HorizontalScrollBarVisibility="Auto"
+                                      VerticalScrollBarVisibility="Auto"
                                       FontFamily="{StaticResource LEMON MILK Regular}" 
                                       Background="#FFF7F7F7" 
                                       BorderBrush="#FF688CAF" 
@@ -604,6 +607,7 @@
                                     Content="EMERGENCY INFO"
                                     IsEnabled="False"
                                     FontSize="20"
+                                    Click="emergencyInfoButton_Click"
                                     FontFamily="{StaticResource Rounded Elegance}"
                                     Foreground="White"
                                     Margin="-0,0,0,0"

@@ -231,6 +231,15 @@ namespace pimsdentistako.DBHelpers
             }));
         }
 
+        public static void DisplayWarningDialog(int error_code)
+        {
+            Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Action)(() =>
+            {
+                Tuple<string, string> ERR_DEF = Errors.ErrorDefinition.Definitions[error_code];
+                MessageBox.Show(ERR_DEF.Item2, ERR_DEF.Item1, MessageBoxButton.OK, MessageBoxImage.Warning);
+            }));
+        }
+
         public static void DisplayErrorDialog(string dialog_label, string dialog_content)
         {
             Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Action)(() => { 

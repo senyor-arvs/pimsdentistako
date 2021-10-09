@@ -32,6 +32,7 @@ namespace pimsdentistako
             DataContext = new DashboardViewModel(DateTime.Today);
             Mainscreen.Height = 1080 * 0.95;
             Mainscreen.Width = 1920 * 0.95;
+            //this.WindowState = WindowState.Maximized;
             DatabaseHelper.Init();
         }
         private void ProfilePicture_LeftClick(object sender, MouseButtonEventArgs e)
@@ -121,5 +122,12 @@ namespace pimsdentistako
         {
             DataContext = new DentistViewModel();
         }
+
+        private void UtilityButton_CLick(object sender, RoutedEventArgs e)
+        {
+            DataContext = new UtilityViewModel();
+        }
+
+        //TODO CREATE A VIEW AND WINDOW MANAGER
     }
 }
