@@ -149,7 +149,7 @@ namespace pimsdentistako.DBHelpers
             return actionState;
         }
 
-        //TODO UNTESTED UPDATE USER ACC
+        //WORKING
         public static bool UpdateUserAccount(string new_password) //use only for admin - only password can be changed
         {
             bool actionState = false;
@@ -312,7 +312,6 @@ namespace pimsdentistako.DBHelpers
 
         private static void reorderAccountList()
         {
-            //TODO ATTACH HERE THE DATA GRID OF USER ACCOUNT
             AccountList = new ObservableCollection<UserAccount>(AccountList.OrderBy(i => Convert.ToUInt64(i.DentistID))); //sort via ID
         }
 

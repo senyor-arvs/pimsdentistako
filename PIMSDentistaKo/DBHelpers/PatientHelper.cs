@@ -8,7 +8,7 @@ using System.Windows.Controls;
 using pimsdentistako.DBElements;
 using static pimsdentistako.DBHelpers.DatabaseHelper;
 using System.Collections.Generic;
-
+using System.Linq;
 namespace pimsdentistako.DBHelpers
 {
     public class PatientHelper
@@ -398,6 +398,40 @@ namespace pimsdentistako.DBHelpers
                 requestConnection(ConnectionState.STATE_CLOSE);
             }
 
+            return actionState;
+        }
+
+        //wORKING
+        public static bool DeletePatient(string patientID)
+        {
+            bool actionState = false;
+
+            try
+            {
+                requestConnection(ConnectionState.STATE_OPEN);
+                OleDbCommand deleteCommand = DatabaseHelper.DeleteCommand(myTable, col[0], patientID, true);
+                bool affectedRows = deleteCommand.ExecuteNonQuery() > 0;
+                if (affectedRows)
+                {
+                    Patient toRemove = PatientList.Single(i => i.PatientID.Equals(patientID));
+                    string removedID = toRemove.PatientID;
+                    bool patientRemoved = PatientList.Remove(toRemove);
+                    if (patientRemoved)
+                    {
+                        reorderPatientList();
+                        EmergencyInfoHelper.DeleteEmergencyInformation(removedID);
+                    }
+                    actionState = true;
+                }
+            }
+            catch(Exception e)
+            {
+                if (DEBUG) DatabaseHelper.DisplayInMessageBox(myTable, e);
+            }
+            finally
+            {
+                requestConnection(ConnectionState.STATE_CLOSE);
+            }
             return actionState;
         }
 

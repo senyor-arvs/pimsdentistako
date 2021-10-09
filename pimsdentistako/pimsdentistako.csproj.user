@@ -33,6 +33,9 @@
     <Compile Update="Windows\AddEditTreatmentPlanWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\AddEditTreatmentTypeWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Windows\AddEditTreatmentWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -90,6 +93,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\AddEditTreatmentPlanWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\AddEditTreatmentTypeWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\AddEditTreatmentWindow.xaml">

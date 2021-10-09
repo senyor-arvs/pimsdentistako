@@ -6,10 +6,7 @@ namespace pimsdentistako.DBElements
 {
     public class Treatment
     {
-        private string treatmentID;
-        private string treatmentName;
-
-        public string TreatmentID { get => treatmentID; set => treatmentID = value; }
-        public string TreatmentName { get => treatmentName; set => treatmentName = value; }
+        public string TreatmentID { get; set; }
+        public string TreatmentName { get; set; }
     }
 }

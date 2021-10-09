@@ -154,6 +154,32 @@ namespace pimsdentistako.DBHelpers
             return actionState;
         }
 
+        //WORKING
+        public static bool DeleteEmergencyInformation(string patietID)
+        {
+            bool actionState = false;
+            try
+            {
+                if (IsEmergencyInformationExist(patietID))
+                {
+                    requestConnection(ConnectionState.STATE_OPEN);
+                    OleDbCommand deleteInfoCommand = DatabaseHelper.DeleteCommand(myTable, col[1], patietID, false);
+                    bool affectedRows = deleteInfoCommand.ExecuteNonQuery() > 0;
+                    actionState = affectedRows;
+                } else
+                {
+                    actionState = true;
+                }
+            } catch (Exception e)
+            {
+                if (DEBUG) DatabaseHelper.DisplayInMessageBox(myTable, e);
+            } finally
+            {
+                requestConnection(ConnectionState.STATE_CLOSE);
+            }
+            return actionState;
+        }
+
         public static void DisplayInfoOnWindow(Patient patient, EmergencyInfo emergencyInfo, params TextBox[] txt_box)
         {
             txt_box[0].Text = DatabaseHelper.isMatchThenReplace(DatabaseHelper.IsValueNull(emergencyInfo.ContactName), "-", emergencyInfo.ContactName);

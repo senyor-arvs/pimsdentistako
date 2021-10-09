@@ -104,7 +104,7 @@ namespace pimsdentistako.DBHelpers
             return dentist;
         }
 
-        //UNDONE WORKING - POSSIBLE ADD DELETE IF ADD ACCOUNT FAILS
+        //UNDONE WORKING - POSSIBLE ROLLBACK MUST BE IMPLEMENTED
         //ADDING DENTIST - Returns Boolean Representing the state of action if false the action fails
         public static bool AddDentist(Dentist dentist)
         {
