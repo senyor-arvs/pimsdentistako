@@ -11,7 +11,8 @@
         Closed="Window_Closed" Loaded="Window_Loaded"
         AllowsTransparency="True"
         Background="Transparent"
-        WindowStyle="None">
+        WindowStyle="None"
+        MouseDown="deleteConfirmationWindowMain_MouseDown">
 
     <Border Background="White" CornerRadius="20" BorderBrush="#191715" BorderThickness="1">
         <Border Margin="10, 10, 10, 10">

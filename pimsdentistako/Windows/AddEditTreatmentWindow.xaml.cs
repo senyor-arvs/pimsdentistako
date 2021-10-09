@@ -44,21 +44,29 @@ namespace pimsdentistako.Windows
             {
                 if (!DatabaseHelper.IsTextBoxTextNullEmpty(treatmentNameTxtBox))
                 {
-                    _ = TreatmentHelper.AddTreatment(treatmentNameTxtBox.Text.Trim());
-                    Close();
+                    bool actionResult = TreatmentHelper.AddTreatment(treatmentNameTxtBox.Text.Trim());
+                    if (actionResult)
+                    {
+                        DatabaseHelper.DisplayDialog("Adding Treatment", "Treatement was added successfully.");
+                        Close();
+                    }
+                    else
+                    {
+                        DatabaseHelper.DisplayErrorDialog(Errors.ErrorCodes.ERR_FAILED_ADDING_TREATMENT);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Please specify the name of the Treatment that you want to add.", "Treatment Adding", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    DatabaseHelper.DisplayWarningDialog(Errors.ErrorCodes.ERR_UNSPECIFIED_TREATMENT);
                 }
             }
 
             // If Mode is set to EDIT TREATMENT
             else if (mode == 1) 
             {
-                if (treatmentNameTxtBox.Text == "")
+                if (DatabaseHelper.IsTextBoxTextNullEmpty(treatmentNameTxtBox))
                 {
-                    MessageBox.Show("Null treatment name not allowed.", "Treatment Editing", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    DatabaseHelper.DisplayWarningDialog(Errors.ErrorCodes.ERR_UNSPECIFIED_TREATMENT_EDITING);
                 } 
                 else
                 {
@@ -68,8 +76,15 @@ namespace pimsdentistako.Windows
                         TreatmentID = TreatmentHelper.TreatmentList[selectedIndex].TreatmentID,
                         TreatmentName = treatmentNameTxtBox.Text.Trim()
                     };
-                    TreatmentHelper.UpdateTreatment(updatedTreatment, selectedIndex);
-                    Close();
+                    bool actionResult = TreatmentHelper.UpdateTreatment(updatedTreatment, selectedIndex);
+                    if (actionResult)
+                    {
+                        DatabaseHelper.DisplayDialog("Updating Treatment", "The selected Treatment was updated successfully.");
+                        Close();
+                    } else
+                    {
+                        DatabaseHelper.DisplayErrorDialog(Errors.ErrorCodes.ERR_FAILED_ADDING_TREATMENT);
+                    }
                 }
             }
         }

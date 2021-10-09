@@ -29,6 +29,7 @@ namespace pimsdentistako.DBHelpers
             {
                 requestConnection(ConnectionState.STATE_OPEN);
                 TreatmentList = new ObservableCollection<Treatment>();
+                treatmentIDS = new List<string>();
                 OleDbCommand getAllTreatmentCommand = DatabaseHelper.SelectAllCommand(myTable);
                 OleDbDataReader dataReader = getAllTreatmentCommand.ExecuteReader();
 
@@ -57,33 +58,41 @@ namespace pimsdentistako.DBHelpers
             return actionState;
         }
 
-        //TODO UPDATE ADDING PROCESS SEQUENCE
-        public static bool AddTreatment(String treatmentName)
+        public static Treatment GetLastRecord()
         {
-            int maxAvailable;
-            bool actionState = false;
+            Treatment treatment = new Treatment();
             try
             {
                 requestConnection(ConnectionState.STATE_OPEN);
+                OleDbCommand getLastRecordCommand = DatabaseHelper.LastRecordCommand(myTable, col[0]);
+                OleDbDataReader dataReader = getLastRecordCommand.ExecuteReader();
 
-                // Get max number of ID
-                OleDbCommand getMaxID = new OleDbCommand("SELECT MAX(" + col[0] + ") from " + myTable, GetConnectionObject());
-                try
+                while (dataReader.Read())
                 {
-                    maxAvailable = (int)getMaxID.ExecuteScalar();
-                    maxAvailable += 1;
+                    treatment = new Treatment
+                    {
+                        TreatmentID = dataReader[col[0]].ToString(),
+                        TreatmentName = dataReader[col[1]].ToString()
+                    };
                 }
-                catch (InvalidCastException e)
-                {
-                    maxAvailable = 0;
-                    if (DEBUG) DatabaseHelper.DisplayInMessageBox(myTable, e);
-                }
+            } catch(Exception e)
+            {
+                if (DEBUG) DatabaseHelper.DisplayInMessageBox(myTable, e);
+            } finally
+            {
+                requestConnection(ConnectionState.STATE_CLOSE);
+            }
+            return treatment;
+        }
 
-                Treatment treatment = new Treatment
-                {
-                    TreatmentID = maxAvailable.ToString(),
-                    TreatmentName = treatmentName
-                };
+        //WORKING
+        public static bool AddTreatment(String treatmentName)
+        {
+            bool actionState = false;
+            Treatment treatment;
+            try
+            {
+                requestConnection(ConnectionState.STATE_OPEN);
 
                 StringBuilder query = new StringBuilder();
                 query.Append("INSERT INTO ").Append(myTable).Append(" (")
@@ -95,9 +104,17 @@ namespace pimsdentistako.DBHelpers
                 insertCommand.Parameters.Add(new OleDbParameter("@treatmentName", treatmentName));
 
                 bool initial_adding = insertCommand.ExecuteNonQuery() > 0;
-                actionState = true;
+                if (initial_adding)
+                {
+                    treatment = GetLastRecord();
+                    TreatmentList.Add(treatment);
 
-                TreatmentList.Add(treatment);
+                    //add id to treatment type dictionary and an empty collection
+                    TreatmentTypeHelper.TreatmentTypeDictionary.Add(
+                        Convert.ToInt64(treatment.TreatmentID), 
+                        new ObservableCollection<TreatmentType>());
+                    actionState = true;
+                }
             }
             catch (OleDbException e)
             {
@@ -109,7 +126,8 @@ namespace pimsdentistako.DBHelpers
             }
             return actionState;
         }
-        //TODO UPDATE, UPDATE PROCESS SEQUENCE
+
+        //WORKING
         public static bool UpdateTreatment(Treatment treatment, int selectedIndex)
         {
             bool actionState = false;
@@ -133,9 +151,11 @@ namespace pimsdentistako.DBHelpers
                 updateCommand.Parameters.Add(new OleDbParameter("@treatmentID", treatment.TreatmentID));
                 
                 bool affectedRows = updateCommand.ExecuteNonQuery() > 0;
-
-                TreatmentList[selectedIndex] = treatment;
-
+                if (affectedRows)
+                {
+                    TreatmentList[selectedIndex] = treatment;
+                    actionState = affectedRows;
+                }
             }
             catch (OleDbException e)
             {
@@ -148,17 +168,33 @@ namespace pimsdentistako.DBHelpers
             return actionState;
         }
 
+        //WORKING
         public static bool DeleteTreatment(string treatmentID)
         {
             bool actionState = false;
             try
             {
                 requestConnection(ConnectionState.STATE_OPEN);
-                OleDbCommand deleteCommand = new OleDbCommand("DELETE FROM " + myTable + " WHERE " + col[0] + "=" + treatmentID + ";", GetConnectionObject());
+                OleDbCommand deleteCommand = DatabaseHelper.DeleteCommand(myTable, col[0], treatmentID, true);
                 bool affectedRows = deleteCommand.ExecuteNonQuery() > 0;
 
-                Treatment toRemove = TreatmentList.Single(i => i.TreatmentID.Equals(treatmentID)); //get the item
-                TreatmentList.Remove(toRemove); //remove the item to list
+                if(affectedRows)
+                {
+                    Treatment toRemove = TreatmentList.Single(i => i.TreatmentID.Equals(treatmentID)); //get the item
+                    string removedID = toRemove.TreatmentID;
+
+                    //use the size of the treatment observable collection as an indicator if there are type exist in database.
+                    int numberOfTypeIntanceExist = TreatmentTypeHelper.TreatmentTypeDictionary[Convert.ToInt64(removedID)].Count;
+                    if (numberOfTypeIntanceExist > 0)
+                    {
+                        //perform removal to database
+                        if(TreatmentTypeHelper.DeleteTreatmentType(removedID))                        
+                            actionState = TreatmentList.Remove(toRemove); //remove the item to list
+                    } else
+                    {
+                        actionState = TreatmentList.Remove(toRemove); //remove the item to list
+                    }
+                }
             }
             catch (OleDbException e)
             {

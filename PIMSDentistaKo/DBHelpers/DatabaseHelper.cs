@@ -247,6 +247,15 @@ namespace pimsdentistako.DBHelpers
             }));
         }
 
+        public static void DisplayErrorDialog(int error_code)
+        {
+            Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Action)(() =>
+            {
+                Tuple<string, string> ERR_DEF = Errors.ErrorDefinition.Definitions[error_code];
+                MessageBox.Show(ERR_DEF.Item2, ERR_DEF.Item1, MessageBoxButton.OK, MessageBoxImage.Error);
+            }));
+        }
+
         public static void DisplayDialog(string dialog_label, string dialog_content)
         {
             Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Action)(() => { 
@@ -323,15 +332,15 @@ namespace pimsdentistako.DBHelpers
             return insertCommand;
         }
 
+        //automatically deletes all instance of testParam
         public static OleDbCommand DeleteCommand(string myTable, string activeColumn, string testParam, bool isParamNumber)
         {
             if (isParamNumber)
             {
                 //numbers in testParam must not contain '' so it is detected by ACCESS as number type not text
-                return new OleDbCommand("DELETE FROM " + myTable + " WHERE [" + activeColumn + "]=" + testParam + ";", GetConnectionObject());
+                return new OleDbCommand("DELETE * FROM " + myTable + " WHERE [" + activeColumn + "]=" + testParam + ";", GetConnectionObject());
             }
-            return new OleDbCommand("DELETE FROM " + myTable + " WHERE [" + activeColumn + "]='" + testParam + "';", GetConnectionObject());
-
+            return new OleDbCommand("DELETE * FROM " + myTable + " WHERE [" + activeColumn + "]='" + testParam + "';", GetConnectionObject());
         }
 
         #endregion COMMON QUERY METHODS

@@ -9,7 +9,7 @@ namespace pimsdentistako.Views
     /// <summary>
     /// Interaction logic for TreatmentView.xaml
     /// </summary>
-    public partial class TreatmentView : UserControl, IWindowCloseListener
+    public partial class TreatmentView : UserControl, IWindowCloseListener, IOnDeleteSuccessListener
     {
         public TreatmentView()
         {
@@ -21,13 +21,6 @@ namespace pimsdentistako.Views
 
         private void addTreatmentButton_Click(object sender, RoutedEventArgs e)
         {
-            /*if (!DatabaseHelper.IsTextBoxTextNullEmpty(treatmentTxtBox))
-            {
-                _ = TreatmentHelper.AddTreatment(treatmentTxtBox.Text.Trim()); 
-            } else
-            {
-                MessageBox.Show("Please specify the name of the Treatment that you want to add.", "Treatment Adding", MessageBoxButton.OK, MessageBoxImage.Warning);
-            }*/
             AddEditTreatmentWindow addEditTreatmentWindow = new AddEditTreatmentWindow(mode: 0);
             addEditTreatmentWindow.WindowCloseListener = this;
             addEditTreatmentWindow.Show();
@@ -35,20 +28,19 @@ namespace pimsdentistako.Views
 
         private void updateTreatmentButton_Click(object sender, RoutedEventArgs e)
         {
-            /* var selectedIndex = treatmentDataGrid.SelectedIndex;
-             Treatment updatedTreatment = new Treatment
-             {
-                 TreatmentID = TreatmentList[selectedIndex].TreatmentID,
-                 TreatmentName = treatmentTxtBox.Text
-             };
-             UpdateTreatment(updatedTreatment, selectedIndex);*/
-            AddEditTreatmentWindow addEditTreatmentWindow = new AddEditTreatmentWindow(
-                mode: 1,
-                treatmentName: treatmentTxtBox.Text,
-                dataGrid_SelectedIndex: treatmentDataGrid.SelectedIndex
-            );
-            addEditTreatmentWindow.WindowCloseListener = this;
-            addEditTreatmentWindow.Show();
+            if (!TreatmentHelper.IsCurrentlySelectedNull())
+            {
+                AddEditTreatmentWindow addEditTreatmentWindow = new AddEditTreatmentWindow(
+                   mode: 1,
+                   treatmentName: treatmentTxtBox.Text,
+                   dataGrid_SelectedIndex: treatmentDataGrid.SelectedIndex
+                );
+                addEditTreatmentWindow.WindowCloseListener = this;
+                addEditTreatmentWindow.Show();
+            } else
+            {
+                DatabaseHelper.DisplayWarningDialog(Errors.ErrorCodes.ERR_INV_TREATMENT_SELECTION);
+            }
         }
 
         private void treatmentDataGrid_SelChanged(object sender, SelectionChangedEventArgs e)
@@ -72,15 +64,67 @@ namespace pimsdentistako.Views
 
         private void deleteTreatmentButton_Click(object sender, RoutedEventArgs e)
         {
-
-           var selectedIndex = treatmentDataGrid.SelectedIndex;
-           TreatmentHelper.DeleteTreatment(TreatmentHelper.TreatmentList[selectedIndex].TreatmentID);
-           treatmentTxtBox.Clear(); 
+            //TODO IMPLEMENT CONFIRMATION DIALOG
+            if (!TreatmentHelper.IsCurrentlySelectedNull())
+            {
+                DeleteConfimationWindow deleteConfirmation = new DeleteConfimationWindow(DeleteConfimationWindow.DeleteWindowModes.TREATMENT_MODE);
+                deleteConfirmation.WindowCloseListener = this;
+                deleteConfirmation.OnDeleteSuccessListener = this;
+                deleteConfirmation.Show();
+            } else
+            {
+                DatabaseHelper.DisplayWarningDialog(Errors.ErrorCodes.ERR_INV_TREATMENT_SELECTION);
+            }
         }
 
         public void OnWindowClose(bool isClosed)
         {
             Window.GetWindow(this).IsEnabled = isClosed;
+        }
+
+        private void addTreatmentTypeButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddEditTreatmentTypeWindow addEditTreatmentTypeWindow = new AddEditTreatmentTypeWindow(0, TreatmentHelper.CurrentlySelectedTreatment());
+            addEditTreatmentTypeWindow.WindowCloseListener = this;
+            addEditTreatmentTypeWindow.Show();
+        }
+
+        private void updateTreatmentTypeButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!TreatmentTypeHelper.IsCurrentlySelectedNull())
+            {
+                AddEditTreatmentTypeWindow addEditTreatmentTypeWindow = new AddEditTreatmentTypeWindow(1, TreatmentHelper.CurrentlySelectedTreatment());
+                addEditTreatmentTypeWindow.WindowCloseListener = this;
+                addEditTreatmentTypeWindow.Show();
+            } else
+            {
+                DatabaseHelper.DisplayWarningDialog(Errors.ErrorCodes.ERR_INV_TREATMENT_TYPE_SELECTION);
+            }
+
+        }
+
+        private void deleteTreatmentTypeButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!TreatmentTypeHelper.IsCurrentlySelectedNull())
+            {
+                DeleteConfimationWindow deleteConfirmation = new DeleteConfimationWindow(DeleteConfimationWindow.DeleteWindowModes.TREATMENT_TYPE_MODE);
+                deleteConfirmation.WindowCloseListener = this;
+                deleteConfirmation.OnDeleteSuccessListener = this;
+                deleteConfirmation.Show();
+            }
+            else
+            {
+                DatabaseHelper.DisplayWarningDialog(Errors.ErrorCodes.ERR_INV_TREATMENT_TYPE_SELECTION);
+            }
+        }
+
+        public void OnDeleteSuccess(bool deleted, string owner)
+        {
+            if (deleted)
+            {
+                if (owner == DeleteConfimationWindow.DeleteWindowTitles.TREATMENT_MODE) treatmentTxtBox.Clear();
+                else if (owner == DeleteConfimationWindow.DeleteWindowTitles.TREATMENT_TYPE_MODE) treatmentTypeTxtBox.Clear();
+            }
         }
     }
 }
