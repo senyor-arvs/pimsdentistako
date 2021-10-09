@@ -16,5 +16,5 @@ D:\User\KRISTIAN\Documents\Programming\C#\PIMSDentistaKo\pimsdentistako\App.xaml
 1941952104453
 Components\AppointmentCalendar.xaml;Components\CustomCalendar.xaml;MainWindow.xaml;Views\AppointmentsView.xaml;Views\DashboardView.xaml;Views\DentistView.xaml;Views\PatientsView.xaml;Views\TreatmentView.xaml;Views\UserAccountView.xaml;Windows\AddEditPatientWindow.xaml;Windows\AddEditTreatmentWindow.xaml;Windows\DentalRecordsWindow.xaml;Windows\DentistAddWindow.xaml;Windows\DentistDeleteWindow.xaml;Windows\DentistEditWindow.xaml;Windows\TreatmentPlanWindow.xaml;
 
-True
+False
 
